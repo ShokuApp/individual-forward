@@ -1,6 +1,5 @@
 @startuml Shoku Individual UML classes
 
-
 node "Types" {
     interface Recipe {
     + id: string
@@ -35,7 +34,7 @@ node "Types" {
         + allergens: Pictogram[]
         + diets: Pictogram[]
     }
-    RecipeIngredient *-- Pictogram : contains
+    Ingredient *-- Pictogram : contains
 
     interface Pictogram {
         + id: string
@@ -52,6 +51,7 @@ node "Types" {
         + average_price: string
         + location: string
         + phone: string
+        + url: string
         + opening_time: TimeRange[][]
         + card: Card
     }
@@ -86,8 +86,17 @@ node "Types" {
         + description: string
         + price: string
         + ingredients: Ingredient[]
+        + sauces: Sauce[]
     }
     Dish *-- Ingredient : contains
+    Dish *-- Sauce : contains
+
+    interface Sauce {
+        id: string
+        name: string
+        ingredients: Ingredient[]
+    }
+    Sauce *-- Ingredient : contains
 
     interface Profile {
         + id: string
@@ -163,6 +172,12 @@ node "Repositories" {
         + set(dish: Dish): Promise<void>
     }
     DishRepository <-- Dish : uses
+
+    interface SauceRepository {
+        + get(id: string): Promise<Sauce>
+        + set(sauce: Sauce): Promise<void>
+    }
+    SauceRepository <-- Sauce : uses
 
     interface ProfileRepository {
         + get(id: string): Promise<Profile>
@@ -462,6 +477,42 @@ node "BLoC" {
         DishBloc *-down- DishRepository : contains
         DishBloc <-up- DishGetEvent : uses
         DishBloc <-up- DishGetState : uses
+    }
+
+    frame "BLoC - Sauce" {
+        frame "BLoC - Sauce - Event" {
+            abstract SauceEvent {
+            }
+
+            class SauceGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            SauceEvent <|-up- SauceGetEvent : extends
+        }
+
+        frame "BLoC - Sauce - State" {
+            abstract SauceState {
+            }
+
+            class SauceGetState {
+                + sauce: Sauce
+
+                + constructor(sauce: Sauce)
+            }
+            SauceState <|-up- SauceGetState : extends
+        }
+
+        class SauceBloc {
+            + repository: SauceRepository
+
+            + override async *mapEventToState(event: SauceEvent)
+            + get(event: SauceGetEvent): SauceGetState
+        }
+        SauceBloc *-down- SauceRepository : contains
+        SauceBloc <-up- SauceGetEvent : uses
+        SauceBloc <-up- SauceGetState : uses
     }
 
     frame "BLoC - Profile" {
