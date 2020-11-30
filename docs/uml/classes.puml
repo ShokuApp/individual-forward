@@ -1,0 +1,532 @@
+@startuml Shoku Individual UML classes
+
+
+node "Types" {
+    interface Recipe {
+    + id: string
+    + name: string
+    + description: string
+    + image: Image
+    + average_time: number
+    + average_rate: number
+    + ingredients: RecipeIngredient[]
+    + steps: RecipeStep[]
+    }
+    Recipe *-- RecipeIngredient : contains
+    Recipe *-- RecipeStep : contains
+
+    interface RecipeStep {
+        + name: string
+        + description: string
+    }
+
+    interface RecipeIngredient {
+        + id: string
+        + ingredient: Ingredient
+        + quantity: number
+        + unity: string
+    }
+    RecipeIngredient *-- Ingredient : contains
+
+    interface Ingredient {
+        + id: string
+        + name: string
+        + image: Image
+        + allergens: Pictogram[]
+        + diets: Pictogram[]
+    }
+    RecipeIngredient *-- Pictogram : contains
+
+    interface Pictogram {
+        + id: string
+        + name: string
+        + pictogram: Image
+    }
+
+    interface Restaurant {
+        + id: string
+        + name: string
+        + description: string
+        + image: Image
+        + average_rate: number
+        + average_price: string
+        + location: string
+        + phone: string
+        + opening_time: TimeRange[][]
+        + card: Card
+    }
+    Restaurant *-- TimeRange : contains
+    Restaurant *-- Card : contains
+
+    interface TimeRange {
+        + from: string
+        + to: string
+    }
+
+    interface Card {
+        + id: string
+        + name: string
+        + dishes: Dish[]
+        + menus: Menu[]
+    }
+    Card *-- Dish : contains
+    Card *-- Menu : contains
+
+    interface Menu {
+        + id: string
+        + name: string
+        + price: string
+        + dishes: Dish[]
+    }
+    Menu *-- Dish : contains
+
+    interface Dish {
+        + id: string
+        + name: string
+        + description: string
+        + price: string
+        + ingredients: Ingredient[]
+    }
+    Dish *-- Ingredient : contains
+
+    interface Profile {
+        + id: string
+        + email: string
+        + firstName: string
+        + lastName: string
+        + allergens: Pictogram[]
+        + diets: Pictogram[]
+        + favorite_recipes: Recipe[]
+        + favorite_restaurants: Restaurant[]
+    }
+}
+
+node "Repositories" {
+    interface Repository<T> {
+        + get(id: string): Promise<T>
+        + set(item: T): Promise<void>
+    }
+    Repository <|-down- RecipeRepository : extends
+    Repository <|-down- RecipeIngredientRepository : extends
+    Repository <|-down- IngredientRepository : extends
+    Repository <|-down- PictogramRepository : extends
+    Repository <|-down- RestaurantRepository : extends
+    Repository <|-down- CardRepository : extends
+    Repository <|-down- MenuRepository : extends
+    Repository <|-down- DishRepository : extends
+    Repository <|-down- ProfileRepository : extends
+
+    interface RecipeRepository {
+        + get(id: string): Promise<Recipe>
+        + set(recipe: Recipe): Promise<void>
+    }
+    RecipeRepository <-- Recipe : uses
+
+    interface RecipeIngredientRepository {
+        + get(id: string): Promise<RecipeIngredient>
+        + set(ingredient: RecipeIngredient): Promise<void>
+    }
+    RecipeIngredientRepository <-- RecipeIngredient : uses
+
+    interface IngredientRepository {
+        + get(id: string): Promise<Ingredient>
+        + set(ingredient: Ingredient): Promise<void>
+    }
+    IngredientRepository <-- Ingredient : uses
+
+    interface PictogramRepository {
+        + get(id: string): Promise<Pictogram>
+        + set(pictogram: Pictogram): Promise<void>
+    }
+    PictogramRepository <-- Pictogram : uses
+
+    interface RestaurantRepository {
+        + get(id: string): Promise<Restaurant>
+        + set(restaurant: Restaurant): Promise<void>
+    }
+    RestaurantRepository <-- Restaurant : uses
+
+    interface CardRepository {
+        + get(id: string): Promise<Card>
+        + set(card: Card): Promise<void>
+    }
+    CardRepository <-- Card : uses
+
+    interface MenuRepository {
+        + get(id: string): Promise<Menu>
+        + set(menu: Menu): Promise<void>
+    }
+    MenuRepository <-- Menu : uses
+
+    interface DishRepository {
+        + get(id: string): Promise<Dish>
+        + set(dish: Dish): Promise<void>
+    }
+    DishRepository <-- Dish : uses
+
+    interface ProfileRepository {
+        + get(id: string): Promise<Profile>
+        + set(profile: Profile): Promise<void>
+    }
+    ProfileRepository <-- Profile : uses
+}
+
+database json {
+}
+json <-up- Repository : uses
+
+node "BLoC" {
+    frame "BLoC - Recipe" {
+        frame "BLoC - Recipe - Event" {
+            abstract RecipeEvent {
+            }
+
+            class RecipeGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            RecipeEvent <|-up- RecipeGetEvent : extends
+        }
+
+        frame "BLoC - Recipe - State" {
+            abstract RecipeState {
+            }
+
+            class RecipeGetState {
+                + recipe: Recipe
+
+                + constructor(recipe: Recipe)
+            }
+            RecipeState <|-up- RecipeGetState : extends
+        }
+
+        class RecipeBloc {
+            + repository: RecipeRepository
+
+            + override async *mapEventToState(event: RecipeEvent)
+            + get(event: RecipeGetEvent): RecipeGetState
+        }
+        RecipeBloc *-down- RecipeRepository : contains
+        RecipeBloc <-up- RecipeGetEvent : uses
+        RecipeBloc <-up- RecipeGetState : uses
+    }
+
+    frame "BLoC - RecipeIngredient" {
+        frame "BLoC - RecipeIngredient - Event" {
+            abstract RecipeIngredientEvent {
+            }
+
+            class RecipeIngredientGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            RecipeIngredientEvent <|-up- RecipeIngredientGetEvent : extends
+        }
+
+        frame "BLoC - RecipeIngredient - State" {
+            abstract RecipeIngredientState {
+            }
+
+            class RecipeIngredientGetState {
+                + recipeIngredient: RecipeIngredient
+
+                + constructor(recipeIngredient: RecipeIngredient)
+            }
+            RecipeIngredientState <|-up- RecipeIngredientGetState : extends
+        }
+
+        class RecipeIngredientBloc {
+            + repository: RecipeIngredientRepository
+
+            + override async *mapEventToState(event: RecipeIngredientEvent)
+            + get(event: RecipeIngredientGetEvent): RecipeIngredientGetState
+        }
+        RecipeIngredientBloc *-down- RecipeIngredientRepository : contains
+        RecipeIngredientBloc <-up- RecipeIngredientGetEvent : uses
+        RecipeIngredientBloc <-up- RecipeIngredientGetState : uses
+    }
+
+    frame "BLoC - Ingredient" {
+        frame "BLoC - Ingredient - Event" {
+            abstract IngredientEvent {
+            }
+
+            class IngredientGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            IngredientEvent <|-up- IngredientGetEvent : extends
+        }
+
+        frame "BLoC - Ingredient - State" {
+            abstract IngredientState {
+            }
+
+            class IngredientGetState {
+                + ingredient: Ingredient
+
+                + constructor(ingredient: Ingredient)
+            }
+            IngredientState <|-up- IngredientGetState : extends
+        }
+
+        class IngredientBloc {
+            + repository: IngredientRepository
+
+            + override async *mapEventToState(event: IngredientEvent)
+            + get(event: IngredientGetEvent): IngredientGetState
+        }
+        IngredientBloc *-down- IngredientRepository : contains
+        IngredientBloc <-up- IngredientGetEvent : uses
+        IngredientBloc <-up- IngredientGetState : uses
+    }
+
+    frame "BLoC - Pictogram" {
+        frame "BLoC - Pictogram - Event" {
+            abstract PictogramEvent {
+            }
+
+            class PictogramGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            PictogramEvent <|-up- PictogramGetEvent : extends
+        }
+
+        frame "BLoC - Pictogram - State" {
+            abstract PictogramState {
+            }
+
+            class PictogramGetState {
+                + pictogram: Pictogram
+
+                + constructor(pictogram: Pictogram)
+            }
+            PictogramState <|-up- PictogramGetState : extends
+        }
+
+        class PictogramBloc {
+            + repository: PictogramRepository
+
+            + override async *mapEventToState(event: PictogramEvent)
+            + get(event: PictogramGetEvent): PictogramGetState
+        }
+        PictogramBloc *-down- PictogramRepository : contains
+        PictogramBloc <-up- PictogramGetEvent : uses
+        PictogramBloc <-up- PictogramGetState : uses
+    }
+
+    frame "BLoC - Restaurant" {
+        frame "BLoC - Restaurant - Event" {
+            abstract RestaurantEvent {
+            }
+
+            class RestaurantGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            RestaurantEvent <|-up- RestaurantGetEvent : extends
+        }
+
+        frame "BLoC - Restaurant - State" {
+            abstract RestaurantState {
+            }
+
+            class RestaurantGetState {
+                + restaurant: Restaurant
+
+                + constructor(restaurant: Restaurant)
+            }
+            RestaurantState <|-up- RestaurantGetState : extends
+        }
+
+        class RestaurantBloc {
+            + repository: RestaurantRepository
+
+            + override async *mapEventToState(event: RestaurantEvent)
+            + get(event: RestaurantGetEvent): RestaurantGetState
+        }
+        RestaurantBloc *-down- RestaurantRepository : contains
+        RestaurantBloc <-up- RestaurantGetEvent : uses
+        RestaurantBloc <-up- RestaurantGetState : uses
+    }
+
+    frame "BLoC - Card" {
+        frame "BLoC - Card - Event" {
+            abstract CardEvent {
+            }
+
+            class CardGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            CardEvent <|-up- CardGetEvent : extends
+        }
+
+        frame "BLoC - Card - State" {
+            abstract CardState {
+            }
+
+            class CardGetState {
+                + card: Card
+
+                + constructor(card: Card)
+            }
+            CardState <|-up- CardGetState : extends
+        }
+
+        class CardBloc {
+            + repository: CardRepository
+
+            + override async *mapEventToState(event: CardEvent)
+            + get(event: CardGetEvent): CardGetState
+        }
+        CardBloc *-down- CardRepository : contains
+        CardBloc <-up- CardGetEvent : uses
+        CardBloc <-up- CardGetState : uses
+    }
+
+    frame "BLoC - Menu" {
+        frame "BLoC - Menu - Event" {
+            abstract MenuEvent {
+            }
+
+            class MenuGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            MenuEvent <|-up- MenuGetEvent : extends
+        }
+
+        frame "BLoC - Menu - State" {
+            abstract MenuState {
+            }
+
+            class MenuGetState {
+                + menu: Menu
+
+                + constructor(menu: Menu)
+            }
+            MenuState <|-up- MenuGetState : extends
+        }
+
+        class MenuBloc {
+            + repository: MenuRepository
+
+            + override async *mapEventToState(event: MenuEvent)
+            + get(event: MenuGetEvent): MenuGetState
+        }
+        MenuBloc *-down- MenuRepository : contains
+        MenuBloc <-up- MenuGetEvent : uses
+        MenuBloc <-up- MenuGetState : uses
+    }
+
+    frame "BLoC - Dish" {
+        frame "BLoC - Dish - Event" {
+            abstract DishEvent {
+            }
+
+            class DishGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            DishEvent <|-up- DishGetEvent : extends
+        }
+
+        frame "BLoC - Dish - State" {
+            abstract DishState {
+            }
+
+            class DishGetState {
+                + dish: Dish
+
+                + constructor(dish: Dish)
+            }
+            DishState <|-up- DishGetState : extends
+        }
+
+        class DishBloc {
+            + repository: DishRepository
+
+            + override async *mapEventToState(event: DishEvent)
+            + get(event: DishGetEvent): DishGetState
+        }
+        DishBloc *-down- DishRepository : contains
+        DishBloc <-up- DishGetEvent : uses
+        DishBloc <-up- DishGetState : uses
+    }
+
+    frame "BLoC - Profile" {
+        frame "BLoC - Profile - Event" {
+            abstract ProfileEvent {
+            }
+
+            class ProfileGetEvent {
+                + id: string
+
+                + constructor(id: string)
+            }
+            ProfileEvent <|-up- ProfileGetEvent : extends
+
+            class ProfileFavoriteRecipeEvent {
+                + id: string
+                + recipeId: string
+
+                + constructor(id: string, recipeId: string)
+            }
+            ProfileEvent <|-up- ProfileFavoriteRecipeEvent : extends
+
+            class ProfileFavoriteRestaurantEvent {
+                + id: string
+                + restaurantId: string
+
+                + constructor(id: string, restaurantId: string)
+            }
+            ProfileEvent <|-up- ProfileFavoriteRestaurantEvent : extends
+        }
+
+        frame "BLoC - Profile - State" {
+            abstract ProfileState {
+            }
+
+            class ProfileGetState {
+                + profile: Profile
+
+                + constructor(profile: Profile)
+            }
+            ProfileState <|-up- ProfileGetState : extends
+
+            class ProfileFavoriteState {
+                + isFavorite: boolean
+
+                + constructor(isFavorite: boolean)
+            }
+            ProfileState <|-up- ProfileFavoriteState : extends
+        }
+
+        class ProfileBloc {
+            + repository: ProfileRepository
+
+            + override async *mapEventToState(event: ProfileEvent)
+            + get(event: ProfileGetEvent): ProfileGetState
+            + favoriteRecipe(event: ProfileFavoriteRecipeEvent): ProfileFavoriteState
+            + favoriteRestaurant(event: ProfileFavoriteRestaurantEvent): ProfileFavoriteState
+        }
+        ProfileBloc *-down- ProfileRepository : contains
+        ProfileBloc <-up- ProfileGetEvent : uses
+        ProfileBloc <-up- ProfileFavoriteRecipeEvent : uses
+        ProfileBloc <-up- ProfileFavoriteRestaurantEvent : uses
+        ProfileBloc <-up- ProfileGetState : uses
+        ProfileBloc <-up- ProfileFavoriteState : uses
+    }
+}
+
+@enduml
