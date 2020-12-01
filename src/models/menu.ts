@@ -6,3 +6,4 @@ export type Menu = {
   price: string;
   dishes: Dish[];
 };
+
