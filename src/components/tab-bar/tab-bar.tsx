@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   TouchableOpacity,
   Dimensions,
   StyleSheet,
+  Animated
 } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { BottomMenuItem } from "./bottom-menu-item";
+import colors from "../../constant/colors";
 
 const style = StyleSheet.create({
   tabContainer: {
@@ -23,7 +25,16 @@ const style = StyleSheet.create({
     elevation: 10,
     position: "absolute",
     bottom: 0,
-  }
+  },
+  slider: {
+    height: 5,
+    position: "absolute",
+    top: 0,
+    left: 10,
+    backgroundColor: colors.themeStandard,
+    borderRadius: 20,
+    width: 30
+  },
 });
 
 export const TabBar = ({
@@ -31,11 +42,35 @@ export const TabBar = ({
   descriptors,
   navigation,
 }: BottomTabBarProps) => {
+
   const totalWidth = Dimensions.get("window").width;
+  const tabWidth = totalWidth / state.routes.length;
+  const [translateValue] = useState(new Animated.Value(0));
+
+  const animateSlider = (index: number) => {
+    Animated.spring(translateValue, {
+      toValue: index * tabWidth,
+      velocity: 10,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  useEffect(() => {
+    animateSlider(state.index);
+  }, [state.index]);
 
   return (
     <View style={[style.tabContainer, { width: totalWidth }]}>
       <View style={{ flexDirection: "row" }}>
+        <Animated.View
+          style={[
+            style.slider,
+            {
+              transform: [{ translateX: translateValue }],
+              width: tabWidth - 20,
+            },
+          ]}
+        />
 
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
@@ -58,6 +93,11 @@ export const TabBar = ({
             if (!isFocused && !event.defaultPrevented) {
               navigation.navigate(route.name);
             }
+            Animated.spring(translateValue, {
+              toValue: index * tabWidth,
+              velocity: 10,
+              useNativeDriver: true,
+            }).start();
           };
 
           const onLongPress = () => {
