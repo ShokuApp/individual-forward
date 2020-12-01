@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
 })
 
 export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
+  const icon = isCurrent ? images.tabBar[iconName].onSelected : images.tabBar[iconName].notSelected;
   return (
     <View
       style={{
@@ -31,7 +32,7 @@ export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
         alignItems: "center",
       }}
     >
-      <Image style={styles.logo} source={images.tabBar.chefHat} />
+      <Image style={styles.logo} source={icon} />
     </View>
   );
 };

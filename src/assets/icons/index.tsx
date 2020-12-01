@@ -1,8 +1,19 @@
-const images = {
+
+
+const images: Record<string | any, any> = {
   tabBar: {
-    chefHat: require("./chef-hat.png"),
-    recipeBook: require("./recipe-book.png"),
-    profil: require("./user.png")
+    'chefHat': {
+      onSelected: require("./chef-hat.png"),
+      notSelected: require("./chef-hat.png")
+    },
+    'recipeBook': {
+      onSelected: require("./recipe-book.png"),
+      notSelected: require("./recipe-book.png")
+    },
+    'profil': {
+      onSelected: require("./user.png"),
+      notSelected: require("./user.png")
+    }
   }
 };
 
