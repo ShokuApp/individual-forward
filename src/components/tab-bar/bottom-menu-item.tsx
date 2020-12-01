@@ -1,7 +1,8 @@
 import React from "react"
-import { View, SafeAreaView, StyleSheet, Text } from "react-native";
+import { View, SafeAreaView, StyleSheet, Text, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import colors from '../../constant/colors';
+import images from '../../assets/icons/index';
 
 
 type Props = {
@@ -15,6 +16,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
+  logo: {
+    width: 32,
+    height: 32
+  }
 })
 
 export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
@@ -26,11 +31,7 @@ export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
         alignItems: "center",
       }}
     >
-      <AntDesign
-        name={"downcircleo"}
-        size={32}
-        style={{ color: isCurrent ? colors.themeStandard : "#CFD2D7" }}
-      />
+      <Image style={styles.logo} source={images.tabBar.chefHat} />
     </View>
   );
 };
