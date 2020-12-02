@@ -4,7 +4,7 @@ import {
   BottomTabBarProps,
 } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./tab-bar";
-import { ProfilScreen } from "../../screens/profil";
+import { ProfileScreen } from "../../screens/profile";
 import { MapScreen } from "../../screens/map";
 import { RecipesScreen } from "../../screens/recipes";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -32,7 +32,7 @@ export const BottomTabNavigator = () => {
       >
         <Tab.Screen name="mapScreen" component={MapScreen} />
         <Tab.Screen name="recipeScreen" component={RecipesScreen} />
-        <Tab.Screen name="profilScreen" component={ProfilScreen} />
+        <Tab.Screen name="profileScreen" component={ProfileScreen} />
       </Tab.Navigator>
       {useSafeAreaInsets().bottom > 0 && (
         <View

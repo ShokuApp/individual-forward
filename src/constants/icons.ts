@@ -9,7 +9,7 @@ export const icons: Record<string, any> = {
       onSelected: require("../../assets/images/recipe-book_selected.png"),
       notSelected: require("../../assets/images/recipe-book.png")
     },
-    'profilScreen': {
+    'profileScreen': {
       onSelected: require("../../assets/images/user_selected.png"),
       notSelected: require("../../assets/images/user.png")
     }

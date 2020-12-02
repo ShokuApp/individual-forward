@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { colors } from '../constants/colors';
 
 
-export const ProfilScreen = () => {
+export const ProfileScreen = () => {
   return (
     <View style={styles.container}>
       <Text>Profil</Text>
