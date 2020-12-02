@@ -9,7 +9,6 @@ from datetime import datetime
 def save_to_file(data, path):
     with open(path, 'w') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=False)
-        outfile.close()
     return
 
 
