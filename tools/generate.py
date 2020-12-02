@@ -9,6 +9,7 @@ from datetime import datetime
 def save_to_file(data, path):
     with open(path, 'w') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=False)
+        outfile.close()
     return
 
 
@@ -270,6 +271,7 @@ def recipe_list(length, recipe_ingredient_data):
 def generate_name():
     file = open("./tools/name.txt")
     lines = file.readlines()
+    file.close()
 
     name = random.choice(lines).replace('\n', '').split(" ")
     
