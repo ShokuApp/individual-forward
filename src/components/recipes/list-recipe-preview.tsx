@@ -4,8 +4,11 @@ import { RecipePreview } from "./recipe-preview";
 import {
   RecipeBloc,
   RecipeGetEvent,
-  RecipeGetState,
   RecipeState,
+  RecipeLoadingState,
+  RecipeErrorState,
+  RecipeInitialState,
+  RecipeGetState,
 } from "../../bloc";
 import { RecipeRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
@@ -15,7 +18,7 @@ type Props = {
 };
 
 const styles = StyleSheet.create({
-  box: {
+  container: {
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
@@ -30,7 +33,7 @@ const styles = StyleSheet.create({
 
 export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
   return (
-    <View style={styles.box}>
+    <View style={styles.container}>
       {recipes.map((id) => {
         const recipe = new RecipeBloc(new RecipeRepository());
         recipe.add(new RecipeGetEvent(id));
@@ -39,12 +42,18 @@ export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
             key={id}
             bloc={recipe}
             builder={(state: RecipeState) => {
-              if (!(state instanceof RecipeGetState)) {
+              if (state instanceof RecipeErrorState) {
+                return <Text>Error</Text>;
+              }
+              if (state instanceof RecipeInitialState) {
+                return <Text>Loading</Text>;
+              }
+              if (state instanceof RecipeLoadingState) {
                 return <Text>Loading</Text>;
               }
               return (
                 <View style={styles.child}>
-                  <RecipePreview recipe={state.recipe} />
+                  <RecipePreview recipe={(state as RecipeGetState).recipe} />
                 </View>
               );
             }}
