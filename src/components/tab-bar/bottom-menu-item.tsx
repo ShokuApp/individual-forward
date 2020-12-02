@@ -2,7 +2,7 @@ import React from "react"
 import { View, SafeAreaView, StyleSheet, Text, Image } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import colors from '../../constant/colors';
-import images from '../../assets/icons/index';
+import images from './index';
 
 
 type Props = {
