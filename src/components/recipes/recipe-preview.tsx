@@ -63,7 +63,7 @@ type Props = {
 };
 
 export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
-  let imageSrc = { uri: recipe.image };
+  const imageSrc = { uri: recipe.image };
   return (
     <TouchableOpacity
       style={styles.card}
