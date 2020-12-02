@@ -12,6 +12,6 @@ const App = () => {
       </NavigationContainer>
     </SafeAreaProvider>
   );
-}
+};
 
 export default registerRootComponent(App);

@@ -9,7 +9,7 @@ import {
   RecipeErrorState,
   RecipeInitialState,
   RecipeGetState,
-} from "../../bloc";
+} from "../../blocs";
 import { RecipeRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
 
