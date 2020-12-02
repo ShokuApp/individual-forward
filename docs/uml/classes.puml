@@ -83,6 +83,7 @@ node "Types" {
     interface Dish {
         + id: string
         + name: string
+        + type: string
         + description: string
         + price: string
         + ingredients: Ingredient[]
