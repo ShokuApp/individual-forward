@@ -1,6 +1,6 @@
 import React from "react"
 import { View, StyleSheet, Image } from "react-native";
-import images from './index';
+import { icons } from '../../constants';
 
 
 type Props = {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 })
 
 export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
-  const icon = isCurrent ? images.tabBar[iconName].onSelected : images.tabBar[iconName].notSelected;
+  const icon = isCurrent ? icons.tabBar[iconName].onSelected : icons.tabBar[iconName].notSelected;
   return (
     <View
       style={styles.container}

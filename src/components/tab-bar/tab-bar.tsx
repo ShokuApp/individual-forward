@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { BottomMenuItem } from "./bottom-menu-item";
-import colors from "../../constant/colors";
+import { colors } from "../../constants/colors";
 
 const style = StyleSheet.create({
   tabContainer: {
