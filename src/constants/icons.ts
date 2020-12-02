@@ -1,15 +1,15 @@
 //  deepcode ignore no-any: Impossible to type
 export const icons: Record<string, any> = {
   tabBar: {
-    'chefHat': {
+    'mapScreen': {
       onSelected: require("../../assets/images/chef-hat_selected.png"),
       notSelected: require("../../assets/images/chef-hat.png")
     },
-    'recipeBook': {
+    'recipeScreen': {
       onSelected: require("../../assets/images/recipe-book_selected.png"),
       notSelected: require("../../assets/images/recipe-book.png")
     },
-    'profil': {
+    'profilScreen': {
       onSelected: require("../../assets/images/user_selected.png"),
       notSelected: require("../../assets/images/user.png")
     }

@@ -30,9 +30,9 @@ export const BottomTabNavigator = () => {
       <Tab.Navigator
         tabBar={(props: BottomTabBarProps) => <TabBar {...props} />}
       >
-        <Tab.Screen name="chefHat" component={MapScreen} />
-        <Tab.Screen name="recipeBook" component={RecipesScreen} />
-        <Tab.Screen name="profil" component={ProfilScreen} />
+        <Tab.Screen name="mapScreen" component={MapScreen} />
+        <Tab.Screen name="recipeScreen" component={RecipesScreen} />
+        <Tab.Screen name="profilScreen" component={ProfilScreen} />
       </Tab.Navigator>
       {useSafeAreaInsets().bottom > 0 && (
         <View
