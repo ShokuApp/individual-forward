@@ -24,11 +24,7 @@ export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
   const icon = isCurrent ? images.tabBar[iconName].onSelected : images.tabBar[iconName].notSelected;
   return (
     <View
-      style={{
-        height: "100%",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={styles.container}
     >
       <Image style={styles.logo} source={icon} />
     </View>
