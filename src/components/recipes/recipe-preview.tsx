@@ -5,13 +5,12 @@ import { Recipe } from "../../models";
 
 const styles = StyleSheet.create({
   card: {
-    shadowColor: "rgba(0,0,0, .4)",
-    shadowOffset: { height: 3, width: 3 },
-    shadowOpacity: 0.5,
-    shadowRadius: 2,
-    elevation: 2,
+    shadowColor: "black",
+    shadowOffset: { height: 6, width: 0 },
+    shadowOpacity: 0.4,
+    shadowRadius: 8,
+    elevation: 13,
     height: 196,
-    width: "45.87%",
     borderRadius: 10,
   },
   container: {
@@ -26,7 +25,8 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     marginBottom: 10,
     marginTop: 5,
-    fontSize: 20,
+    fontWeight: "bold",
+    fontSize: 15,
   },
   image: {
     width: "100%",
@@ -37,11 +37,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-  },
-
-  text: {
-    fontWeight: "bold",
-    fontSize: 20,
   },
   containerView: {
     position: "absolute",

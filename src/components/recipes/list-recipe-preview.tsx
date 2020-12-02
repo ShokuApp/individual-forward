@@ -14,9 +14,23 @@ type Props = {
   recipes: string[];
 };
 
+const styles = StyleSheet.create({
+  box: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-start",
+    flexWrap: "wrap",
+  },
+  child: {
+    flexBasis: "50%",
+    paddingHorizontal: 5,
+    paddingVertical: 8,
+  },
+});
+
 export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
   return (
-    <View>
+    <View style={styles.box}>
       {recipes.map((id) => {
         const recipe = new RecipeBloc(new RecipeRepository());
         recipe.add(new RecipeGetEvent(id));
@@ -27,7 +41,11 @@ export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
               if (!(state instanceof RecipeGetState)) {
                 return <Text>Loading</Text>;
               }
-              return <RecipePreview recipe={state.recipe} />;
+              return (
+                <View style={styles.child}>
+                  <RecipePreview recipe={state.recipe} />
+                </View>
+              );
             }}
           />
         );
