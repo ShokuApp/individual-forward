@@ -10,7 +10,7 @@ import { RecipesScreen } from "../../screens/recipes";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { View, StyleSheet } from "react-native";
 
-export const BottomMenu = () => {
+export const BottomTabNavigator = () => {
 
   const styles = StyleSheet.create({
     container: {

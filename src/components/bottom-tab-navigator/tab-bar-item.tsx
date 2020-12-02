@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const BottomMenuItem = ({ iconName, isCurrent }: Props) => {
+export const TabBarItem = ({ iconName, isCurrent }: Props) => {
   const icon = isCurrent ? icons.tabBar[iconName].onSelected : icons.tabBar[iconName].notSelected;
   return (
     <View

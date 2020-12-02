@@ -7,7 +7,7 @@ import {
   Animated
 } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
-import { BottomMenuItem } from "./bottom-menu-item";
+import { TabBarItem } from "./tab-bar-item";
 import { colors } from "../../constants/colors";
 
 const style = StyleSheet.create({
@@ -118,7 +118,7 @@ export const TabBar = ({
               style={{ flex: 1 }}
               key={index}
             >
-              <BottomMenuItem
+              <TabBarItem
                 iconName={label.toString()}
                 isCurrent={isFocused}
               />
