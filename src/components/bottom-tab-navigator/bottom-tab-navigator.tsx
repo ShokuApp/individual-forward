@@ -4,9 +4,9 @@ import {
   BottomTabBarProps,
 } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./tab-bar";
-import { ProfileScreen } from "../../screens/profile";
-import { MapScreen } from "../../screens/map";
-import { RecipesScreen } from "../../screens/recipes";
+import ProfileScreen from "../../screens/profile";
+import MapScreen from "../../screens/map";
+import RecipesScreen from "../../screens/recipes";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { View, StyleSheet } from "react-native";
 
