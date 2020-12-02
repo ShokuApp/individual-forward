@@ -1,6 +1,6 @@
 
 
-const images: Record<string | any, any> = {
+const images: Record<string, any> = {
   tabBar: {
     'chefHat': {
       onSelected: require("../../../assets/images/chef-hat_selected.png"),
