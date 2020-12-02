@@ -167,7 +167,7 @@ def restaurant(number, card_data):
             "name": "Restaurant " + str(number),
             "description": "A generic description",
             "image": "https://source.unsplash.com/random",
-            "average_rate": random.randint(0, 5),
+            "average_rate": str(random.randint(0, 6)),
             "average_price": str(random.randint(5, 30)) + "€",
             "location": str(random.randint(10, 999)) + ", " + str(random.randint(10, 999)),
             "phone": "01 02 03 04 05",
@@ -220,20 +220,20 @@ def restaurant_list(length, card_data):
     return data
 
 
-def recipe_ingredient(number):
+def recipe_ingredient(ingredient_data):
     data = {"id": str(uuid.uuid4()),
-            "name": "Recipe ingredient " + str(number),
-            "quantity": random.randint(1, 30) * 10,
+            "ingredient": random.choice(ingredient_data),
+            "quantity": str(random.randint(1, 30) * 10),
             "unity": random.choice(["mg", "g", "mL"])}
 
     return data
 
 
-def recipe_ingredient_list(length):
+def recipe_ingredient_list(length, ingredient_data):
     data = []
 
     for i in range(1, length + 1):
-        data.append(recipe_ingredient(i))
+        data.append(recipe_ingredient(ingredient_data))
 
     return data
 
@@ -243,17 +243,17 @@ def recipe(number, recipe_ingredient_data):
             "name": "Recipe " + str(number),
             "description": "A generic description",
             "image": "https://source.unsplash.com/random",
-            "average_time": random.randint(300, 4900),
-            "average_rate": random.randint(0, 5),
+            "average_time": str(random.randint(300, 4900)),
+            "average_rate": str(random.randint(0, 6)),
             "ingredients": [],
             "steps": []}
 
-    for i in range(1, random.randint(5, 15)):
+    for i in range(1, random.randint(5, 16)):
         elem = random.choice(recipe_ingredient_data)
         if elem["id"] not in data["ingredients"]:
             data["ingredients"].append(elem["id"])
 
-    for i in range(1, random.randint(3, 10)):
+    for i in range(1, random.randint(3, 11)):
         data["steps"].append({"name": "Step " + str(i), "description": "A generic description"})
 
     return data
@@ -290,12 +290,12 @@ def profile(pictogram_data, recipe_data, restaurant_data):
             "favorite_recipes": [],
             "favorite_restaurants": []}
 
-    for i in range(1, random.randint(0, 3)):
+    for i in range(1, random.randint(1, 4)):
         elem = random.choice(pictogram_data)
         if elem["id"] not in data["allergens"]:
             data["allergens"].append(elem["id"])
 
-    for i in range(1, random.randint(0, 1)):
+    for i in range(1, random.randint(0, 2)):
         elem = random.choice(pictogram_data)
         if elem["id"] not in data["diets"]:
             data["diets"].append(elem["id"])
@@ -346,7 +346,7 @@ def main():
     restaurant_data = restaurant_list(random.randint(5, 100), card_data)
     save_to_file(restaurant_data, "./data/restaurant/data.json")
 
-    recipe_ingredient_data = recipe_ingredient_list(random.randint(5, 100))
+    recipe_ingredient_data = recipe_ingredient_list(random.randint(5, 100), ingredient_data)
     save_to_file(recipe_ingredient_data, "./data/recipe-ingredient/data.json")
 
     recipe_data = recipe_list(random.randint(5, 100), recipe_ingredient_data)

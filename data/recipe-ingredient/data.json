@@ -1,224 +1,112 @@
 [
     {
-        "id": "c08b2a68-991e-4d8b-95f5-d49aae42e3b4",
-        "name": "Recipe ingredient 1",
-        "quantity": 80,
+        "id": "8287e154-daa4-444d-8eca-4d4155c724b2",
+        "ingredient": {
+            "id": "162fcc29-6a0c-4e71-b450-9d23715a5132",
+            "name": "Ingredient 42",
+            "image": "https://source.unsplash.com/random",
+            "allergens": [
+                "17cb1136-8161-4ee0-8ded-c1daa220b746",
+                "90d20f0f-bd33-41ed-8a4d-73b6cd7814eb",
+                "0812dfb9-acaa-4c44-8785-21b0838d0e59",
+                "302677fe-3a80-4239-b9fd-16cf6a8b4117"
+            ],
+            "diets": [
+                "06e1656f-fd4e-4498-83e4-aadcb575ce46"
+            ]
+        },
+        "quantity": "10",
         "unity": "mL"
     },
     {
-        "id": "c58d3fcc-cfa7-42b3-9934-cdab0fa1da5a",
-        "name": "Recipe ingredient 2",
-        "quantity": 210,
-        "unity": "g"
-    },
-    {
-        "id": "1d5ee18d-7e06-4a49-9f20-bc49a743a603",
-        "name": "Recipe ingredient 3",
-        "quantity": 40,
-        "unity": "g"
-    },
-    {
-        "id": "71c9daf7-6ed5-4a46-b0d2-13eafb06e872",
-        "name": "Recipe ingredient 4",
-        "quantity": 80,
-        "unity": "mL"
-    },
-    {
-        "id": "9b906a83-5467-481b-b91e-1787c1762a8e",
-        "name": "Recipe ingredient 5",
-        "quantity": 220,
-        "unity": "mL"
-    },
-    {
-        "id": "de2286b4-b00e-4d69-b67a-39e6ae90f89a",
-        "name": "Recipe ingredient 6",
-        "quantity": 150,
-        "unity": "g"
-    },
-    {
-        "id": "bb9af532-c319-463d-b29b-c1b893ad7337",
-        "name": "Recipe ingredient 7",
-        "quantity": 130,
-        "unity": "mL"
-    },
-    {
-        "id": "5c31baff-7579-48b5-aba6-aca51f7bc909",
-        "name": "Recipe ingredient 8",
-        "quantity": 260,
-        "unity": "g"
-    },
-    {
-        "id": "35a8fc62-d194-41ec-a63e-01e31014d3a9",
-        "name": "Recipe ingredient 9",
-        "quantity": 270,
-        "unity": "mL"
-    },
-    {
-        "id": "35598ca1-ab60-4efb-a592-de985e932b65",
-        "name": "Recipe ingredient 10",
-        "quantity": 140,
-        "unity": "g"
-    },
-    {
-        "id": "1c1032b2-0311-42b3-9552-4aa8cc6659a7",
-        "name": "Recipe ingredient 11",
-        "quantity": 90,
+        "id": "b3f13f2f-d2d4-4e15-8e06-5c9f822ec712",
+        "ingredient": {
+            "id": "6b412bdc-933f-4282-b093-6f3a00fa20ba",
+            "name": "Ingredient 84",
+            "image": "https://source.unsplash.com/random",
+            "allergens": [
+                "28e0b0c4-b877-4dc3-a0ed-e8c560f26893",
+                "06e1656f-fd4e-4498-83e4-aadcb575ce46",
+                "0812dfb9-acaa-4c44-8785-21b0838d0e59"
+            ],
+            "diets": [
+                "7e44b62c-3394-42af-bea5-e451bc3c9965",
+                "6d419f66-7577-4055-a0dd-e23617b58247"
+            ]
+        },
+        "quantity": "140",
         "unity": "mg"
     },
     {
-        "id": "99c497c4-3b36-4902-aec1-f0fb1ee5997c",
-        "name": "Recipe ingredient 12",
-        "quantity": 30,
+        "id": "3034ee5d-7072-4e40-8cbb-ed8aa4d6f1df",
+        "ingredient": {
+            "id": "9fa1f2ae-0fe4-4a88-b33f-ad6e87ba1afc",
+            "name": "Ingredient 87",
+            "image": "https://source.unsplash.com/random",
+            "allergens": [],
+            "diets": [
+                "93d41d26-f430-4eb5-b27b-f034507808b9",
+                "bd67e6d4-626e-4c29-9b75-ca2edcef1eff"
+            ]
+        },
+        "quantity": "160",
         "unity": "g"
     },
     {
-        "id": "0e6e7f1e-a3e0-4cf1-82c9-b63465c99989",
-        "name": "Recipe ingredient 13",
-        "quantity": 290,
-        "unity": "mg"
+        "id": "6ef34979-9123-4c30-8804-3b863c64c113",
+        "ingredient": {
+            "id": "162fcc29-6a0c-4e71-b450-9d23715a5132",
+            "name": "Ingredient 42",
+            "image": "https://source.unsplash.com/random",
+            "allergens": [
+                "17cb1136-8161-4ee0-8ded-c1daa220b746",
+                "90d20f0f-bd33-41ed-8a4d-73b6cd7814eb",
+                "0812dfb9-acaa-4c44-8785-21b0838d0e59",
+                "302677fe-3a80-4239-b9fd-16cf6a8b4117"
+            ],
+            "diets": [
+                "06e1656f-fd4e-4498-83e4-aadcb575ce46"
+            ]
+        },
+        "quantity": "270",
+        "unity": "g"
     },
     {
-        "id": "4f04a55c-8764-446a-bd60-cf7f532ed692",
-        "name": "Recipe ingredient 14",
-        "quantity": 130,
+        "id": "e848b471-f922-4d23-a427-668c47ce1629",
+        "ingredient": {
+            "id": "c02e347c-f03f-48d8-b351-a5a89d5b0944",
+            "name": "Ingredient 29",
+            "image": "https://source.unsplash.com/random",
+            "allergens": [
+                "72612009-b5b5-4afe-a646-ec1eed16feb8",
+                "3667229e-4aa2-4ae6-8200-d706190133e4",
+                "41367448-9931-46a1-b614-3e89a4dfac88",
+                "dd5c255c-640a-4b06-b40d-594713f20a0d"
+            ],
+            "diets": [
+                "93d41d26-f430-4eb5-b27b-f034507808b9",
+                "58d0910f-b370-4a92-8a94-6ad80000bbb6"
+            ]
+        },
+        "quantity": "120",
         "unity": "mL"
     },
     {
-        "id": "edebe899-2e9d-487b-a17b-ea544e6c4e88",
-        "name": "Recipe ingredient 15",
-        "quantity": 110,
-        "unity": "g"
-    },
-    {
-        "id": "30b0ee11-df38-46d1-bd40-ba764cd79c06",
-        "name": "Recipe ingredient 16",
-        "quantity": 290,
-        "unity": "mL"
-    },
-    {
-        "id": "c78a5f74-8a08-4937-ac4d-f6f3a6480ca2",
-        "name": "Recipe ingredient 17",
-        "quantity": 210,
-        "unity": "mg"
-    },
-    {
-        "id": "08a69e12-ae60-432f-a2f3-8d424733aa62",
-        "name": "Recipe ingredient 18",
-        "quantity": 40,
-        "unity": "mg"
-    },
-    {
-        "id": "ac7551bb-f0fa-42c2-adda-92e0ece72143",
-        "name": "Recipe ingredient 19",
-        "quantity": 70,
-        "unity": "mL"
-    },
-    {
-        "id": "0a07a9b3-de55-4e06-9899-2da4b168149b",
-        "name": "Recipe ingredient 20",
-        "quantity": 210,
-        "unity": "mL"
-    },
-    {
-        "id": "29d31866-d148-4ef8-9fae-075708a8de8d",
-        "name": "Recipe ingredient 21",
-        "quantity": 250,
-        "unity": "g"
-    },
-    {
-        "id": "1d5dd201-e504-4a38-910a-664d91d49ef7",
-        "name": "Recipe ingredient 22",
-        "quantity": 110,
-        "unity": "mL"
-    },
-    {
-        "id": "f7229e71-e8ab-413c-bdf7-871dc63188f4",
-        "name": "Recipe ingredient 23",
-        "quantity": 290,
-        "unity": "mL"
-    },
-    {
-        "id": "a4d032d0-5310-400b-82cb-32e56102496a",
-        "name": "Recipe ingredient 24",
-        "quantity": 160,
-        "unity": "mg"
-    },
-    {
-        "id": "dc7cf3b0-f836-4497-8b65-08335355a938",
-        "name": "Recipe ingredient 25",
-        "quantity": 260,
-        "unity": "mg"
-    },
-    {
-        "id": "4e358e54-c3b4-4b9f-a407-48035ba04097",
-        "name": "Recipe ingredient 26",
-        "quantity": 130,
-        "unity": "mL"
-    },
-    {
-        "id": "c13679bf-83ea-420b-b7ac-1295847d93e5",
-        "name": "Recipe ingredient 27",
-        "quantity": 220,
-        "unity": "mg"
-    },
-    {
-        "id": "d7f4fe70-bf2d-4ce3-8c34-1a80f705e1cc",
-        "name": "Recipe ingredient 28",
-        "quantity": 180,
-        "unity": "mg"
-    },
-    {
-        "id": "44edd3e3-2e95-4fd6-bbb6-6c67e6971681",
-        "name": "Recipe ingredient 29",
-        "quantity": 120,
-        "unity": "g"
-    },
-    {
-        "id": "d27cb56e-dc43-433f-8363-012396f03c8b",
-        "name": "Recipe ingredient 30",
-        "quantity": 200,
-        "unity": "g"
-    },
-    {
-        "id": "ba334667-82e3-45e7-b4dd-46661d919e96",
-        "name": "Recipe ingredient 31",
-        "quantity": 120,
-        "unity": "g"
-    },
-    {
-        "id": "31d3f00d-04d2-482f-b9d1-1a7a3a990500",
-        "name": "Recipe ingredient 32",
-        "quantity": 10,
-        "unity": "g"
-    },
-    {
-        "id": "41a6df8c-3853-4625-ad14-2c14022cde75",
-        "name": "Recipe ingredient 33",
-        "quantity": 100,
-        "unity": "mg"
-    },
-    {
-        "id": "5eed783e-7753-4af3-81ea-4af93ef681b3",
-        "name": "Recipe ingredient 34",
-        "quantity": 180,
-        "unity": "g"
-    },
-    {
-        "id": "405635d6-e2ae-402d-b629-7eb58c72c340",
-        "name": "Recipe ingredient 35",
-        "quantity": 40,
-        "unity": "mg"
-    },
-    {
-        "id": "0cf0a7c4-57d6-4e2a-86ce-b32f94e97a34",
-        "name": "Recipe ingredient 36",
-        "quantity": 150,
-        "unity": "mg"
-    },
-    {
-        "id": "34a5a48a-3ba0-471e-9577-791f45db1bb8",
-        "name": "Recipe ingredient 37",
-        "quantity": 50,
+        "id": "5f073432-628d-40cd-b10e-e2d16b7cc6c4",
+        "ingredient": {
+            "id": "836ab2a5-6c7a-4fd6-9ac3-fd99a8ef49c0",
+            "name": "Ingredient 90",
+            "image": "https://source.unsplash.com/random",
+            "allergens": [],
+            "diets": [
+                "b6f5bd1e-4395-4e57-9dcf-91463f32ea99",
+                "88b241c2-b656-42b0-866a-b6f5e88e2a7d",
+                "6d419f66-7577-4055-a0dd-e23617b58247",
+                "baf55fe9-abb2-4b06-b9b9-fcd6ab624949",
+                "c1c29c5f-26c0-4408-b0f2-dd01a608ccd0"
+            ]
+        },
+        "quantity": "140",
         "unity": "mg"
     }
 ]
