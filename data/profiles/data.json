@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "email": "john.doe@email.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "allergens_ids": ["1"],
+    "diets_ids": ["1"],
+    "favorite_recipes_ids": ["1"],
+    "favorite_restaurants_ids": ["1"]
+  }
+]

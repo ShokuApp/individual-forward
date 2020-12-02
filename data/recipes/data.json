@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1",
+    "name": "Name",
+    "description": "Hello, World!",
+    "image": "https://images.fr/name",
+    "average_time": "5",
+    "average_rate": "4.5",
+    "steps": [
+      {
+        "name": "1",
+        "description": "Hello, World!"
+      }
+    ],
+    "ingredients_ids": [
+      "1"
+    ]
+  }
+]
