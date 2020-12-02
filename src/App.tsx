@@ -4,7 +4,7 @@ import { ListRecipePreview } from "./components/recipes/list-recipe-preview";
 import Data from "../data/recipes/data.json";
 
 const getRecipeIds: () => string[] = () => {
-  let ids: string[] = [];
+  const ids: string[] = [];
   Data.map((recipe) => {
     ids.push(recipe.id);
   });

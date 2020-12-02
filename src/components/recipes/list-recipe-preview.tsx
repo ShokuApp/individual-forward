@@ -36,6 +36,7 @@ export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
         recipe.add(new RecipeGetEvent(id));
         return (
           <BlocBuilder
+            key={id}
             bloc={recipe}
             builder={(state: RecipeState) => {
               if (!(state instanceof RecipeGetState)) {
