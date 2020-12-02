@@ -6,14 +6,17 @@ import {
   StyleSheet,
   ImageBackground,
   TouchableOpacity,
+  Dimensions,
 } from "react-native";
 import { Card, ListItem, Button, Icon } from "react-native-elements";
 import { Restaurant } from "../../models";
 
+const { width, height } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
   container: {
-    height: "32,75%",
-    width: "83,73%",
+    height: (32.76 * height) / 100,
+    width: (83.73 * width) / 100,
     shadowColor: "rgba(0,0,0, .4)",
     shadowOffset: { height: 3, width: 3 },
     shadowOpacity: 0.5,
@@ -33,25 +36,30 @@ const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    height: "50%",
+    height: "60%",
+  },
+  iconRate: {
+    paddingRight: 5,
+    paddingLeft: 5,
+    paddingTop: 5,
   },
   iconText: {
-    marginRight: 5,
-    marginLeft: 5,
-    marginTop: 5,
+    paddingRight: 5,
+    paddingLeft: 5,
+    paddingTop: 10,
   },
   iconPrice: {
-    marginTop: 2,
+    paddingTop: 2,
   },
   iconLocation: {
-    marginRight: 2,
-    marginLeft: 8,
-    marginTop: 5,
+    paddingRight: 2,
+    paddingLeft: 8,
+    paddingTop: 5,
   },
   iconRestaurant: {
-    marginRight: 7,
-    marginLeft: 5,
-    marginTop: 5,
+    paddingRight: 7,
+    paddingLeft: 5,
+    paddingTop: 5,
   },
   view: {
     flexDirection: "row",
@@ -59,33 +67,33 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   viewPrice: {
-    marginRight: 8,
-    marginLeft: 5,
-    marginTop: 10,
+    paddingRight: 8,
+    paddingLeft: 5,
+    paddingTop: 10,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
   },
   paragraph: {
-    marginTop: 10,
+    paddinfTop: 10,
     paddingLeft: 5,
     marginBottom: 0,
     fontSize: 10,
   },
   adress: {
-    marginTop: 0,
+    paddingTop: 0,
     paddingLeft: 5,
     marginBottom: 0,
     fontSize: 10,
   },
   openingTime: {
-    marginTop: 0,
+    paddingTop: 0,
     paddingLeft: 0,
     marginBottom: 0,
     fontSize: 10,
   },
   textRight: {
-    marginTop: 10,
+    paddingTop: 10,
     paddingLeft: 5,
     fontSize: 10,
     flexDirection: "row",
@@ -101,7 +109,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textMark: {
-    marginTop: 5,
+    paddingTop: 5,
     fontSize: 10,
     color: "#2196F3",
     flexDirection: "row",
@@ -156,6 +164,7 @@ const getPriceRange = (price: number) => {
   for (let i = 0; i < numberIcons; i++) {
     icons.push(
       <Icon
+        key={i}
         name="euro-symbol"
         type="material-icons"
         color="#000000"
@@ -172,7 +181,7 @@ type Props = {
 };
 
 export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
-  let imageRestaurant = { uri: restaurant.image };
+  const imageRestaurant = { uri: restaurant.image };
   return (
     <TouchableOpacity
       style={styles.container}
@@ -190,7 +199,7 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
                 type="font-awesome"
                 color="#2196F3"
                 size={20}
-                style={styles.iconText}
+                style={styles.iconRate}
               />
             </View>
           </View>
