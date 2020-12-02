@@ -1,5 +1,4 @@
-
-
+//  deepcode ignore no-any: Impossible to type
 const images: Record<string, any> = {
   tabBar: {
     'chefHat': {
