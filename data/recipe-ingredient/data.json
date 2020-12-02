@@ -1,112 +1,86 @@
 [
     {
-        "id": "8287e154-daa4-444d-8eca-4d4155c724b2",
-        "ingredient": {
-            "id": "162fcc29-6a0c-4e71-b450-9d23715a5132",
-            "name": "Ingredient 42",
-            "image": "https://source.unsplash.com/random",
-            "allergens": [
-                "17cb1136-8161-4ee0-8ded-c1daa220b746",
-                "90d20f0f-bd33-41ed-8a4d-73b6cd7814eb",
-                "0812dfb9-acaa-4c44-8785-21b0838d0e59",
-                "302677fe-3a80-4239-b9fd-16cf6a8b4117"
-            ],
-            "diets": [
-                "06e1656f-fd4e-4498-83e4-aadcb575ce46"
-            ]
-        },
-        "quantity": "10",
-        "unity": "mL"
-    },
-    {
-        "id": "b3f13f2f-d2d4-4e15-8e06-5c9f822ec712",
-        "ingredient": {
-            "id": "6b412bdc-933f-4282-b093-6f3a00fa20ba",
-            "name": "Ingredient 84",
-            "image": "https://source.unsplash.com/random",
-            "allergens": [
-                "28e0b0c4-b877-4dc3-a0ed-e8c560f26893",
-                "06e1656f-fd4e-4498-83e4-aadcb575ce46",
-                "0812dfb9-acaa-4c44-8785-21b0838d0e59"
-            ],
-            "diets": [
-                "7e44b62c-3394-42af-bea5-e451bc3c9965",
-                "6d419f66-7577-4055-a0dd-e23617b58247"
-            ]
-        },
-        "quantity": "140",
+        "id": "55ea6009-f50c-4f4d-ba54-9685523c702c",
+        "ingredient": "15e978ab-3131-4430-965e-e1ceb408d8e0",
+        "quantity": "290",
         "unity": "mg"
     },
     {
-        "id": "3034ee5d-7072-4e40-8cbb-ed8aa4d6f1df",
-        "ingredient": {
-            "id": "9fa1f2ae-0fe4-4a88-b33f-ad6e87ba1afc",
-            "name": "Ingredient 87",
-            "image": "https://source.unsplash.com/random",
-            "allergens": [],
-            "diets": [
-                "93d41d26-f430-4eb5-b27b-f034507808b9",
-                "bd67e6d4-626e-4c29-9b75-ca2edcef1eff"
-            ]
-        },
-        "quantity": "160",
-        "unity": "g"
-    },
-    {
-        "id": "6ef34979-9123-4c30-8804-3b863c64c113",
-        "ingredient": {
-            "id": "162fcc29-6a0c-4e71-b450-9d23715a5132",
-            "name": "Ingredient 42",
-            "image": "https://source.unsplash.com/random",
-            "allergens": [
-                "17cb1136-8161-4ee0-8ded-c1daa220b746",
-                "90d20f0f-bd33-41ed-8a4d-73b6cd7814eb",
-                "0812dfb9-acaa-4c44-8785-21b0838d0e59",
-                "302677fe-3a80-4239-b9fd-16cf6a8b4117"
-            ],
-            "diets": [
-                "06e1656f-fd4e-4498-83e4-aadcb575ce46"
-            ]
-        },
-        "quantity": "270",
-        "unity": "g"
-    },
-    {
-        "id": "e848b471-f922-4d23-a427-668c47ce1629",
-        "ingredient": {
-            "id": "c02e347c-f03f-48d8-b351-a5a89d5b0944",
-            "name": "Ingredient 29",
-            "image": "https://source.unsplash.com/random",
-            "allergens": [
-                "72612009-b5b5-4afe-a646-ec1eed16feb8",
-                "3667229e-4aa2-4ae6-8200-d706190133e4",
-                "41367448-9931-46a1-b614-3e89a4dfac88",
-                "dd5c255c-640a-4b06-b40d-594713f20a0d"
-            ],
-            "diets": [
-                "93d41d26-f430-4eb5-b27b-f034507808b9",
-                "58d0910f-b370-4a92-8a94-6ad80000bbb6"
-            ]
-        },
-        "quantity": "120",
+        "id": "d5f0c85c-0906-4c1e-b02f-1246f1159799",
+        "ingredient": "4ef4b258-db63-43ae-98ff-2d66414e0914",
+        "quantity": "290",
         "unity": "mL"
     },
     {
-        "id": "5f073432-628d-40cd-b10e-e2d16b7cc6c4",
-        "ingredient": {
-            "id": "836ab2a5-6c7a-4fd6-9ac3-fd99a8ef49c0",
-            "name": "Ingredient 90",
-            "image": "https://source.unsplash.com/random",
-            "allergens": [],
-            "diets": [
-                "b6f5bd1e-4395-4e57-9dcf-91463f32ea99",
-                "88b241c2-b656-42b0-866a-b6f5e88e2a7d",
-                "6d419f66-7577-4055-a0dd-e23617b58247",
-                "baf55fe9-abb2-4b06-b9b9-fcd6ab624949",
-                "c1c29c5f-26c0-4408-b0f2-dd01a608ccd0"
-            ]
-        },
-        "quantity": "140",
+        "id": "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
+        "ingredient": "15e978ab-3131-4430-965e-e1ceb408d8e0",
+        "quantity": "230",
+        "unity": "g"
+    },
+    {
+        "id": "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
+        "ingredient": "b9f7978b-4755-4ede-9ad7-67733eb1d849",
+        "quantity": "40",
+        "unity": "mg"
+    },
+    {
+        "id": "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
+        "ingredient": "f20e7141-2d1c-43eb-9bb5-1e27863096ca",
+        "quantity": "210",
+        "unity": "mL"
+    },
+    {
+        "id": "32706eae-6aa1-49f8-9639-047a5d9acd05",
+        "ingredient": "02948828-891f-4680-aed5-10f7ccbe35be",
+        "quantity": "190",
+        "unity": "g"
+    },
+    {
+        "id": "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
+        "ingredient": "02948828-891f-4680-aed5-10f7ccbe35be",
+        "quantity": "250",
+        "unity": "g"
+    },
+    {
+        "id": "6a7b7497-9797-4471-9cb4-97858dc297fd",
+        "ingredient": "15e978ab-3131-4430-965e-e1ceb408d8e0",
+        "quantity": "200",
+        "unity": "g"
+    },
+    {
+        "id": "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
+        "ingredient": "15e978ab-3131-4430-965e-e1ceb408d8e0",
+        "quantity": "220",
+        "unity": "mL"
+    },
+    {
+        "id": "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
+        "ingredient": "23f9d87d-daed-41e0-9a11-0607977e4ed4",
+        "quantity": "220",
+        "unity": "mg"
+    },
+    {
+        "id": "38ca6090-95df-42b5-8f63-8c27c78882b1",
+        "ingredient": "b9f7978b-4755-4ede-9ad7-67733eb1d849",
+        "quantity": "30",
+        "unity": "g"
+    },
+    {
+        "id": "80cffe34-c38d-422a-acc7-14e1a993e64d",
+        "ingredient": "b9f7978b-4755-4ede-9ad7-67733eb1d849",
+        "quantity": "10",
+        "unity": "mg"
+    },
+    {
+        "id": "3a24a348-582d-4114-9665-061f1a6c283e",
+        "ingredient": "cc2a9246-c328-4773-aeae-e45835e8b835",
+        "quantity": "150",
+        "unity": "g"
+    },
+    {
+        "id": "018a7ce3-f739-4abb-88d7-56175f58bf18",
+        "ingredient": "cc2a9246-c328-4773-aeae-e45835e8b835",
+        "quantity": "100",
         "unity": "mg"
     }
 ]

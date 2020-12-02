@@ -221,7 +221,7 @@ def restaurant_list(length, card_data):
 
 def recipe_ingredient(ingredient_data):
     data = {"id": str(uuid.uuid4()),
-            "ingredient": random.choice(ingredient_data),
+            "ingredient": random.choice(ingredient_data)["id"],
             "quantity": str(random.randint(1, 30) * 10),
             "unity": random.choice(["mg", "g", "mL"])}
 
