@@ -1,0 +1,124 @@
+[
+    {
+        "id": "231f147d-c416-419f-8f17-6881a12c7551",
+        "name": "Ingredient 1",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "7979a15e-31d8-4646-8722-c84c62dbf22f"
+        ],
+        "diets": [
+            "e164079b-d674-48fd-aa7d-7f891d228c33",
+            "4e41ba4c-9013-4126-a9bf-06a50802452f",
+            "8a5a91e3-3826-49f2-a409-2edd6a4aa7b5",
+            "dd68a4eb-f527-451c-a6c3-6e7168c69427"
+        ]
+    },
+    {
+        "id": "15e978ab-3131-4430-965e-e1ceb408d8e0",
+        "name": "Ingredient 2",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "9fe27ace-4f0c-4527-8f95-d4cbd7ef378c",
+            "84d3f445-58e3-4b03-ac84-bfa519f88683",
+            "7979a15e-31d8-4646-8722-c84c62dbf22f"
+        ],
+        "diets": [
+            "8c8760cd-d615-4105-96b6-c7b8661cf32a",
+            "4050813a-8a27-4153-9bda-723470578341"
+        ]
+    },
+    {
+        "id": "02948828-891f-4680-aed5-10f7ccbe35be",
+        "name": "Ingredient 3",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "dd68a4eb-f527-451c-a6c3-6e7168c69427"
+        ],
+        "diets": [
+            "9cec8fed-1222-45f6-ac65-7c6eabf92523",
+            "6437251c-e4bf-41a6-9a6a-c553aff0ec37",
+            "2d80427b-3a1e-46ff-a844-5098d1a916c2",
+            "91272e3e-3da6-4cc0-828f-d799d0779777"
+        ]
+    },
+    {
+        "id": "f20e7141-2d1c-43eb-9bb5-1e27863096ca",
+        "name": "Ingredient 4",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "b80af16d-90c0-4d7a-ae73-5b6c1846efa8",
+            "774c6119-c23e-49cf-a379-6f99f972039d",
+            "6437251c-e4bf-41a6-9a6a-c553aff0ec37",
+            "8b5c4221-df16-49d8-9d71-9a4d8c45d6c9"
+        ],
+        "diets": [
+            "cbea9067-9bac-478a-a223-b88dd141e777",
+            "2a88d255-d503-404c-83f6-5282d4dc0d8f",
+            "f2b81329-452a-461c-b268-5d2a3595579c",
+            "b80af16d-90c0-4d7a-ae73-5b6c1846efa8"
+        ]
+    },
+    {
+        "id": "846dfa52-11e1-465a-bfa5-dc51cd5bc24d",
+        "name": "Ingredient 5",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "9091b320-aa43-4747-8dbd-721868ea129e"
+        ],
+        "diets": [
+            "8401f9e8-8591-4079-886d-50a710d4c020",
+            "e164079b-d674-48fd-aa7d-7f891d228c33"
+        ]
+    },
+    {
+        "id": "23f9d87d-daed-41e0-9a11-0607977e4ed4",
+        "name": "Ingredient 6",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "b80af16d-90c0-4d7a-ae73-5b6c1846efa8",
+            "9cec8fed-1222-45f6-ac65-7c6eabf92523"
+        ],
+        "diets": [
+            "8c8760cd-d615-4105-96b6-c7b8661cf32a",
+            "cbea9067-9bac-478a-a223-b88dd141e777",
+            "91272e3e-3da6-4cc0-828f-d799d0779777"
+        ]
+    },
+    {
+        "id": "b9f7978b-4755-4ede-9ad7-67733eb1d849",
+        "name": "Ingredient 7",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [],
+        "diets": [
+            "dd68a4eb-f527-451c-a6c3-6e7168c69427",
+            "2d80427b-3a1e-46ff-a844-5098d1a916c2",
+            "d5198da3-22b8-4a5f-bc8a-5be263129162",
+            "aa39013c-0e61-4267-bc3c-dd165b546112"
+        ]
+    },
+    {
+        "id": "4ef4b258-db63-43ae-98ff-2d66414e0914",
+        "name": "Ingredient 8",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "b80af16d-90c0-4d7a-ae73-5b6c1846efa8",
+            "9091b320-aa43-4747-8dbd-721868ea129e",
+            "57c01742-b08d-483d-b4a5-2828595065b6"
+        ],
+        "diets": [
+            "8c8760cd-d615-4105-96b6-c7b8661cf32a",
+            "3d3d2c53-a38f-40c2-904e-9faf6bb2941c",
+            "2a88d255-d503-404c-83f6-5282d4dc0d8f",
+            "f2b81329-452a-461c-b268-5d2a3595579c"
+        ]
+    },
+    {
+        "id": "cc2a9246-c328-4773-aeae-e45835e8b835",
+        "name": "Ingredient 9",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [],
+        "diets": [
+            "78bc8486-78e3-4464-8529-344eb26a29ba"
+        ]
+    }
+]
