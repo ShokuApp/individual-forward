@@ -1,0 +1,649 @@
+[
+    {
+        "id": "8b1902f2-bf98-43d8-972d-f31656280089",
+        "name": "Restaurant 1",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 4,
+        "average_price": "18€",
+        "location": "97, 961",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [],
+            [],
+            [
+                {
+                    "from": "02:58",
+                    "to": "04:04"
+                }
+            ],
+            [
+                {
+                    "from": "11:28",
+                    "to": "23:39"
+                }
+            ],
+            [
+                {
+                    "from": "03:46",
+                    "to": "08:40"
+                }
+            ],
+            [
+                {
+                    "from": "02:56",
+                    "to": "20:30"
+                }
+            ],
+            [
+                {
+                    "from": "18:48",
+                    "to": "19:08"
+                }
+            ]
+        ],
+        "card": "fb56509f-28ca-40fd-8781-6a9aeac8536a"
+    },
+    {
+        "id": "9a58117f-39ed-4eb2-826d-ff0fe6d648b0",
+        "name": "Restaurant 2",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 5,
+        "average_price": "22€",
+        "location": "275, 562",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "09:33",
+                    "to": "15:49"
+                }
+            ],
+            [
+                {
+                    "from": "08:54",
+                    "to": "16:26"
+                }
+            ],
+            [
+                {
+                    "from": "00:46",
+                    "to": "13:11"
+                }
+            ],
+            [
+                {
+                    "from": "20:49",
+                    "to": "21:30"
+                }
+            ],
+            [
+                {
+                    "from": "03:08",
+                    "to": "12:13"
+                }
+            ],
+            [
+                {
+                    "from": "15:22",
+                    "to": "20:09"
+                }
+            ],
+            [
+                {
+                    "from": "05:21",
+                    "to": "15:12"
+                }
+            ]
+        ],
+        "card": "26450679-bf22-4959-bef5-b64243e788ea"
+    },
+    {
+        "id": "e974f1b2-37a8-457d-9dc3-7fdcabee88bd",
+        "name": "Restaurant 3",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 5,
+        "average_price": "17€",
+        "location": "411, 176",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "11:06",
+                    "to": "18:22"
+                }
+            ],
+            [
+                {
+                    "from": "05:36",
+                    "to": "22:41"
+                }
+            ],
+            [
+                {
+                    "from": "11:52",
+                    "to": "18:56"
+                }
+            ],
+            [
+                {
+                    "from": "03:19",
+                    "to": "12:38"
+                }
+            ],
+            [
+                {
+                    "from": "05:21",
+                    "to": "05:49"
+                }
+            ],
+            [
+                {
+                    "from": "12:04",
+                    "to": "15:44"
+                }
+            ],
+            [
+                {
+                    "from": "12:08",
+                    "to": "18:53"
+                }
+            ]
+        ],
+        "card": "8008410a-96d6-4a3b-9252-2fd7a21e63d4"
+    },
+    {
+        "id": "2495e207-d180-4455-9534-36a1796a1613",
+        "name": "Restaurant 4",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 0,
+        "average_price": "28€",
+        "location": "359, 484",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "01:30",
+                    "to": "04:53"
+                }
+            ],
+            [
+                {
+                    "from": "12:05",
+                    "to": "18:10"
+                }
+            ],
+            [
+                {
+                    "from": "06:23",
+                    "to": "09:30"
+                }
+            ],
+            [
+                {
+                    "from": "13:06",
+                    "to": "20:19"
+                }
+            ],
+            [
+                {
+                    "from": "02:35",
+                    "to": "19:08"
+                }
+            ],
+            [
+                {
+                    "from": "05:21",
+                    "to": "06:59"
+                }
+            ],
+            [
+                {
+                    "from": "09:43",
+                    "to": "17:44"
+                }
+            ]
+        ],
+        "card": "fb56509f-28ca-40fd-8781-6a9aeac8536a"
+    },
+    {
+        "id": "bf0b3f87-51f3-4df4-b133-fdca71249555",
+        "name": "Restaurant 5",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 1,
+        "average_price": "24€",
+        "location": "920, 319",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "07:13",
+                    "to": "18:12"
+                }
+            ],
+            [
+                {
+                    "from": "20:47",
+                    "to": "21:22"
+                }
+            ],
+            [
+                {
+                    "from": "09:11",
+                    "to": "23:14"
+                }
+            ],
+            [
+                {
+                    "from": "03:09",
+                    "to": "15:32"
+                }
+            ],
+            [
+                {
+                    "from": "05:37",
+                    "to": "12:44"
+                }
+            ],
+            [
+                {
+                    "from": "03:01",
+                    "to": "21:01"
+                }
+            ],
+            [
+                {
+                    "from": "09:10",
+                    "to": "21:52"
+                }
+            ]
+        ],
+        "card": "30c4ac43-bb9f-4ad6-9fbb-f70b5f93a8b4"
+    },
+    {
+        "id": "e7191af8-f3f8-48de-b81b-2a7f9787b991",
+        "name": "Restaurant 6",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 3,
+        "average_price": "29€",
+        "location": "203, 413",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "17:02",
+                    "to": "19:55"
+                }
+            ],
+            [
+                {
+                    "from": "13:34",
+                    "to": "17:08"
+                }
+            ],
+            [
+                {
+                    "from": "05:08",
+                    "to": "12:31"
+                }
+            ],
+            [
+                {
+                    "from": "05:56",
+                    "to": "07:43"
+                }
+            ],
+            [
+                {
+                    "from": "20:24",
+                    "to": "22:17"
+                }
+            ],
+            [],
+            [
+                {
+                    "from": "07:27",
+                    "to": "12:26"
+                }
+            ]
+        ],
+        "card": "30c4ac43-bb9f-4ad6-9fbb-f70b5f93a8b4"
+    },
+    {
+        "id": "6b83386c-272f-4edc-b59e-f420cab424f3",
+        "name": "Restaurant 7",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 3,
+        "average_price": "24€",
+        "location": "158, 246",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "11:17",
+                    "to": "23:01"
+                }
+            ],
+            [
+                {
+                    "from": "09:07",
+                    "to": "17:10"
+                }
+            ],
+            [
+                {
+                    "from": "02:30",
+                    "to": "21:25"
+                }
+            ],
+            [
+                {
+                    "from": "11:34",
+                    "to": "17:28"
+                }
+            ],
+            [
+                {
+                    "from": "04:36",
+                    "to": "07:54"
+                }
+            ],
+            [
+                {
+                    "from": "15:01",
+                    "to": "19:41"
+                }
+            ],
+            [
+                {
+                    "from": "08:40",
+                    "to": "21:47"
+                }
+            ]
+        ],
+        "card": "2b9bf487-e518-4813-80bd-a79f4ab8d00e"
+    },
+    {
+        "id": "c7dab175-6dc4-40fc-be61-6d3571e65ac2",
+        "name": "Restaurant 8",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 3,
+        "average_price": "11€",
+        "location": "111, 10",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "09:42",
+                    "to": "18:05"
+                }
+            ],
+            [
+                {
+                    "from": "18:03",
+                    "to": "18:13"
+                }
+            ],
+            [
+                {
+                    "from": "08:17",
+                    "to": "23:44"
+                }
+            ],
+            [
+                {
+                    "from": "18:22",
+                    "to": "23:40"
+                }
+            ],
+            [
+                {
+                    "from": "03:26",
+                    "to": "08:23"
+                }
+            ],
+            [
+                {
+                    "from": "19:07",
+                    "to": "22:07"
+                }
+            ],
+            [
+                {
+                    "from": "07:58",
+                    "to": "14:04"
+                }
+            ]
+        ],
+        "card": "05f5627c-1f6e-47dd-95de-0ad40b7f56fc"
+    },
+    {
+        "id": "0bca8525-6296-4af4-8901-2a2c41d8ae39",
+        "name": "Restaurant 9",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 1,
+        "average_price": "11€",
+        "location": "482, 461",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "01:31",
+                    "to": "14:36"
+                }
+            ],
+            [
+                {
+                    "from": "13:19",
+                    "to": "13:44"
+                }
+            ],
+            [
+                {
+                    "from": "00:55",
+                    "to": "23:58"
+                }
+            ],
+            [
+                {
+                    "from": "13:25",
+                    "to": "15:23"
+                }
+            ],
+            [
+                {
+                    "from": "01:10",
+                    "to": "14:34"
+                }
+            ],
+            [
+                {
+                    "from": "08:33",
+                    "to": "20:52"
+                }
+            ],
+            [
+                {
+                    "from": "03:53",
+                    "to": "04:03"
+                }
+            ]
+        ],
+        "card": "2b9bf487-e518-4813-80bd-a79f4ab8d00e"
+    },
+    {
+        "id": "4a5cadfd-012d-400f-b299-d42e72a6ccf8",
+        "name": "Restaurant 10",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 0,
+        "average_price": "20€",
+        "location": "714, 134",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "20:53",
+                    "to": "23:44"
+                }
+            ],
+            [
+                {
+                    "from": "03:50",
+                    "to": "20:29"
+                }
+            ],
+            [],
+            [
+                {
+                    "from": "07:40",
+                    "to": "08:10"
+                }
+            ],
+            [
+                {
+                    "from": "03:59",
+                    "to": "05:44"
+                }
+            ],
+            [
+                {
+                    "from": "01:47",
+                    "to": "10:31"
+                }
+            ],
+            [
+                {
+                    "from": "02:15",
+                    "to": "06:24"
+                }
+            ]
+        ],
+        "card": "05f5627c-1f6e-47dd-95de-0ad40b7f56fc"
+    },
+    {
+        "id": "0fbb0098-598b-4a57-bbcb-2ffd6a57ec64",
+        "name": "Restaurant 11",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 0,
+        "average_price": "21€",
+        "location": "350, 205",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "03:31",
+                    "to": "23:24"
+                }
+            ],
+            [
+                {
+                    "from": "01:38",
+                    "to": "23:47"
+                }
+            ],
+            [
+                {
+                    "from": "03:04",
+                    "to": "20:46"
+                }
+            ],
+            [],
+            [
+                {
+                    "from": "06:19",
+                    "to": "23:56"
+                }
+            ],
+            [
+                {
+                    "from": "14:29",
+                    "to": "20:17"
+                }
+            ],
+            [
+                {
+                    "from": "04:37",
+                    "to": "11:05"
+                }
+            ]
+        ],
+        "card": "55940240-7d12-430f-ab7b-35e38217efbc"
+    },
+    {
+        "id": "013b4e84-0082-4c04-83bc-6f5036317479",
+        "name": "Restaurant 12",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_rate": 1,
+        "average_price": "19€",
+        "location": "870, 83",
+        "phone": "01 02 03 04 05",
+        "url": "https://example.com",
+        "opening_time": [
+            [
+                {
+                    "from": "08:45",
+                    "to": "10:40"
+                }
+            ],
+            [
+                {
+                    "from": "08:45",
+                    "to": "17:13"
+                }
+            ],
+            [
+                {
+                    "from": "00:24",
+                    "to": "02:23"
+                }
+            ],
+            [
+                {
+                    "from": "07:42",
+                    "to": "14:02"
+                }
+            ],
+            [
+                {
+                    "from": "00:41",
+                    "to": "07:25"
+                }
+            ],
+            [
+                {
+                    "from": "14:14",
+                    "to": "16:00"
+                }
+            ],
+            [
+                {
+                    "from": "13:06",
+                    "to": "13:07"
+                }
+            ]
+        ],
+        "card": "4d53338a-207b-4e0b-9a4f-ae1017432329"
+    }
+]
