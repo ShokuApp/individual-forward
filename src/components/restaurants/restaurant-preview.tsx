@@ -9,7 +9,7 @@ import {
   Dimensions,
 } from "react-native";
 import { Card, ListItem, Button, Icon } from "react-native-elements";
-import { Restaurant } from "../../models";
+import { Restaurant, TimeRange } from "../../models";
 
 const { width, height } = Dimensions.get("window");
 
@@ -126,9 +126,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const getOpeningTime = (dataOpeningTime: any) => {
-  var now = new Date();
-  var date = now.getDate();
+const getOpeningTime = (dataOpeningTime: TimeRange[][]) => {
+  const now = new Date();
+  const date = now.getDate();
   if (dataOpeningTime[date].length === 0) {
     return <Text style={styles.textRight}>Fermé</Text>;
   } else if (dataOpeningTime[date].length === 1) {
@@ -141,10 +141,10 @@ const getOpeningTime = (dataOpeningTime: any) => {
     return (
       <View style={styles.paragraph}>
         <Text style={styles.openingTime}>
-          {dataOpeningTime[0][0].from + " - " + dataOpeningTime[0][0].to}
+          {dataOpeningTime[date][0].from + " - " + dataOpeningTime[date][0].to}
         </Text>
         <Text style={styles.openingTime}>
-          {dataOpeningTime[0][1].from + " - " + dataOpeningTime[0][1].to}
+          {dataOpeningTime[date][1].from + " - " + dataOpeningTime[date][1].to}
         </Text>
       </View>
     );

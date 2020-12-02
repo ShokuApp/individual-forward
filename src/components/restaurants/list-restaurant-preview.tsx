@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   restaurantPreviewContainer: {
-    width: width,
+    width,
     alignItems: "center",
   },
 });
