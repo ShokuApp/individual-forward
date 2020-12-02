@@ -30,7 +30,7 @@ const style = StyleSheet.create({
     height: 5,
     position: "absolute",
     top: 0,
-    left: 10,
+    left: 28,
     backgroundColor: colors.themeStandard,
     borderRadius: 20,
     width: 30
@@ -67,7 +67,7 @@ export const TabBar = ({
             style.slider,
             {
               transform: [{ translateX: translateValue }],
-              width: tabWidth - 20,
+              width: tabWidth - 60,
             },
           ]}
         />
