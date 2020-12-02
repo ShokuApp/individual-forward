@@ -1,0 +1,18 @@
+import { Dish } from "../../models";
+
+export abstract class DishState {}
+
+export class DishInitialState extends DishState {}
+
+export class DishLoadingState extends DishState {}
+
+export class DishErrorState extends DishState {}
+
+export class DishGetState extends DishState {
+  dish: Dish;
+
+  constructor(dish: Dish) {
+    super();
+    this.dish = dish;
+  }
+}
