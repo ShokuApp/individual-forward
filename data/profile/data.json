@@ -1,0 +1,231 @@
+[
+    {
+        "id": "93ea9043-7f9a-43b1-a8ba-6570d23ae329",
+        "email": "kayleigh.foreman@example.com",
+        "firstName": "Kayleigh",
+        "lastName": "Foreman",
+        "allergens": [],
+        "diets": [],
+        "favorite_recipes": [
+            "f6d20706-9a6d-4ce4-b770-f5f489a14ee2",
+            "b670173b-bb57-4122-a575-12dffe0865d1",
+            "164adeb1-b858-49da-a054-9dcdc97768f6",
+            "01b9e5d5-026b-4f99-90ce-03fd3cea15de",
+            "00354628-dc72-4446-9652-b4e4faf60e58",
+            "c1399d8e-ada6-44ff-9260-8ae2b42eac77",
+            "71c5bab3-f4df-4791-90ef-4a46a3812a52",
+            "94ba9b53-a8f5-4a2f-8a94-5d570496556c",
+            "b1d337c3-e326-43c8-a2af-311beece3043"
+        ],
+        "favorite_restaurants": [
+            "b8c79b3d-0974-4950-8177-bb5ae33472b2",
+            "a852ee02-9f85-47e5-89f2-46bd15f5c6c4",
+            "a51a4d31-f37e-4df3-bed2-5cd0b3b985af",
+            "d3103649-9784-4e91-aee7-9a4c1c8b834f",
+            "47538013-ff3c-45a5-8fe5-7b7df5aca3b9",
+            "2faee48d-bde1-4f36-a739-67797dfcb6ee",
+            "9d163592-5efd-4bd1-9db9-cc802e414bf7",
+            "d70341c1-c17e-4af7-8b95-9546b567efa9",
+            "8b62d6bf-7563-48b7-8e43-a09d973f7f10"
+        ]
+    },
+    {
+        "id": "1a80810f-97a7-43a5-b068-593e048920fd",
+        "email": "nikolas.mcnamara@example.com",
+        "firstName": "Nikolas",
+        "lastName": "Mcnamara",
+        "allergens": [
+            "16677457-a4d7-4d8f-8419-f8c54fbb7166"
+        ],
+        "diets": [],
+        "favorite_recipes": [
+            "01b9e5d5-026b-4f99-90ce-03fd3cea15de",
+            "c1399d8e-ada6-44ff-9260-8ae2b42eac77",
+            "b1d337c3-e326-43c8-a2af-311beece3043",
+            "f6d20706-9a6d-4ce4-b770-f5f489a14ee2",
+            "00354628-dc72-4446-9652-b4e4faf60e58",
+            "71c5bab3-f4df-4791-90ef-4a46a3812a52",
+            "b670173b-bb57-4122-a575-12dffe0865d1"
+        ],
+        "favorite_restaurants": [
+            "577e088d-b41f-4cda-9d28-43ff676d37a6",
+            "7993b32e-d490-4dc3-8028-a8c1ae87de88"
+        ]
+    },
+    {
+        "id": "e62591c0-2a39-4172-9d9b-cc898f9fb964",
+        "email": "aiyla.alston@example.com",
+        "firstName": "Aiyla",
+        "lastName": "Alston",
+        "allergens": [],
+        "diets": [],
+        "favorite_recipes": [
+            "b1d337c3-e326-43c8-a2af-311beece3043",
+            "71c5bab3-f4df-4791-90ef-4a46a3812a52",
+            "f6d20706-9a6d-4ce4-b770-f5f489a14ee2",
+            "01b9e5d5-026b-4f99-90ce-03fd3cea15de",
+            "c1399d8e-ada6-44ff-9260-8ae2b42eac77",
+            "94ba9b53-a8f5-4a2f-8a94-5d570496556c",
+            "b670173b-bb57-4122-a575-12dffe0865d1",
+            "00354628-dc72-4446-9652-b4e4faf60e58",
+            "164adeb1-b858-49da-a054-9dcdc97768f6"
+        ],
+        "favorite_restaurants": [
+            "d3103649-9784-4e91-aee7-9a4c1c8b834f",
+            "0fbcc285-7b6e-48df-a389-e5e137e39d20",
+            "9d163592-5efd-4bd1-9db9-cc802e414bf7",
+            "af018c83-ce11-4baa-b2aa-8a17c8d60fe6",
+            "a9bca267-86f8-480d-84b0-2fe61664236e",
+            "a852ee02-9f85-47e5-89f2-46bd15f5c6c4"
+        ]
+    },
+    {
+        "id": "343fb6cb-b8c3-417f-9bcf-b0043c9754b4",
+        "email": "demi.arias@example.com",
+        "firstName": "Demi",
+        "lastName": "Arias",
+        "allergens": [
+            "16677457-a4d7-4d8f-8419-f8c54fbb7166",
+            "bd4b77e0-ef2c-45d9-bc54-82205cd3ca4e"
+        ],
+        "diets": [],
+        "favorite_recipes": [
+            "164adeb1-b858-49da-a054-9dcdc97768f6",
+            "f6d20706-9a6d-4ce4-b770-f5f489a14ee2",
+            "01b9e5d5-026b-4f99-90ce-03fd3cea15de",
+            "b670173b-bb57-4122-a575-12dffe0865d1",
+            "00354628-dc72-4446-9652-b4e4faf60e58",
+            "71c5bab3-f4df-4791-90ef-4a46a3812a52",
+            "b1d337c3-e326-43c8-a2af-311beece3043"
+        ],
+        "favorite_restaurants": [
+            "38487a1a-69c0-4770-8832-529e1a19d055",
+            "fc4962d6-f715-47d6-afca-52c98b7cbb3f",
+            "aecae640-d7f7-45b2-afd2-5c85e5d46d40",
+            "751df4f4-f301-42ec-9e1b-0bd8f023d2b1",
+            "a51a4d31-f37e-4df3-bed2-5cd0b3b985af",
+            "b8c79b3d-0974-4950-8177-bb5ae33472b2",
+            "aa5e1273-a3da-4941-96f2-14f0da437582",
+            "d3103649-9784-4e91-aee7-9a4c1c8b834f",
+            "3609678a-d260-4e3f-9d4d-dd5808218af4",
+            "577e088d-b41f-4cda-9d28-43ff676d37a6",
+            "ddddc53b-0c27-4969-af2f-506708644744",
+            "e81b0e35-d42a-44de-bce1-9bb2c1570f07",
+            "7993b32e-d490-4dc3-8028-a8c1ae87de88",
+            "71dd17d7-7b95-489a-83a3-af44be833f7f",
+            "2cbf6e9a-2b9c-41b0-99d2-287f9fbc352e",
+            "687714da-a249-417a-9a71-68781b53090c",
+            "a9bca267-86f8-480d-84b0-2fe61664236e",
+            "06ef7541-c57c-48db-8d4d-a10aa0eec062"
+        ]
+    },
+    {
+        "id": "4a36b772-fc22-43bd-b81e-7f8693e321b7",
+        "email": "aleena.trujillo@example.com",
+        "firstName": "Aleena",
+        "lastName": "Trujillo",
+        "allergens": [],
+        "diets": [],
+        "favorite_recipes": [
+            "71c5bab3-f4df-4791-90ef-4a46a3812a52",
+            "b670173b-bb57-4122-a575-12dffe0865d1",
+            "94ba9b53-a8f5-4a2f-8a94-5d570496556c",
+            "f6d20706-9a6d-4ce4-b770-f5f489a14ee2",
+            "c1399d8e-ada6-44ff-9260-8ae2b42eac77",
+            "164adeb1-b858-49da-a054-9dcdc97768f6",
+            "b1d337c3-e326-43c8-a2af-311beece3043",
+            "01b9e5d5-026b-4f99-90ce-03fd3cea15de",
+            "00354628-dc72-4446-9652-b4e4faf60e58"
+        ],
+        "favorite_restaurants": [
+            "f8fcc7f6-1f0c-4043-bfd1-3e7b8bd41dba",
+            "af018c83-ce11-4baa-b2aa-8a17c8d60fe6",
+            "a852ee02-9f85-47e5-89f2-46bd15f5c6c4",
+            "2faee48d-bde1-4f36-a739-67797dfcb6ee",
+            "53bb5a80-75c1-426c-8625-370b195831f0",
+            "ddddc53b-0c27-4969-af2f-506708644744",
+            "47538013-ff3c-45a5-8fe5-7b7df5aca3b9",
+            "aa5e1273-a3da-4941-96f2-14f0da437582",
+            "a299dfd2-4847-4d6d-a0b9-541bd4b886f8",
+            "133fe490-9f3c-4ff9-96dc-6eb1d9bb412e",
+            "a51a4d31-f37e-4df3-bed2-5cd0b3b985af",
+            "577e088d-b41f-4cda-9d28-43ff676d37a6"
+        ]
+    },
+    {
+        "id": "5421d4b6-a698-47e4-89d2-536216f32c1e",
+        "email": "tadhg.mclellan@example.com",
+        "firstName": "Tadhg",
+        "lastName": "Mclellan",
+        "allergens": [
+            "85b095b7-9736-4cc1-9b96-3640b47f5c85"
+        ],
+        "diets": [],
+        "favorite_recipes": [
+            "164adeb1-b858-49da-a054-9dcdc97768f6",
+            "c1399d8e-ada6-44ff-9260-8ae2b42eac77"
+        ],
+        "favorite_restaurants": [
+            "af018c83-ce11-4baa-b2aa-8a17c8d60fe6",
+            "071135a9-8485-43f8-b8be-ff5aa4652255",
+            "b8c79b3d-0974-4950-8177-bb5ae33472b2",
+            "440ea598-909c-49e6-bdaf-2d42c7b421ab",
+            "e48a54f0-1fb4-4b41-904a-9b4e99935612",
+            "a51a4d31-f37e-4df3-bed2-5cd0b3b985af",
+            "a852ee02-9f85-47e5-89f2-46bd15f5c6c4",
+            "d70341c1-c17e-4af7-8b95-9546b567efa9",
+            "452b5399-6df5-4f31-8e97-63cc5d5d256c",
+            "eb15edf7-314d-4407-a3c0-b9fe5d4f5f5c",
+            "bd0bdbb3-711a-4021-8f29-5c38aee24a78",
+            "06ef7541-c57c-48db-8d4d-a10aa0eec062",
+            "7993b32e-d490-4dc3-8028-a8c1ae87de88",
+            "751df4f4-f301-42ec-9e1b-0bd8f023d2b1",
+            "577e088d-b41f-4cda-9d28-43ff676d37a6",
+            "0fbcc285-7b6e-48df-a389-e5e137e39d20"
+        ]
+    },
+    {
+        "id": "70267341-c617-4101-97c4-14087e02c02f",
+        "email": "kaila.mcmanus@example.com",
+        "firstName": "Kaila",
+        "lastName": "Mcmanus",
+        "allergens": [],
+        "diets": [],
+        "favorite_recipes": [
+            "01b9e5d5-026b-4f99-90ce-03fd3cea15de",
+            "71c5bab3-f4df-4791-90ef-4a46a3812a52",
+            "94ba9b53-a8f5-4a2f-8a94-5d570496556c",
+            "00354628-dc72-4446-9652-b4e4faf60e58",
+            "164adeb1-b858-49da-a054-9dcdc97768f6",
+            "b670173b-bb57-4122-a575-12dffe0865d1",
+            "f6d20706-9a6d-4ce4-b770-f5f489a14ee2",
+            "c1399d8e-ada6-44ff-9260-8ae2b42eac77",
+            "b1d337c3-e326-43c8-a2af-311beece3043"
+        ],
+        "favorite_restaurants": [
+            "aecae640-d7f7-45b2-afd2-5c85e5d46d40",
+            "a51a4d31-f37e-4df3-bed2-5cd0b3b985af",
+            "7993b32e-d490-4dc3-8028-a8c1ae87de88",
+            "eb15edf7-314d-4407-a3c0-b9fe5d4f5f5c",
+            "a852ee02-9f85-47e5-89f2-46bd15f5c6c4",
+            "aa5e1273-a3da-4941-96f2-14f0da437582",
+            "577e088d-b41f-4cda-9d28-43ff676d37a6",
+            "2faee48d-bde1-4f36-a739-67797dfcb6ee",
+            "d3103649-9784-4e91-aee7-9a4c1c8b834f",
+            "ac0d7b3a-4363-4e65-8ec7-66256560ccd0",
+            "687714da-a249-417a-9a71-68781b53090c",
+            "53bb5a80-75c1-426c-8625-370b195831f0",
+            "af018c83-ce11-4baa-b2aa-8a17c8d60fe6",
+            "a9bca267-86f8-480d-84b0-2fe61664236e",
+            "e48a54f0-1fb4-4b41-904a-9b4e99935612",
+            "38487a1a-69c0-4770-8832-529e1a19d055",
+            "d70341c1-c17e-4af7-8b95-9546b567efa9",
+            "71dd17d7-7b95-489a-83a3-af44be833f7f",
+            "ddddc53b-0c27-4969-af2f-506708644744",
+            "f8fcc7f6-1f0c-4043-bfd1-3e7b8bd41dba",
+            "133fe490-9f3c-4ff9-96dc-6eb1d9bb412e",
+            "8b62d6bf-7563-48b7-8e43-a09d973f7f10",
+            "071135a9-8485-43f8-b8be-ff5aa4652255"
+        ]
+    }
+]

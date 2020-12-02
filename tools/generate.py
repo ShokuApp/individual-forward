@@ -324,34 +324,34 @@ def main():
     random.seed(datetime.now())
 
     pictogram_data = pictogram_list(random.randint(5, 100))
-    save_to_file(pictogram_data, "./data/pictogram/init.json")
+    save_to_file(pictogram_data, "./data/pictogram/data.json")
 
     ingredient_data = ingredient_list(random.randint(5, 100), pictogram_data)
-    save_to_file(ingredient_data, "./data/ingredient/init.json")
+    save_to_file(ingredient_data, "./data/ingredient/data.json")
 
     sauce_data = sauce_list(random.randint(5, 100), ingredient_data)
-    save_to_file(sauce_data, "./data/sauce/init.json")
+    save_to_file(sauce_data, "./data/sauce/data.json")
 
     dish_data = dish_list(random.randint(5, 100), ingredient_data, sauce_data)
-    save_to_file(dish_data, "./data/dish/init.json")
+    save_to_file(dish_data, "./data/dish/data.json")
 
     menu_data = menu_list(random.randint(5, 100), dish_data)
-    save_to_file(menu_data, "./data/menu/init.json")
+    save_to_file(menu_data, "./data/menu/data.json")
 
     card_data = card_list(random.randint(5, 100), dish_data, menu_data)
-    save_to_file(card_data, "./data/card/init.json")
+    save_to_file(card_data, "./data/card/data.json")
 
     restaurant_data = restaurant_list(random.randint(5, 100), card_data)
-    save_to_file(restaurant_data, "./data/restaurant/init.json")
+    save_to_file(restaurant_data, "./data/restaurant/data.json")
 
     recipe_ingredient_data = recipe_ingredient_list(random.randint(5, 100))
-    save_to_file(recipe_ingredient_data, "./data/recipe-ingredient/init.json")
+    save_to_file(recipe_ingredient_data, "./data/recipe-ingredient/data.json")
 
     recipe_data = recipe_list(random.randint(5, 100), recipe_ingredient_data)
-    save_to_file(recipe_data, "./data/recipe/init.json")
+    save_to_file(recipe_data, "./data/recipe/data.json")
 
     profile_data = profile_list(random.randint(5, 100), pictogram_data, recipe_data, restaurant_data)
-    save_to_file(profile_data, "./data/profile/init.json")
+    save_to_file(profile_data, "./data/profile/data.json")
 
     return
 
