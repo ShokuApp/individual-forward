@@ -1,7 +1,5 @@
 import React from "react"
-import { View, SafeAreaView, StyleSheet, Text, Image } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
-import colors from '../../constant/colors';
+import { View, StyleSheet, Image } from "react-native";
 import images from './index';
 
 
