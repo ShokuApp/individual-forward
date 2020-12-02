@@ -14,7 +14,7 @@ export class RestaurantRepository implements Repository<Restaurant> {
       throw Error("Restaurant not found");
     }
 
-    const card = await cardRepository.get(restaurantJson.card_id);
+    const card = await cardRepository.get(restaurantJson.card);
 
     return {
       id: restaurantJson.id,
@@ -43,7 +43,7 @@ export class RestaurantRepository implements Repository<Restaurant> {
       phone: restaurant.phone,
       url: restaurant.url,
       opening_time: restaurant.opening_time,
-      card_id: restaurant.card.id,
+      card: restaurant.card.id,
     };
     const index = restaurants.findIndex((item) => item.id === restaurant.id);
 

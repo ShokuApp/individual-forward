@@ -18,7 +18,7 @@ export class RecipeIngredientRepository
     }
 
     const ingredient = await ingredientRepository.get(
-      recipeIngredientJson.ingredient_id
+      recipeIngredientJson.ingredient
     );
 
     return {
@@ -34,7 +34,7 @@ export class RecipeIngredientRepository
       id: recipeIngredient.id,
       quantity: recipeIngredient.quantity.toString(),
       unity: recipeIngredient.unity,
-      ingredient_id: recipeIngredient.ingredient.id,
+      ingredient: recipeIngredient.ingredient.id,
     };
     const index = recipeIngredients.findIndex(
       (item) => item.id === recipeIngredient.id

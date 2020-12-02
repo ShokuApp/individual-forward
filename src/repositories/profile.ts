@@ -19,25 +19,25 @@ export class ProfileRepository implements Repository<Profile> {
     }
 
     const allergens = await Promise.all(
-      profileJson.allergens_ids.map(async (id) => {
+      profileJson.allergens.map(async (id) => {
         return pictogramRepository.get(id);
       })
     );
 
     const diets = await Promise.all(
-      profileJson.allergens_ids.map(async (id) => {
+      profileJson.allergens.map(async (id) => {
         return pictogramRepository.get(id);
       })
     );
 
     const favorite_recipes = await Promise.all(
-      profileJson.favorite_recipes_ids.map(async (id) => {
+      profileJson.favorite_recipes.map(async (id) => {
         return recipeRepository.get(id);
       })
     );
 
     const favorite_restaurants = await Promise.all(
-      profileJson.favorite_restaurants_ids.map(async (id) => {
+      profileJson.favorite_restaurants.map(async (id) => {
         return restaurantRepository.get(id);
       })
     );
@@ -60,12 +60,10 @@ export class ProfileRepository implements Repository<Profile> {
       email: profile.email,
       firstName: profile.firstName,
       lastName: profile.lastName,
-      allergens_ids: profile.allergens.map((allergen) => allergen.id),
-      diets_ids: profile.diets.map((diet) => diet.id),
-      favorite_recipes_ids: profile.favorite_recipes.map(
-        (favorite) => favorite.id
-      ),
-      favorite_restaurants_ids: profile.favorite_restaurants.map(
+      allergens: profile.allergens.map((allergen) => allergen.id),
+      diets: profile.diets.map((diet) => diet.id),
+      favorite_recipes: profile.favorite_recipes.map((favorite) => favorite.id),
+      favorite_restaurants: profile.favorite_restaurants.map(
         (favorite) => favorite.id
       ),
     };

@@ -15,7 +15,7 @@ export class RecipeRepository implements Repository<Recipe> {
     }
 
     const ingredients = await Promise.all(
-      recipeJson.ingredients_ids.map(async (id) => {
+      recipeJson.ingredients.map(async (id) => {
         return recipeIngredientRepository.get(id);
       })
     );
@@ -41,7 +41,7 @@ export class RecipeRepository implements Repository<Recipe> {
       average_time: recipe.average_time.toString(),
       average_rate: recipe.average_rate.toString(),
       steps: recipe.steps,
-      ingredients_ids: recipe.ingredients.map((ingredient) => ingredient.id),
+      ingredients: recipe.ingredients.map((ingredient) => ingredient.id),
     };
     const index = recipes.findIndex((item) => item.id === recipe.id);
 
