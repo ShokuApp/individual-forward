@@ -1,6 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Icon } from "react-native-elements";
+import { Recipe } from "../../models";
 
 const styles = StyleSheet.create({
   card: {
@@ -57,20 +58,22 @@ const styles = StyleSheet.create({
   },
 });
 
-export function RecipePreview() {
+type Props = {
+  recipe: Recipe;
+};
+
+export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
+  let imageSrc = { uri: recipe.image };
   return (
     <TouchableOpacity
       style={styles.card}
       onPress={() => console.log("Attach display recipe details method")}
     >
       <View style={styles.container}>
-        <Image
-          style={styles.image}
-          source={require("../../../assets/images/pasta.jpg")}
-        />
+        <Image style={styles.image} source={imageSrc} />
         <View style={styles.containerView}>
           <View style={styles.view}>
-            <Text style={styles.recipeTitle}>Recette 1</Text>
+            <Text style={styles.recipeTitle}>{recipe.name}</Text>
             <Icon
               style={{ marginRight: 8, marginBottom: 10, marginTop: 5 }}
               name="heart"
@@ -89,10 +92,12 @@ export function RecipePreview() {
                 size={15}
                 color="#000"
               />
-              <Text style={{ marginLeft: 3, fontSize: 12 }}>15 min</Text>
+              <Text style={{ marginLeft: 3, fontSize: 12 }}>
+                {Math.round(recipe.average_time / 60)} min
+              </Text>
             </View>
             <View style={styles.view}>
-              <Text style={{ marginRight: 3 }}>4,9</Text>
+              <Text style={{ marginRight: 3 }}>{recipe.average_rate}</Text>
               <Icon
                 style={{ marginRight: 8 }}
                 name="star-o"
@@ -106,4 +111,4 @@ export function RecipePreview() {
       </View>
     </TouchableOpacity>
   );
-}
+};
