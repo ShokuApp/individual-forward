@@ -9,7 +9,6 @@ import { Recipe } from "./models";
 const Stack = createStackNavigator();
 
 export type RecipesStackParamList = {
-  Recipes: undefined;
   RecipeDetails: { recipe: Recipe };
 };
 
