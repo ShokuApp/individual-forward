@@ -22,6 +22,7 @@ const RecipeDetails = () => {
       <RecipeDetailsStack.Screen
         name="RecipeDetails"
         component={RecipeDetailsScreen}
+        options={{ headerShown: false }}
       />
     </RecipeDetailsStack.Navigator>
   );
