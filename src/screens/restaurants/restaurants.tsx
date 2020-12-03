@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
-import Data from "../../data/restaurants/data.json";
-import { ListRestaurantPreview } from "../components/restaurants/list-restaurant-preview";
+import Data from "../../restaurants/data.json";
+import { ListRestaurantPreview } from "../../components/restaurants/list-restaurant-preview";
 
 const getRestaurantsIds: () => string[] = () => {
   const ids: string[] = [];
