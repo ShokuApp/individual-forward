@@ -9,19 +9,21 @@ import {
 } from "react-native";
 import { Icon } from "react-native-elements";
 import { Restaurant, TimeRange } from "../../models";
+import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    height: 314,
+    height: (30 * height) / 100,
+    minHeight: 250,
     width: (83.73 * width) / 100,
-    shadowColor: "rgba(0,0,0, .4)",
-    shadowOffset: { height: 3, width: 3 },
-    shadowOpacity: 0.5,
-    shadowRadius: 2,
-    elevation: 2,
+    shadowOffset: { height: 3, width: 0 },
+    shadowOpacity: 0.4,
+    shadowRadius: 3,
+    elevation: 5,
     borderRadius: 10,
+    marginBottom: 30,
   },
   viewContainer: {
     height: "100%",
@@ -38,13 +40,11 @@ const styles = StyleSheet.create({
     height: "60%",
   },
   iconRate: {
-    paddingRight: 5,
-    paddingLeft: 5,
+    paddingHorizontal: 5,
     paddingTop: 5,
   },
   iconText: {
-    paddingRight: 5,
-    paddingLeft: 5,
+    paddingHorizontal: 5,
     paddingTop: 10,
   },
   iconPrice: {
@@ -76,19 +76,16 @@ const styles = StyleSheet.create({
   paragraph: {
     paddingTop: 10,
     paddingLeft: 5,
-    marginBottom: 0,
     fontSize: 10,
   },
   adress: {
     paddingTop: 0,
     paddingLeft: 5,
-    marginBottom: 0,
     fontSize: 10,
   },
   openingTime: {
     paddingTop: 0,
     paddingLeft: 0,
-    marginBottom: 0,
     fontSize: 10,
   },
   textRight: {
@@ -125,7 +122,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const getOpeningTime = (dataOpeningTime: TimeRange[][]) => {
+const GetOpeningTime: FC<TimeRange[][]> = (dataOpeningTime: TimeRange[][]) => {
   const now = new Date();
   const date = now.getDay();
   if (dataOpeningTime[date].length === 0) {
@@ -150,7 +147,7 @@ const getOpeningTime = (dataOpeningTime: TimeRange[][]) => {
   }
 };
 
-const getPriceRange = (price: number) => {
+const GetPriceRange: FC<number> = (price: number) => {
   let numberIcons;
   if (price < 15) {
     numberIcons = 1;
@@ -181,10 +178,17 @@ type Props = {
 
 export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
   const imageRestaurant = { uri: restaurant.image };
+  const { navigate } = useNavigation();
   return (
     <TouchableOpacity
+      activeOpacity={1}
       style={styles.container}
-      onPress={() => console.log("Attach display restaurant details method")}
+      onPress={() =>
+        navigate("Restaurant", {
+          screen: "RestaurantDetailsScreen",
+          params: { restaurant: restaurant },
+        })
+      }
     >
       <View style={styles.viewContainer}>
         <Image style={styles.image} source={imageRestaurant} />
@@ -241,9 +245,9 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
                 size={20}
                 style={styles.iconText}
               />
-              {getOpeningTime(restaurant.opening_time)}
+              {GetOpeningTime(restaurant.opening_time)}
             </View>
-            {getPriceRange(Number(restaurant.average_price.slice(0, -1)))}
+            {GetPriceRange(Number(restaurant.average_price.slice(0, -1)))}
           </View>
         </View>
       </View>

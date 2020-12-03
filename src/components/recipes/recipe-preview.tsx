@@ -51,6 +51,24 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  favoriteIcon: {
+    marginRight: 8,
+    marginBottom: 10,
+    marginTop: 5,
+  },
+  clockIcon: {
+    marginLeft: 8,
+  },
+  preparationTime: {
+    marginLeft: 3,
+    fontSize: 12,
+  },
+  average_rate: {
+    marginRight: 3,
+  },
+  startIcon: {
+    marginRight: 8,
+  },
 });
 
 type Props = {
@@ -70,7 +88,7 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
           <View style={styles.view}>
             <Text style={styles.recipeTitle}>{recipe.name}</Text>
             <Icon
-              style={{ marginRight: 8, marginBottom: 10, marginTop: 5 }}
+              style={styles.favoriteIcon}
               name="heart"
               type="font-awesome"
               size={15}
@@ -81,20 +99,20 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
           <View style={styles.view}>
             <View style={styles.view}>
               <Icon
-                style={{ marginLeft: 8 }}
+                style={styles.clockIcon}
                 name="clock"
                 type="feather"
                 size={15}
                 color="#000"
               />
-              <Text style={{ marginLeft: 3, fontSize: 12 }}>
+              <Text style={styles.preparationTime}>
                 {Math.round(recipe.average_time / 60)} min
               </Text>
             </View>
             <View style={styles.view}>
-              <Text style={{ marginRight: 3 }}>{recipe.average_rate}</Text>
+              <Text style={styles.average_rate}>{recipe.average_rate}</Text>
               <Icon
-                style={{ marginRight: 8 }}
+                style={styles.startIcon}
                 name="star-o"
                 type="font-awesome"
                 size={15}

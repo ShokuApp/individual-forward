@@ -1,16 +1,27 @@
 import React, { FC } from "react";
 import { View, StyleSheet, Dimensions } from "react-native";
 
-const { width, height } = Dimensions.get("window");
-
 const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
+  },
+  divider: {
     height: 1,
-    backgroundColor: "#DADADA",
-    width: width / 1.2,
+    alignItems: "center",
   },
 });
 
-export const Divider: FC = () => {
-  return <View style={styles.container} />;
+type Props = {
+  width: number | string;
+  color: string;
+};
+
+export const Divider: FC<Props> = ({ width, color }: Props) => {
+  return (
+    <View style={styles.container}>
+      <View
+        style={[styles.divider, { width: width, backgroundColor: color }]}
+      />
+    </View>
+  );
 };

@@ -1,11 +1,23 @@
 import React, { FC } from "react";
-import { View, StyleSheet, Text, Dimensions } from "react-native";
+import {
+  Image,
+  TouchableOpacity,
+  View,
+  StyleSheet,
+  Text,
+  Dimensions,
+} from "react-native";
 import {
   Informations,
   Divider,
+  UserButtons,
+  CardDescription,
 } from "../../components/restaurants/restaurant-details";
 import { AntDesign } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
+import { RouteProp, useNavigation } from "@react-navigation/native";
+import { RestaurantStackParamList } from "../../app";
+import { Restaurant, TimeRange } from "../../models";
 
 const { width, height } = Dimensions.get("window");
 
@@ -14,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    height: 200,
+    height: height / 5,
     backgroundColor: "gray",
   },
   closeIcon: {
@@ -34,7 +46,6 @@ const styles = StyleSheet.create({
     height: height,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    alignItems: "center",
   },
   titleContainer: {
     height: height / 17,
@@ -50,32 +61,79 @@ const styles = StyleSheet.create({
   },
 });
 
-type RestaurantDetailsProps = {};
+type RestaurantDetailsProps = {
+  restaurant: Restaurant;
+};
 
-const RestaurantDetails: FC<RestaurantDetailsProps> = () => {
+const RestaurantDetails: FC<RestaurantDetailsProps> = ({
+  restaurant,
+}: RestaurantDetailsProps) => {
+  const { goBack } = useNavigation();
+
+  const getOpeningTime: (dataOpeningTime: TimeRange[][]) => string = (
+    dataOpeningTime: TimeRange[][]
+  ) => {
+    const now = new Date();
+    const date = now.getDay();
+    if (dataOpeningTime[date].length === 0) {
+      return "Fermé";
+    } else if (dataOpeningTime[date].length === 1) {
+      return (
+        dataOpeningTime[date][0].from.toString() +
+        " - " +
+        dataOpeningTime[date][0].to.toString()
+      );
+    } else {
+      return (
+        dataOpeningTime[date][0].from +
+        " - " +
+        dataOpeningTime[date][0].to.toString() +
+        " | " +
+        dataOpeningTime[date][1].from +
+        " - " +
+        dataOpeningTime[date][1].to.toString()
+      );
+    }
+  };
+
   return (
-    <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
-      <View style={styles.image} />
-      <View style={styles.closeIcon}>
+    <View style={styles.container}>
+      <Image source={{ uri: restaurant.image }} style={styles.image} />
+      <TouchableOpacity style={styles.closeIcon} onPress={() => goBack()}>
         <AntDesign name="close" size={25} color="white" />
-      </View>
-      <View style={styles.detailsContainer}>
+      </TouchableOpacity>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.detailsContainer}
+      >
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Restaurant Les 2 Font La Paire</Text>
+          <Text style={styles.title}>{restaurant.name}</Text>
         </View>
         <Informations
           address={"11 Grande Rue Nazareth 31000 Toulouse"}
-          type={"Brasserie"}
-          note={4}
+          type={restaurant.description}
+          hours={getOpeningTime(restaurant.opening_time)}
+          note={restaurant.average_rate}
         />
-        <Divider />
-      </View>
-    </ScrollView>
+        <Divider width={"80%"} color={"#DADADA"} />
+        <UserButtons />
+        <CardDescription card={restaurant.card} />
+      </ScrollView>
+    </View>
   );
 };
 
-const RestaurantDetailsScreen: FC = () => {
-  return <RestaurantDetails />;
+type RestaurantDetailsScreenProps = RouteProp<
+  RestaurantStackParamList,
+  "RestaurantDetailsScreen"
+>;
+
+type Props = {
+  route: RestaurantDetailsScreenProps;
+};
+
+const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
+  return <RestaurantDetails restaurant={route.params.restaurant} />;
 };
 
 export default RestaurantDetailsScreen;
