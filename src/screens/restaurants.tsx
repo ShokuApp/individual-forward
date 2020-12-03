@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   previewList: {
     position: "absolute",
-    bottom: 30,
+    bottom: 0,
   },
 });
 
@@ -56,7 +56,12 @@ const RestaurantsScreen: FC = () => {
           );
         })}
       </MapView>
-      <ScrollView horizontal={true} style={styles.previewList}>
+      <ScrollView
+        horizontal={true}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        style={styles.previewList}
+      >
         <ListRestaurantPreview restaurants={getRestaurantsIds()} />
       </ScrollView>
     </View>

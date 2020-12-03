@@ -14,14 +14,15 @@ const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    height: 314,
+    height: (30 * height) / 100,
+    minHeight: 250,
     width: (83.73 * width) / 100,
-    shadowColor: "rgba(0,0,0, .4)",
-    shadowOffset: { height: 3, width: 3 },
-    shadowOpacity: 0.5,
-    shadowRadius: 2,
-    elevation: 2,
+    shadowOffset: { height: 3, width: 0 },
+    shadowOpacity: 0.4,
+    shadowRadius: 3,
+    elevation: 5,
     borderRadius: 10,
+    marginBottom: 30,
   },
   viewContainer: {
     height: "100%",
@@ -178,6 +179,7 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
   const imageRestaurant = { uri: restaurant.image };
   return (
     <TouchableOpacity
+      activeOpacity={1}
       style={styles.container}
       onPress={() => console.log("Attach display restaurant details method")}
     >
