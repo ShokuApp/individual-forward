@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   BottomTabBarProps,
   createBottomTabNavigator,
@@ -37,7 +37,7 @@ const Recipes = () => {
   );
 };
 
-export const BottomTabNavigator = () => {
+export const BottomTabNavigator: FC = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,

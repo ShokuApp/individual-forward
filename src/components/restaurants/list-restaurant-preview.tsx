@@ -10,12 +10,6 @@ import {
 import { RestaurantRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
 
-type Props = {
-  restaurants: string[];
-};
-
-const { width } = Dimensions.get("window");
-
 const styles = StyleSheet.create({
   container: {
     display: "flex",
@@ -23,10 +17,14 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   restaurantPreviewContainer: {
-    width,
+    width: Dimensions.get("window").width,
     alignItems: "center",
   },
 });
+
+type Props = {
+  restaurants: string[];
+};
 
 export const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
   return (
