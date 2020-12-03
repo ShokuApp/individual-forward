@@ -4,14 +4,6 @@ import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import Data from "../../data/restaurants/data.json";
 import { ListRestaurantPreview } from "../components/restaurants/list-restaurant-preview";
 
-const getRestaurantsIds: () => string[] = () => {
-  const ids: string[] = [];
-  Data.map((restaurant) => {
-    ids.push(restaurant.id);
-  });
-  return ids;
-};
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -28,6 +20,14 @@ const styles = StyleSheet.create({
     bottom: 30,
   },
 });
+
+const getRestaurantsIds: () => string[] = () => {
+  const ids: string[] = [];
+  Data.map((restaurant) => {
+    ids.push(restaurant.id);
+  });
+  return ids;
+};
 
 const RestaurantsScreen: FC = () => {
   const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
