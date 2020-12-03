@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     fontSize: 10,
   },
-  adress: {
+  address: {
     paddingTop: 0,
     paddingLeft: 5,
     marginBottom: 0,
@@ -192,7 +192,7 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
           <View style={styles.view}>
             <Text style={styles.title}>{restaurant.name}</Text>
             <View style={styles.view}>
-              <Text style={styles.textMark}>{restaurant.average_rate}</Text>
+              <Text style={styles.textMark}>{restaurant.averageRate}</Text>
               <Icon
                 name="star"
                 type="font-awesome"
@@ -212,12 +212,11 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
                 style={styles.iconLocation}
               />
               <View style={styles.paragraph}>
-                <Text style={styles.adress}>
-                  {restaurant.house_number} {} {restaurant.street}
+                <Text style={styles.address}>
+                  {`${restaurant.address.streetNumber} ${restaurant.address.street}`}
                 </Text>
-                <Text style={styles.adress}>
-                  {restaurant.postal_code} {}
-                  {restaurant.city}
+                <Text style={styles.address}>
+                  {`${restaurant.address.postalCode} ${restaurant.address.city}`}
                 </Text>
               </View>
             </View>
@@ -241,9 +240,9 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
                 size={20}
                 style={styles.iconText}
               />
-              {getOpeningTime(restaurant.opening_time)}
+              {getOpeningTime(restaurant.openingTime)}
             </View>
-            {getPriceRange(Number(restaurant.average_price.slice(0, -1)))}
+            {getPriceRange(restaurant.averagePrice)}
           </View>
         </View>
       </View>

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { Recipe } from "../../models";
 
@@ -57,6 +57,10 @@ type Props = {
   recipe: Recipe;
 };
 
+function totalAverageTime(recipe: Recipe): number {
+  return recipe.averageTime.preparation + recipe.averageTime.cooking;
+}
+
 export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
   const imageSrc = { uri: recipe.image };
   return (
@@ -88,11 +92,11 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
                 color="#000"
               />
               <Text style={{ marginLeft: 3, fontSize: 12 }}>
-                {Math.round(recipe.average_time / 60)} min
+                {totalAverageTime(recipe) / 60} min
               </Text>
             </View>
             <View style={styles.view}>
-              <Text style={{ marginRight: 3 }}>{recipe.average_rate}</Text>
+              <Text style={{ marginRight: 3 }}>{recipe.averageRate}</Text>
               <Icon
                 style={{ marginRight: 8 }}
                 name="star-o"
