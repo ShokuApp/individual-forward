@@ -4,7 +4,7 @@ import {
   TouchableOpacity,
   Dimensions,
   StyleSheet,
-  Animated
+  Animated,
 } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { TabBarItem } from "./tab-bar-item";
@@ -33,7 +33,7 @@ const style = StyleSheet.create({
     left: 28,
     backgroundColor: colors.themeStandard,
     borderRadius: 20,
-    width: 30
+    width: 30,
   },
 });
 
@@ -42,7 +42,6 @@ export const TabBar = ({
   descriptors,
   navigation,
 }: BottomTabBarProps) => {
-
   const totalWidth = Dimensions.get("window").width;
   const tabWidth = totalWidth / state.routes.length;
   const [translateValue] = useState(new Animated.Value(0));
@@ -78,8 +77,8 @@ export const TabBar = ({
             options.tabBarLabel !== undefined
               ? options.tabBarLabel
               : options.title !== undefined
-                ? options.title
-                : route.name;
+              ? options.title
+              : route.name;
 
           const isFocused = state.index === index;
 
@@ -118,10 +117,7 @@ export const TabBar = ({
               style={{ flex: 1 }}
               key={index}
             >
-              <TabBarItem
-                iconName={label.toString()}
-                isCurrent={isFocused}
-              />
+              <TabBarItem iconName={label.toString()} isCurrent={isFocused} />
             </TouchableOpacity>
           );
         })}

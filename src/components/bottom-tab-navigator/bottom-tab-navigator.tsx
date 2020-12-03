@@ -11,16 +11,15 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { View, StyleSheet } from "react-native";
 
 export const BottomTabNavigator = () => {
-
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      position: "relative"
+      position: "relative",
     },
     safeAreaBackground: {
       height: useSafeAreaInsets().bottom - 5,
-      backgroundColor: "white"
-    }
+      backgroundColor: "white",
+    },
   });
 
   const Tab = createBottomTabNavigator();
@@ -35,9 +34,7 @@ export const BottomTabNavigator = () => {
         <Tab.Screen name="profileScreen" component={ProfileScreen} />
       </Tab.Navigator>
       {useSafeAreaInsets().bottom > 0 && (
-        <View
-          style={styles.safeAreaBackground}
-        />
+        <View style={styles.safeAreaBackground} />
       )}
     </View>
   );
