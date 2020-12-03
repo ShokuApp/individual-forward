@@ -1,3 +1,3 @@
 export const colors = {
-  themeStandard: "#2196F3"
-}
+  themeStandard: "#2196F3",
+};

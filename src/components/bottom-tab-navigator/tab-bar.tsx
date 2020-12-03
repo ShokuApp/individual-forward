@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   TouchableOpacity,
@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { TabBarItem } from "./tab-bar-item";
-import { colors } from "../../constants/colors";
+import { colors } from "../../constants";
 
 const style = StyleSheet.create({
   tabContainer: {
@@ -19,9 +19,8 @@ const style = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 4.0,
-    backgroundColor: "white",
     elevation: 10,
-    position: "absolute",
+    backgroundColor: "white",
     bottom: 0,
   },
   slider: {
@@ -35,7 +34,7 @@ const style = StyleSheet.create({
   },
 });
 
-export const TabBar: FC<BottomTabBarProps> = ({
+export const TabBar = ({
   state,
   descriptors,
   navigation,
@@ -106,8 +105,6 @@ export const TabBar: FC<BottomTabBarProps> = ({
 
           return (
             <TouchableOpacity
-              accessibilityRole="button"
-              accessibilityLabel={options.tabBarAccessibilityLabel}
               testID={options.tabBarTestID}
               onPress={onPress}
               onLongPress={onLongPress}

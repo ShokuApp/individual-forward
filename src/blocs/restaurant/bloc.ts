@@ -9,7 +9,7 @@ import {
 } from "./state";
 import { RestaurantRepository } from "../../repositories";
 
-class RestaurantBloc extends Bloc<RestaurantEvent, RestaurantState> {
+export class RestaurantBloc extends Bloc<RestaurantEvent, RestaurantState> {
   private repository: RestaurantRepository;
 
   constructor(repository: RestaurantRepository) {

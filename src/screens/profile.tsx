@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { colors } from '../constants/colors';
+import { colors } from "../constants";
 
-
-const ProfileScreen = () => {
+export const ProfileScreen = () => {
   return (
     <View style={styles.container}>
       <Text>Profil</Text>
@@ -19,5 +18,3 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-
-export default (ProfileScreen);

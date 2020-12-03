@@ -1,1 +1,1 @@
-export * from './bottom-tab-navigator'
+export * from "./bottom-tab-navigator";
