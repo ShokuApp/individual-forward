@@ -16,8 +16,7 @@ type Props = {
   recipe: Recipe;
 };
 
-const height = Dimensions.get("window").height;
-const width = Dimensions.get("window").width;
+const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
@@ -37,10 +36,13 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "35%",
-    position: "absolute",
   },
   cardView: {
-    height: -30,
+    top: -30,
+    backgroundColor: "white",
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    alignItems: "center",
   },
 });
 
@@ -59,6 +61,9 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
             goBack();
           }}
         />
+      </View>
+      <View style={styles.cardView}>
+        <Text>Yo</Text>
       </View>
     </View>
   );
