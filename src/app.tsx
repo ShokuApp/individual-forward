@@ -14,4 +14,5 @@ const getRestaurantIds: () => string[] = () => {
 function App() {
   return <ListRestaurantPreview restaurants={getRestaurantIds()} />;
 }
+
 export default registerRootComponent(App);

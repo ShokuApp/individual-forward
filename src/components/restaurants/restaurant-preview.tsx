@@ -1,21 +1,20 @@
 import React, { FC } from "react";
 import {
-  View,
-  Text,
+  Dimensions,
   Image,
   StyleSheet,
-  ImageBackground,
+  Text,
   TouchableOpacity,
-  Dimensions,
+  View,
 } from "react-native";
-import { Card, ListItem, Button, Icon } from "react-native-elements";
+import { Icon } from "react-native-elements";
 import { Restaurant, TimeRange } from "../../models";
 
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    height: (32.76 * height) / 100,
+    height: 314,
     width: (83.73 * width) / 100,
     shadowColor: "rgba(0,0,0, .4)",
     shadowOffset: { height: 3, width: 3 },
