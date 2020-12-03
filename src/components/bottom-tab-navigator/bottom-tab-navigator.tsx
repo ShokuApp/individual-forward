@@ -8,6 +8,9 @@ import ProfileScreen from "../../screens/profile";
 import RestaurantsScreen from "../../screens/restaurants";
 import { StyleSheet, View } from "react-native";
 import RecipesScreen from "../../screens/recipes";
+import RecipeDetailsScreen from "../../screens/recipe-details";
+import { Recipe } from "../../models";
+
 import { createStackNavigator } from "@react-navigation/stack";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
