@@ -4,13 +4,15 @@ import {
   View,
   StyleSheet,
   Image,
-  TouchableOpacity,
   Dimensions,
+  ScrollView,
 } from "react-native";
-import { Icon } from "react-native-elements";
 import { Recipe } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
+import { RecipeDescription } from "./recipe-decription";
+import { Divider } from "./divider";
+import { RecipeIconButtons } from "./recipe-icon-buttons";
 
 type Props = {
   recipe: Recipe;
@@ -43,6 +45,18 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     alignItems: "center",
+    height: height,
+    width: width,
+  },
+  recipeTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#2196F3",
+    marginTop: 10,
+    textAlign: "center",
+  },
+  divider: {
+    alignItems: "center",
   },
 });
 
@@ -63,7 +77,14 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
         />
       </View>
       <View style={styles.cardView}>
-        <Text>Yo</Text>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Text style={styles.recipeTitle}>{recipe.name}</Text>
+          <RecipeDescription recipe={recipe} />
+          <View style={styles.divider}>
+            <Divider />
+          </View>
+          <RecipeIconButtons recipe={recipe} />
+        </ScrollView>
       </View>
     </View>
   );
