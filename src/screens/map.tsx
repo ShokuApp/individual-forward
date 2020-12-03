@@ -34,6 +34,7 @@ const MapScreen: FC<Props> = ({ restaurants }: Props) => {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
+        showsUserLocation={true}
       >
         {locations.map((restaurant, index) => {
           return (
