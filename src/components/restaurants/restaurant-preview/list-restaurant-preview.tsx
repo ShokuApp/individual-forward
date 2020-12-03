@@ -6,8 +6,8 @@ import {
   RestaurantGetEvent,
   RestaurantGetState,
   RestaurantState,
-} from "../../blocs";
-import { RestaurantRepository } from "../../repositories";
+} from "../../../blocs";
+import { RestaurantRepository } from "../../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
 
 const styles = StyleSheet.create({
