@@ -16,3 +16,12 @@ export class RecipeIngredientGetState extends RecipeIngredientState {
     this.recipeIngredient = recipeIngredient;
   }
 }
+
+export class RecipeIngredientListState extends RecipeIngredientState {
+  recipeIngredients: RecipeIngredient[];
+
+  constructor(recipeIngredients: RecipeIngredient[]) {
+    super();
+    this.recipeIngredients = recipeIngredients;
+  }
+}

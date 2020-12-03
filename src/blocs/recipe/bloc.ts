@@ -1,9 +1,10 @@
 import { Bloc } from "@felangel/bloc";
-import { RecipeEvent, RecipeGetEvent } from "./event";
+import { RecipeEvent, RecipeGetEvent, RecipeListEvent } from "./event";
 import {
   RecipeErrorState,
   RecipeGetState,
   RecipeInitialState,
+  RecipeListState,
   RecipeLoadingState,
   RecipeState,
 } from "./state";
@@ -25,6 +26,8 @@ export class RecipeBloc extends Bloc<RecipeEvent, RecipeState> {
 
     if (event instanceof RecipeGetEvent) {
       yield* this.get(event);
+    } else if (event instanceof RecipeListEvent) {
+      yield* this.list(event);
     }
   }
 
@@ -33,6 +36,16 @@ export class RecipeBloc extends Bloc<RecipeEvent, RecipeState> {
       const recipe = await this.repository.get(event.id);
 
       yield new RecipeGetState(recipe);
+    } catch (e) {
+      yield new RecipeErrorState();
+    }
+  }
+
+  async *list(event: RecipeListEvent) {
+    try {
+      const recipes = await this.repository.list();
+
+      yield new RecipeListState(recipes);
     } catch (e) {
       yield new RecipeErrorState();
     }

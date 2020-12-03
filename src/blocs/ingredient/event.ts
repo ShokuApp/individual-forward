@@ -8,3 +8,5 @@ export class IngredientGetEvent extends IngredientEvent {
     this.id = id;
   }
 }
+
+export class IngredientListEvent extends IngredientEvent {}
