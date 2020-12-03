@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const getOpeningTime: FC<TimeRange[][]> = (dataOpeningTime: TimeRange[][]) => {
+const GetOpeningTime: FC<TimeRange[][]> = (dataOpeningTime: TimeRange[][]) => {
   const now = new Date();
   const date = now.getDay();
   if (dataOpeningTime[date].length === 0) {
@@ -145,7 +145,7 @@ const getOpeningTime: FC<TimeRange[][]> = (dataOpeningTime: TimeRange[][]) => {
   }
 };
 
-const getPriceRange: FC<number> = (price: number) => {
+const GetPriceRange: FC<number> = (price: number) => {
   let numberIcons;
   if (price < 15) {
     numberIcons = 1;
@@ -236,9 +236,9 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
                 size={20}
                 style={styles.iconText}
               />
-              {getOpeningTime(restaurant.opening_time)}
+              {GetOpeningTime(restaurant.opening_time)}
             </View>
-            {getPriceRange(Number(restaurant.average_price.slice(0, -1)))}
+            {GetPriceRange(Number(restaurant.average_price.slice(0, -1)))}
           </View>
         </View>
       </View>
