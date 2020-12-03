@@ -23,4 +23,8 @@ export class PictogramRepository implements Repository<Pictogram> {
       pictograms.push(pictogram);
     }
   }
+
+  async list(): Promise<Pictogram[]> {
+    return pictograms;
+  }
 }
