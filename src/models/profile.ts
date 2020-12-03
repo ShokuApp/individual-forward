@@ -1,6 +1,4 @@
-import { Restaurant } from "./restaurant";
 import { Pictogram } from "./pictogram";
-import { Recipe } from "./recipe";
 
 export type Profile = {
   id: string;
@@ -9,6 +7,6 @@ export type Profile = {
   lastName: string;
   allergens: Pictogram[];
   diets: Pictogram[];
-  favoriteRecipes: Recipe[];
-  favoriteRestaurants: Restaurant[];
+  favoriteRecipes: string[];
+  favoriteRestaurants: string[];
 };
