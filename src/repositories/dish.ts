@@ -28,7 +28,7 @@ async function fromJSON(dishJson: any): Promise<Dish> {
     description: dishJson.description,
     type: dishJson.type,
     price: dishJson.price,
-    isAdaptable: dishJson.isAdaptable,
+    isAdaptable: dishJson.is_adaptable,
     ingredients,
     sauces,
   };

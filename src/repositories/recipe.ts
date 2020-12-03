@@ -1,13 +1,17 @@
 import { Repository } from "./repository";
-import { Recipe, RecipeIngredient } from "../models";
+import { Profile, Recipe, RecipeIngredient } from "../models";
 
 import recipes from "../../data/recipes/data.json";
 import { RecipeIngredientRepository } from "./recipe-ingredient";
+import { ProfileRepository } from "./profile";
 
+const profileRepository = new ProfileRepository();
 const recipeIngredientRepository = new RecipeIngredientRepository();
 
 // deepcode ignore no-any: JSON
 async function fromJSON(recipeJson: any): Promise<Recipe> {
+  const author: Profile = await profileRepository.get(recipeJson.profile_id);
+
   const ingredients: RecipeIngredient[] = await Promise.all(
     recipeJson.ingredients.map(async (id: string) => {
       return recipeIngredientRepository.get(id);
@@ -18,11 +22,14 @@ async function fromJSON(recipeJson: any): Promise<Recipe> {
     id: recipeJson.id,
     name: recipeJson.name,
     description: recipeJson.description,
-    author: recipeJson.author,
     image: recipeJson.image,
-    averageTime: recipeJson.average_time,
+    averageTime: {
+      preparation: Number(recipeJson.average_time.preparation),
+      cooking: Number(recipeJson.average_time.cooking),
+    },
     averageRate: Number(recipeJson.average_rate),
     steps: recipeJson.steps,
+    author,
     ingredients,
   };
 }
