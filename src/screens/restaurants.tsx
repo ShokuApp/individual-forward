@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { StyleSheet, View, Dimensions } from "react-native";
+import {StyleSheet, View, Dimensions, ScrollView} from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
-import { Restaurant } from "../models";
 import Data from "../../data/restaurants/data.json";
 import { ListRestaurantPreview } from "../components/restaurants/list-restaurant-preview";
 
@@ -24,9 +23,13 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
   },
+  previewList: {
+    position: "absolute",
+    bottom: 30,
+  },
 });
 
-const MapScreen: FC = () => {
+const RestaurantsScreen: FC = () => {
   const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
   return (
     <View style={styles.container}>
@@ -53,9 +56,11 @@ const MapScreen: FC = () => {
           );
         })}
       </MapView>
-      <ListRestaurantPreview restaurants={getRestaurantsIds()} />
+      <ScrollView horizontal={true} style={styles.previewList}>
+        <ListRestaurantPreview restaurants={getRestaurantsIds()} />
+      </ScrollView>
     </View>
   );
 };
 
-export default MapScreen;
+export default RestaurantsScreen;

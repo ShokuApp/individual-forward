@@ -5,7 +5,7 @@ import {
 } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./tab-bar";
 import ProfileScreen from "../../screens/profile";
-import MapScreen from "../../screens/map";
+import RestaurantsScreen from "../../screens/restaurants";
 import { StyleSheet, View } from "react-native";
 import RecipesScreen from "../../screens/recipes";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -36,7 +36,7 @@ export const BottomTabNavigator = () => {
       >
         <Tab.Screen
           name="mapScreen"
-          component={StackScreen("Restaurants", MapScreen)}
+          component={StackScreen("Restaurants", RestaurantsScreen)}
         />
         <Tab.Screen
           name="recipeScreen"
