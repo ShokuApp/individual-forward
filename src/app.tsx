@@ -14,17 +14,23 @@ export type RecipesStackParamList = {
 
 const RecipeDetailsStack = createStackNavigator<RecipesStackParamList>();
 
+const RootStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={BottomTabNavigator}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 const App = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={BottomTabNavigator}
-            options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
+        <RootStack />
       </NavigationContainer>
     </SafeAreaProvider>
   );
