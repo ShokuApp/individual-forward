@@ -13,43 +13,29 @@ import { Recipe } from "../../models";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
-export type RecipesStackParamList = {
-  Recipes: undefined;
-  RecipeDetails: { recipe: Recipe };
-};
-const RecipesStack = createStackNavigator<RecipesStackParamList>();
-
-export type RestaurantsStackParamList = {
-  Restaurants: undefined;
-};
-const RestaurantsStack = createStackNavigator<RestaurantsStackParamList>();
+const Stack = createStackNavigator();
 
 const Restaurants = () => {
-  return () => (
-    <RestaurantsStack.Navigator>
-      <RestaurantsStack.Screen
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
         name={"Restaurants"}
         component={RestaurantsScreen}
         options={{ title: "Restaurants" }}
       />
-    </RestaurantsStack.Navigator>
+    </Stack.Navigator>
   );
 };
 
 const Recipes = () => {
-  return () => (
-    <RecipesStack.Navigator>
-      <RecipesStack.Screen
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
         name={"Recipes"}
         component={RecipesScreen}
         options={{ title: "Recettes" }}
       />
-      <RecipesStack.Screen
-        name={"RecipeDetails"}
-        component={RecipeDetailsScreen}
-        options={{ headerShown: true }}
-      />
-    </RecipesStack.Navigator>
+    </Stack.Navigator>
   );
 };
 
@@ -67,8 +53,8 @@ export const BottomTabNavigator = () => {
       <Tab.Navigator
         tabBar={(props: BottomTabBarProps) => <TabBar {...props} />}
       >
-        <Tab.Screen name="mapScreen" component={Restaurants()} />
-        <Tab.Screen name="recipeScreen" component={Recipes()} />
+        <Tab.Screen name="mapScreen" component={Restaurants} />
+        <Tab.Screen name="recipeScreen" component={Recipes} />
         <Tab.Screen name="profileScreen" component={ProfileScreen} />
       </Tab.Navigator>
     </View>
