@@ -1,17 +1,21 @@
 [
     {
-        "id": "31e2d3f6-6b61-4dea-9f3d-4ece9ee17238",
+        "id": "a91c5392-14a4-4e73-a0f3-6e5fb806c28e",
         "name": "Recipe 1",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3426",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "2551",
+            "cooking": "2388"
+        },
+        "average_rate": "3",
         "ingredients": [
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0"
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454"
         ],
         "steps": [
             {
@@ -37,24 +41,48 @@
             {
                 "name": "Step 6",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "0dca3449-80f8-469d-970f-a2eaf633510a"
     },
     {
-        "id": "c787b1a6-a7a4-419b-8d95-4e9b7f1190f1",
+        "id": "1f8feb03-c867-4215-90aa-6a85cf93d1eb",
         "name": "Recipe 2",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2970",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "3322",
+            "cooking": "4534"
+        },
+        "average_rate": "3",
         "ingredients": [
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96"
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "228f396a-6e8b-4b01-822f-a515e86a0668"
         ],
         "steps": [
             {
@@ -88,32 +116,28 @@
             {
                 "name": "Step 8",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 10",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "bc7c593d-1166-4744-8528-4cb7b0d08417"
     },
     {
-        "id": "4e613967-369e-4fc1-9508-0e1d95865817",
+        "id": "4077f3f4-2d9c-48c3-9b94-db814ada226b",
         "name": "Recipe 3",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2086",
-        "average_rate": "1",
+        "average_time": {
+            "preparation": "2740",
+            "cooking": "2984"
+        },
+        "average_rate": "4",
         "ingredients": [
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05"
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "5c6beb93-61b9-4992-873d-202edb77c3af"
         ],
         "steps": [
             {
@@ -132,25 +156,23 @@
                 "name": "Step 4",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "2f835aab-2f73-4fe2-88a8-df9b424bb6e5"
     },
     {
-        "id": "f2c53f38-975b-400a-a4bb-e7d63ed06a86",
+        "id": "170ec005-63c6-46ce-9c73-6e0fe02b514d",
         "name": "Recipe 4",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2995",
-        "average_rate": "0",
+        "average_time": {
+            "preparation": "4793",
+            "cooking": "2049"
+        },
+        "average_rate": "2",
         "ingredients": [
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1"
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "aad395f2-4947-433d-9c8e-c707291f9db4"
         ],
         "steps": [
             {
@@ -164,23 +186,38 @@
             {
                 "name": "Step 3",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "a7f5e086-0c4f-47e7-9951-2d55b3dbb68e"
     },
     {
-        "id": "db20adfe-fdd5-4823-9740-943f96d044cd",
+        "id": "ef20d46e-eb21-44f3-aa90-cd75ffd8c72f",
         "name": "Recipe 5",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3727",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "4105",
+            "cooking": "4294"
+        },
+        "average_rate": "2",
         "ingredients": [
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd"
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
         ],
         "steps": [
             {
@@ -202,34 +239,29 @@
             {
                 "name": "Step 5",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "b344b433-0857-4773-b3e0-1312241e7f10"
     },
     {
-        "id": "10bea07f-c618-4d7e-817c-3f0faae5f6ff",
+        "id": "cb54d915-9155-43de-9890-feee23a84ba1",
         "name": "Recipe 6",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "4782",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "1151",
+            "cooking": "3574"
+        },
+        "average_rate": "0",
         "ingredients": [
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799"
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "5c6beb93-61b9-4992-873d-202edb77c3af"
         ],
         "steps": [
             {
@@ -247,24 +279,37 @@
             {
                 "name": "Step 4",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "c8560585-54e3-4d4e-8033-fa38fba1e636"
     },
     {
-        "id": "d02cc2a4-6390-43a1-9663-e6eb3a4d4c26",
+        "id": "b03e3f7d-39d5-45be-b23a-8aeca3a406c4",
         "name": "Recipe 7",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2481",
-        "average_rate": "3",
+        "average_time": {
+            "preparation": "2792",
+            "cooking": "579"
+        },
+        "average_rate": "1",
         "ingredients": [
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d"
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2"
         ],
         "steps": [
             {
@@ -286,26 +331,44 @@
             {
                 "name": "Step 5",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "543aa217-b360-4448-998b-a86542d00fd7"
     },
     {
-        "id": "95e4e068-39ae-44a4-a529-4913d2c6c66c",
+        "id": "3e59c9e7-91df-4610-b400-4077a209ab9a",
         "name": "Recipe 8",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2634",
-        "average_rate": "6",
+        "average_time": {
+            "preparation": "300",
+            "cooking": "3754"
+        },
+        "average_rate": "4",
         "ingredients": [
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799"
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
         ],
         "steps": [
             {
@@ -331,32 +394,26 @@
             {
                 "name": "Step 6",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "78845cca-e2f1-4119-9f38-57f7958f228b"
     },
     {
-        "id": "19144dbd-a42a-4b26-a6e8-e8ce47c118b8",
+        "id": "040d3524-9ba1-4826-8482-fee1c7126fcc",
         "name": "Recipe 9",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2388",
-        "average_rate": "3",
+        "average_time": {
+            "preparation": "3915",
+            "cooking": "1020"
+        },
+        "average_rate": "4",
         "ingredients": [
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1"
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099"
         ],
         "steps": [
             {
@@ -374,22 +431,46 @@
             {
                 "name": "Step 4",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "cc98adb0-e9b3-4d4a-8891-5fdbf980db8e"
     },
     {
-        "id": "84a4c089-506c-4607-8ab3-bf88602f6645",
+        "id": "e5f12404-7686-45fb-b715-0022ffd0ca8c",
         "name": "Recipe 10",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "1581",
-        "average_rate": "3",
+        "average_time": {
+            "preparation": "651",
+            "cooking": "2465"
+        },
+        "average_rate": "5",
         "ingredients": [
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96"
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
         ],
         "steps": [
             {
@@ -408,23 +489,28 @@
                 "name": "Step 4",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "59c61bed-266b-4f8f-bc99-e33fd3a90fdc"
     },
     {
-        "id": "f982f354-bf20-4873-945d-8a6d689e8fda",
+        "id": "bf6408f1-aecd-46db-9015-c6502369aa57",
         "name": "Recipe 11",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2934",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "4240",
+            "cooking": "3552"
+        },
+        "average_rate": "2",
         "ingredients": [
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1"
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e"
         ],
         "steps": [
             {
@@ -438,37 +524,31 @@
             {
                 "name": "Step 3",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "7aa23590-2fc8-4906-857c-f428edaf6657"
     },
     {
-        "id": "c5682419-d593-4a1a-bc80-ba3e24cf0a23",
+        "id": "80f997ba-5377-48cb-864c-fcfa01656cac",
         "name": "Recipe 12",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "4801",
+        "average_time": {
+            "preparation": "1506",
+            "cooking": "1423"
+        },
         "average_rate": "5",
         "ingredients": [
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18"
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "5c6beb93-61b9-4992-873d-202edb77c3af"
         ],
         "steps": [
             {
@@ -498,27 +578,30 @@
             {
                 "name": "Step 7",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "037adaf4-776d-4617-a66c-0d0eae8ddf8b"
     },
     {
-        "id": "e285f590-bdb2-4a53-9700-4787861b4833",
+        "id": "52ee01b7-7f2e-4c91-b481-52fbf1be402b",
         "name": "Recipe 13",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "643",
-        "average_rate": "5",
+        "average_time": {
+            "preparation": "3405",
+            "cooking": "3725"
+        },
+        "average_rate": "1",
         "ingredients": [
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c"
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "aad395f2-4947-433d-9c8e-c707291f9db4"
         ],
         "steps": [
             {
@@ -536,22 +619,41 @@
             {
                 "name": "Step 4",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "037adaf4-776d-4617-a66c-0d0eae8ddf8b"
     },
     {
-        "id": "f1323b34-78a2-4649-9792-2b3e09b1f4a6",
+        "id": "5effd67e-06d8-4f6e-9e79-58c190128fd1",
         "name": "Recipe 14",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "429",
-        "average_rate": "3",
+        "average_time": {
+            "preparation": "2956",
+            "cooking": "4373"
+        },
+        "average_rate": "5",
         "ingredients": [
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18"
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b"
         ],
         "steps": [
             {
@@ -582,22 +684,29 @@
                 "name": "Step 7",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "fb13ae50-bf37-4823-b67b-7ca67fb6bba4"
     },
     {
-        "id": "28346391-fba4-4fd1-add8-10481b65af4e",
+        "id": "84bc1536-30a3-42d2-b8ee-304e562ac715",
         "name": "Recipe 15",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2869",
-        "average_rate": "1",
+        "average_time": {
+            "preparation": "769",
+            "cooking": "732"
+        },
+        "average_rate": "2",
         "ingredients": [
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05"
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099"
         ],
         "steps": [
             {
@@ -623,34 +732,30 @@
             {
                 "name": "Step 6",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "543aa217-b360-4448-998b-a86542d00fd7"
     },
     {
-        "id": "7e15614f-e2e3-4873-a9fe-af03d60b09be",
+        "id": "06044319-2158-475d-9241-9adbc901eec3",
         "name": "Recipe 16",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "4169",
-        "average_rate": "5",
+        "average_time": {
+            "preparation": "4192",
+            "cooking": "2254"
+        },
+        "average_rate": "6",
         "ingredients": [
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd"
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "aad395f2-4947-433d-9c8e-c707291f9db4"
         ],
         "steps": [
             {
@@ -672,44 +777,31 @@
             {
                 "name": "Step 5",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 10",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "543aa217-b360-4448-998b-a86542d00fd7"
     },
     {
-        "id": "23081f22-d8a5-4f2e-a074-585db5fd8c93",
+        "id": "f0c10a46-ad29-48f1-a769-9c5eb34716d0",
         "name": "Recipe 17",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "1841",
-        "average_rate": "2",
+        "average_time": {
+            "preparation": "3616",
+            "cooking": "4810"
+        },
+        "average_rate": "1",
         "ingredients": [
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18"
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f"
         ],
         "steps": [
             {
@@ -735,28 +827,30 @@
             {
                 "name": "Step 6",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "78845cca-e2f1-4119-9f38-57f7958f228b"
     },
     {
-        "id": "33836b50-0576-40bd-8246-753c7edd47f3",
+        "id": "edd7db0e-80d3-4328-b5ee-dbb25cb8f6d3",
         "name": "Recipe 18",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "772",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "2036",
+            "cooking": "509"
+        },
+        "average_rate": "6",
         "ingredients": [
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a"
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
         ],
         "steps": [
             {
@@ -794,28 +888,30 @@
             {
                 "name": "Step 9",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "ad29420f-0544-4010-8b82-7de0480a32fb"
     },
     {
-        "id": "02a831ad-cd91-4350-9964-6ab6dabaf2c0",
+        "id": "d22e41ae-c12d-466a-b99b-943488998e0f",
         "name": "Recipe 19",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2757",
-        "average_rate": "1",
+        "average_time": {
+            "preparation": "4234",
+            "cooking": "1404"
+        },
+        "average_rate": "6",
         "ingredients": [
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81"
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3"
         ],
         "steps": [
             {
@@ -826,21 +922,29 @@
                 "name": "Step 2",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "3545818a-3e74-415b-8f5c-94f10ae9bfb5"
     },
     {
-        "id": "7902ea8e-4c03-45c8-8e0a-981fcdcbff46",
+        "id": "e6bd584c-b7c8-405c-87c6-3e812e003395",
         "name": "Recipe 20",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3219",
+        "average_time": {
+            "preparation": "4156",
+            "cooking": "659"
+        },
         "average_rate": "2",
         "ingredients": [
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05"
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
         ],
         "steps": [
             {
@@ -862,21 +966,43 @@
             {
                 "name": "Step 5",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "00245630-591f-443e-945d-7e097896c746"
     },
     {
-        "id": "6c4155bc-a360-4d82-a13c-135f8f0e3a50",
+        "id": "390b3b5e-f05b-4c33-9b09-e4f61fbfea32",
         "name": "Recipe 21",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2135",
-        "average_rate": "0",
+        "average_time": {
+            "preparation": "4258",
+            "cooking": "1934"
+        },
+        "average_rate": "4",
         "ingredients": [
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799"
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "2ab715d9-3389-4720-a8e6-6109c9329943"
         ],
         "steps": [
             {
@@ -919,23 +1045,30 @@
                 "name": "Step 10",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "a7f5e086-0c4f-47e7-9951-2d55b3dbb68e"
     },
     {
-        "id": "f492e01f-fddb-4f33-af2e-00ee32a131a1",
+        "id": "79f30a98-0a9c-457e-8263-b43b4287b5c6",
         "name": "Recipe 22",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2204",
-        "average_rate": "2",
+        "average_time": {
+            "preparation": "1476",
+            "cooking": "2002"
+        },
+        "average_rate": "3",
         "ingredients": [
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799"
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76"
         ],
         "steps": [
             {
@@ -965,33 +1098,29 @@
             {
                 "name": "Step 7",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 10",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "ca0f95be-6b6f-4b9b-bc3a-dc23c72455c0"
     },
     {
-        "id": "83657413-e4fb-4d23-add2-6290b1ae9e2a",
+        "id": "031b4878-5f50-491c-b5d0-5800ceb45721",
         "name": "Recipe 23",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "641",
-        "average_rate": "1",
+        "average_time": {
+            "preparation": "2804",
+            "cooking": "2653"
+        },
+        "average_rate": "2",
         "ingredients": [
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05"
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "aad395f2-4947-433d-9c8e-c707291f9db4"
         ],
         "steps": [
             {
@@ -1001,46 +1130,31 @@
             {
                 "name": "Step 2",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "6f7df194-35cc-4746-87d0-5d8290eead19"
     },
     {
-        "id": "b5ba3b1d-0d69-467b-8f91-2de32dbe9524",
+        "id": "a252c9c4-d25f-4a15-a7c5-2f14ea646051",
         "name": "Recipe 24",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "1474",
-        "average_rate": "2",
+        "average_time": {
+            "preparation": "1683",
+            "cooking": "3151"
+        },
+        "average_rate": "1",
         "ingredients": [
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81"
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b"
         ],
         "steps": [
             {
@@ -1066,28 +1180,27 @@
             {
                 "name": "Step 6",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "359c516a-5e18-4e24-be3b-d9760c9146e2"
     },
     {
-        "id": "9aee5771-aa71-4b01-80d9-a108c0b9ab3e",
+        "id": "59962f89-7a06-40cb-b1fd-cab176aef773",
         "name": "Recipe 25",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "1190",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "1682",
+            "cooking": "3570"
+        },
+        "average_rate": "1",
         "ingredients": [
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "3a24a348-582d-4114-9665-061f1a6c283e"
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f"
         ],
         "steps": [
             {
@@ -1117,33 +1230,31 @@
             {
                 "name": "Step 7",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "a7f5e086-0c4f-47e7-9951-2d55b3dbb68e"
     },
     {
-        "id": "f3200df1-24c9-4cab-9a07-b12d824ffb19",
+        "id": "e669b0e1-c293-4139-9e42-3602874b9d0b",
         "name": "Recipe 26",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3026",
-        "average_rate": "2",
+        "average_time": {
+            "preparation": "1478",
+            "cooking": "502"
+        },
+        "average_rate": "5",
         "ingredients": [
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96"
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "5c6beb93-61b9-4992-873d-202edb77c3af"
         ],
         "steps": [
             {
@@ -1169,23 +1280,45 @@
             {
                 "name": "Step 6",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "f95e47e8-6aa4-4289-86fe-91090324a9bc"
     },
     {
-        "id": "2301a8a6-78f1-46a5-8e4d-c7c281d01040",
+        "id": "006d42ba-2563-461b-803c-c040655b4c39",
         "name": "Recipe 27",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "418",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "3095",
+            "cooking": "383"
+        },
+        "average_rate": "5",
         "ingredients": [
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05"
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76"
         ],
         "steps": [
             {
@@ -1195,26 +1328,38 @@
             {
                 "name": "Step 2",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "ad29420f-0544-4010-8b82-7de0480a32fb"
     },
     {
-        "id": "914c7f6a-1583-4193-84e1-c683a64f2a51",
+        "id": "c5b9e7d5-92eb-4b6e-8514-3d354f7dc373",
         "name": "Recipe 28",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "4126",
-        "average_rate": "5",
+        "average_time": {
+            "preparation": "2092",
+            "cooking": "4769"
+        },
+        "average_rate": "0",
         "ingredients": [
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51"
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
         ],
         "steps": [
             {
@@ -1224,23 +1369,53 @@
             {
                 "name": "Step 2",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "037adaf4-776d-4617-a66c-0d0eae8ddf8b"
     },
     {
-        "id": "4f133c7e-f221-4646-873a-afa12b4ae137",
+        "id": "a45d5b3b-b679-4de1-962d-81cf1a6c7077",
         "name": "Recipe 29",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2239",
-        "average_rate": "5",
+        "average_time": {
+            "preparation": "3752",
+            "cooking": "1716"
+        },
+        "average_rate": "0",
         "ingredients": [
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d"
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "56465f3c-3446-402b-b855-c2b235d913b0"
         ],
         "steps": [
             {
@@ -1270,27 +1445,27 @@
             {
                 "name": "Step 7",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "5342fdcd-59d6-4a19-8e5d-b60bad28dc8e"
     },
     {
-        "id": "a2058c66-49d7-42c8-9e94-344ff3bd4724",
+        "id": "327dfbea-7355-4dee-a754-51b5b7757a25",
         "name": "Recipe 30",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "4638",
-        "average_rate": "5",
+        "average_time": {
+            "preparation": "2734",
+            "cooking": "849"
+        },
+        "average_rate": "1",
         "ingredients": [
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0"
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "56465f3c-3446-402b-b855-c2b235d913b0"
         ],
         "steps": [
             {
@@ -1304,25 +1479,33 @@
             {
                 "name": "Step 3",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "366c4705-af1e-4e6a-a586-d50df2e68c2b"
     },
     {
-        "id": "49f254ab-7840-484b-b212-48d15ed4a69e",
+        "id": "cf314e2d-dbaa-4dec-88f3-9a31114bce73",
         "name": "Recipe 31",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3962",
-        "average_rate": "6",
+        "average_time": {
+            "preparation": "3011",
+            "cooking": "582"
+        },
+        "average_rate": "0",
         "ingredients": [
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "3a24a348-582d-4114-9665-061f1a6c283e"
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee"
         ],
         "steps": [
             {
@@ -1332,26 +1515,39 @@
             {
                 "name": "Step 2",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "fb13ae50-bf37-4823-b67b-7ca67fb6bba4"
     },
     {
-        "id": "8adba812-269f-4a99-aa58-0a107d97f9f9",
+        "id": "2f0b67c4-0e39-4549-9e19-51982eb5b16f",
         "name": "Recipe 32",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "416",
+        "average_time": {
+            "preparation": "3716",
+            "cooking": "1542"
+        },
         "average_rate": "1",
         "ingredients": [
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18"
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
         ],
         "steps": [
             {
@@ -1377,35 +1573,28 @@
             {
                 "name": "Step 6",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "f37b214a-cd42-4b57-9896-f5867b2dd659"
     },
     {
-        "id": "960b361d-a204-477b-b15a-4bbfe3ece057",
+        "id": "3a7cca4f-778d-430d-9ece-15e727b0284e",
         "name": "Recipe 33",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3429",
-        "average_rate": "2",
+        "average_time": {
+            "preparation": "1495",
+            "cooking": "2178"
+        },
+        "average_rate": "4",
         "ingredients": [
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51"
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee"
         ],
         "steps": [
             {
@@ -1419,25 +1608,34 @@
             {
                 "name": "Step 3",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "00245630-591f-443e-945d-7e097896c746"
     },
     {
-        "id": "27484894-aa43-4f5d-ab47-b8ed36905124",
+        "id": "38608a2f-993b-4aac-a56d-5a73e2e666b1",
         "name": "Recipe 34",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "612",
-        "average_rate": "4",
+        "average_time": {
+            "preparation": "2458",
+            "cooking": "1769"
+        },
+        "average_rate": "2",
         "ingredients": [
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05"
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0"
         ],
         "steps": [
             {
@@ -1460,26 +1658,30 @@
                 "name": "Step 5",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "af67d80d-e642-496a-8656-5ea790536288"
     },
     {
-        "id": "4903bc3a-0636-4a15-bd6d-f679e5dbd2c1",
+        "id": "ddab56f9-f879-4ffa-8487-1ab28b7461b1",
         "name": "Recipe 35",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3308",
-        "average_rate": "0",
+        "average_time": {
+            "preparation": "3016",
+            "cooking": "2115"
+        },
+        "average_rate": "3",
         "ingredients": [
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a"
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "5c6beb93-61b9-4992-873d-202edb77c3af"
         ],
         "steps": [
             {
@@ -1501,28 +1703,50 @@
             {
                 "name": "Step 5",
                 "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "f37b214a-cd42-4b57-9896-f5867b2dd659"
     },
     {
-        "id": "de8bbcf8-d4eb-4cae-a1f3-5b70ca34a157",
+        "id": "6052cb97-d6d8-4615-bf5f-20eb1ce588a0",
         "name": "Recipe 36",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2856",
-        "average_rate": "0",
+        "average_time": {
+            "preparation": "2387",
+            "cooking": "2539"
+        },
+        "average_rate": "4",
         "ingredients": [
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1"
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76"
         ],
         "steps": [
             {
@@ -1532,41 +1756,26 @@
             {
                 "name": "Step 2",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "9e68199a-a68f-4e0b-a46d-d0850c0f4318"
     },
     {
-        "id": "a6233404-71b4-49d7-9b85-9660bf9e88ac",
+        "id": "f6b382a1-4366-45d7-9cd9-271e87ebeb24",
         "name": "Recipe 37",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "1633",
-        "average_rate": "3",
+        "average_time": {
+            "preparation": "1980",
+            "cooking": "4437"
+        },
+        "average_rate": "6",
         "ingredients": [
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c"
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb"
         ],
         "steps": [
             {
@@ -1604,29 +1813,29 @@
             {
                 "name": "Step 9",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 10",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "8c461589-3e11-47aa-8e05-17b82447d6ee"
     },
     {
-        "id": "66aee1c6-472d-4e44-a3d9-41ae931d758c",
+        "id": "02d55cf1-5319-4e3e-9ab7-2415539f306e",
         "name": "Recipe 38",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2177",
-        "average_rate": "2",
+        "average_time": {
+            "preparation": "2617",
+            "cooking": "2578"
+        },
+        "average_rate": "6",
         "ingredients": [
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd"
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb"
         ],
         "steps": [
             {
@@ -1640,51 +1849,29 @@
             {
                 "name": "Step 3",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "d4c73563-6b94-449b-a603-9610fb5c9656"
     },
     {
-        "id": "ac311423-8a18-4ef1-aff9-d6f47501c7fd",
+        "id": "ad55dd76-01b5-4bb9-9f00-4a8fb797d623",
         "name": "Recipe 39",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "900",
-        "average_rate": "6",
+        "average_time": {
+            "preparation": "3451",
+            "cooking": "3330"
+        },
+        "average_rate": "2",
         "ingredients": [
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d"
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "91e5ba00-33f4-4226-b698-472c3c545912"
         ],
         "steps": [
             {
@@ -1703,20 +1890,25 @@
                 "name": "Step 4",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "9e68199a-a68f-4e0b-a46d-d0850c0f4318"
     },
     {
-        "id": "ce42e396-7a37-407b-b495-56a79d9be48e",
+        "id": "332fa9d5-bccd-4cb8-86de-a25471ea05f2",
         "name": "Recipe 40",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2289",
-        "average_rate": "5",
+        "average_time": {
+            "preparation": "4888",
+            "cooking": "4529"
+        },
+        "average_rate": "0",
         "ingredients": [
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799"
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b"
         ],
         "steps": [
             {
@@ -1726,629 +1918,26 @@
             {
                 "name": "Step 2",
                 "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 10",
-                "description": "A generic description"
             }
-        ]
+        ],
+        "author": "543aa217-b360-4448-998b-a86542d00fd7"
     },
     {
-        "id": "aae25a31-7319-4ec3-93cb-ca5ae15c7d77",
+        "id": "2c247ebc-e892-40f6-9b4a-8aad0c34e17e",
         "name": "Recipe 41",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3902",
-        "average_rate": "5",
-        "ingredients": [
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "aa32a89f-e98a-4f2a-acb6-e7681d01d7f3",
-        "name": "Recipe 42",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "3298",
-        "average_rate": "6",
-        "ingredients": [
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "7bcdc70d-61e2-474c-883c-1ee5716e07db",
-        "name": "Recipe 43",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "1906",
-        "average_rate": "5",
-        "ingredients": [
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "a3214c45-d54f-4942-95e3-bc785e4de6a9",
-        "name": "Recipe 44",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "3545",
+        "average_time": {
+            "preparation": "4542",
+            "cooking": "1388"
+        },
         "average_rate": "2",
         "ingredients": [
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "87c571e6-db09-4392-856c-a2db31016f35",
-        "name": "Recipe 45",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "2187",
-        "average_rate": "3",
-        "ingredients": [
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "4aeb9288-866d-4183-8db9-8b40279af49d",
-        "name": "Recipe 46",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "3217",
-        "average_rate": "4",
-        "ingredients": [
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "dacdca55-2a4e-4dec-a143-080e034d735f",
-        "name": "Recipe 47",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "1265",
-        "average_rate": "0",
-        "ingredients": [
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "1b4eaab8-b3ac-4d05-8d56-16addcc3be3f",
-        "name": "Recipe 48",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "4788",
-        "average_rate": "3",
-        "ingredients": [
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "067ae7cf-6ba1-4e9a-917b-479679a64fa5",
-        "name": "Recipe 49",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "4607",
-        "average_rate": "6",
-        "ingredients": [
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "34d92765-25d3-4beb-8f22-4e41efd947b1",
-        "name": "Recipe 50",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "3403",
-        "average_rate": "6",
-        "ingredients": [
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "bc78a25c-5414-4b65-bfda-2666c615236c",
-        "name": "Recipe 51",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "2098",
-        "average_rate": "0",
-        "ingredients": [
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "5e8588e2-a050-4aef-b6d1-0dc2f5d8061e",
-        "name": "Recipe 52",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "1870",
-        "average_rate": "1",
-        "ingredients": [
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "fc3ff929-0374-4db8-8a1a-0d8c262fd460",
-        "name": "Recipe 53",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "1088",
-        "average_rate": "5",
-        "ingredients": [
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "a41d6be5-f85d-4471-8ae3-64757ce3bd81",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "3a24a348-582d-4114-9665-061f1a6c283e"
-        ],
-        "steps": [
-            {
-                "name": "Step 1",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 2",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 3",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 4",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 5",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 6",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 7",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 8",
-                "description": "A generic description"
-            },
-            {
-                "name": "Step 9",
-                "description": "A generic description"
-            }
-        ]
-    },
-    {
-        "id": "499b577c-fe47-4bcc-9d4e-f38218e4e242",
-        "name": "Recipe 54",
-        "description": "A generic description",
-        "image": "https://source.unsplash.com/random",
-        "average_time": "4104",
-        "average_rate": "3",
-        "ingredients": [
-            "ff4a5669-7937-4bc9-bc17-84fc639ebf05",
-            "81a34f35-5e47-436f-92a0-3c58d8cc5e8a",
-            "1b56cb48-f7d1-46b6-a0f3-0d5f96018f96",
-            "018a7ce3-f739-4abb-88d7-56175f58bf18"
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454"
         ],
         "steps": [
             {
@@ -2391,23 +1980,26 @@
                 "name": "Step 10",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "f37b214a-cd42-4b57-9896-f5867b2dd659"
     },
     {
-        "id": "a2f70a37-259f-41a5-9236-752dc7812cf3",
-        "name": "Recipe 55",
+        "id": "275e6705-3f52-48ce-a086-2c2dff1a879a",
+        "name": "Recipe 42",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "3694",
-        "average_rate": "3",
+        "average_time": {
+            "preparation": "2086",
+            "cooking": "4597"
+        },
+        "average_rate": "5",
         "ingredients": [
-            "5b28ec29-87f6-4ae1-a38e-0c840fb6ecf0",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "d5f0c85c-0906-4c1e-b02f-1246f1159799",
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51",
-            "55ea6009-f50c-4f4d-ba54-9685523c702c",
-            "6a7b7497-9797-4471-9cb4-97858dc297fd"
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099"
         ],
         "steps": [
             {
@@ -2434,21 +2026,124 @@
                 "name": "Step 6",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "f37b214a-cd42-4b57-9896-f5867b2dd659"
     },
     {
-        "id": "cfed11da-4da2-4fd0-bfff-81997b677972",
-        "name": "Recipe 56",
+        "id": "75499682-6f57-415b-b780-0c20dab93b29",
+        "name": "Recipe 43",
         "description": "A generic description",
         "image": "https://source.unsplash.com/random",
-        "average_time": "2520",
+        "average_time": {
+            "preparation": "2094",
+            "cooking": "4268"
+        },
+        "average_rate": "2",
+        "ingredients": [
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            }
+        ],
+        "author": "ca0f95be-6b6f-4b9b-bc3a-dc23c72455c0"
+    },
+    {
+        "id": "e8fd1125-ec26-424e-abc7-37e64cc2421f",
+        "name": "Recipe 44",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2707",
+            "cooking": "464"
+        },
         "average_rate": "1",
         "ingredients": [
-            "32706eae-6aa1-49f8-9639-047a5d9acd05",
-            "80cffe34-c38d-422a-acc7-14e1a993e64d",
-            "3a24a348-582d-4114-9665-061f1a6c283e",
-            "38ca6090-95df-42b5-8f63-8c27c78882b1",
-            "7a7c3f44-0b59-43e9-a8a6-b063ff89ab51"
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            }
+        ],
+        "author": "66c278b9-f680-4f96-9e19-351faa91e743"
+    },
+    {
+        "id": "e935b7ae-c801-4783-a9f7-2ec454d477e0",
+        "name": "Recipe 45",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "3705",
+            "cooking": "1796"
+        },
+        "average_rate": "2",
+        "ingredients": [
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76"
         ],
         "steps": [
             {
@@ -2459,6 +2154,1879 @@
                 "name": "Step 2",
                 "description": "A generic description"
             }
-        ]
+        ],
+        "author": "f95e47e8-6aa4-4289-86fe-91090324a9bc"
+    },
+    {
+        "id": "044dca71-1f1c-4d98-b635-c042924897a6",
+        "name": "Recipe 46",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2263",
+            "cooking": "1113"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "228f396a-6e8b-4b01-822f-a515e86a0668"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            }
+        ],
+        "author": "26f5e534-0b9b-468e-bd4c-4c111f16837f"
+    },
+    {
+        "id": "643bba9b-ccab-4ba5-8060-26da3056acc4",
+        "name": "Recipe 47",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "3718",
+            "cooking": "3309"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "0e011e38-933a-4607-99af-b4469e65bc30"
+    },
+    {
+        "id": "83bf7332-ce5f-4aa2-8da6-d176d98e2edd",
+        "name": "Recipe 48",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4045",
+            "cooking": "2881"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            }
+        ],
+        "author": "9a906626-d447-459b-8441-6cf16a6e1b13"
+    },
+    {
+        "id": "d8390d1c-d2b9-4cda-a613-68119f30de72",
+        "name": "Recipe 49",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2174",
+            "cooking": "3622"
+        },
+        "average_rate": "6",
+        "ingredients": [
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            }
+        ],
+        "author": "7aa23590-2fc8-4906-857c-f428edaf6657"
+    },
+    {
+        "id": "eb64c43c-2fe7-499e-b527-2b0625f2cf63",
+        "name": "Recipe 50",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "3011",
+            "cooking": "1662"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            }
+        ],
+        "author": "d4c73563-6b94-449b-a603-9610fb5c9656"
+    },
+    {
+        "id": "ac4ba920-2f26-4c2d-bcd1-906fc1ef5cbb",
+        "name": "Recipe 51",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "574",
+            "cooking": "2003"
+        },
+        "average_rate": "1",
+        "ingredients": [
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
+            }
+        ],
+        "author": "bdc442eb-2d07-41c7-a77e-71561ae23986"
+    },
+    {
+        "id": "b9e8c0ad-335d-414a-aab7-24558e1c36db",
+        "name": "Recipe 52",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4458",
+            "cooking": "1787"
+        },
+        "average_rate": "1",
+        "ingredients": [
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            }
+        ],
+        "author": "f95e47e8-6aa4-4289-86fe-91090324a9bc"
+    },
+    {
+        "id": "0e38e7d7-e504-4b1c-972b-75ae697454bf",
+        "name": "Recipe 53",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "3325",
+            "cooking": "3777"
+        },
+        "average_rate": "4",
+        "ingredients": [
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            }
+        ],
+        "author": "4dd9afb9-728f-4bb9-8cee-ff00260f78b7"
+    },
+    {
+        "id": "12463d81-d1b8-4113-ba01-0eea02913226",
+        "name": "Recipe 54",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "3944",
+            "cooking": "3534"
+        },
+        "average_rate": "2",
+        "ingredients": [
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            }
+        ],
+        "author": "798c3d44-2a03-405b-a38c-b88628fd4e01"
+    },
+    {
+        "id": "a50384e2-3c99-4b1c-abd2-66bed973579c",
+        "name": "Recipe 55",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2166",
+            "cooking": "3976"
+        },
+        "average_rate": "6",
+        "ingredients": [
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            }
+        ],
+        "author": "366c4705-af1e-4e6a-a586-d50df2e68c2b"
+    },
+    {
+        "id": "07fb35da-d72c-412a-bbe1-f55e0d00cf74",
+        "name": "Recipe 56",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4731",
+            "cooking": "2284"
+        },
+        "average_rate": "6",
+        "ingredients": [
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "5c6beb93-61b9-4992-873d-202edb77c3af"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            }
+        ],
+        "author": "8b045bbc-90d1-4fef-9584-48ca834fc08e"
+    },
+    {
+        "id": "73dcf55f-3fc6-4ce5-bf17-21835f3ddf9a",
+        "name": "Recipe 57",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4495",
+            "cooking": "1132"
+        },
+        "average_rate": "6",
+        "ingredients": [
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            }
+        ],
+        "author": "cc98adb0-e9b3-4d4a-8891-5fdbf980db8e"
+    },
+    {
+        "id": "545a0f7f-1f8d-4854-9eb7-d143d91000fa",
+        "name": "Recipe 58",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "418",
+            "cooking": "4896"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            }
+        ],
+        "author": "b130985a-be52-4d0c-98fd-a6ec3f7ef36d"
+    },
+    {
+        "id": "731ed6ea-6451-4be6-bae1-bce02867683f",
+        "name": "Recipe 59",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2213",
+            "cooking": "2662"
+        },
+        "average_rate": "4",
+        "ingredients": [
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "037adaf4-776d-4617-a66c-0d0eae8ddf8b"
+    },
+    {
+        "id": "6e8a9026-e99c-48f0-b224-30e5b5d8d277",
+        "name": "Recipe 60",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "3933",
+            "cooking": "2517"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "aad395f2-4947-433d-9c8e-c707291f9db4"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            }
+        ],
+        "author": "6f7df194-35cc-4746-87d0-5d8290eead19"
+    },
+    {
+        "id": "19ec09ed-3136-4daf-a970-b8a451d4005a",
+        "name": "Recipe 61",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "1241",
+            "cooking": "1903"
+        },
+        "average_rate": "1",
+        "ingredients": [
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            }
+        ],
+        "author": "4dd9afb9-728f-4bb9-8cee-ff00260f78b7"
+    },
+    {
+        "id": "30daf07f-873a-404b-80a5-787771d163c3",
+        "name": "Recipe 62",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2538",
+            "cooking": "4002"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "56465f3c-3446-402b-b855-c2b235d913b0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            }
+        ],
+        "author": "359c516a-5e18-4e24-be3b-d9760c9146e2"
+    },
+    {
+        "id": "3fcb22d9-7252-48f9-a269-77a1fe95ddcb",
+        "name": "Recipe 63",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2801",
+            "cooking": "1797"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            }
+        ],
+        "author": "59c61bed-266b-4f8f-bc99-e33fd3a90fdc"
+    },
+    {
+        "id": "a3ddd58c-1255-4156-b991-88925bf74fec",
+        "name": "Recipe 64",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "345",
+            "cooking": "3614"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "91e5ba00-33f4-4226-b698-472c3c545912"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            }
+        ],
+        "author": "9a906626-d447-459b-8441-6cf16a6e1b13"
+    },
+    {
+        "id": "9218ac89-5bb3-4eac-8298-b79557546a2a",
+        "name": "Recipe 65",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "559",
+            "cooking": "2720"
+        },
+        "average_rate": "0",
+        "ingredients": [
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "5c6beb93-61b9-4992-873d-202edb77c3af"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            }
+        ],
+        "author": "0620c5a6-733e-4883-a8c4-0b7b61b56954"
+    },
+    {
+        "id": "16957d77-0f12-4105-bd1e-16fb5c8576fd",
+        "name": "Recipe 66",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "1460",
+            "cooking": "2812"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "aad395f2-4947-433d-9c8e-c707291f9db4"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            }
+        ],
+        "author": "f95e47e8-6aa4-4289-86fe-91090324a9bc"
+    },
+    {
+        "id": "2b182ffe-26c5-4958-90b9-2a0d7a7be5a4",
+        "name": "Recipe 67",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "1836",
+            "cooking": "828"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            }
+        ],
+        "author": "f37b214a-cd42-4b57-9896-f5867b2dd659"
+    },
+    {
+        "id": "3d1b1cf8-fc71-4f2e-9a05-c03ad3cee010",
+        "name": "Recipe 68",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2398",
+            "cooking": "3797"
+        },
+        "average_rate": "6",
+        "ingredients": [
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            }
+        ],
+        "author": "4dd9afb9-728f-4bb9-8cee-ff00260f78b7"
+    },
+    {
+        "id": "3b9bfcde-a9d8-46cd-95b9-cceae75c8c99",
+        "name": "Recipe 69",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4576",
+            "cooking": "4441"
+        },
+        "average_rate": "1",
+        "ingredients": [
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "228f396a-6e8b-4b01-822f-a515e86a0668"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "65f211a0-f2c3-4cf6-8133-38b78c689135"
+    },
+    {
+        "id": "7bf89528-1af0-4dbf-a905-0b1786eadb65",
+        "name": "Recipe 70",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "306",
+            "cooking": "426"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            }
+        ],
+        "author": "d4c73563-6b94-449b-a603-9610fb5c9656"
+    },
+    {
+        "id": "c29387b4-7041-4f18-a427-7a80aa9da15e",
+        "name": "Recipe 71",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "734",
+            "cooking": "4452"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "56465f3c-3446-402b-b855-c2b235d913b0",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            }
+        ],
+        "author": "f18e3322-d705-4a3b-9164-91fafa9edfe2"
+    },
+    {
+        "id": "8a516b41-17cd-439c-a738-a81e7a72709a",
+        "name": "Recipe 72",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2587",
+            "cooking": "3952"
+        },
+        "average_rate": "4",
+        "ingredients": [
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            }
+        ],
+        "author": "543aa217-b360-4448-998b-a86542d00fd7"
+    },
+    {
+        "id": "7d18358f-ac20-4b28-a174-bf3b07ba546f",
+        "name": "Recipe 73",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2386",
+            "cooking": "3891"
+        },
+        "average_rate": "0",
+        "ingredients": [
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            }
+        ],
+        "author": "a7f5e086-0c4f-47e7-9951-2d55b3dbb68e"
+    },
+    {
+        "id": "2940a2c1-7c58-4c31-87ef-2ca1df7a5b85",
+        "name": "Recipe 74",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "1653",
+            "cooking": "4365"
+        },
+        "average_rate": "1",
+        "ingredients": [
+            "a8ade1d2-617e-4c3e-b0fd-dd72e08ead6b",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "4dd9afb9-728f-4bb9-8cee-ff00260f78b7"
+    },
+    {
+        "id": "35f98de3-3ad4-46be-bc1a-8f004e2fd1df",
+        "name": "Recipe 75",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4658",
+            "cooking": "1149"
+        },
+        "average_rate": "0",
+        "ingredients": [
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "3b61e464-bf5b-4dc7-85a8-a8f3a81fbd98"
+    },
+    {
+        "id": "3ceb231c-a436-4340-ab76-465f6012e18b",
+        "name": "Recipe 76",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "3464",
+            "cooking": "2076"
+        },
+        "average_rate": "0",
+        "ingredients": [
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            }
+        ],
+        "author": "ca0f95be-6b6f-4b9b-bc3a-dc23c72455c0"
+    },
+    {
+        "id": "12e25f5e-254f-421d-936d-252711ece160",
+        "name": "Recipe 77",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4558",
+            "cooking": "2489"
+        },
+        "average_rate": "2",
+        "ingredients": [
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "56465f3c-3446-402b-b855-c2b235d913b0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "8c461589-3e11-47aa-8e05-17b82447d6ee"
+    },
+    {
+        "id": "f5e57193-4795-4ef2-9abb-75e22d290de8",
+        "name": "Recipe 78",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2633",
+            "cooking": "3906"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "8f3e8d11-d56e-4336-8f1d-0535fa41db9f",
+            "aad395f2-4947-433d-9c8e-c707291f9db4"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
+            }
+        ],
+        "author": "366c4705-af1e-4e6a-a586-d50df2e68c2b"
+    },
+    {
+        "id": "701ea8f5-08ad-463e-b524-866265c7438b",
+        "name": "Recipe 79",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4296",
+            "cooking": "3185"
+        },
+        "average_rate": "0",
+        "ingredients": [
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            }
+        ],
+        "author": "66c278b9-f680-4f96-9e19-351faa91e743"
+    },
+    {
+        "id": "86a388a6-1292-4ab3-bad3-1164b5fd8cb7",
+        "name": "Recipe 80",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "366",
+            "cooking": "2472"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "798c3d44-2a03-405b-a38c-b88628fd4e01"
+    },
+    {
+        "id": "1ac4b873-9b3e-4610-acdc-06be5ea6c47a",
+        "name": "Recipe 81",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2652",
+            "cooking": "2421"
+        },
+        "average_rate": "4",
+        "ingredients": [
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
+            }
+        ],
+        "author": "7aa23590-2fc8-4906-857c-f428edaf6657"
+    },
+    {
+        "id": "7ffac108-e9cb-449c-9de2-5d468c4b9008",
+        "name": "Recipe 82",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "4020",
+            "cooking": "663"
+        },
+        "average_rate": "4",
+        "ingredients": [
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 10",
+                "description": "A generic description"
+            }
+        ],
+        "author": "6f7df194-35cc-4746-87d0-5d8290eead19"
+    },
+    {
+        "id": "935e83da-d9da-4dc4-a588-27ffea661445",
+        "name": "Recipe 83",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2021",
+            "cooking": "4541"
+        },
+        "average_rate": "0",
+        "ingredients": [
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "164e58e4-be9d-484a-b4d5-b28051f30b76",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "aad395f2-4947-433d-9c8e-c707291f9db4",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "cfa2fe66-ac06-44b5-84d1-3b13c9912b3e"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            }
+        ],
+        "author": "0e011e38-933a-4607-99af-b4469e65bc30"
+    },
+    {
+        "id": "cba80b1f-0ab3-433a-9698-994b6e8cc60f",
+        "name": "Recipe 84",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "2036",
+            "cooking": "3165"
+        },
+        "average_rate": "3",
+        "ingredients": [
+            "30dc6829-1609-49ff-a48a-1b533e9ceaf3",
+            "0a040c0b-63bc-4866-b328-e471fc4d8fa2",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "900351da-fdef-446c-9f4b-e2df71dbcbee",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 3",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 4",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 5",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 6",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 7",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 8",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 9",
+                "description": "A generic description"
+            }
+        ],
+        "author": "cc98adb0-e9b3-4d4a-8891-5fdbf980db8e"
+    },
+    {
+        "id": "bf69d019-be5a-4d80-91b9-5014ee4e7494",
+        "name": "Recipe 85",
+        "description": "A generic description",
+        "image": "https://source.unsplash.com/random",
+        "average_time": {
+            "preparation": "449",
+            "cooking": "1272"
+        },
+        "average_rate": "5",
+        "ingredients": [
+            "5c6beb93-61b9-4992-873d-202edb77c3af",
+            "1c8a6192-2a15-4283-96bc-65985ef08bb2",
+            "78231a04-dd4f-4e78-8045-c2e707aebf0f",
+            "28469490-6bc8-4fa5-9201-cccf73efeca0",
+            "2ab715d9-3389-4720-a8e6-6109c9329943",
+            "89197c8f-9a90-4803-b72d-b4d51a4275fb",
+            "eb45b292-cca8-4ef0-ae47-2e2cca90d454",
+            "91e5ba00-33f4-4226-b698-472c3c545912",
+            "228f396a-6e8b-4b01-822f-a515e86a0668",
+            "6a0a27f6-5c17-4c8f-970d-3b721a32a099",
+            "ea491cad-acbe-49f3-b8d2-c274ca5bcfc0"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "A generic description"
+            },
+            {
+                "name": "Step 2",
+                "description": "A generic description"
+            }
+        ],
+        "author": "0e011e38-933a-4607-99af-b4469e65bc30"
     }
 ]
