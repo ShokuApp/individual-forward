@@ -9,4 +9,5 @@ export type Dish = {
   type: string;
   ingredients: Ingredient[];
   sauces: Sauce[];
+  isAdaptable: boolean;
 };

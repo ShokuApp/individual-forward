@@ -9,6 +9,6 @@ export type Profile = {
   lastName: string;
   allergens: Pictogram[];
   diets: Pictogram[];
-  favorite_recipes: Recipe[];
-  favorite_restaurants: Restaurant[];
+  favoriteRecipes: Recipe[];
+  favoriteRestaurants: Restaurant[];
 };
