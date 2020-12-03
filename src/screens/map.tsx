@@ -1,11 +1,16 @@
 import React, { FC } from "react";
 import { StyleSheet, View, Dimensions } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
-import "../models/restaurant";
-import { Restaurant } from "../models/restaurant";
+import { Restaurant } from "../models";
+import Data from "../../data/restaurants/data.json";
+import { ListRestaurantPreview } from "../components/restaurants/list-restaurant-preview";
 
-type Props = {
-  restaurants: Restaurant[];
+const getRestaurantsIds: () => string[] = () => {
+  const ids: string[] = [];
+  Data.map((restaurant) => {
+    ids.push(restaurant.id);
+  });
+  return ids;
 };
 
 const styles = StyleSheet.create({
@@ -21,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const MapScreen: FC<Props> = ({ restaurants }: Props) => {
+const MapScreen: FC = () => {
   const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
   return (
     <View style={styles.container}>
@@ -48,6 +53,7 @@ const MapScreen: FC<Props> = ({ restaurants }: Props) => {
           );
         })}
       </MapView>
+      <ListRestaurantPreview restaurants={getRestaurantsIds()} />
     </View>
   );
 };
