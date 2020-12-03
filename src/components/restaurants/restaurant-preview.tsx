@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   paragraph: {
-    paddinfTop: 10,
+    paddingTop: 10,
     paddingLeft: 5,
     marginBottom: 0,
     fontSize: 10,
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
 
 const getOpeningTime = (dataOpeningTime: TimeRange[][]) => {
   const now = new Date();
-  const date = now.getDate();
+  const date = now.getDay();
   if (dataOpeningTime[date].length === 0) {
     return <Text style={styles.textRight}>Fermé</Text>;
   } else if (dataOpeningTime[date].length === 1) {
