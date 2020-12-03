@@ -43,7 +43,17 @@ function toJSON(restaurant: Restaurant) {
     image: restaurant.image,
     average_rate: restaurant.averageRate.toString(),
     average_price: restaurant.averagePrice.toString(),
-    location: restaurant.location,
+    address: {
+      street_number: restaurant.address.streetNumber.toString(),
+      street: restaurant.address.street,
+      postal_code: restaurant.address.postalCode,
+      city: restaurant.address.city,
+      country: restaurant.address.country,
+    },
+    location: {
+      latitude: restaurant.location.latitude.toString(),
+      longitude: restaurant.location.longitude.toString(),
+    },
     phone: restaurant.phone,
     url: restaurant.url,
     opening_time: restaurant.openingTime,

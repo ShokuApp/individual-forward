@@ -1,13 +1,9 @@
 import { Repository } from "./repository";
-import { Pictogram, Profile, Recipe, Restaurant } from "../models";
+import { Pictogram, Profile } from "../models";
 
 import profiles from "../../data/profiles/data.json";
-import { RestaurantRepository } from "./restaurant";
-import { RecipeRepository } from "./recipe";
 import { PictogramRepository } from "./pictogram";
 
-const recipeRepository = new RecipeRepository();
-const restaurantRepository = new RestaurantRepository();
 const pictogramRepository = new PictogramRepository();
 
 // deepcode ignore no-any: JSON
@@ -24,27 +20,15 @@ async function fromJSON(profileJson: any): Promise<Profile> {
     })
   );
 
-  const favoriteRecipes: Recipe[] = await Promise.all(
-    profileJson.favorite_recipes.map(async (id: string) => {
-      return recipeRepository.get(id);
-    })
-  );
-
-  const favoriteRestaurants: Restaurant[] = await Promise.all(
-    profileJson.favorite_restaurants.map(async (id: string) => {
-      return restaurantRepository.get(id);
-    })
-  );
-
   return {
     id: profileJson.id,
     email: profileJson.email,
     firstName: profileJson.firstName,
     lastName: profileJson.lastName,
+    favoriteRecipes: profileJson.favorite_recipes,
+    favoriteRestaurants: profileJson.favorite_restaurants,
     allergens,
     diets,
-    favoriteRecipes,
-    favoriteRestaurants,
   };
 }
 
@@ -56,10 +40,8 @@ function toJSON(profile: Profile) {
     lastName: profile.lastName,
     allergens: profile.allergens.map((allergen) => allergen.id),
     diets: profile.diets.map((diet) => diet.id),
-    favorite_recipes: profile.favoriteRecipes.map((favorite) => favorite.id),
-    favorite_restaurants: profile.favoriteRestaurants.map(
-      (favorite) => favorite.id
-    ),
+    favorite_recipes: profile.favoriteRecipes,
+    favorite_restaurants: profile.favoriteRestaurants,
   };
 }
 

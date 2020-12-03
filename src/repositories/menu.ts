@@ -17,7 +17,7 @@ async function fromJSON(menuJson: any): Promise<Menu> {
   return {
     id: menuJson.id,
     name: menuJson.name,
-    price: menuJson.price,
+    price: Number(menuJson.price),
     dishes,
   };
 }
@@ -26,7 +26,7 @@ function toJSON(menu: Menu) {
   return {
     id: menu.id,
     name: menu.name,
-    price: menu.price,
+    price: menu.price.toString(),
     dishes: menu.dishes.map((dish) => dish.id),
   };
 }

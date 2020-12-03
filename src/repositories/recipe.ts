@@ -10,7 +10,7 @@ const recipeIngredientRepository = new RecipeIngredientRepository();
 
 // deepcode ignore no-any: JSON
 async function fromJSON(recipeJson: any): Promise<Recipe> {
-  const author: Profile = await profileRepository.get(recipeJson.profile_id);
+  const author: Profile = await profileRepository.get(recipeJson.author);
 
   const ingredients: RecipeIngredient[] = await Promise.all(
     recipeJson.ingredients.map(async (id: string) => {
@@ -39,8 +39,12 @@ function toJSON(recipe: Recipe) {
     id: recipe.id,
     name: recipe.name,
     description: recipe.description,
+    author: recipe.author.id,
     image: recipe.image,
-    average_time: recipe.averageTime.toString(),
+    average_time: {
+      preparation: recipe.averageTime.preparation.toString(),
+      cooking: recipe.averageTime.cooking.toString(),
+    },
     average_rate: recipe.averageRate.toString(),
     steps: recipe.steps,
     ingredients: recipe.ingredients.map((ingredient) => ingredient.id),

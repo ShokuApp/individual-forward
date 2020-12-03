@@ -27,8 +27,8 @@ async function fromJSON(dishJson: any): Promise<Dish> {
     name: dishJson.name,
     description: dishJson.description,
     type: dishJson.type,
-    price: dishJson.price,
-    isAdaptable: dishJson.is_adaptable,
+    price: Number(dishJson.price),
+    isAdaptable: Boolean(dishJson.is_adaptable),
     ingredients,
     sauces,
   };
@@ -40,9 +40,10 @@ function toJSON(dish: Dish) {
     name: dish.name,
     description: dish.description,
     type: dish.type,
-    price: dish.price,
+    price: dish.price.toString(),
     ingredients: dish.ingredients.map((ingredient) => ingredient.id),
     sauces: dish.sauces.map((sauce) => sauce.id),
+    is_adaptable: String(dish.isAdaptable),
   };
 }
 
