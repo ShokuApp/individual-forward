@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import {StyleSheet, View, Dimensions, ScrollView} from "react-native";
+import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import Data from "../../data/restaurants/data.json";
 import { ListRestaurantPreview } from "../components/restaurants/list-restaurant-preview";
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   previewList: {
     position: "absolute",
-    bottom: 30,
+    bottom: 0,
   },
 });
 
@@ -56,7 +56,12 @@ const RestaurantsScreen: FC = () => {
           );
         })}
       </MapView>
-      <ScrollView horizontal={true} style={styles.previewList}>
+      <ScrollView
+        horizontal={true}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        style={styles.previewList}
+      >
         <ListRestaurantPreview restaurants={getRestaurantsIds()} />
       </ScrollView>
     </View>
