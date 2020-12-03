@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { View, StyleSheet, Image } from "react-native";
 import { icons } from "../../constants";
 
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const TabBarItem = ({ iconName, isCurrent }: Props) => {
+export const TabBarItem: FC<Props> = ({ iconName, isCurrent }: Props) => {
   const icon = isCurrent
     ? icons.tabBar[iconName].onSelected
     : icons.tabBar[iconName].notSelected;

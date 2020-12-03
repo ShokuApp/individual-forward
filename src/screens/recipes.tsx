@@ -1,20 +1,22 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { colors } from "../constants/colors";
+import React, { FC } from "react";
+import Data from "../../data/recipes/data.json";
+import { ListRecipePreview } from "../components/recipes/list-recipe-preview";
+import { ScrollView } from "react-native";
 
-export const RecipesScreen = () => {
+const getRecipeIds: () => string[] = () => {
+  const ids: string[] = [];
+  Data.map((recipe) => {
+    ids.push(recipe.id);
+  });
+  return ids;
+};
+
+const RecipesScreen: FC = () => {
   return (
-    <View style={styles.container}>
-      <Text>Recipes</Text>
-    </View>
+    <ScrollView>
+      <ListRecipePreview recipes={getRecipeIds()} />
+    </ScrollView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.themeStandard,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default RecipesScreen;
