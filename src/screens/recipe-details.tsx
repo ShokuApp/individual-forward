@@ -4,7 +4,8 @@ import Data from "../../data/recipes/data.json";
 import { RecipeDetails } from "../components/recipes/recipe-details/recipe-details";
 import { Recipe } from "../models";
 import { RouteProp } from "@react-navigation/native";
-import { RecipesStackParamList } from "../components/bottom-tab-navigator/bottom-tab-navigator";
+import { RecipesStackParamList } from "../app";
+import RecipesScreen from "./recipes";
 
 type RecipeDetailsScreenProps = RouteProp<
   RecipesStackParamList,

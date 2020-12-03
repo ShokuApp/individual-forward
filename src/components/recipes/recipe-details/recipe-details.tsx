@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
   return (
     <View style={styles.container}>
-      <Text>{JSON.stringify(recipe.id)}</Text>
+      <Text>{recipe.id}</Text>
     </View>
   );
 };

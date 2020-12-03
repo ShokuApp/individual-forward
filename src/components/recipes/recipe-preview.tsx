@@ -64,7 +64,12 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
   return (
     <TouchableOpacity
       style={styles.card}
-      onPress={() => navigate("RecipeDetails", { recipe: recipe })}
+      onPress={() =>
+        navigate("RecipeDetails", {
+          screen: "RecipeDetails",
+          params: { recipe: recipe },
+        })
+      }
     >
       <View style={styles.container}>
         <Image style={styles.image} source={imageSrc} />
