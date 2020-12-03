@@ -92,7 +92,7 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
                 color="#000"
               />
               <Text style={{ marginLeft: 3, fontSize: 12 }}>
-                {totalAverageTime(recipe) / 60} min
+                {Math.ceil(totalAverageTime(recipe) / 60)} min
               </Text>
             </View>
             <View style={styles.view}>
