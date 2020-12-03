@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   BottomTabBarProps,
   createBottomTabNavigator,
@@ -21,7 +21,7 @@ const StackScreen = (name: string, component: React.ComponentType) => {
   );
 };
 
-export const BottomTabNavigator = () => {
+export const BottomTabNavigator: FC = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -45,7 +45,7 @@ export const BottomTabNavigator = () => {
         />
         <Tab.Screen
           name="recipeScreen"
-          component={StackScreen("Recipes", RecipesScreen)}
+          component={StackScreen("Recettes", RecipesScreen)}
         />
         <Tab.Screen name="profileScreen" component={ProfileScreen} />
       </Tab.Navigator>
