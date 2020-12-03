@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { FC } from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Icon } from "react-native-elements";
@@ -59,10 +60,11 @@ type Props = {
 
 export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
   const imageSrc = { uri: recipe.image };
+  const { navigate } = useNavigation();
   return (
     <TouchableOpacity
       style={styles.card}
-      onPress={() => console.log("Attach display recipe details method")}
+      onPress={() => navigate("RecipeDetails", { recipe: recipe })}
     >
       <View style={styles.container}>
         <Image style={styles.image} source={imageSrc} />
