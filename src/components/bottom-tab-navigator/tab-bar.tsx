@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { TabBarItem } from "./tab-bar-item";
-import { colors } from "../../constants";
+import { colors } from "../../constants/colors";
 
 const style = StyleSheet.create({
   tabContainer: {
@@ -19,8 +19,8 @@ const style = StyleSheet.create({
     },
     shadowOpacity: 0.2,
     shadowRadius: 4.0,
-    elevation: 10,
     backgroundColor: "white",
+    elevation: 10,
     bottom: 0,
   },
   slider: {
@@ -105,6 +105,8 @@ export const TabBar = ({
 
           return (
             <TouchableOpacity
+              accessibilityRole="button"
+              accessibilityLabel={options.tabBarAccessibilityLabel}
               testID={options.tabBarTestID}
               onPress={onPress}
               onLongPress={onLongPress}

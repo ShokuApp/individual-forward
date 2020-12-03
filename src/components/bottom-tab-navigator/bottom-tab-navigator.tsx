@@ -9,6 +9,7 @@ import RestaurantsScreen from "../../screens/restaurants";
 import { StyleSheet, View } from "react-native";
 import RecipesScreen from "../../screens/recipes";
 import { createStackNavigator } from "@react-navigation/stack";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,10 @@ export const BottomTabNavigator = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
+    },
+    safeAreaBackground: {
+      height: useSafeAreaInsets().bottom - 5,
+      backgroundColor: "white",
     },
   });
 
@@ -44,6 +49,9 @@ export const BottomTabNavigator = () => {
         />
         <Tab.Screen name="profileScreen" component={ProfileScreen} />
       </Tab.Navigator>
+      {useSafeAreaInsets().bottom > 0 && (
+        <View style={styles.safeAreaBackground} />
+      )}
     </View>
   );
 };
