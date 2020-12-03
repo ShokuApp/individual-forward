@@ -18,10 +18,10 @@ export class IngredientGetState extends IngredientState {
 }
 
 export class IngredientListState extends IngredientState {
-  ingredientes: Ingredient[];
+  ingredients: Ingredient[];
 
-  constructor(ingredientes: Ingredient[]) {
+  constructor(ingredients: Ingredient[]) {
     super();
-    this.ingredientes = ingredientes;
+    this.ingredients = ingredients;
   }
 }

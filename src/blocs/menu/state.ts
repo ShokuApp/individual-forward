@@ -18,10 +18,10 @@ export class MenuGetState extends MenuState {
 }
 
 export class MenuListState extends MenuState {
-  Menues: Menu[];
+  menus: Menu[];
 
-  constructor(Menues: Menu[]) {
+  constructor(menus: Menu[]) {
     super();
-    this.Menues = Menues;
+    this.menus = menus;
   }
 }
