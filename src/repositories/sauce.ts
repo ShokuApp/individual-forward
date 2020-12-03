@@ -6,6 +6,7 @@ import { IngredientRepository } from "./ingredient";
 
 const ingredientRepository = new IngredientRepository();
 
+// deepcode ignore no-any: JSON
 async function fromJSON(sauceJson: any): Promise<Sauce> {
   const ingredients: Ingredient[] = await Promise.all(
     sauceJson.ingredients.map(async (id: string) => {

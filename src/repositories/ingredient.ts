@@ -6,6 +6,7 @@ import { PictogramRepository } from "./pictogram";
 
 const pictogramRepository = new PictogramRepository();
 
+// deepcode ignore no-any: JSON
 async function fromJSON(ingredientJson: any): Promise<Ingredient> {
   const allergens: Pictogram[] = await Promise.all(
     ingredientJson.allergens.map(async (id: string) => {

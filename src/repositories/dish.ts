@@ -8,6 +8,7 @@ import { SauceRepository } from "./sauce";
 const ingredientRepository = new IngredientRepository();
 const sauceRepository = new SauceRepository();
 
+// deepcode ignore no-any: JSON
 async function fromJSON(dishJson: any): Promise<Dish> {
   const ingredients: Ingredient[] = await Promise.all(
     dishJson.ingredients.map(async (id: string) => {

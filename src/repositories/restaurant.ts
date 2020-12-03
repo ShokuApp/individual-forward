@@ -6,6 +6,7 @@ import { CardRepository } from "./card";
 
 const cardRepository = new CardRepository();
 
+// deepcode ignore no-any: JSON
 async function fromJSON(restaurantJson: any): Promise<Restaurant> {
   const card = await cardRepository.get(restaurantJson.card);
 

@@ -10,6 +10,7 @@ const recipeRepository = new RecipeRepository();
 const restaurantRepository = new RestaurantRepository();
 const pictogramRepository = new PictogramRepository();
 
+// deepcode ignore no-any: JSON
 async function fromJSON(profileJson: any): Promise<Profile> {
   const allergens: Pictogram[] = await Promise.all(
     profileJson.allergens.map(async (id: string) => {
@@ -42,8 +43,8 @@ async function fromJSON(profileJson: any): Promise<Profile> {
     lastName: profileJson.lastName,
     allergens,
     diets,
-    favoriteRecipes: favoriteRecipes,
-    favoriteRestaurants: favoriteRestaurants,
+    favoriteRecipes,
+    favoriteRestaurants,
   };
 }
 

@@ -6,6 +6,7 @@ import { DishRepository } from "./dish";
 
 const dishRepository = new DishRepository();
 
+// deepcode ignore no-any: JSON
 async function fromJSON(menuJson: any): Promise<Menu> {
   const dishes: Dish[] = await Promise.all(
     menuJson.dishes.map(async (id: string) => {
