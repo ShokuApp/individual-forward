@@ -48,12 +48,12 @@ export const Allergens: FC<Props> = ({ dishes, menus, profile }: Props) => {
   const getAllergens = () => {
     let allergens: Pictogram[] = profile.allergens;
     allergens = getDishesAllergen({ dishes, allergens });
-    menus.map((menu) => {
+    for (const menu of menus) {
       allergens = getDishesAllergen({
         dishes: menu.dishes,
         allergens,
       });
-    });
+    }
     return allergens;
   };
 
