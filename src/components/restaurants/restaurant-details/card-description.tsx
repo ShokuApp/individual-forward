@@ -39,8 +39,8 @@ type Props = {
 
 export const CardDescription: FC<Props> = ({ card }: Props) => {
   const starters = card.dishes.filter((dish) => dish.type === "starter");
-  const plates = card.dishes.filter((dish) => dish.type === "plates");
-  const dessert = card.dishes.filter((dish) => dish.type === "dessert");
+  const plates = card.dishes.filter((dish) => dish.type === "plate");
+  const desserts = card.dishes.filter((dish) => dish.type === "dessert");
 
   return (
     <View style={styles.container}>
@@ -60,8 +60,8 @@ export const CardDescription: FC<Props> = ({ card }: Props) => {
       {plates.length !== 0 ? (
         <DishCard category={"Plats"} dishes={plates} />
       ) : null}
-      {dessert.length !== 0 ? (
-        <DishCard category={"Desserts"} dishes={dessert} />
+      {desserts.length !== 0 ? (
+        <DishCard category={"Desserts"} dishes={desserts} />
       ) : null}
       {card.menus.length !== 0 ? <MenuCard menus={card.menus} /> : null}
     </View>
