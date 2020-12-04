@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import { BottomTabNavigator } from "./components/bottom-tab-navigator";
@@ -14,7 +14,7 @@ export type RecipesStackParamList = {
 
 const RecipeDetailsStack = createStackNavigator<RecipesStackParamList>();
 
-const RootStack = () => {
+const RootStack: FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -26,7 +26,7 @@ const RootStack = () => {
   );
 };
 
-const App = () => {
+const App: FC = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
