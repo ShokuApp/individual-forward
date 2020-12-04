@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   address: {
-    paddingTop: 0,
     paddingLeft: 5,
     fontSize: 10,
   },
