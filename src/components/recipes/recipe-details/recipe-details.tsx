@@ -70,7 +70,7 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
       </View>
       <View style={styles.stepsContainer}>
         {recipe.steps.map((step) => {
-          return <RecipeSteps step={step} />;
+          return <RecipeSteps step={step} key={step.name} />;
         })}
       </View>
     </View>
