@@ -51,30 +51,40 @@ type Props = {
 };
 
 export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
-  const getProfileDishes = ({ dishes }: { dishes: Dish[] }) => {
+  const getProfileDishes: ({ dishes }: { dishes: Dish[] }) => Dish[] = ({
+    dishes,
+  }: {
+    dishes: Dish[];
+  }) => {
     return dishes.filter((dish) => {
       let returnValue = true;
-      dish.ingredients.map((ingredient) => {
-        ingredient.allergens.map((allergen) => {
+      for (const ingredient of dish.ingredients) {
+        for (const allergen of ingredient.allergens) {
           if (profile.allergens.includes(allergen)) {
             returnValue = false;
           }
-        });
-      });
-      dish.sauces.map((sauce) => {
-        sauce.ingredients.map((ingredient) => {
-          ingredient.allergens.map((allergen) => {
+        }
+      }
+      for (const sauce of dish.sauces) {
+        for (const ingredient of sauce.ingredients) {
+          for (const allergen of ingredient.allergens) {
             if (profile.allergens.includes(allergen)) {
               returnValue = false;
             }
-          });
-        });
-      });
+          }
+        }
+      }
       return returnValue;
     });
   };
 
-  const getProfileCard = ({
+  const getProfileCard: ({
+    dishes,
+    menu,
+  }: {
+    dishes: Dish[];
+    menu: Menu[];
+  }) => { profileDishes: Dish[]; profileMenu: Menu[] } = ({
     dishes,
     menu,
   }: {

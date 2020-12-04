@@ -31,18 +31,17 @@ export const Allergens: FC<Props> = ({ dishes, menus, profile }: Props) => {
     dishes: Dish[];
     allergens: Pictogram[];
   }) => {
-    dishes.map((dish) => {
-      dish.ingredients.map((ingredient) => {
-        ingredient.allergens.map((allergen) => {
+    for (const dish of dishes) {
+      for (const ingredient of dish.ingredients) {
+        for (const allergen of ingredient.allergens) {
           if (allergens.includes(allergen)) {
-            console.log(allergen.name);
             allergens = allergens.filter(
               (myAllergens) => myAllergens !== allergen
             );
           }
-        });
-      });
-    });
+        }
+      }
+    }
     return allergens;
   };
 

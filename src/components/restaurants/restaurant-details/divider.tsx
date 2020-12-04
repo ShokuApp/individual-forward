@@ -19,9 +19,7 @@ type Props = {
 export const Divider: FC<Props> = ({ width, color }: Props) => {
   return (
     <View style={styles.container}>
-      <View
-        style={[styles.divider, { width: width, backgroundColor: color }]}
-      />
+      <View style={[styles.divider, { width, backgroundColor: color }]} />
     </View>
   );
 };
