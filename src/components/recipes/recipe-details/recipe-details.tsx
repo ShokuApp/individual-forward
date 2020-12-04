@@ -67,6 +67,13 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#2196F3",
+    marginVertical: 10,
+    marginLeft: 20,
+  },
 });
 
 export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
@@ -93,7 +100,9 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
             <Divider />
           </View>
           <RecipeIconButtons recipe={recipe} />
-          <View style={styles.bottomView} />
+          <View style={styles.bottomView}>
+            <Text style={styles.sectionTitle}>Ingrédients</Text>
+          </View>
         </ScrollView>
       </View>
     </View>
