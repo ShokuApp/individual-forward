@@ -16,24 +16,27 @@ const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    marginVertical: 20,
   },
   step: {
-    paddingHorizontal: 5,
+    paddingRight: 60,
+    marginTop: 7,
     fontSize: 14,
   },
   stepsCounterContainer: {
-    width: 20,
-    height: 20,
-    borderRadius: 20 / 2,
+    width: 30,
+    height: 30,
+    borderRadius: 30 / 2,
     backgroundColor: "white",
     alignItems: "center",
     shadowOffset: { height: 3, width: 0 },
     shadowOpacity: 0.4,
     shadowRadius: 3,
     elevation: 5,
+    marginHorizontal: 10,
   },
   counterText: {
-    paddingTop: 1,
+    paddingTop: 6,
     color: "#2196F3",
     fontSize: 14,
   },
