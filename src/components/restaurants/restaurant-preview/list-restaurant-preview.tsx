@@ -3,12 +3,10 @@ import { Text, View, StyleSheet, Dimensions } from "react-native";
 import { RestaurantPreview } from "./restaurant-preview";
 import {
   RestaurantBloc,
-  RestaurantGetEvent,
+  RestaurantListEvent,
   RestaurantState,
-  RestaurantLoadingState,
   RestaurantErrorState,
-  RestaurantInitialState,
-  RestaurantGetState,
+  RestaurantListState,
 } from "../../../blocs";
 import { RestaurantRepository } from "../../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
@@ -25,41 +23,36 @@ const styles = StyleSheet.create({
   },
 });
 
-type Props = {
-  restaurants: string[];
-};
-
-export const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
+export const ListRestaurantPreview: FC = () => {
+  const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
+  restaurantBloc.add(new RestaurantListEvent());
   return (
     <View style={styles.container}>
-      {restaurants.map((id) => {
-        const restaurant = new RestaurantBloc(new RestaurantRepository());
-        restaurant.add(new RestaurantGetEvent(id));
-        return (
-          <BlocBuilder
-            key={id}
-            bloc={restaurant}
-            builder={(state: RestaurantState) => {
-              if (state instanceof RestaurantErrorState) {
-                return <Text>Error</Text>;
-              }
-              if (state instanceof RestaurantInitialState) {
-                return <Text>Loading</Text>;
-              }
-              if (state instanceof RestaurantLoadingState) {
-                return <Text>Loading</Text>;
-              }
-              return (
-                <View style={styles.restaurantPreviewContainer}>
-                  <RestaurantPreview
-                    restaurant={(state as RestaurantGetState).restaurant}
-                  />
-                </View>
-              );
-            }}
-          />
-        );
-      })}
+      <BlocBuilder
+        bloc={restaurantBloc}
+        builder={(state: RestaurantState) => {
+          if (state instanceof RestaurantErrorState) {
+            return <Text>Error</Text>;
+          }
+          if (state instanceof RestaurantListState) {
+            return (
+              <View style={styles.container}>
+                {state.restaurants.map((restaurant) => {
+                  return (
+                    <View
+                      style={styles.restaurantPreviewContainer}
+                      key={restaurant.id}
+                    >
+                      <RestaurantPreview restaurant={restaurant} />
+                    </View>
+                  );
+                })}
+              </View>
+            );
+          }
+          return <Text>Loading</Text>;
+        }}
+      />
     </View>
   );
 };

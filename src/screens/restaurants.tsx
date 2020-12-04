@@ -21,14 +21,6 @@ const styles = StyleSheet.create({
   },
 });
 
-const getRestaurantsIds: () => string[] = () => {
-  const ids: string[] = [];
-  Data.map((restaurant) => {
-    ids.push(restaurant.id);
-  });
-  return ids;
-};
-
 const RestaurantsScreen: FC = () => {
   const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
   return (
@@ -62,7 +54,7 @@ const RestaurantsScreen: FC = () => {
         showsHorizontalScrollIndicator={false}
         style={styles.previewList}
       >
-        <ListRestaurantPreview restaurants={getRestaurantsIds()} />
+        <ListRestaurantPreview />
       </ScrollView>
     </View>
   );
