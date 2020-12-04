@@ -186,7 +186,7 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
       onPress={() =>
         navigate("Restaurant", {
           screen: "RestaurantDetailsScreen",
-          params: { restaurant: restaurant },
+          params: { restaurant },
         })
       }
     >
