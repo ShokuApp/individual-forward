@@ -29,6 +29,7 @@ export const RecipeIconButtons: FC<Props> = ({ recipe }: Props) => {
     <View>
       <View style={styles.container}>
         <View>
+        {/* TODO: Use @Matttx 's UserButton component */}
           <Icon
             name="heart-o"
             type="font-awesome"
