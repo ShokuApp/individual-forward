@@ -42,6 +42,7 @@ export const RecipeIconButtons: FC<Props> = ({ recipe }: Props) => {
           <Text>Favoris</Text>
         </View>
         <View>
+         {/* TODO: Use @Matttx 's UserButton component */}
           <Icon
             name="comment-o"
             type="font-awesome"
