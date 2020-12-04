@@ -1,16 +1,8 @@
 import React, { FC } from "react";
-import {StyleSheet, View, Dimensions, ScrollView} from "react-native";
+import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import Data from "../../data/restaurants/data.json";
-import { ListRestaurantPreview } from "../components/restaurants/list-restaurant-preview";
-
-const getRestaurantsIds: () => string[] = () => {
-  const ids: string[] = [];
-  Data.map((restaurant) => {
-    ids.push(restaurant.id);
-  });
-  return ids;
-};
+import { ListRestaurantPreview } from "../components/restaurants/restaurant-preview/list-restaurant-preview";
 
 const styles = StyleSheet.create({
   container: {
@@ -25,9 +17,17 @@ const styles = StyleSheet.create({
   },
   previewList: {
     position: "absolute",
-    bottom: 30,
+    bottom: 0,
   },
 });
+
+const getRestaurantsIds: () => string[] = () => {
+  const ids: string[] = [];
+  Data.map((restaurant) => {
+    ids.push(restaurant.id);
+  });
+  return ids;
+};
 
 const RestaurantsScreen: FC = () => {
   const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
@@ -56,7 +56,12 @@ const RestaurantsScreen: FC = () => {
           );
         })}
       </MapView>
-      <ScrollView horizontal={true} style={styles.previewList}>
+      <ScrollView
+        horizontal={true}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        style={styles.previewList}
+      >
         <ListRestaurantPreview restaurants={getRestaurantsIds()} />
       </ScrollView>
     </View>

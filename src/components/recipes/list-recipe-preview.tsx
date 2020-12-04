@@ -13,10 +13,6 @@ import {
 import { RecipeRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
 
-type Props = {
-  recipes: string[];
-};
-
 const styles = StyleSheet.create({
   container: {
     display: "flex",
@@ -30,6 +26,10 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
 });
+
+type Props = {
+  recipes: string[];
+};
 
 export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
   return (
