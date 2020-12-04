@@ -1,8 +1,18 @@
 import React, { FC } from "react";
-import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
+import { StyleSheet, View, Dimensions, ScrollView, Text } from "react-native";
 import MapArea from "../map-area/map-area";
 import Data from "../../../data/restaurants/data.json";
-import { ListRestaurantPreview } from "./list-restaurant-preview";
+import { ListRestaurantPreview } from "./restaurant-preview/list-restaurant-preview";
+import {
+  RestaurantBloc,
+  RestaurantErrorState,
+  RestaurantListEvent,
+  RestaurantListState,
+  RestaurantState,
+} from "../../blocs";
+import { RestaurantRepository } from "../../repositories";
+import { BlocBuilder } from "@felangel/react-bloc";
+import { Restaurant } from "../../models";
 
 const styles = StyleSheet.create({
   container: {
@@ -31,25 +41,51 @@ const getRestaurantsIds: () => string[] = () => {
 };
 
 const Restaurants: FC = () => {
-  const scrollRef = React.createRef<ScrollView>(); // has type React.RefObject<ScrollView>
+  const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
+  restaurantBloc.add(new RestaurantListEvent());
+
+  const scrollRef = React.createRef<ScrollView>();
   const scrollToRow: (itemIndex: number) => void = (itemIndex) => {
     scrollRef.current?.scrollTo({
       x: itemIndex * Dimensions.get("window").width,
     });
   };
 
+  //TODO: Define restaurantLocationList
+  let restaurantLocationList;
+
   return (
     <View style={styles.container}>
-      <MapArea onClickMarker={scrollToRow} locations={getRestaurantsIds()} />
-      <ScrollView
-        ref={scrollRef}
-        horizontal={true}
-        pagingEnabled
-        showsHorizontalScrollIndicator={false}
-        style={styles.previewList}
-      >
-        <ListRestaurantPreview restaurants={getRestaurantsIds()} />
-      </ScrollView>
+      <BlocBuilder
+        bloc={restaurantBloc}
+        builder={(state: RestaurantState) => {
+          if (state instanceof RestaurantErrorState) return <Text>Error</Text>;
+          if (state instanceof RestaurantListState) {
+            const restaurants: Restaurant[] = state.restaurants;
+            restaurants.map((restaurant) => {
+              restaurantLocationList.push(restaurant.location);
+            });
+            return (
+              <View>
+                <MapArea
+                  onClickMarker={scrollToRow}
+                  locations={getRestaurantsIds()}
+                />
+                <ScrollView
+                  ref={scrollRef}
+                  horizontal={true}
+                  pagingEnabled
+                  showsHorizontalScrollIndicator={false}
+                  style={styles.previewList}
+                >
+                  <ListRestaurantPreview restaurants={getRestaurantsIds()} />
+                </ScrollView>
+              </View>
+            );
+          }
+          return <Text>Loading</Text>;
+        }}
+      />
     </View>
   );
 };
