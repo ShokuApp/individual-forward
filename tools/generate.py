@@ -49,7 +49,6 @@ def get_postal_codes():
 def save_to_file(data, path):
     with open(path, 'w') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=False)
-    return
 
 
 def pictogram(number):
@@ -420,8 +419,6 @@ def main():
         item["author"] = random.choice(profile_data)["id"]
 
     save_to_file(recipe_data, "./data/recipes/data.json")
-
-    return
 
 
 if __name__ == '__main__':
