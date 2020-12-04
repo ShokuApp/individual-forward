@@ -1,26 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { registerRootComponent } from 'expo';
+import React, { FC } from "react";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { NavigationContainer } from "@react-navigation/native";
+import { BottomTabNavigator } from "./components/bottom-tab-navigator";
+import { registerRootComponent } from "expo";
+import { createStackNavigator } from "@react-navigation/stack";
 
-import useCachedResources from './hooks/use-cached-resources';
-import useColorScheme from './hooks/use-color-scheme';
-import Navigation from './navigation';
+const Stack = createStackNavigator();
 
-function App() {
-  const isLoadingComplete = useCachedResources();
-  const colorScheme = useColorScheme();
+const RootStack: FC = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={BottomTabNavigator}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
 
-  if (!isLoadingComplete) {
-    return null;
-  } else {
-    return (
-        <SafeAreaProvider>
-          <Navigation colorScheme={colorScheme} />
-          <StatusBar />
-        </SafeAreaProvider>
-    );
-  }
-}
+const App: FC = () => {
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <RootStack />
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+};
 
 export default registerRootComponent(App);

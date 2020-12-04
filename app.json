@@ -4,7 +4,7 @@
     "slug": "individual-forward",
     "version": "1.0.0",
     "orientation": "portrait",
-    "entryPoint": "./src/App.tsx",
+    "entryPoint": "./src/app.tsx",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
@@ -20,14 +20,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyBMTj5oKMVoBPonXYX6ykNVm2pf4RCHUyE"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "app.shoku.individual.forward"
+      "package": "app.shoku.individual.forward",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCp-BUoX8B8699rkbnb2P2CK4gXSeesVcc"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
