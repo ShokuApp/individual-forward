@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
-    top: height / 11,
+    top: height / 14,
     left: width / 15,
   },
   image: {
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   bottomView: {
-    backgroundColor: "#DADADA",
+    backgroundColor: "#ECECEC",
     height,
     width,
   },
