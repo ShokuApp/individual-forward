@@ -85,7 +85,7 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
       onPress={() =>
         navigate("RecipeDetails", {
           screen: "RecipeDetails",
-          params: { recipe: recipe },
+          params: { recipe },
         })
       }
     >
