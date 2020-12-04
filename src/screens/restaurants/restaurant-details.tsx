@@ -18,6 +18,17 @@ import { ScrollView } from "react-native-gesture-handler";
 import { RouteProp, useNavigation } from "@react-navigation/native";
 import { RestaurantStackParamList } from "../../app";
 import { Restaurant, TimeRange } from "../../models";
+import { BlocBuilder } from "@felangel/react-bloc";
+import {
+  ProfileBloc,
+  ProfileGetEvent,
+  ProfileState,
+  ProfileErrorState,
+  ProfileInitialState,
+  ProfileLoadingState,
+  ProfileGetState,
+} from "../../blocs";
+import { ProfileRepository } from "../../repositories";
 
 const { width, height } = Dimensions.get("window");
 
@@ -96,30 +107,53 @@ const RestaurantDetails: FC<RestaurantDetailsProps> = ({
     }
   };
 
+  const id = "07be4ee4-417a-4a10-9e82-c7ec9b219dff";
+  const profilBloc = new ProfileBloc(new ProfileRepository());
+  profilBloc.add(new ProfileGetEvent(id));
+
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: restaurant.image }} style={styles.image} />
-      <TouchableOpacity style={styles.closeIcon} onPress={() => goBack()}>
-        <AntDesign name="close" size={25} color="white" />
-      </TouchableOpacity>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        style={styles.detailsContainer}
-      >
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{restaurant.name}</Text>
-        </View>
-        <Informations
-          address={"11 Grande Rue Nazareth 31000 Toulouse"}
-          type={restaurant.description}
-          hours={getOpeningTime(restaurant.opening_time)}
-          note={restaurant.average_rate}
-        />
-        <Divider width={"80%"} color={"#DADADA"} />
-        <UserButtons />
-        <CardDescription card={restaurant.card} />
-      </ScrollView>
-    </View>
+    <BlocBuilder
+      bloc={profilBloc}
+      builder={(state: ProfileState) => {
+        if (state instanceof ProfileErrorState) {
+          return <Text>Error</Text>;
+        }
+        if (state instanceof ProfileInitialState) {
+          return <Text>Loading</Text>;
+        }
+        if (state instanceof ProfileLoadingState) {
+          return <Text>Loading</Text>;
+        }
+        return (
+          <View style={styles.container}>
+            <Image source={{ uri: restaurant.image }} style={styles.image} />
+            <TouchableOpacity style={styles.closeIcon} onPress={() => goBack()}>
+              <AntDesign name="close" size={25} color="white" />
+            </TouchableOpacity>
+            <ScrollView
+              showsVerticalScrollIndicator={false}
+              style={styles.detailsContainer}
+            >
+              <View style={styles.titleContainer}>
+                <Text style={styles.title}>{restaurant.name}</Text>
+              </View>
+              <Informations
+                address={"11 Grande Rue Nazareth 31000 Toulouse"}
+                type={restaurant.description}
+                hours={getOpeningTime(restaurant.opening_time)}
+                note={restaurant.average_rate}
+              />
+              <Divider width={"80%"} color={"#DADADA"} />
+              <UserButtons />
+              <CardDescription
+                card={restaurant.card}
+                profile={(state as ProfileGetState).profile}
+              />
+            </ScrollView>
+          </View>
+        );
+      }}
+    />
   );
 };
 

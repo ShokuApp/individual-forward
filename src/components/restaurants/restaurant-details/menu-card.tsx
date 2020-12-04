@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
     paddingVertical: "2%",
-    marginBottom: "10%",
+    marginBottom: "5%",
   },
   menuContainer: {
     marginBottom: "7%",
