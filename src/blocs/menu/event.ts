@@ -8,3 +8,5 @@ export class MenuGetEvent extends MenuEvent {
     this.id = id;
   }
 }
+
+export class MenuListEvent extends MenuEvent {}

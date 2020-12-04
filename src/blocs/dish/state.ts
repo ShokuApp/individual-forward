@@ -16,3 +16,12 @@ export class DishGetState extends DishState {
     this.dish = dish;
   }
 }
+
+export class DishListState extends DishState {
+  dishes: Dish[];
+
+  constructor(dishes: Dish[]) {
+    super();
+    this.dishes = dishes;
+  }
+}

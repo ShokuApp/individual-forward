@@ -8,3 +8,5 @@ export class SauceGetEvent extends SauceEvent {
     this.id = id;
   }
 }
+
+export class SauceListEvent extends SauceEvent {}

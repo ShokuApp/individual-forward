@@ -16,3 +16,12 @@ export class SauceGetState extends SauceState {
     this.sauce = sauce;
   }
 }
+
+export class SauceListState extends SauceState {
+  sauces: Sauce[];
+
+  constructor(sauces: Sauce[]) {
+    super();
+    this.sauces = sauces;
+  }
+}

@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     marginLeft: 3,
     fontSize: 12,
   },
-  average_rate: {
+  averageRate: {
     marginRight: 3,
   },
   startIcon: {
@@ -74,6 +74,10 @@ const styles = StyleSheet.create({
 type Props = {
   recipe: Recipe;
 };
+
+function totalAverageTime(recipe: Recipe): number {
+  return recipe.averageTime.preparation + recipe.averageTime.cooking;
+}
 
 export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
   const imageSrc = { uri: recipe.image };
@@ -106,11 +110,11 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
                 color="#000"
               />
               <Text style={styles.preparationTime}>
-                {Math.round(recipe.average_time / 60)} min
+                {Math.ceil(totalAverageTime(recipe) / 60)} min
               </Text>
             </View>
             <View style={styles.view}>
-              <Text style={styles.average_rate}>{recipe.average_rate}</Text>
+              <Text style={styles.averageRate}>{recipe.averageRate}</Text>
               <Icon
                 style={styles.startIcon}
                 name="star-o"

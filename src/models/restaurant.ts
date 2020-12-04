@@ -7,11 +7,21 @@ export type Restaurant = {
   name: string;
   description: string;
   image: Image;
-  average_rate: number;
-  average_price: string;
-  location: string;
+  averageRate: number;
+  averagePrice: number;
+  address: {
+    streetNumber: number;
+    street: string;
+    postalCode: string;
+    city: string;
+    country: string;
+  };
+  location: {
+    latitude: number;
+    longitude: number;
+  };
   phone: string;
   url: string;
-  opening_time: TimeRange[][];
+  openingTime: TimeRange[][];
   card: Card;
 };

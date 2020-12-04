@@ -4,10 +4,13 @@ import { RestaurantPreview } from "./restaurant-preview";
 import {
   RestaurantBloc,
   RestaurantGetEvent,
-  RestaurantGetState,
   RestaurantState,
-} from "../../blocs";
-import { RestaurantRepository } from "../../repositories";
+  RestaurantLoadingState,
+  RestaurantErrorState,
+  RestaurantInitialState,
+  RestaurantGetState,
+} from "../../../blocs";
+import { RestaurantRepository } from "../../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
 
 const styles = StyleSheet.create({
@@ -37,12 +40,20 @@ export const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
             key={id}
             bloc={restaurant}
             builder={(state: RestaurantState) => {
-              if (!(state instanceof RestaurantGetState)) {
+              if (state instanceof RestaurantErrorState) {
+                return <Text>Error</Text>;
+              }
+              if (state instanceof RestaurantInitialState) {
+                return <Text>Loading</Text>;
+              }
+              if (state instanceof RestaurantLoadingState) {
                 return <Text>Loading</Text>;
               }
               return (
                 <View style={styles.restaurantPreviewContainer}>
-                  <RestaurantPreview restaurant={state.restaurant} />
+                  <RestaurantPreview
+                    restaurant={(state as RestaurantGetState).restaurant}
+                  />
                 </View>
               );
             }}
