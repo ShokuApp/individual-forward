@@ -14,11 +14,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     alignItems: "center",
-    width: width,
+    width,
     marginVertical: 20,
   },
   divider: {
-    width: width,
+    width,
     backgroundColor: "#DADADA",
     height: 1,
   },
