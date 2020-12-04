@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     alignItems: "center",
-    height: height,
-    width: width,
+    height,
+    width,
   },
   recipeTitle: {
     fontSize: 20,
@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
   },
   bottomView: {
     backgroundColor: "#DADADA",
-    height: height,
-    width: width,
+    height,
+    width,
   },
   scroll: {
     borderTopLeftRadius: 30,
