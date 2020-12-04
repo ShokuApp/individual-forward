@@ -12,8 +12,6 @@ export type RecipesStackParamList = {
   RecipeDetails: { recipe: Recipe };
 };
 
-const RecipeDetailsStack = createStackNavigator<RecipesStackParamList>();
-
 const RootStack: FC = () => {
   return (
     <Stack.Navigator>
