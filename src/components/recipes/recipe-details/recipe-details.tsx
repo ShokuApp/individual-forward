@@ -58,6 +58,15 @@ const styles = StyleSheet.create({
   divider: {
     alignItems: "center",
   },
+  bottomView: {
+    backgroundColor: "#DADADA",
+    height: height,
+    width: width,
+  },
+  scroll: {
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+  },
 });
 
 export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
@@ -77,13 +86,14 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
         />
       </View>
       <View style={styles.cardView}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.scroll}>
           <Text style={styles.recipeTitle}>{recipe.name}</Text>
           <RecipeDescription recipe={recipe} />
           <View style={styles.divider}>
             <Divider />
           </View>
           <RecipeIconButtons recipe={recipe} />
+          <View style={styles.bottomView} />
         </ScrollView>
       </View>
     </View>
