@@ -3,19 +3,17 @@ import { Text, View, StyleSheet } from "react-native";
 import { RecipePreview } from "./recipe-preview";
 import {
   RecipeBloc,
-  RecipeGetEvent,
+  RecipeListState,
+  RecipeListEvent,
   RecipeState,
-  RecipeLoadingState,
   RecipeErrorState,
-  RecipeInitialState,
-  RecipeGetState,
 } from "../../blocs";
 import { RecipeRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
+import { ScrollView } from "react-native-gesture-handler";
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
     flexWrap: "wrap",
@@ -27,39 +25,33 @@ const styles = StyleSheet.create({
   },
 });
 
-type Props = {
-  recipes: string[];
-};
-
-export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
+export const ListRecipePreview: FC = () => {
+  const recipeBloc = new RecipeBloc(new RecipeRepository());
+  recipeBloc.add(new RecipeListEvent());
   return (
-    <View style={styles.container}>
-      {recipes.map((id) => {
-        const recipe = new RecipeBloc(new RecipeRepository());
-        recipe.add(new RecipeGetEvent(id));
-        return (
-          <BlocBuilder
-            key={id}
-            bloc={recipe}
-            builder={(state: RecipeState) => {
-              if (state instanceof RecipeErrorState) {
-                return <Text>Error</Text>;
-              }
-              if (state instanceof RecipeInitialState) {
-                return <Text>Loading</Text>;
-              }
-              if (state instanceof RecipeLoadingState) {
-                return <Text>Loading</Text>;
-              }
-              return (
-                <View style={styles.child}>
-                  <RecipePreview recipe={(state as RecipeGetState).recipe} />
-                </View>
-              );
-            }}
-          />
-        );
-      })}
-    </View>
+    <ScrollView>
+      <BlocBuilder
+        bloc={recipeBloc}
+        builder={(state: RecipeState) => {
+          if (state instanceof RecipeErrorState) {
+            return <Text>Error</Text>;
+          }
+          if (state instanceof RecipeListState) {
+            return (
+              <View style={styles.container}>
+                {state.recipes.map((recipe) => {
+                  return (
+                    <View style={styles.child} key={recipe.id}>
+                      <RecipePreview recipe={recipe} />
+                    </View>
+                  );
+                })}
+              </View>
+            );
+          }
+          return <Text>Loading</Text>;
+        }}
+      />
+    </ScrollView>
   );
 };
