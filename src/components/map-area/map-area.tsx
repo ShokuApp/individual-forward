@@ -21,11 +21,13 @@ const styles = StyleSheet.create({
 
 type Props = {
   onClickMarker(itemIndex: number): void;
-  locations: string[];
+  locations: {
+    latitude: number;
+    longitude: number;
+  }[];
 };
 
 const MapArea: FC<Props> = (props: Props) => {
-  const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
   return (
     <View style={styles.container}>
       <MapView
@@ -39,14 +41,14 @@ const MapArea: FC<Props> = (props: Props) => {
         }}
         showsUserLocation={true}
       >
-        {locations.map((restaurant, index) => {
+        {props.locations.map((restaurantLocation, index) => {
           // use props.locations
           return (
             <Marker
               key={index}
               coordinate={{
-                latitude: Number(restaurant.split(",")[0]),
-                longitude: Number(restaurant.split(" ")[1]),
+                latitude: restaurantLocation.latitude,
+                longitude: restaurantLocation.longitude,
               }}
               onPress={() => props.onClickMarker(index)}
             />

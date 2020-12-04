@@ -51,9 +51,6 @@ const Restaurants: FC = () => {
     });
   };
 
-  //TODO: Define restaurantLocationList
-  let restaurantLocationList;
-
   return (
     <View style={styles.container}>
       <BlocBuilder
@@ -61,15 +58,15 @@ const Restaurants: FC = () => {
         builder={(state: RestaurantState) => {
           if (state instanceof RestaurantErrorState) return <Text>Error</Text>;
           if (state instanceof RestaurantListState) {
-            const restaurants: Restaurant[] = state.restaurants;
-            restaurants.map((restaurant) => {
+            const restaurantLocationList: Restaurant["location"][] = [];
+            state.restaurants.map((restaurant) => {
               restaurantLocationList.push(restaurant.location);
             });
             return (
               <View>
                 <MapArea
                   onClickMarker={scrollToRow}
-                  locations={getRestaurantsIds()}
+                  locations={restaurantLocationList}
                 />
                 <ScrollView
                   ref={scrollRef}
