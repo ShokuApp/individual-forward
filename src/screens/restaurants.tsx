@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   previewList: {
     position: "absolute",
-    bottom: 0,
+    bottom: 25,
   },
 });
 

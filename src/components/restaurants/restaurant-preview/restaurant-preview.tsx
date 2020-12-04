@@ -7,8 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Icon } from "react-native-elements";
-import { Restaurant, TimeRange } from "../../../models";
+import { Restaurant } from "../../../models";
 import { PriceRange } from "./price-range";
 import { Location } from "./location";
 import { RestaurantType } from "./restaurant-type";
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 5,
     borderRadius: 10,
-    marginBottom: 30,
+    marginBottom: 5,
   },
   viewContainer: {
     height: "100%",
