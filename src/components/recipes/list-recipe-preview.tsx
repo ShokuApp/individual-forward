@@ -1,17 +1,16 @@
-import React, { FC } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, { FC, useState } from "react";
+import { StyleSheet, Text, View } from "react-native";
 import { RecipePreview } from "./recipe-preview";
 import {
   RecipeBloc,
-  RecipeGetEvent,
+  RecipeListEvent,
+  RecipeListState,
   RecipeState,
-  RecipeLoadingState,
-  RecipeErrorState,
-  RecipeInitialState,
-  RecipeGetState,
 } from "../../blocs";
 import { RecipeRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
+import { RecipeSearch } from "./search";
+import { Recipe } from "../../models";
 
 const styles = StyleSheet.create({
   container: {
@@ -27,39 +26,47 @@ const styles = StyleSheet.create({
   },
 });
 
-type Props = {
-  recipes: string[];
+type ListStateProps = {
+  recipes: Recipe[];
 };
 
-export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
+export const ListRecipePreview: FC = () => {
+  const bloc = new RecipeBloc(new RecipeRepository());
+
+  bloc.add(new RecipeListEvent());
+
   return (
-    <View style={styles.container}>
-      {recipes.map((id) => {
-        const recipe = new RecipeBloc(new RecipeRepository());
-        recipe.add(new RecipeGetEvent(id));
-        return (
-          <BlocBuilder
-            key={id}
-            bloc={recipe}
-            builder={(state: RecipeState) => {
-              if (state instanceof RecipeErrorState) {
-                return <Text>Error</Text>;
-              }
-              if (state instanceof RecipeInitialState) {
-                return <Text>Loading</Text>;
-              }
-              if (state instanceof RecipeLoadingState) {
-                return <Text>Loading</Text>;
-              }
-              return (
-                <View style={styles.child}>
-                  <RecipePreview recipe={(state as RecipeGetState).recipe} />
-                </View>
-              );
-            }}
-          />
-        );
-      })}
+    <BlocBuilder
+      bloc={bloc}
+      builder={(state: RecipeState) => {
+        if (state instanceof RecipeListState) {
+          return <ListRecipePreviewListState recipes={state.recipes} />;
+        }
+
+        return <Text>Loading</Text>;
+      }}
+    />
+  );
+};
+
+const ListRecipePreviewListState: FC<ListStateProps> = (props) => {
+  const [text, setText] = useState("");
+  const filtered = props.recipes.filter((recipe) => {
+    return recipe.name.toLowerCase().includes(text.toLowerCase());
+  });
+
+  return (
+    <View>
+      <RecipeSearch text={text} setText={setText} />
+      <View style={styles.container}>
+        {filtered.map((recipe) => {
+          return (
+            <View key={recipe.id} style={styles.child}>
+              <RecipePreview recipe={recipe} />
+            </View>
+          );
+        })}
+      </View>
     </View>
   );
 };
