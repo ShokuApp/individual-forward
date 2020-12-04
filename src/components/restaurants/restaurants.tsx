@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { StyleSheet, View, Dimensions, ScrollView, Text } from "react-native";
 import MapArea from "../map-area/map-area";
 import Data from "../../../data/restaurants/data.json";
@@ -41,13 +41,24 @@ const getRestaurantsIds: () => string[] = () => {
 };
 
 const Restaurants: FC = () => {
+  const width = Dimensions.get("window").width;
+  const [item, setItem] = useState(0);
+
   const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
   restaurantBloc.add(new RestaurantListEvent());
 
   const scrollRef = React.createRef<ScrollView>();
+
+  let index = 0;
+
+  useEffect(() => {
+    setItem(index);
+  }, [index]);
+
+  //TODO: Move scrollTORow in MapArea
   const scrollToRow: (itemIndex: number) => void = (itemIndex) => {
     scrollRef.current?.scrollTo({
-      x: itemIndex * Dimensions.get("window").width,
+      x: itemIndex * width,
     });
   };
 
@@ -67,6 +78,8 @@ const Restaurants: FC = () => {
                 <MapArea
                   onClickMarker={scrollToRow}
                   locations={restaurantLocationList}
+                  onPreviewSelected={state.restaurants[item].location}
+                  index={item}
                 />
                 <ScrollView
                   ref={scrollRef}
@@ -74,8 +87,18 @@ const Restaurants: FC = () => {
                   pagingEnabled
                   showsHorizontalScrollIndicator={false}
                   style={styles.previewList}
+                  onMomentumScrollEnd={(event) => {
+                    console.log(
+                      "offest: " +
+                        event.nativeEvent.contentOffset.x +
+                        " width: " +
+                        width
+                    );
+                    index = event.nativeEvent.contentOffset.x / width;
+                    setItem(index);
+                  }}
                 >
-                  <ListRestaurantPreview restaurants={getRestaurantsIds()} />
+                  <ListRestaurantPreview restaurants={state.restaurants} />
                 </ScrollView>
               </View>
             );

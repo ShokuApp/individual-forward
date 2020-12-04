@@ -12,6 +12,7 @@ import {
 } from "../../../blocs";
 import { RestaurantRepository } from "../../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
+import { Restaurant } from "../../../models";
 
 const styles = StyleSheet.create({
   container: {
@@ -26,38 +27,17 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-  restaurants: string[];
+  restaurants: Restaurant[];
 };
 
 export const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
   return (
     <View style={styles.container}>
-      {restaurants.map((id) => {
-        const restaurant = new RestaurantBloc(new RestaurantRepository());
-        restaurant.add(new RestaurantGetEvent(id));
+      {restaurants.map((restaurant, index) => {
         return (
-          <BlocBuilder
-            key={id}
-            bloc={restaurant}
-            builder={(state: RestaurantState) => {
-              if (state instanceof RestaurantErrorState) {
-                return <Text>Error</Text>;
-              }
-              if (state instanceof RestaurantInitialState) {
-                return <Text>Loading</Text>;
-              }
-              if (state instanceof RestaurantLoadingState) {
-                return <Text>Loading</Text>;
-              }
-              return (
-                <View style={styles.restaurantPreviewContainer}>
-                  <RestaurantPreview
-                    restaurant={(state as RestaurantGetState).restaurant}
-                  />
-                </View>
-              );
-            }}
-          />
+          <View style={styles.restaurantPreviewContainer} key={index}>
+            <RestaurantPreview restaurant={restaurant} />
+          </View>
         );
       })}
     </View>
