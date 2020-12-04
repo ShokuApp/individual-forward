@@ -1,15 +1,16 @@
 import { Bloc } from "@felangel/bloc";
-import { ProfileEvent, ProfileGetEvent } from "./event";
+import { ProfileEvent, ProfileGetEvent, ProfileListEvent } from "./event";
 import {
   ProfileErrorState,
   ProfileGetState,
   ProfileInitialState,
+  ProfileListState,
   ProfileLoadingState,
   ProfileState,
 } from "./state";
 import { ProfileRepository } from "../../repositories";
 
-class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
+export class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   private repository: ProfileRepository;
 
   constructor(repository: ProfileRepository) {
@@ -25,6 +26,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
     if (event instanceof ProfileGetEvent) {
       yield* this.get(event);
+    } else if (event instanceof ProfileListEvent) {
+      yield* this.list(event);
     }
   }
 
@@ -33,6 +36,16 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       const profile = await this.repository.get(event.id);
 
       yield new ProfileGetState(profile);
+    } catch (e) {
+      yield new ProfileErrorState();
+    }
+  }
+
+  async *list(event: ProfileListEvent) {
+    try {
+      const profiles = await this.repository.list();
+
+      yield new ProfileListState(profiles);
     } catch (e) {
       yield new ProfileErrorState();
     }

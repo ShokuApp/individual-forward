@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-  streetNumber: string;
+  streetNumber: number;
   street: string;
   postalCode: string;
   city: string;

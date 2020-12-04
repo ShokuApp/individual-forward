@@ -8,3 +8,5 @@ export class ProfileGetEvent extends ProfileEvent {
     this.id = id;
   }
 }
+
+export class ProfileListEvent extends ProfileEvent {}

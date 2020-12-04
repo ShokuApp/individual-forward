@@ -8,3 +8,5 @@ export class DishGetEvent extends DishEvent {
     this.id = id;
   }
 }
+
+export class DishListEvent extends DishEvent {}
