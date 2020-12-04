@@ -61,6 +61,15 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
           }
         });
       });
+      dish.sauces.map((sauce) => {
+        sauce.ingredients.map((ingredient) => {
+          ingredient.allergens.map((allergen) => {
+            if (profile.allergens.includes(allergen)) {
+              returnValue = false;
+            }
+          });
+        });
+      });
       return returnValue;
     });
   };
