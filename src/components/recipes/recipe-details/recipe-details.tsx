@@ -11,6 +11,7 @@ import { Icon } from "react-native-elements";
 import { Recipe } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
+import { RecipeSteps } from "./recipe-steps";
 
 type Props = {
   recipe: Recipe;
@@ -44,6 +45,11 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     alignItems: "center",
   },
+  stepsContainer: {
+    width: (90 * width) / 100,
+    borderRadius: 10,
+    backgroundColor: "white",
+  },
 });
 
 export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
@@ -62,8 +68,10 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
           }}
         />
       </View>
-      <View style={styles.cardView}>
-        <Text>Yo</Text>
+      <View style={styles.stepsContainer}>
+        {recipe.steps.map((step) => {
+          return <RecipeSteps step={step} />;
+        })}
       </View>
     </View>
   );

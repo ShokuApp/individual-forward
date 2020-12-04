@@ -9,9 +9,6 @@ import {
 } from "react-native";
 import { Icon } from "react-native-elements";
 import { Recipe, RecipeStep } from "../../../models";
-import { AntDesign } from "@expo/vector-icons";
-
-const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
