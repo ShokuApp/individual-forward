@@ -114,7 +114,7 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
               </Text>
             </View>
             <View style={styles.view}>
-              <Text style={styles.average_rate}>{recipe.average_rate}</Text>
+              <Text style={styles.average_rate}>{recipe.averageRate}</Text>
               <Icon
                 style={styles.startIcon}
                 name="star-o"

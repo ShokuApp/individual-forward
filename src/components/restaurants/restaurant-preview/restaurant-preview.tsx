@@ -75,20 +75,20 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
         <View style={styles.viewCard}>
           <View style={styles.view}>
             <Text style={styles.title}>{restaurant.name}</Text>
-            <Rating rate={restaurant.average_rate} />
+            <Rating rate={restaurant.averageRate} />
           </View>
           <View style={styles.view}>
             <Location
-              streetNumber={restaurant.streetNumber}
-              street={restaurant.street}
-              postalCode={restaurant.postalCode}
-              city={restaurant.city}
+              streetNumber={restaurant.address.streetNumber}
+              street={restaurant.address.street}
+              postalCode={restaurant.address.postalCode}
+              city={restaurant.address.city}
             />
             <RestaurantType description={restaurant.description} />
           </View>
           <View style={styles.view}>
-            <Schedule openingTimes={restaurant.opening_time} />
-            <PriceRange price={Number(restaurant.average_price.slice(0, -1))} />
+            <Schedule openingTimes={restaurant.openingTime} />
+            <PriceRange price={restaurant.averagePrice} />
           </View>
         </View>
       </View>
