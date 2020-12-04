@@ -4,13 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { BottomTabNavigator } from "./components/bottom-tab-navigator";
 import { registerRootComponent } from "expo";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Recipe } from "./models";
 
 const Stack = createStackNavigator();
-
-export type RecipesStackParamList = {
-  RecipeDetails: { recipe: Recipe };
-};
 
 const RootStack: FC = () => {
   return (
