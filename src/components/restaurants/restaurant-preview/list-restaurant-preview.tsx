@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Text, View, StyleSheet, Dimensions } from "react-native";
-import { RestaurantPreview } from "./restaurant-preview";
+import RestaurantPreview from "./restaurant-preview";
 import {
   RestaurantBloc,
   RestaurantGetEvent,
@@ -29,7 +29,7 @@ type Props = {
   restaurants: string[];
 };
 
-export const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
+const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
   return (
     <View style={styles.container}>
       {restaurants.map((id) => {
@@ -63,3 +63,5 @@ export const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
     </View>
   );
 };
+
+export default ListRestaurantPreview;

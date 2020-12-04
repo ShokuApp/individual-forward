@@ -8,10 +8,10 @@ import {
   View,
 } from "react-native";
 import { Restaurant } from "../../../models";
-import { PriceRange } from "./price-range";
-import { Location } from "./location";
-import { RestaurantType } from "./restaurant-type";
-import { Rating } from "./rating";
+import RestaurantPreviewPriceRange from "./price-range";
+import RestaurantPreviewLocation from "./location";
+import RestaurantPreviewType from "./type";
+import RestaurantPreviewRating from "./rating";
 import { Schedule } from "./schedule";
 
 const { width, height } = Dimensions.get("window");
@@ -54,7 +54,7 @@ type Props = {
   restaurant: Restaurant;
 };
 
-export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
+const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
   const imageRestaurant = { uri: restaurant.image };
   return (
     <TouchableOpacity
@@ -66,22 +66,24 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
       <View style={styles.informationContainer}>
         <View style={styles.rowContainer}>
           <Text style={styles.title}>{restaurant.name}</Text>
-          <Rating rate={restaurant.averageRate} />
+          <RestaurantPreviewRating rate={restaurant.averageRate} />
         </View>
         <View style={styles.rowContainer}>
-          <Location
+          <RestaurantPreviewLocation
             streetNumber={restaurant.address.streetNumber}
             street={restaurant.address.street}
             postalCode={restaurant.address.postalCode}
             city={restaurant.address.city}
           />
-          <RestaurantType description={restaurant.description} />
+          <RestaurantPreviewType description={restaurant.description} />
         </View>
         <View style={styles.rowContainer}>
           <Schedule openingTimes={restaurant.openingTime} />
-          <PriceRange price={restaurant.averagePrice} />
+          <RestaurantPreviewPriceRange price={restaurant.averagePrice} />
         </View>
       </View>
     </TouchableOpacity>
   );
 };
+
+export default RestaurantPreview;

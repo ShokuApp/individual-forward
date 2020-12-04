@@ -22,7 +22,7 @@ type Props = {
   openingTimes: TimeRange[][];
 };
 
-export const OpeningTime: FC<Props> = ({ openingTimes }: Props) => {
+const RestaurantPreviewOpeningTime: FC<Props> = ({ openingTimes }: Props) => {
   const now = new Date();
   const date = now.getDay();
   if (openingTimes[date].length === 0) {
@@ -46,3 +46,5 @@ export const OpeningTime: FC<Props> = ({ openingTimes }: Props) => {
     );
   }
 };
+
+export default RestaurantPreviewOpeningTime;
