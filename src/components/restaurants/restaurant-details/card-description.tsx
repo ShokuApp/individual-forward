@@ -57,24 +57,18 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
     dishes: Dish[];
   }) => {
     return dishes.filter((dish) => {
-      let returnValue = true;
-      for (const ingredient of dish.ingredients) {
-        for (const allergen of ingredient.allergens) {
-          if (profile.allergens.includes(allergen)) {
-            returnValue = false;
-          }
-        }
-      }
-      for (const sauce of dish.sauces) {
-        for (const ingredient of sauce.ingredients) {
-          for (const allergen of ingredient.allergens) {
-            if (profile.allergens.includes(allergen)) {
-              returnValue = false;
+      if (
+        dish.ingredients.find((ingredient) => {
+          for (const allergen of profile.allergens) {
+            if (ingredient.allergens.includes(allergen)) {
+              return true;
             }
           }
-        }
+        })
+      ) {
+        return false;
       }
-      return returnValue;
+      return true;
     });
   };
 
@@ -95,9 +89,9 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
     const profileMenu: Menu[] = menu;
 
     profileDishes = getProfileDishes({ dishes: profileDishes });
-    profileMenu.map((menu) => {
+    for (const menu of profileMenu) {
       menu.dishes = getProfileDishes(menu);
-    });
+    }
 
     return { profileDishes, profileMenu };
   };
