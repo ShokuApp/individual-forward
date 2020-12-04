@@ -27,11 +27,12 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     borderRadius: 10,
     marginBottom: 5,
-    overflow: "hidden",
     elevation: 5,
   },
   image: {
     flexGrow: 1,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
   informationContainer: {
     width: "100%",
@@ -40,6 +41,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 5,
   },
   title: {
     paddingTop: 5,
