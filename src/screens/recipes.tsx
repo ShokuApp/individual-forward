@@ -1,7 +1,13 @@
 import React, { FC } from "react";
 import Data from "../../data/recipes/data.json";
-import { ListRecipePreview } from "../components/recipes/list-recipe-preview";
-import { ScrollView } from "react-native";
+import ListRecipePreview from "../components/recipes/recipe-preview/list-recipe-preview";
+import { ScrollView, StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#FFFFFF",
+  },
+});
 
 const getRecipeIds: () => string[] = () => {
   const ids: string[] = [];
@@ -13,7 +19,7 @@ const getRecipeIds: () => string[] = () => {
 
 const RecipesScreen: FC = () => {
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       <ListRecipePreview recipes={getRecipeIds()} />
     </ScrollView>
   );

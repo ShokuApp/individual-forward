@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { RecipePreview } from "./recipe-preview";
+import RecipePreview from "./recipe-preview";
 import {
   RecipeBloc,
   RecipeGetEvent,
@@ -9,8 +9,8 @@ import {
   RecipeErrorState,
   RecipeInitialState,
   RecipeGetState,
-} from "../../blocs";
-import { RecipeRepository } from "../../repositories";
+} from "../../../blocs";
+import { RecipeRepository } from "../../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
 
 const styles = StyleSheet.create({
@@ -31,7 +31,7 @@ type Props = {
   recipes: string[];
 };
 
-export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
+const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
   return (
     <View style={styles.container}>
       {recipes.map((id) => {
@@ -63,3 +63,5 @@ export const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
     </View>
   );
 };
+
+export default ListRecipePreview;
