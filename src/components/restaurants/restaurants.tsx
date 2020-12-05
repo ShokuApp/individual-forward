@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
-import MapArea from "../map-area/map-area";
+import { MapArea } from "../map-area/map-area";
 import { ListRestaurantPreview } from "./restaurant-preview/list-restaurant-preview";
 import { Restaurant } from "../../models";
 
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   previewList: {
     position: "absolute",
-    bottom: 0,
+    bottom: 20,
   },
 });
 
@@ -21,7 +21,7 @@ type Props = {
   restaurantsList: Restaurant[];
 };
 
-const Restaurants: FC<Props> = (props: Props) => {
+export const Restaurants: FC<Props> = (props: Props) => {
   const width = Dimensions.get("window").width;
   const [index, setIndex] = useState(-1);
 
@@ -54,5 +54,3 @@ const Restaurants: FC<Props> = (props: Props) => {
     </View>
   );
 };
-
-export default Restaurants;

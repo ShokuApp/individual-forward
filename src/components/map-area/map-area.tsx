@@ -29,7 +29,7 @@ type Props = {
   index: number;
 };
 
-const MapArea: FC<Props> = (props: Props) => {
+export const MapArea: FC<Props> = (props: Props) => {
   const { width, height } = Dimensions.get("window");
 
   const mapRef = React.useRef<MapView>(null);
@@ -88,5 +88,3 @@ const MapArea: FC<Props> = (props: Props) => {
     </View>
   );
 };
-
-export default MapArea;
