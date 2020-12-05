@@ -1,16 +1,10 @@
 import React, { FC } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { RecipePreview } from "./recipe-preview";
-import {
-  RecipeBloc,
-  RecipeListState,
-  RecipeListEvent,
-  RecipeState,
-  RecipeErrorState,
-} from "../../blocs";
+import { RecipeBloc, RecipeListEvent } from "../../blocs";
 import { RecipeRepository } from "../../repositories";
-import { BlocBuilder } from "@felangel/react-bloc";
 import { ScrollView } from "react-native-gesture-handler";
+import { Recipe } from "../../models";
 
 const styles = StyleSheet.create({
   container: {
@@ -18,40 +12,31 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     flexWrap: "wrap",
   },
-  child: {
+  recipePreviewContainer: {
     flexBasis: "50%",
     paddingHorizontal: 5,
     paddingVertical: 8,
   },
 });
 
-export const ListRecipePreview: FC = () => {
+type Props = {
+  recipes: Recipe[];
+};
+
+export const ListRecipePreview: FC<Props> = (props) => {
   const recipeBloc = new RecipeBloc(new RecipeRepository());
   recipeBloc.add(new RecipeListEvent());
   return (
     <ScrollView>
-      <BlocBuilder
-        bloc={recipeBloc}
-        builder={(state: RecipeState) => {
-          if (state instanceof RecipeErrorState) {
-            return <Text>Error</Text>;
-          }
-          if (state instanceof RecipeListState) {
-            return (
-              <View style={styles.container}>
-                {state.recipes.map((recipe) => {
-                  return (
-                    <View style={styles.child} key={recipe.id}>
-                      <RecipePreview recipe={recipe} />
-                    </View>
-                  );
-                })}
-              </View>
-            );
-          }
-          return <Text>Loading</Text>;
-        }}
-      />
+      <View style={styles.container}>
+        {props.recipes.map((recipe) => {
+          return (
+            <View style={styles.recipePreviewContainer} key={recipe.id}>
+              <RecipePreview recipe={recipe} />
+            </View>
+          );
+        })}
+      </View>
     </ScrollView>
   );
 };

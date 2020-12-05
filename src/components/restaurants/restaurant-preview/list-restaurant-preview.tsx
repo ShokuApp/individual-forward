@@ -1,17 +1,13 @@
 import React, { FC } from "react";
-import { Text, View, StyleSheet, Dimensions } from "react-native";
+import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
 import { RestaurantPreview } from "./restaurant-preview";
-import {
-  RestaurantBloc,
-  RestaurantListEvent,
-  RestaurantState,
-  RestaurantErrorState,
-  RestaurantListState,
-} from "../../../blocs";
-import { RestaurantRepository } from "../../../repositories";
-import { BlocBuilder } from "@felangel/react-bloc";
+import { Restaurant } from "../../../models";
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    position: "absolute",
+    bottom: 0,
+  },
   container: {
     display: "flex",
     flexDirection: "row",
@@ -23,36 +19,27 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ListRestaurantPreview: FC = () => {
-  const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
-  restaurantBloc.add(new RestaurantListEvent());
+type Props = {
+  restaurants: Restaurant[];
+};
+
+export const ListRestaurantPreview: FC<Props> = (props) => {
   return (
-    <View style={styles.container}>
-      <BlocBuilder
-        bloc={restaurantBloc}
-        builder={(state: RestaurantState) => {
-          if (state instanceof RestaurantErrorState) {
-            return <Text>Error</Text>;
-          }
-          if (state instanceof RestaurantListState) {
-            return (
-              <View style={styles.container}>
-                {state.restaurants.map((restaurant) => {
-                  return (
-                    <View
-                      style={styles.restaurantPreviewContainer}
-                      key={restaurant.id}
-                    >
-                      <RestaurantPreview restaurant={restaurant} />
-                    </View>
-                  );
-                })}
-              </View>
-            );
-          }
-          return <Text>Loading</Text>;
-        }}
-      />
-    </View>
+    <ScrollView
+      horizontal={true}
+      pagingEnabled
+      showsHorizontalScrollIndicator={false}
+      style={styles.scrollContainer}
+    >
+      <View style={styles.container}>
+        {props.restaurants.map((restaurant) => {
+          return (
+            <View style={styles.restaurantPreviewContainer} key={restaurant.id}>
+              <RestaurantPreview restaurant={restaurant} />
+            </View>
+          );
+        })}
+      </View>
+    </ScrollView>
   );
 };
