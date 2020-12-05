@@ -9,7 +9,7 @@ import {
 } from "../blocs";
 import { RecipeRepository } from "../repositories";
 import { Text } from "react-native";
-import { ListRecipePreview } from "../components/recipes/list-recipe-preview";
+import { ListRecipePreview } from "../components/recipes/recipe-preview/list-recipe-preview";
 
 const RecipesScreen: FC = () => {
   const recipeBloc = new RecipeBloc(new RecipeRepository());

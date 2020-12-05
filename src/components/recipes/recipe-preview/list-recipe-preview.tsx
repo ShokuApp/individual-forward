@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import { StyleSheet, View } from "react-native";
-import { RecipePreview } from "./recipe-preview";
-import { RecipeBloc, RecipeListEvent } from "../../blocs";
-import { RecipeRepository } from "../../repositories";
+import RecipePreview from "./recipe-preview";
+import { RecipeBloc, RecipeListEvent } from "../../../blocs";
+import { RecipeRepository } from "../../../repositories";
 import { ScrollView } from "react-native-gesture-handler";
-import { Recipe } from "../../models";
+import { Recipe } from "../../../models";
 
 const styles = StyleSheet.create({
   container: {

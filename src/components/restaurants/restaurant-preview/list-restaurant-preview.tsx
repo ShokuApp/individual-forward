@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
-import { RestaurantPreview } from "./restaurant-preview";
+import RestaurantPreview from "./restaurant-preview";
 import { Restaurant } from "../../../models";
 
 const styles = StyleSheet.create({
