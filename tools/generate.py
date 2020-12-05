@@ -1,15 +1,54 @@
 #!/usr/bin/python3
 
 import json
-import uuid
 import random
+import uuid
 from datetime import datetime
+
+
+def get_profile_names():
+    file = open("./tools/samples/profile-name.txt")
+    lines = file.readlines()
+    file.close()
+
+    lines = [line.replace('\n', '') for line in lines]
+
+    return lines
+
+
+def get_restaurant_names():
+    file = open("./tools/samples/restaurant-name.txt")
+    lines = file.readlines()
+    file.close()
+
+    lines = [line.replace('\n', '') for line in lines]
+
+    return lines
+
+
+def get_street_names():
+    file = open("./tools/samples/street-name.txt")
+    lines = file.readlines()
+    file.close()
+
+    lines = [line.replace('\n', '') for line in lines]
+
+    return lines
+
+
+def get_postal_codes():
+    file = open("./tools/samples/postal-code.txt")
+    lines = file.readlines()
+    file.close()
+
+    lines = [line.replace('\n', '') for line in lines]
+
+    return lines
 
 
 def save_to_file(data, path):
     with open(path, 'w') as outfile:
         json.dump(data, outfile, indent=4, ensure_ascii=False)
-    return
 
 
 def pictogram(number):
@@ -85,9 +124,10 @@ def dish(number, ingredient_data, sauce_data):
             "name": "Dish " + str(number),
             "type": random.choice(["starter", "plate", "dessert"]),
             "description": "A generic description",
-            "price": str(random.randint(5, 25)) + "€",
+            "price": str(random.randint(5, 25)),
             "ingredients": [],
-            "sauces": []}
+            "sauces": [],
+            "is_adaptable": random.choice(["true", "false"])}
 
     for i in range(1, random.randint(2, 6)):
         elem = random.choice(ingredient_data)
@@ -113,7 +153,7 @@ def dish_list(length, ingredient_data, sauce_data):
 def menu(number, dish_data):
     data = {"id": str(uuid.uuid4()),
             "name": "Menu " + str(number),
-            "price": str(random.randint(10, 50)) + "€",
+            "price": str(random.randint(10, 50)),
             "dishes": []}
 
     for i in range(1, random.randint(2, 4)):
@@ -161,14 +201,27 @@ def card_list(length, dish_data, menu_data):
     return data
 
 
-def restaurant(number, card_data):
+def restaurant(restaurant_name, street_name, postal_code, card_data):
+    longitude_float = random.randint(41000, 47000)
+    latitude_float = random.randint(57000, 60000)
+
     data = {"id": str(uuid.uuid4()),
-            "name": "Restaurant " + str(number),
+            "name": restaurant_name,
             "description": "A generic description",
             "image": "https://source.unsplash.com/random",
             "average_rate": str(random.randint(0, 6)),
-            "average_price": str(random.randint(5, 30)) + "€",
-            "location": str(random.randint(10, 999)) + ", " + str(random.randint(10, 999)),
+            "average_price": str(random.randint(5, 30)),
+            "address": {
+                "street_number": str(random.randint(1, 200)),
+                "street": street_name,
+                "postal_code": postal_code,
+                "city": "Toulouse",
+                "country": "France",
+            },
+            "location": {
+                "latitude": "43.{}".format(latitude_float),
+                "longitude": "1.{}".format(longitude_float),
+            },
             "phone": "01 02 03 04 05",
             "url": "https://example.com",
             "opening_time": [[], [], [], [], [], [], []],
@@ -210,11 +263,18 @@ def restaurant(number, card_data):
     return data
 
 
-def restaurant_list(length, card_data):
+def restaurant_list(length, restaurant_names, street_names, postal_codes, card_data):
     data = []
 
     for i in range(1, length + 1):
-        data.append(restaurant(i, card_data))
+        restaurant_name = random.choice(restaurant_names)
+        street_name = random.choice(street_names)
+        postal_code = random.choice(postal_codes)
+
+        restaurant_names.remove(restaurant_name)
+        street_names.remove(street_name)
+
+        data.append(restaurant(restaurant_name, street_name, postal_code, card_data))
 
     return data
 
@@ -242,7 +302,10 @@ def recipe(number, recipe_ingredient_data):
             "name": "Recipe " + str(number),
             "description": "A generic description",
             "image": "https://source.unsplash.com/random",
-            "average_time": str(random.randint(300, 4900)),
+            "average_time": {
+                "preparation": str(random.randint(300, 4900)),
+                "cooking": str(random.randint(300, 4900)),
+            },
             "average_rate": str(random.randint(0, 6)),
             "ingredients": [],
             "steps": []}
@@ -267,19 +330,9 @@ def recipe_list(length, recipe_ingredient_data):
     return data
 
 
-def generate_name():
-    file = open("./tools/name.txt")
-    lines = file.readlines()
-    file.close()
+def profile(name, pictogram_data, recipe_data, restaurant_data):
+    first_name, last_name = name.split(" ")
 
-    name = random.choice(lines).replace('\n', '').split(" ")
-    
-    return name[0], name[1]
-
-
-def profile(pictogram_data, recipe_data, restaurant_data):
-    first_name, last_name = generate_name()
-    
     data = {"id": str(uuid.uuid4()),
             "email": first_name.lower() + "." + last_name.lower() + "@example.com",
             "firstName": first_name,
@@ -312,11 +365,15 @@ def profile(pictogram_data, recipe_data, restaurant_data):
     return data
 
 
-def profile_list(length, pictogram_data, recipe_data, restaurant_data):
+def profile_list(length, profile_names, pictogram_data, recipe_data, restaurant_data):
     data = []
 
     for i in range(1, length + 1):
-        data.append(profile(pictogram_data, recipe_data, restaurant_data))
+        name = random.choice(profile_names)
+
+        profile_names.remove(name)
+
+        data.append(profile(name, pictogram_data, recipe_data, restaurant_data))
 
     return data
 
@@ -324,37 +381,44 @@ def profile_list(length, pictogram_data, recipe_data, restaurant_data):
 def main():
     random.seed(datetime.now())
 
+    profile_names = get_profile_names()
+    restaurant_names = get_restaurant_names()
+    street_names = get_street_names()
+    postal_codes = get_postal_codes()
+
     pictogram_data = pictogram_list(random.randint(5, 100))
-    save_to_file(pictogram_data, "./data/pictogram/data.json")
+    save_to_file(pictogram_data, "./data/pictograms/data.json")
 
     ingredient_data = ingredient_list(random.randint(5, 100), pictogram_data)
-    save_to_file(ingredient_data, "./data/ingredient/data.json")
+    save_to_file(ingredient_data, "./data/ingredients/data.json")
 
     sauce_data = sauce_list(random.randint(5, 100), ingredient_data)
-    save_to_file(sauce_data, "./data/sauce/data.json")
+    save_to_file(sauce_data, "./data/sauces/data.json")
 
     dish_data = dish_list(random.randint(5, 100), ingredient_data, sauce_data)
-    save_to_file(dish_data, "./data/dish/data.json")
+    save_to_file(dish_data, "./data/dishes/data.json")
 
     menu_data = menu_list(random.randint(5, 100), dish_data)
-    save_to_file(menu_data, "./data/menu/data.json")
+    save_to_file(menu_data, "./data/menus/data.json")
 
     card_data = card_list(random.randint(5, 100), dish_data, menu_data)
-    save_to_file(card_data, "./data/card/data.json")
+    save_to_file(card_data, "./data/cards/data.json")
 
-    restaurant_data = restaurant_list(random.randint(5, 100), card_data)
-    save_to_file(restaurant_data, "./data/restaurant/data.json")
+    restaurant_data = restaurant_list(random.randint(5, 100), restaurant_names, street_names, postal_codes, card_data)
+    save_to_file(restaurant_data, "./data/restaurants/data.json")
 
     recipe_ingredient_data = recipe_ingredient_list(random.randint(5, 100), ingredient_data)
-    save_to_file(recipe_ingredient_data, "./data/recipe-ingredient/data.json")
+    save_to_file(recipe_ingredient_data, "./data/recipe-ingredients/data.json")
 
     recipe_data = recipe_list(random.randint(5, 100), recipe_ingredient_data)
-    save_to_file(recipe_data, "./data/recipe/data.json")
 
-    profile_data = profile_list(random.randint(5, 100), pictogram_data, recipe_data, restaurant_data)
-    save_to_file(profile_data, "./data/profile/data.json")
+    profile_data = profile_list(random.randint(5, 100), profile_names, pictogram_data, recipe_data, restaurant_data)
+    save_to_file(profile_data, "./data/profiles/data.json")
 
-    return
+    for item in recipe_data:
+        item["author"] = random.choice(profile_data)["id"]
+
+    save_to_file(recipe_data, "./data/recipes/data.json")
 
 
 if __name__ == '__main__':

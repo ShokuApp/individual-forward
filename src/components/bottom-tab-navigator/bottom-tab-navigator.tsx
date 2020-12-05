@@ -13,7 +13,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const Stack = createStackNavigator();
 
-const Restaurants = () => {
+const Restaurants: FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -25,7 +25,7 @@ const Restaurants = () => {
   );
 };
 
-const Recipes = () => {
+const Recipes: FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen

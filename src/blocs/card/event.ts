@@ -8,3 +8,5 @@ export class CardGetEvent extends CardEvent {
     this.id = id;
   }
 }
+
+export class CardListEvent extends CardEvent {}
