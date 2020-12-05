@@ -19,7 +19,7 @@ type Props = {
   price: number;
 };
 
-export const PriceRange: FC<Props> = ({ price }: Props) => {
+const RestaurantPreviewPriceRange: FC<Props> = ({ price }: Props) => {
   let numberIcons;
   if (price < 15) {
     numberIcons = 1;
@@ -43,3 +43,5 @@ export const PriceRange: FC<Props> = ({ price }: Props) => {
   }
   return <View style={styles.viewPrice}>{icons}</View>;
 };
+
+export default RestaurantPreviewPriceRange;

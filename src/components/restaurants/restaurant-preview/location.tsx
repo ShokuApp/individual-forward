@@ -31,7 +31,7 @@ type Props = {
   city: string;
 };
 
-export const Location: FC<Props> = ({
+const RestaurantPreviewLocation: FC<Props> = ({
   streetNumber,
   street,
   postalCode,
@@ -53,3 +53,5 @@ export const Location: FC<Props> = ({
     </View>
   );
 };
+
+export default RestaurantPreviewLocation;

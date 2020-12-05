@@ -27,7 +27,7 @@ type Props = {
   description: string;
 };
 
-export const RestaurantType: FC<Props> = ({ description }: Props) => {
+const RestaurantPreviewType: FC<Props> = ({ description }: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textLeft}>{description}</Text>
@@ -41,3 +41,5 @@ export const RestaurantType: FC<Props> = ({ description }: Props) => {
     </View>
   );
 };
+
+export default RestaurantPreviewType;
