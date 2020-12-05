@@ -1,18 +1,7 @@
-import { BlocBuilder } from "@felangel/react-bloc";
 import React, { FC } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
-import { Icon } from "react-native-elements";
-import { Recipe, RecipeIngredient, Ingredient } from "../../../models";
-import { IngredientRepository } from "../../../repositories";
-
-const { width, height } = Dimensions.get("window");
+import { Text, View, StyleSheet } from "react-native";
+import { RecipeIngredient } from "../../../models";
+import { colors } from "../../../constants/colors";
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +10,7 @@ const styles = StyleSheet.create({
   textQuantity: {
     paddingTop: 18,
     fontSize: 14,
-    color: "#2196F3",
+    color: colors.themeStandard,
   },
   textIngredient: {
     fontSize: 14,

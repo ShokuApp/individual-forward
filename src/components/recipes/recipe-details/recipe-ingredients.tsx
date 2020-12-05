@@ -1,17 +1,7 @@
 import React, { FC } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
-import { Icon } from "react-native-elements";
-import { Recipe, RecipeIngredient, Ingredient } from "../../../models";
+import { View, StyleSheet } from "react-native";
+import { RecipeIngredient } from "../../../models";
 import { IngredientType } from "./ingredient-type";
-
-const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
