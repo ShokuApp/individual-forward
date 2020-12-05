@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Text, View, StyleSheet, Dimensions } from "react-native";
-import { Recipe } from "../../../models";
 import { InformationSubtitle } from "./information-subtitle";
 
 const { width } = Dimensions.get("window");
@@ -11,6 +10,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "column",
     justifyContent: "space-between",
+    marginBottom: 30,
   },
   informationRow: {
     flexDirection: "row",
@@ -29,36 +29,38 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-  recipe: Recipe;
+  address: string;
+  type: string;
+  hours: string;
+  note: number;
 };
 
-export const RecipeDescription: FC<Props> = ({ recipe }: Props) => {
+export const Informations: FC<Props> = ({
+  address,
+  type,
+  hours,
+  note,
+}: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.informationRow}>
         <View>
-          <InformationSubtitle label="Préparation" />
-          <Text style={styles.labelContainer}>
-            {Math.round(recipe.averageTime.preparation / 60)} minutes
-          </Text>
+          <InformationSubtitle label="Adresse" />
+          <Text style={styles.labelContainer}>{address}</Text>
         </View>
         <View style={[styles.typeContainer, styles.labelContainer]}>
-          <InformationSubtitle label="Cuisson" />
-          <Text style={styles.typeContainer}>
-            {Math.round(recipe.averageTime.cooking / 60)} minutes
-          </Text>
+          <InformationSubtitle label="Type" />
+          <Text style={styles.typeContainer}>{type}</Text>
         </View>
       </View>
       <View style={styles.informationRow}>
         <View>
-          <InformationSubtitle label="Fait par" />
-          <Text style={styles.labelContainer}>ViviG51</Text>
+          <InformationSubtitle label="Horaire" />
+          <Text style={styles.labelContainer}>{hours}</Text>
         </View>
         <View style={[styles.typeContainer, styles.labelContainer]}>
           <InformationSubtitle label="Note" />
-          <Text style={styles.typeContainer}>
-            {recipe.averageRate.toString() + "/5"}
-          </Text>
+          <Text style={styles.typeContainer}>{note.toString() + "/5"}</Text>
         </View>
       </View>
     </View>

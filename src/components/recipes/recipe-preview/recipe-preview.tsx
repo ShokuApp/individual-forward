@@ -5,6 +5,7 @@ import RecipePreviewName from "./name";
 import RecipePreviewFavorite from "./favorite";
 import RecipePreviewPreparationTime from "./preparation-time";
 import RecipePreviewRating from "./rating";
+import { useNavigation } from "@react-navigation/native";
 
 const styles = StyleSheet.create({
   container: {
@@ -45,10 +46,16 @@ type Props = {
 
 const RecipePreview: FC<Props> = ({ recipe }: Props) => {
   const imageSrc = { uri: recipe.image };
+  const { navigate } = useNavigation();
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => console.log("Attach display recipe details method")}
+      onPress={() =>
+        navigate("RecipeDetails", {
+          screen: "RecipeDetails",
+          params: { recipe },
+        })
+      }
     >
       <Image style={styles.image} source={imageSrc} />
       <View style={styles.informationContainer}>
