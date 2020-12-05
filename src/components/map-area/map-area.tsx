@@ -20,10 +20,10 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-  locations: {
+  locations: Array<{
     latitude: number;
     longitude: number;
-  }[];
+  }>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   scrollRef: any;
   index: number;

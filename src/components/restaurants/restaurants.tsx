@@ -27,7 +27,10 @@ export const Restaurants: FC<Props> = (props: Props) => {
 
   const scrollRef = React.useRef<ScrollView>(null);
 
-  const restaurantLocationList: { latitude: number; longitude: number }[] = [];
+  const restaurantLocationList: Array<{
+    latitude: number;
+    longitude: number;
+  }> = [];
   for (const restaurant of props.restaurantsList) {
     restaurantLocationList.push(restaurant.location);
   }
