@@ -14,11 +14,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#fff",
     shadowOffset: {
-      height: 10,
-      width: 10,
+      height: 3,
+      width: 0,
     },
     shadowOpacity: 0.5,
-    elevation: 10,
+    shadowRadius: 4,
+    elevation: 1,
     borderRadius: 50,
     paddingHorizontal: 8,
   },
@@ -26,7 +27,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     flexShrink: 1,
     width: "100%",
-    padding: 8,
+    paddingHorizontal: 8,
+    height: 40,
   },
 });
 

@@ -9,6 +9,9 @@ import { RecipeSearch } from "./search";
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "white",
+  },
+  listContainer: {
     flexDirection: "row",
     alignItems: "flex-start",
     flexWrap: "wrap",
@@ -34,9 +37,9 @@ export const ListRecipePreview: FC<Props> = (props) => {
   });
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
       <RecipeSearch text={text} setText={setText} />
-      <View style={styles.container}>
+      <View style={styles.listContainer}>
         {filteredRecipes.map((recipe) => {
           return (
             <View style={styles.recipePreviewContainer} key={recipe.id}>
