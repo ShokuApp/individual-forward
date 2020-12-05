@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     left: width / 15,
   },
   image: {
-    width: "100%",
-    height: "35%",
+    width,
+    height: height / 5,
   },
   cardView: {
     top: -30,
