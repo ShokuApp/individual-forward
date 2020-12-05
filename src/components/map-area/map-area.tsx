@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import { StyleSheet, View, Dimensions } from "react-native";
+import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 
 const styles = StyleSheet.create({
@@ -24,8 +24,7 @@ type Props = {
     latitude: number;
     longitude: number;
   }>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  scrollRef: any;
+  scrollRef: React.RefObject<ScrollView>;
   index: number;
 };
 
