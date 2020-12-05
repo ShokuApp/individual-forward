@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#2196F3",
     marginTop: 10,
+    marginBottom: 20,
     textAlign: "center",
   },
   divider: {
