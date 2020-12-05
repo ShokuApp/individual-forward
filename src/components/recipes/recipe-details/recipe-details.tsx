@@ -14,6 +14,7 @@ import { RecipeDescription } from "./recipe-decription";
 import { Divider } from "./divider";
 import { RecipeIconButtons } from "./recipe-icon-buttons";
 import { RecipeNumberInput } from "./recipe-number-input";
+import { RecipeIngredients } from "./recipe-ingredients";
 
 const { width, height } = Dimensions.get("window");
 
@@ -57,6 +58,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   contentContainer: {
+    alignItems: "center",
     backgroundColor: "#ECECEC",
     height,
     width,
@@ -64,6 +66,12 @@ const styles = StyleSheet.create({
   scroll: {
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
+  },
+  ingredientsContainer: {
+    marginTop: 10,
+    width: (90 * width) / 100,
+    borderRadius: 10,
+    backgroundColor: "white",
   },
 });
 
@@ -109,6 +117,12 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
                 if (count < 99) setCount(count + 1);
               }}
             />
+            <View style={styles.ingredientsContainer}>
+              <RecipeIngredients
+                ingredients={recipe.ingredients}
+                nbPeople={count}
+              />
+            </View>
           </View>
         </ScrollView>
       </View>
