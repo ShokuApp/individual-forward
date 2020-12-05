@@ -4,6 +4,10 @@ import { RestaurantPreview } from "./restaurant-preview";
 import { Restaurant } from "../../../models";
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    position: "absolute",
+    bottom: 25,
+  },
   container: {
     display: "flex",
     flexDirection: "row",
@@ -19,7 +23,7 @@ type Props = {
   restaurants: Restaurant[];
 };
 
-export const ListRestaurantPreview: FC<Props> = ({ restaurants }: Props) => {
+export const ListRestaurantPreview: FC<Props> = (props) => {
   return (
     <View style={styles.container}>
       {restaurants.map((restaurant, index) => {

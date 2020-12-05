@@ -1,6 +1,7 @@
 import { BlocBuilder } from "@felangel/react-bloc";
 import React, { FC } from "react";
 import { Text } from "react-native";
+
 import {
   RestaurantBloc,
   RestaurantErrorState,

@@ -26,7 +26,7 @@ type Props = {
   rate: number;
 };
 
-export const Rating: FC<Props> = ({ rate }: Props) => {
+const RestaurantPreviewRating: FC<Props> = ({ rate }: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textMark}>{rate}</Text>
@@ -40,3 +40,5 @@ export const Rating: FC<Props> = ({ rate }: Props) => {
     </View>
   );
 };
+
+export default RestaurantPreviewRating;
