@@ -53,7 +53,7 @@ export const ListRecipePreview: FC<Props> = (props) => {
           })}
         </View>
       ) : (
-        <Text style={styles.text}>No recipe found</Text>
+        <Text style={styles.text}>Aucune recette trouvée</Text>
       )}
     </ScrollView>
   );
