@@ -1,15 +1,15 @@
 import React, { FC } from "react";
 import { Dimensions, StyleSheet, Text } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
-import { ListRestaurantPreview } from "../components/restaurants/restaurant-preview/list-restaurant-preview";
+import { ListRestaurantPreview } from "../../components/restaurants/restaurant-preview/list-restaurant-preview";
 import {
   RestaurantBloc,
   RestaurantErrorState,
   RestaurantListEvent,
   RestaurantListState,
   RestaurantState,
-} from "../blocs";
-import { RestaurantRepository } from "../repositories";
+} from "../../blocs";
+import { RestaurantRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
 
 const styles = StyleSheet.create({
