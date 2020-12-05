@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     shadowOffset: {
       height: 10,
       width: 10,

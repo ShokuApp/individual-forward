@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import RecipePreview from "./recipe-preview";
 import { RecipeBloc, RecipeListEvent } from "../../../blocs";
 import { RecipeRepository } from "../../../repositories";
@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
     flexBasis: "50%",
     paddingHorizontal: 5,
     paddingVertical: 8,
+  },
+  text: {
+    textAlign: "center",
   },
 });
 
@@ -36,15 +39,19 @@ export const ListRecipePreview: FC<Props> = (props) => {
   return (
     <ScrollView>
       <RecipeSearch text={text} setText={setText} />
-      <View style={styles.container}>
-        {filteredRecipes.map((recipe) => {
-          return (
-            <View style={styles.recipePreviewContainer} key={recipe.id}>
-              <RecipePreview recipe={recipe} />
-            </View>
-          );
-        })}
-      </View>
+      {filteredRecipes.length ? (
+        <View style={styles.container}>
+          {filteredRecipes.map((recipe) => {
+            return (
+              <View style={styles.recipePreviewContainer} key={recipe.id}>
+                <RecipePreview recipe={recipe} />
+              </View>
+            );
+          })}
+        </View>
+      ) : (
+        <Text style={styles.text}>No recipe found</Text>
+      )}
     </ScrollView>
   );
 };
