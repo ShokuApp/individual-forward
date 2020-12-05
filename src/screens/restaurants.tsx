@@ -1,70 +1,81 @@
 import React, { FC } from "react";
-import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
-import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
-import Data from "../../data/restaurants/data.json";
-import ListRestaurantPreview from "../components/restaurants/restaurant-preview/list-restaurant-preview";
+import { Dimensions, StyleSheet, Text } from "react-native";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
+import { ListRestaurantPreview } from "../components/restaurants/restaurant-preview/list-restaurant-preview";
+import {
+  RestaurantBloc,
+  RestaurantErrorState,
+  RestaurantListEvent,
+  RestaurantListState,
+  RestaurantState,
+} from "../blocs";
+import { RestaurantRepository } from "../repositories";
+import { BlocBuilder } from "@felangel/react-bloc";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  mapStyle: {
+  map: {
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
   },
-  previewList: {
-    position: "absolute",
-    bottom: 25,
-  },
 });
 
-const getRestaurantsIds: () => string[] = () => {
-  const ids: string[] = [];
-  Data.map((restaurant) => {
-    ids.push(restaurant.id);
-  });
-  return ids;
+// ! Temporary pending SPAR-259
+// ! Related Pull Request: https://github.com/ShokuApp/individual-forward/pull/21
+const RestaurantsMap: FC = () => {
+  const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
+
+  return (
+    <MapView
+      style={styles.map}
+      provider={PROVIDER_GOOGLE}
+      initialRegion={{
+        latitude: 43.6047,
+        longitude: 1.4442,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      }}
+      showsUserLocation={true}
+    >
+      {locations.map((restaurant, index) => {
+        return (
+          <Marker
+            key={index}
+            coordinate={{
+              latitude: Number(restaurant.split(",")[0]),
+              longitude: Number(restaurant.split(" ")[1]),
+            }}
+          />
+        );
+      })}
+    </MapView>
+  );
 };
 
 const RestaurantsScreen: FC = () => {
-  const locations = ["44.0181, 1.3558", "43.6047, 1.4442", "43.6092, 1.4463"];
+  const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
+
+  restaurantBloc.add(new RestaurantListEvent());
+
   return (
-    <View style={styles.container}>
-      <MapView
-        style={styles.mapStyle}
-        provider={PROVIDER_GOOGLE}
-        initialRegion={{
-          latitude: 43.6047,
-          longitude: 1.4442,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
-        showsUserLocation={true}
-      >
-        {locations.map((restaurant, index) => {
+    <BlocBuilder
+      bloc={restaurantBloc}
+      builder={(state: RestaurantState) => {
+        if (state instanceof RestaurantErrorState) {
+          return <Text>Error</Text>;
+        }
+
+        if (state instanceof RestaurantListState) {
           return (
-            <Marker
-              key={index}
-              coordinate={{
-                latitude: Number(restaurant.split(",")[0]),
-                longitude: Number(restaurant.split(" ")[1]),
-              }}
-            />
+            <>
+              <RestaurantsMap />
+              <ListRestaurantPreview restaurants={state.restaurants} />
+            </>
           );
-        })}
-      </MapView>
-      <ScrollView
-        horizontal={true}
-        pagingEnabled
-        showsHorizontalScrollIndicator={false}
-        style={styles.previewList}
-      >
-        <ListRestaurantPreview restaurants={getRestaurantsIds()} />
-      </ScrollView>
-    </View>
+        }
+
+        return <Text>Loading...</Text>;
+      }}
+    />
   );
 };
 
