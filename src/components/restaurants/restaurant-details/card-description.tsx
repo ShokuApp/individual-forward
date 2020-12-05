@@ -43,6 +43,13 @@ const styles = StyleSheet.create({
     color: "#2196F3",
     marginBottom: "2%",
   },
+  warningContainer: {
+    marginTop: 20,
+  },
+  warningLabel: {
+    fontSize: 18,
+    color: "black",
+  },
 });
 
 type Props = {
@@ -69,7 +76,7 @@ const getProfileCard: (
   dishes: Dish[],
   menus: Menu[],
   profile: Profile
-) => { dishes: Dish[]; menus: Menu[] } = (
+) => { dishes: Dish[]; menus: Menu[]; allDishes: Dish[] } = (
   dishes: Dish[],
   menus: Menu[],
   profile: Profile
@@ -81,8 +88,9 @@ const getProfileCard: (
       dishes: getDishesFromProfileAllergens(menu.dishes, profile),
     };
   });
+  const allDishes = [...filteredDishes, ...menus.map((menu) => menu.dishes)];
 
-  return { dishes: filteredDishes, menus: filteredMenus };
+  return { dishes: filteredDishes, menus: filteredMenus, allDishes: allDishes };
 };
 
 export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
@@ -109,6 +117,13 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
           />
         </TouchableOpacity>
       </View>
+      {!profileCard.allDishes || profileCard.allDishes.length === 0 ? (
+        <View style={styles.warningContainer}>
+          <Text style={styles.warningLabel}>
+            Aucun plat ne correspond a votre profil
+          </Text>
+        </View>
+      ) : null}
       {starters.length !== 0 ? (
         <DishesSection category={"Entrées"} dishes={starters} />
       ) : null}
