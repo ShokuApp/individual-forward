@@ -35,11 +35,14 @@ export const MapArea: FC<Props> = (props: Props) => {
 
   useEffect(() => {
     props.index !== -1
-      ? mapRef.current?.animateToRegion({
-          latitudeDelta: 0,
-          longitudeDelta: 0.006,
-          ...props.locations[props.index],
-        })
+      ? mapRef.current?.animateToRegion(
+          {
+            latitudeDelta: 0,
+            longitudeDelta: 0.006,
+            ...props.locations[props.index],
+          },
+          350
+        )
       : null;
   });
 
@@ -72,12 +75,15 @@ export const MapArea: FC<Props> = (props: Props) => {
                 longitude: restaurantLocation.longitude,
               }}
               onPress={(e) => {
-                mapRef.current?.animateToRegion({
-                  latitudeDelta: 0,
-                  longitudeDelta: 0.006,
-                  latitude: e.nativeEvent.coordinate.latitude,
-                  longitude: e.nativeEvent.coordinate.longitude,
-                });
+                mapRef.current?.animateToRegion(
+                  {
+                    latitudeDelta: 0,
+                    longitudeDelta: 0.006,
+                    latitude: e.nativeEvent.coordinate.latitude,
+                    longitude: e.nativeEvent.coordinate.longitude,
+                  },
+                  390
+                );
                 scrollToRow(index);
               }}
             />
