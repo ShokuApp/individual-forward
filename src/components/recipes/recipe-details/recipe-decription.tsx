@@ -39,13 +39,13 @@ export const RecipeDescription: FC<Props> = ({ recipe }: Props) => {
         <View>
           <InformationSubtitle label="Préparation" />
           <Text style={styles.labelContainer}>
-            {Math.round(recipe.average_time / 60)}
+            {Math.round(recipe.average_time / 60)} minutes
           </Text>
         </View>
         <View style={[styles.typeContainer, styles.labelContainer]}>
           <InformationSubtitle label="Cuisson" />
           <Text style={styles.typeContainer}>
-            {Math.round(recipe.average_time / 60)}
+            {Math.round(recipe.average_time / 60)} minutes
           </Text>
         </View>
       </View>
