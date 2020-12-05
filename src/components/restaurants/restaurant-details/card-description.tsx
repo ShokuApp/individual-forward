@@ -119,12 +119,14 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
         <DishesSection category={"Desserts"} dishes={desserts} />
       ) : null}
       {menus.length !== 0 ? <MenuCard menus={menus} /> : null}
-      <View style={styles.allergenContainer}>
-        <Text style={styles.allergenLabel}>
-          Ces recettes ne contiennent pas les allergènes suivant:
-        </Text>
-        <Allergens allergens={profile.allergens} />
-      </View>
+      {profile.allergens.length !== 0 ? (
+        <View style={styles.allergenContainer}>
+          <Text style={styles.allergenLabel}>
+            Ces plats ne contiennent pas les allergènes suivant:
+          </Text>
+          <Allergens allergens={profile.allergens} />
+        </View>
+      ) : null}
     </View>
   );
 };

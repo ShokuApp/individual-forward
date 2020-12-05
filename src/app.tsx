@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import { registerRootComponent } from "expo";
 import { RootStack } from "./navigator/root-navigator";
 
-const App = () => {
+const App: FC = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
