@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    height: height / 5,
+    minHeight: 100,
+    height: "20%",
     backgroundColor: "gray",
   },
   closeIcon: {

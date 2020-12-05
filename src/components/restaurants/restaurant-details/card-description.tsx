@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerContainer: {
-    height: "5%",
     width: "85%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    marginVertical: 10,
   },
   title: {
     fontSize: 20,
