@@ -94,6 +94,7 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
           <RecipeDescription recipe={recipe} />
           <View style={styles.divider}>
             <Divider />
+            {/*TODO: use @Matttx 's Divider component */}
           </View>
           <View style={styles.divider} />
           <RecipeIconButtons recipe={recipe} />
