@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect } from "react";
 import { StyleSheet, View, Dimensions } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 
@@ -20,47 +20,51 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-  onClickMarker(itemIndex: number): void;
   locations: {
     latitude: number;
     longitude: number;
   }[];
-  onPreviewSelected: {
-    latitude: number;
-    longitude: number;
-  };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  scrollRef: any;
   index: number;
 };
 
 const MapArea: FC<Props> = (props: Props) => {
-  console.log("props: " + props.index);
   const { width, height } = Dimensions.get("window");
-  const [centerRegion, setCenterRegion] = useState({
-    latitude: 43.6047,
-    longitude: 1.4442,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0922 * (width / height),
-  }); //TOULOUSE COORDINATES
 
-  // useEffect(() => {
-  //   console.log
-  //   props.onPreviewSelected
-  //     ? setCenterRegion({ ...centerRegion, ...props.onPreviewSelected })
-  //     : null;
-  // });
-  const mapRef = React.createRef<MapView>();
+  const mapRef = React.useRef<MapView>(null);
+
+  useEffect(() => {
+    props.index !== -1
+      ? mapRef.current?.animateToRegion({
+          latitudeDelta: 0,
+          longitudeDelta: 0.006,
+          ...props.locations[props.index],
+        })
+      : null;
+  });
+
+  const scrollToRow: (itemIndex: number) => void = (itemIndex) => {
+    props.scrollRef.current?.scrollTo({
+      x: itemIndex * width,
+    });
+  };
+
   return (
     <View style={styles.container}>
       <MapView
         ref={mapRef}
         style={styles.mapStyle}
         provider={PROVIDER_GOOGLE}
-        initialRegion={centerRegion}
-        region={centerRegion}
+        initialRegion={{
+          latitude: 43.6047,
+          longitude: 1.4442,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0922 * (width / height), //TOULOUSE COORDINATES, FAIRLY ZOOMED
+        }}
         showsUserLocation={true}
       >
         {props.locations.map((restaurantLocation, index) => {
-          // use props.locations
           return (
             <Marker
               key={index}
@@ -69,14 +73,13 @@ const MapArea: FC<Props> = (props: Props) => {
                 longitude: restaurantLocation.longitude,
               }}
               onPress={(e) => {
-                setCenterRegion({
+                mapRef.current?.animateToRegion({
                   latitudeDelta: 0,
                   longitudeDelta: 0.006,
                   latitude: e.nativeEvent.coordinate.latitude,
                   longitude: e.nativeEvent.coordinate.longitude,
                 });
-                mapRef.current?.animateToRegion(centerRegion);
-                props.onClickMarker(index);
+                scrollToRow(index);
               }}
             />
           );

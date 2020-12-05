@@ -1,17 +1,7 @@
-import React, { FC, useEffect, useState } from "react";
-import { StyleSheet, View, Dimensions, ScrollView, Text } from "react-native";
+import React, { FC, useState } from "react";
+import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
 import MapArea from "../map-area/map-area";
-import Data from "../../../data/restaurants/data.json";
 import { ListRestaurantPreview } from "./restaurant-preview/list-restaurant-preview";
-import {
-  RestaurantBloc,
-  RestaurantErrorState,
-  RestaurantListEvent,
-  RestaurantListState,
-  RestaurantState,
-} from "../../blocs";
-import { RestaurantRepository } from "../../repositories";
-import { BlocBuilder } from "@felangel/react-bloc";
 import { Restaurant } from "../../models";
 
 const styles = StyleSheet.create({
@@ -27,85 +17,40 @@ const styles = StyleSheet.create({
   },
 });
 
-//TODO: Récupérer tous les restaurants, séparer la location dans une array et l'objet dans une autre
-//QUESTION : DONNER LES RESTAURANTS EN PROPS + UN BOOLEAN ISLOADING A LISTRESTAURANTPREVIEW
-//POUR QU'IL LE DONNE A RESTAURANTPREVIEW ?  ----> CHANGER FROM STRING[] TO RESTAURANT[],
-//ENLEVER LE BLOCK ET JUST MAP SUR L'ARRAY
-
-const getRestaurantsIds: () => string[] = () => {
-  const ids: string[] = [];
-  Data.map((restaurant) => {
-    ids.push(restaurant.id);
-  });
-  return ids;
+type Props = {
+  restaurantsList: Restaurant[];
 };
 
-const Restaurants: FC = () => {
+const Restaurants: FC<Props> = (props: Props) => {
   const width = Dimensions.get("window").width;
-  const [item, setItem] = useState(0);
+  const [index, setIndex] = useState(-1);
 
-  const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
-  restaurantBloc.add(new RestaurantListEvent());
+  const scrollRef = React.useRef<ScrollView>(null);
 
-  const scrollRef = React.createRef<ScrollView>();
-
-  let index = 0;
-
-  useEffect(() => {
-    setItem(index);
-  }, [index]);
-
-  //TODO: Move scrollTORow in MapArea
-  const scrollToRow: (itemIndex: number) => void = (itemIndex) => {
-    scrollRef.current?.scrollTo({
-      x: itemIndex * width,
-    });
-  };
+  const restaurantLocationList: { latitude: number; longitude: number }[] = [];
+  for (const restaurant of props.restaurantsList) {
+    restaurantLocationList.push(restaurant.location);
+  }
 
   return (
     <View style={styles.container}>
-      <BlocBuilder
-        bloc={restaurantBloc}
-        builder={(state: RestaurantState) => {
-          if (state instanceof RestaurantErrorState) return <Text>Error</Text>;
-          if (state instanceof RestaurantListState) {
-            const restaurantLocationList: Restaurant["location"][] = [];
-            state.restaurants.map((restaurant) => {
-              restaurantLocationList.push(restaurant.location);
-            });
-            return (
-              <View>
-                <MapArea
-                  onClickMarker={scrollToRow}
-                  locations={restaurantLocationList}
-                  onPreviewSelected={state.restaurants[item].location}
-                  index={item}
-                />
-                <ScrollView
-                  ref={scrollRef}
-                  horizontal={true}
-                  pagingEnabled
-                  showsHorizontalScrollIndicator={false}
-                  style={styles.previewList}
-                  onMomentumScrollEnd={(event) => {
-                    console.log(
-                      "offest: " +
-                        event.nativeEvent.contentOffset.x +
-                        " width: " +
-                        width
-                    );
-                    index = event.nativeEvent.contentOffset.x / width;
-                    setItem(index);
-                  }}
-                >
-                  <ListRestaurantPreview restaurants={state.restaurants} />
-                </ScrollView>
-              </View>
-            );
-          }
-          return <Text>Loading</Text>;
-        }}
+      <MapArea
+        scrollRef={scrollRef}
+        locations={restaurantLocationList}
+        index={index}
       />
+      <ScrollView
+        ref={scrollRef}
+        horizontal={true}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        style={styles.previewList}
+        onMomentumScrollEnd={(event) => {
+          setIndex(event.nativeEvent.contentOffset.x / width);
+        }}
+      >
+        <ListRestaurantPreview restaurants={props.restaurantsList} />
+      </ScrollView>
     </View>
   );
 };
