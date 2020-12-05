@@ -16,3 +16,12 @@ export class ProfileGetState extends ProfileState {
     this.profile = profile;
   }
 }
+
+export class ProfileListState extends ProfileState {
+  profiles: Profile[];
+
+  constructor(profiles: Profile[]) {
+    super();
+    this.profiles = profiles;
+  }
+}

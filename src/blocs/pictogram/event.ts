@@ -8,3 +8,5 @@ export class PictogramGetEvent extends PictogramEvent {
     this.id = id;
   }
 }
+
+export class PictogramListEvent extends PictogramEvent {}

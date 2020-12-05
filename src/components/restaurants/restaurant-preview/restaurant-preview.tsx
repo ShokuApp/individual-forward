@@ -7,54 +7,46 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Icon } from "react-native-elements";
-import { Restaurant, TimeRange } from "../../../models";
-import { PriceRange } from "./price-range";
-import { Location } from "./location";
-import { RestaurantType } from "./restaurant-type";
-import { Rating } from "./rating";
+import { Restaurant } from "../../../models";
+import RestaurantPreviewPriceRange from "./price-range";
+import RestaurantPreviewLocation from "./location";
+import RestaurantPreviewType from "./type";
+import RestaurantPreviewRating from "./rating";
 import { Schedule } from "./schedule";
 
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
+    display: "flex",
     height: (30 * height) / 100,
-    minHeight: 250,
-    width: (83.73 * width) / 100,
+    width: (85 * width) / 100,
+    backgroundColor: "#FFFFFF",
     shadowOffset: { height: 3, width: 0 },
     shadowOpacity: 0.4,
     shadowRadius: 3,
+    borderRadius: 10,
+    marginBottom: 5,
     elevation: 5,
-    borderRadius: 10,
-    marginBottom: 30,
-  },
-  viewContainer: {
-    height: "100%",
-    width: "100%",
-    overflow: "hidden",
-    borderRadius: 10,
-    backgroundColor: "#FFFFFF",
-  },
-  viewCard: {
-    width: "100%",
   },
   image: {
-    width: "100%",
-    height: "60%",
+    flexGrow: 1,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
-  view: {
+  informationContainer: {
+    width: "100%",
+  },
+  rowContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 5,
   },
   title: {
     paddingTop: 5,
     paddingLeft: 8,
     fontSize: 18,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
   },
 });
 
@@ -62,7 +54,7 @@ type Props = {
   restaurant: Restaurant;
 };
 
-export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
+const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
   const imageRestaurant = { uri: restaurant.image };
   return (
     <TouchableOpacity
@@ -70,28 +62,28 @@ export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
       style={styles.container}
       onPress={() => console.log("Attach display restaurant details method")}
     >
-      <View style={styles.viewContainer}>
-        <Image style={styles.image} source={imageRestaurant} />
-        <View style={styles.viewCard}>
-          <View style={styles.view}>
-            <Text style={styles.title}>{restaurant.name}</Text>
-            <Rating rate={restaurant.average_rate} />
-          </View>
-          <View style={styles.view}>
-            <Location
-              streetNumber={restaurant.streetNumber}
-              street={restaurant.street}
-              postalCode={restaurant.postalCode}
-              city={restaurant.city}
-            />
-            <RestaurantType description={restaurant.description} />
-          </View>
-          <View style={styles.view}>
-            <Schedule openingTimes={restaurant.opening_time} />
-            <PriceRange price={Number(restaurant.average_price.slice(0, -1))} />
-          </View>
+      <Image style={styles.image} source={imageRestaurant} />
+      <View style={styles.informationContainer}>
+        <View style={styles.rowContainer}>
+          <Text style={styles.title}>{restaurant.name}</Text>
+          <RestaurantPreviewRating rate={restaurant.averageRate} />
+        </View>
+        <View style={styles.rowContainer}>
+          <RestaurantPreviewLocation
+            streetNumber={restaurant.address.streetNumber}
+            street={restaurant.address.street}
+            postalCode={restaurant.address.postalCode}
+            city={restaurant.address.city}
+          />
+          <RestaurantPreviewType description={restaurant.description} />
+        </View>
+        <View style={styles.rowContainer}>
+          <Schedule openingTimes={restaurant.openingTime} />
+          <RestaurantPreviewPriceRange price={restaurant.averagePrice} />
         </View>
       </View>
     </TouchableOpacity>
   );
 };
+
+export default RestaurantPreview;

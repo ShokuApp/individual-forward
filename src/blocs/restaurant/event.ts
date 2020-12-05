@@ -8,3 +8,5 @@ export class RestaurantGetEvent extends RestaurantEvent {
     this.id = id;
   }
 }
+
+export class RestaurantListEvent extends RestaurantEvent {}

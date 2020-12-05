@@ -13,8 +13,7 @@ const styles = StyleSheet.create({
     paddingLeft: 8,
     paddingTop: 5,
   },
-  adress: {
-    paddingTop: 0,
+  address: {
     paddingLeft: 5,
     fontSize: 10,
   },
@@ -26,13 +25,13 @@ const styles = StyleSheet.create({
 });
 
 type Props = {
-  streetNumber: string;
+  streetNumber: number;
   street: string;
   postalCode: string;
   city: string;
 };
 
-export const Location: FC<Props> = ({
+const RestaurantPreviewLocation: FC<Props> = ({
   streetNumber,
   street,
   postalCode,
@@ -48,9 +47,11 @@ export const Location: FC<Props> = ({
         style={styles.iconLocation}
       />
       <View style={styles.paragraph}>
-        <Text style={styles.adress}>{streetNumber + " " + street}</Text>
-        <Text style={styles.adress}>{postalCode + " " + city}</Text>
+        <Text style={styles.address}>{streetNumber + " " + street}</Text>
+        <Text style={styles.address}>{postalCode + " " + city}</Text>
       </View>
     </View>
   );
 };
+
+export default RestaurantPreviewLocation;

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { Icon } from "react-native-elements";
-import { OpeningTime } from "./opening-time";
+import RestaurantPreviewOpeningTime from "./opening-time";
 import { TimeRange } from "../../../models";
 
 const styles = StyleSheet.create({
@@ -30,7 +30,7 @@ export const Schedule: FC<Props> = ({ openingTimes }: Props) => {
         size={20}
         style={styles.iconText}
       />
-      <OpeningTime openingTimes={openingTimes} />
+      <RestaurantPreviewOpeningTime openingTimes={openingTimes} />
     </View>
   );
 };

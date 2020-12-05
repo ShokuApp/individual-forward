@@ -8,3 +8,5 @@ export class RecipeGetEvent extends RecipeEvent {
     this.id = id;
   }
 }
+
+export class RecipeListEvent extends RecipeEvent {}

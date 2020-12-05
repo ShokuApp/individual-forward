@@ -1,15 +1,16 @@
 import { Bloc } from "@felangel/bloc";
-import { MenuEvent, MenuGetEvent } from "./event";
+import { MenuEvent, MenuGetEvent, MenuListEvent } from "./event";
 import {
   MenuErrorState,
   MenuGetState,
   MenuInitialState,
+  MenuListState,
   MenuLoadingState,
   MenuState,
 } from "./state";
 import { MenuRepository } from "../../repositories";
 
-class MenuBloc extends Bloc<MenuEvent, MenuState> {
+export class MenuBloc extends Bloc<MenuEvent, MenuState> {
   private repository: MenuRepository;
 
   constructor(repository: MenuRepository) {
@@ -23,6 +24,8 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
 
     if (event instanceof MenuGetEvent) {
       yield* this.get(event);
+    } else if (event instanceof MenuListEvent) {
+      yield* this.list(event);
     }
   }
 
@@ -31,6 +34,16 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
       const menu = await this.repository.get(event.id);
 
       yield new MenuGetState(menu);
+    } catch (e) {
+      yield new MenuErrorState();
+    }
+  }
+
+  async *list(event: MenuListEvent) {
+    try {
+      const menus = await this.repository.list();
+
+      yield new MenuListState(menus);
     } catch (e) {
       yield new MenuErrorState();
     }

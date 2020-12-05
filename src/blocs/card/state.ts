@@ -16,3 +16,12 @@ export class CardGetState extends CardState {
     this.card = card;
   }
 }
+
+export class CardListState extends CardState {
+  cards: Card[];
+
+  constructor(cards: Card[]) {
+    super();
+    this.cards = cards;
+  }
+}
