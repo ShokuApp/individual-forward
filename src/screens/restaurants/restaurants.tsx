@@ -7,9 +7,9 @@ import {
   RestaurantListEvent,
   RestaurantListState,
   RestaurantState,
-} from "../blocs";
-import { Restaurants } from "../components/restaurants/restaurants";
-import { RestaurantRepository } from "../repositories";
+} from "../../blocs";
+import { Restaurants } from "../../components/restaurants/restaurants";
+import { RestaurantRepository } from "../../repositories";
 
 const RestaurantsScreen: FC = () => {
   const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
