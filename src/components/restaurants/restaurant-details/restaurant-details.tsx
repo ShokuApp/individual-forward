@@ -7,7 +7,7 @@ import {
   Text,
   Dimensions,
 } from "react-native";
-import { Divider } from "./divider";
+import { Divider } from "../../common";
 import { Informations } from "./informations";
 import { UserButtons } from "./user-buttons";
 import { CardDescription } from "./card-description";

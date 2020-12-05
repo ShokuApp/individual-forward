@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { StyleSheet, View, Image } from "react-native";
-import { Dish, Menu, Profile, Pictogram } from "../../../models";
+import { Pictogram } from "../../../models";
 
 const styles = StyleSheet.create({
   container: {
@@ -13,51 +13,15 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 30 / 2,
-    marginHorizontal: "1%",
+    marginHorizontal: 5,
   },
 });
 
 type Props = {
-  dishes: Dish[];
-  menus: Menu[];
-  profile: Profile;
+  allergens: Pictogram[];
 };
 
-export const Allergens: FC<Props> = ({ dishes, menus, profile }: Props) => {
-  const getDishesAllergen = ({
-    dishes,
-    allergens,
-  }: {
-    dishes: Dish[];
-    allergens: Pictogram[];
-  }) => {
-    for (const dish of dishes) {
-      for (const ingredient of dish.ingredients) {
-        for (const allergen of ingredient.allergens) {
-          if (allergens.includes(allergen)) {
-            allergens = allergens.filter(
-              (myAllergens) => myAllergens !== allergen
-            );
-          }
-        }
-      }
-    }
-    return allergens;
-  };
-
-  const getAllergens = () => {
-    let allergens: Pictogram[] = profile.allergens;
-    allergens = getDishesAllergen({ dishes, allergens });
-    for (const menu of menus) {
-      allergens = getDishesAllergen({
-        dishes: menu.dishes,
-        allergens,
-      });
-    }
-    return allergens;
-  };
-
-  const allergens = getAllergens();
+export const Allergens: FC<Props> = ({ allergens }: Props) => {
   return (
     <View style={styles.container}>
       {allergens.map((allergen) => (

@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Card, Dish, Menu } from "../../../models";
-import { EvilIcons } from "@expo/vector-icons";
-import { DishCard } from "./dish-card";
+import { DishesSection } from "./dishes-section";
 import { MenuCard } from "./menu-card";
 import { Allergens } from "./allergens";
 import { Profile } from "../../../models";
+import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
   container: {
@@ -50,65 +50,47 @@ type Props = {
   profile: Profile;
 };
 
-export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
-  const getProfileDishes: ({ dishes }: { dishes: Dish[] }) => Dish[] = ({
-    dishes,
-  }: {
-    dishes: Dish[];
-  }) => {
-    return dishes.filter((dish) => {
-      if (
-        dish.ingredients.find((ingredient) => {
-          for (const allergen of profile.allergens) {
-            if (ingredient.allergens.includes(allergen)) {
-              return true;
-            }
-          }
-        })
-      ) {
-        return false;
+const getDishesFromProfileAllergens: (
+  dishes: Dish[],
+  profile: Profile
+) => Dish[] = (dishes: Dish[], profile: Profile) => {
+  return dishes.filter((dish) => {
+    return !dish.ingredients.find((ingredient) => {
+      for (const allergen of profile.allergens) {
+        if (ingredient.allergens.includes(allergen)) {
+          return true;
+        }
       }
-      return true;
     });
-  };
-
-  const getProfileCard: ({
-    dishes,
-    menu,
-  }: {
-    dishes: Dish[];
-    menu: Menu[];
-  }) => { profileDishes: Dish[]; profileMenu: Menu[] } = ({
-    dishes,
-    menu,
-  }: {
-    dishes: Dish[];
-    menu: Menu[];
-  }) => {
-    let profileDishes: Dish[] = dishes;
-    const profileMenu: Menu[] = menu;
-
-    profileDishes = getProfileDishes({ dishes: profileDishes });
-    for (const menu of profileMenu) {
-      menu.dishes = getProfileDishes(menu);
-    }
-
-    return { profileDishes, profileMenu };
-  };
-  const profileCard = getProfileCard({
-    dishes: card.dishes,
-    menu: card.menus,
   });
-  const starters = profileCard.profileDishes.filter(
-    (dish) => dish.type === "starter"
-  );
-  const plates = profileCard.profileDishes.filter(
-    (dish) => dish.type === "plate"
-  );
-  const desserts = profileCard.profileDishes.filter(
-    (dish) => dish.type === "dessert"
-  );
-  const menus = profileCard.profileMenu;
+};
+
+const getProfileCard: (
+  dishes: Dish[],
+  menus: Menu[],
+  profile: Profile
+) => { dishes: Dish[]; menus: Menu[] } = (
+  dishes: Dish[],
+  menus: Menu[],
+  profile: Profile
+) => {
+  const filteredDishes = getDishesFromProfileAllergens(dishes, profile);
+  const filteredMenus = menus.map((menu) => {
+    return {
+      ...menu,
+      dishes: getDishesFromProfileAllergens(menu.dishes, profile),
+    };
+  });
+
+  return { dishes: filteredDishes, menus: filteredMenus };
+};
+
+export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
+  const profileCard = getProfileCard(card.dishes, card.menus, profile);
+  const starters = profileCard.dishes.filter((dish) => dish.type === "starter");
+  const plates = profileCard.dishes.filter((dish) => dish.type === "plate");
+  const desserts = profileCard.dishes.filter((dish) => dish.type === "dessert");
+  const menus = profileCard.menus;
 
   return (
     <View style={styles.container}>
@@ -119,28 +101,29 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
           onPress={() => alert("Todo!")}
         >
           <Text style={styles.filtreLabel}>Voir la carte</Text>
-          <EvilIcons name="chevron-right" size={24} color="#2196F3" />
+          <Icon
+            type="evilicon"
+            name="chevron-right"
+            size={24}
+            color="#2196F3"
+          />
         </TouchableOpacity>
       </View>
       {starters.length !== 0 ? (
-        <DishCard category={"Entrées"} dishes={starters} />
+        <DishesSection category={"Entrées"} dishes={starters} />
       ) : null}
       {plates.length !== 0 ? (
-        <DishCard category={"Plats"} dishes={plates} />
+        <DishesSection category={"Plats"} dishes={plates} />
       ) : null}
       {desserts.length !== 0 ? (
-        <DishCard category={"Desserts"} dishes={desserts} />
+        <DishesSection category={"Desserts"} dishes={desserts} />
       ) : null}
       {menus.length !== 0 ? <MenuCard menus={menus} /> : null}
       <View style={styles.allergenContainer}>
         <Text style={styles.allergenLabel}>
           Ces recettes ne contiennent pas les allergènes suivant:
         </Text>
-        <Allergens
-          dishes={profileCard.profileDishes}
-          menus={menus}
-          profile={profile}
-        />
+        <Allergens allergens={profile.allergens} />
       </View>
     </View>
   );

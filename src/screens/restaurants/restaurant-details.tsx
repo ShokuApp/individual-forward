@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Text } from "react-native";
 
 import { RouteProp } from "@react-navigation/native";
-import { RestaurantStackParamList } from "../../app";
+import { RestaurantStackParamList } from "../../navigator/restaurant-details-navigator";
 import { BlocBuilder } from "@felangel/react-bloc";
 import {
   ProfileBloc,
@@ -10,7 +10,6 @@ import {
   ProfileState,
   ProfileErrorState,
   ProfileInitialState,
-  ProfileLoadingState,
   ProfileGetState,
 } from "../../blocs";
 import { ProfileRepository } from "../../repositories";
@@ -25,6 +24,18 @@ type Props = {
   route: RestaurantDetailsScreenProps;
 };
 
+const RestaurantDetailsError: FC = () => {
+  return <Text>Error</Text>;
+};
+
+const RestaurantDetailsInitial: FC = () => {
+  return <Text>Loading</Text>;
+};
+
+const RestaurantDetailsLoading: FC = () => {
+  return <Text>Loading</Text>;
+};
+
 const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
   const id = "07be4ee4-417a-4a10-9e82-c7ec9b219dff";
   const profilBloc = new ProfileBloc(new ProfileRepository());
@@ -34,20 +45,20 @@ const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
       bloc={profilBloc}
       builder={(state: ProfileState) => {
         if (state instanceof ProfileErrorState) {
-          return <Text>Error</Text>;
+          return <RestaurantDetailsError />;
         }
         if (state instanceof ProfileInitialState) {
-          return <Text>Loading</Text>;
+          return <RestaurantDetailsInitial />;
         }
-        if (state instanceof ProfileLoadingState) {
-          return <Text>Loading</Text>;
+        if (state instanceof ProfileGetState) {
+          return (
+            <RestaurantDetails
+              restaurant={route.params.restaurant}
+              profile={(state as ProfileGetState).profile}
+            />
+          );
         }
-        return (
-          <RestaurantDetails
-            restaurant={route.params.restaurant}
-            profile={(state as ProfileGetState).profile}
-          />
-        );
+        return <RestaurantDetailsLoading />;
       }}
     />
   );

@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import { View, StyleSheet } from "react-native";
-import { UserButton } from "./user-button";
-import { Feather, SimpleLineIcons, EvilIcons } from "@expo/vector-icons";
+import { UserButton } from "../../common/user-button";
+import { SimpleLineIcons, EvilIcons } from "@expo/vector-icons";
+import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
   container: {
@@ -16,22 +17,29 @@ export const UserButtons: FC = () => {
     <View style={styles.container}>
       <UserButton
         label="Favoris"
-        icon={<EvilIcons name="heart" size={50} color="#2196F3" />}
+        icon={<Icon type="evilicon" name="heart" size={50} color="#2196F3" />}
         onPress={() => alert("Favoris")}
       />
       <UserButton
         label="Commenter"
-        icon={<EvilIcons name="comment" size={50} color="#2196F3" />}
+        icon={<Icon type="evilicon" name="comment" size={50} color="#2196F3" />}
         onPress={() => alert("Commenter")}
       />
       <UserButton
         label="Noter"
-        icon={<EvilIcons name="star" size={50} color="#2196F3" />}
+        icon={<Icon type="evilicon" name="star" size={50} color="#2196F3" />}
         onPress={() => alert("Noter")}
       />
       <UserButton
         label="Appeler"
-        icon={<SimpleLineIcons name="phone" size={37.5} color="#2196F3" />}
+        icon={
+          <Icon
+            type="simple-line-icon"
+            name="phone"
+            size={37.5}
+            color="#2196F3"
+          />
+        }
         onPress={() => alert("Appeler")}
       />
     </View>

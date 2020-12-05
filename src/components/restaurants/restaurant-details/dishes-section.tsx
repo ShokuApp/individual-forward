@@ -30,7 +30,7 @@ type Props = {
   dishes: Dish[];
 };
 
-export const DishCard: FC<Props> = ({ category, dishes }: Props) => {
+export const DishesSection: FC<Props> = ({ category, dishes }: Props) => {
   return (
     <View style={styles.container}>
       <CategoryTitle title={category} />
