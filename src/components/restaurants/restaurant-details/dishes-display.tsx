@@ -16,13 +16,11 @@ const styles = StyleSheet.create({
   },
 });
 
-type DishesDisplayProps = {
+type Props = {
   dishes: Dish[];
 };
 
-export const DishesDisplay: FC<DishesDisplayProps> = ({
-  dishes,
-}: DishesDisplayProps) => {
+export const DishesDisplay: FC<Props> = ({ dishes }: Props) => {
   return (
     <View>
       {dishes.map((dish) => {
