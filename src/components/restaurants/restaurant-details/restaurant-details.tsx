@@ -19,6 +19,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+  },
   image: {
     minHeight: 100,
     height: "20%",
@@ -89,7 +92,7 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Image source={{ uri: restaurant.image }} style={styles.image} />
       <TouchableOpacity style={styles.closeIcon} onPress={() => goBack()}>
         <Icon name="close" type={"antdesign"} size={25} color="white" />

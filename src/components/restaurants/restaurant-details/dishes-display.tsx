@@ -6,10 +6,10 @@ import { Divider } from "../../common";
 const styles = StyleSheet.create({
   dishContainer: {
     width: "100%",
-    paddingLeft: "10%",
+    paddingLeft: "6%",
   },
   dishTitleContainer: {
-    marginVertical: "2%",
+    marginVertical: 8,
   },
   dishTitle: {
     fontSize: 12,

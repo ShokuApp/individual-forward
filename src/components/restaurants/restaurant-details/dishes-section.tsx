@@ -9,19 +9,20 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     borderRadius: 10,
-    paddingVertical: "2%",
-    marginBottom: "5%",
+    paddingVertical: 10,
+    marginBottom: 20,
   },
   dishContainer: {
-    width: "100%",
-    paddingHorizontal: "5%",
+    width: "90%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: "2%",
+    paddingVertical: 8,
+    borderBottomColor: "#DADADA",
+    borderBottomWidth: 1,
   },
   dishName: {
-    paddingRight: "10%",
+    paddingRight: 20,
   },
 });
 
@@ -38,7 +39,7 @@ export const DishesSection: FC<Props> = ({ category, dishes }: Props) => {
         return (
           <View key={dish.name} style={styles.dishContainer}>
             <Text style={styles.dishName}>{dish.name}</Text>
-            <Text>{dish.price}</Text>
+            <Text>{dish.price.toString() + "€"}</Text>
           </View>
         );
       })}

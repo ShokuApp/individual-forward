@@ -11,17 +11,18 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     alignItems: "center",
     borderRadius: 10,
-    paddingVertical: "2%",
-    marginBottom: "5%",
+    paddingVertical: 8,
+    marginBottom: 20,
   },
   menuContainer: {
-    marginBottom: "7%",
+    marginBottom: 8,
     width: "90%",
   },
   menuTitleContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    marginBottom: 8,
   },
 });
 
@@ -42,7 +43,7 @@ export const MenuCard: FC<Props> = ({ menus }: Props) => {
           <View key={menu.name} style={styles.menuContainer}>
             <View style={styles.menuTitleContainer}>
               <Text>{menu.name}</Text>
-              <Text>{menu.price}</Text>
+              <Text>{menu.price.toString() + "€"}</Text>
             </View>
             <Divider width={"100%"} color={"#DADADA"} />
             {starters.length !== 0 ? <DishesDisplay dishes={starters} /> : null}

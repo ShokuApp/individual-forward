@@ -13,6 +13,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 const styles = {
   container: {
     height: "100%",
+    backgroundColor: "white",
   },
 };
 
