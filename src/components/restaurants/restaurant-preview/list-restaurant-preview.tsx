@@ -1,17 +1,6 @@
 import React, { FC } from "react";
-import { Text, View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet, Dimensions } from "react-native";
 import { RestaurantPreview } from "./restaurant-preview";
-import {
-  RestaurantBloc,
-  RestaurantGetEvent,
-  RestaurantState,
-  RestaurantLoadingState,
-  RestaurantErrorState,
-  RestaurantInitialState,
-  RestaurantGetState,
-} from "../../../blocs";
-import { RestaurantRepository } from "../../../repositories";
-import { BlocBuilder } from "@felangel/react-bloc";
 import { Restaurant } from "../../../models";
 
 const styles = StyleSheet.create({
