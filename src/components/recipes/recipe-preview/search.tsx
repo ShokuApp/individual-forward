@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import { Icon } from "react-native-elements";
-import { colors } from "../../constants";
+import { colors } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
