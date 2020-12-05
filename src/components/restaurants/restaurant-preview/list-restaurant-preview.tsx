@@ -6,7 +6,7 @@ import { Restaurant } from "../../../models";
 const styles = StyleSheet.create({
   scrollContainer: {
     position: "absolute",
-    bottom: 0,
+    bottom: 25,
   },
   container: {
     display: "flex",
