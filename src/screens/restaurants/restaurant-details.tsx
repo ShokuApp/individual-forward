@@ -6,11 +6,10 @@ import { RestaurantStackParamList } from "../../navigator/restaurant-details-nav
 import { BlocBuilder } from "@felangel/react-bloc";
 import {
   ProfileBloc,
-  ProfileGetEvent,
-  ProfileState,
   ProfileErrorState,
-  ProfileInitialState,
+  ProfileGetEvent,
   ProfileGetState,
+  ProfileState,
 } from "../../blocs";
 import { ProfileRepository } from "../../repositories";
 import { RestaurantDetails } from "../../components/restaurants/restaurant-details";
@@ -24,31 +23,16 @@ type Props = {
   route: RestaurantDetailsScreenProps;
 };
 
-const RestaurantDetailsError: FC = () => {
-  return <Text>Error</Text>;
-};
-
-const RestaurantDetailsInitial: FC = () => {
-  return <Text>Loading</Text>;
-};
-
-const RestaurantDetailsLoading: FC = () => {
-  return <Text>Loading</Text>;
-};
-
 const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
-  const id = "07be4ee4-417a-4a10-9e82-c7ec9b219dff";
-  const profilBloc = new ProfileBloc(new ProfileRepository());
-  profilBloc.add(new ProfileGetEvent(id));
+  const id = "129e5ebe-aaab-48f0-a1f5-31409a2fc11d";
+  const profileBloc = new ProfileBloc(new ProfileRepository());
+  profileBloc.add(new ProfileGetEvent(id));
   return (
     <BlocBuilder
-      bloc={profilBloc}
+      bloc={profileBloc}
       builder={(state: ProfileState) => {
         if (state instanceof ProfileErrorState) {
-          return <RestaurantDetailsError />;
-        }
-        if (state instanceof ProfileInitialState) {
-          return <RestaurantDetailsInitial />;
+          return <Text>Error</Text>;
         }
         if (state instanceof ProfileGetState) {
           return (
@@ -58,7 +42,7 @@ const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
             />
           );
         }
-        return <RestaurantDetailsLoading />;
+        return <Text>Loading</Text>;
       }}
     />
   );

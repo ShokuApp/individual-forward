@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { RestaurantStack } from "../navigator/restaurant-details-navigator";
+import { RestaurantStack } from "./restaurant-details-navigator";
 import { BottomTabNavigator } from "../components/bottom-tab-navigator";
 
 const Stack = createStackNavigator();

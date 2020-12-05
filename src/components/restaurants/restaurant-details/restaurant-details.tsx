@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import {
+  Dimensions,
   Image,
-  TouchableOpacity,
-  View,
   StyleSheet,
   Text,
-  Dimensions,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { Divider } from "../../common";
 import { Informations } from "./informations";
@@ -13,7 +13,7 @@ import { UserButtons } from "./user-buttons";
 import { CardDescription } from "./card-description";
 import { AntDesign } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
-import { Restaurant, TimeRange, Profile } from "../../../models";
+import { Profile, Restaurant, TimeRange } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
@@ -44,17 +44,12 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
   },
-  titleContainer: {
-    height: height / 17,
-    width,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 10,
-  },
   title: {
     fontSize: 20,
     color: "#2196F3",
     fontWeight: "bold",
+    textAlign: "center",
+    marginVertical: 10,
   },
 });
 
@@ -105,14 +100,20 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
         showsVerticalScrollIndicator={false}
         style={styles.detailsContainer}
       >
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>{restaurant.name}</Text>
-        </View>
+        <Text style={styles.title}>{restaurant.name}</Text>
         <Informations
-          address={"11 Grande Rue Nazareth 31000 Toulouse"}
+          address={
+            restaurant.address.streetNumber +
+            " " +
+            restaurant.address.street +
+            " " +
+            restaurant.address.postalCode +
+            " " +
+            restaurant.address.city
+          }
           type={restaurant.description}
-          hours={getOpeningTime(restaurant.opening_time)}
-          note={restaurant.average_rate}
+          hours={getOpeningTime(restaurant.openingTime)}
+          note={restaurant.averageRate}
         />
         <Divider width={"80%"} color={"#DADADA"} />
         <UserButtons />

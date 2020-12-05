@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { View, StyleSheet } from "react-native";
-import { UserButton } from "../../common/user-button";
-import { SimpleLineIcons, EvilIcons } from "@expo/vector-icons";
+import { UserButton } from "../../common";
 import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
