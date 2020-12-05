@@ -13,11 +13,6 @@ const styles = StyleSheet.create({
     width,
     marginVertical: 20,
   },
-  divider: {
-    width,
-    backgroundColor: "#DADADA",
-    height: 1,
-  },
 });
 
 type Props = {
@@ -26,60 +21,58 @@ type Props = {
 
 export const RecipeIconButtons: FC<Props> = ({ recipe }: Props) => {
   return (
-    <View>
-      <View style={styles.container}>
-        <View>
-          {/* TODO: Use @Matttx 's UserButton component */}
-          <Icon
-            name="heart-o"
-            type="font-awesome"
-            size={30}
-            color="#2196F3"
-            onPress={() => {
-              console.log("Attach fav method");
-            }}
-          />
-          <Text>Favoris</Text>
-        </View>
-        <View>
-          {/* TODO: Use @Matttx 's UserButton component */}
-          <Icon
-            name="comment-o"
-            type="font-awesome"
-            size={30}
-            color="#2196F3"
-            onPress={() => {
-              console.log("Attach comment method");
-            }}
-          />
-          <Text>Commenter</Text>
-        </View>
-        <View>
-          {/* TODO: Use @Matttx 's UserButton component */}
-          <Icon
-            name="star-o"
-            type="font-awesome"
-            size={30}
-            color="#2196F3"
-            onPress={() => {
-              console.log("Attach rate method");
-            }}
-          />
-          <Text>Noter</Text>
-        </View>
-        <View>
-          {/* TODO: Use @Matttx 's UserButton component */}
-          <Icon
-            name="share-square-o"
-            type="font-awesome"
-            size={30}
-            color="#2196F3"
-            onPress={() => {
-              console.log("Attach share method");
-            }}
-          />
-          <Text>Partager</Text>
-        </View>
+    <View style={styles.container}>
+      <View>
+        {/* TODO: Use @Matttx 's UserButton component */}
+        <Icon
+          name="heart-o"
+          type="font-awesome"
+          size={30}
+          color="#2196F3"
+          onPress={() => {
+            console.log("Attach fav method");
+          }}
+        />
+        <Text>Favoris</Text>
+      </View>
+      <View>
+        {/* TODO: Use @Matttx 's UserButton component */}
+        <Icon
+          name="comment-o"
+          type="font-awesome"
+          size={30}
+          color="#2196F3"
+          onPress={() => {
+            console.log("Attach comment method");
+          }}
+        />
+        <Text>Commenter</Text>
+      </View>
+      <View>
+        {/* TODO: Use @Matttx 's UserButton component */}
+        <Icon
+          name="star-o"
+          type="font-awesome"
+          size={30}
+          color="#2196F3"
+          onPress={() => {
+            console.log("Attach rate method");
+          }}
+        />
+        <Text>Noter</Text>
+      </View>
+      <View>
+        {/* TODO: Use @Matttx 's UserButton component */}
+        <Icon
+          name="share-square-o"
+          type="font-awesome"
+          size={30}
+          color="#2196F3"
+          onPress={() => {
+            console.log("Attach share method");
+          }}
+        />
+        <Text>Partager</Text>
       </View>
     </View>
   );
