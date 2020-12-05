@@ -7,18 +7,13 @@ import {
   Dimensions,
   ScrollView,
 } from "react-native";
+import { Icon } from "react-native-elements";
 import { Recipe } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
-import { AntDesign } from "@expo/vector-icons";
-import { Ionicons } from "@expo/vector-icons";
 import { RecipeDescription } from "./recipe-decription";
 import { Divider } from "./divider";
 import { RecipeIconButtons } from "./recipe-icon-buttons";
-import { TouchableOpacity } from "react-native-gesture-handler";
-
-type Props = {
-  recipe: Recipe;
-};
+import { RecipeNumberInput } from "./recipe-number-input";
 
 const { width, height } = Dimensions.get("window");
 
@@ -36,18 +31,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: height / 14,
     left: width / 15,
-  },
-  ingredientIcon: {
-    height: 30,
-    width: 30,
-    borderRadius: 30 / 2,
-    backgroundColor: "white",
-    justifyContent: "center",
-    alignItems: "center",
-    shadowOffset: { height: 3, width: 0 },
-    shadowOpacity: 0.4,
-    shadowRadius: 3,
-    elevation: 5,
   },
   image: {
     width: "100%",
@@ -72,7 +55,7 @@ const styles = StyleSheet.create({
   divider: {
     alignItems: "center",
   },
-  bottomView: {
+  contentContainer: {
     backgroundColor: "#ECECEC",
     height,
     width,
@@ -81,37 +64,11 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
-  sectionTitle: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#2196F3",
-  },
-  inputIngredient: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    width: 80,
-  },
-  textNumber: {
-    fontSize: 20,
-    color: "#2196F3",
-    marginHorizontal: 2,
-  },
-  ingredientSectionTitle: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    width,
-    paddingHorizontal: 10,
-    paddingVertical: 15,
-  },
-  sectionSubtitle: {
-    fontSize: 12,
-    color: "#8A8A8A",
-    paddingTop: 5,
-    paddingLeft: 30,
-  },
 });
+
+type Props = {
+  recipe: Recipe;
+};
 
 export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
   const imageSrc = { uri: recipe.image };
@@ -121,7 +78,8 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
     <View style={styles.container}>
       <Image style={styles.image} source={imageSrc} />
       <View style={styles.closeIcon}>
-        <AntDesign
+        <Icon
+          type="antdesign"
           name="close"
           size={25}
           color="white"
@@ -137,31 +95,18 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
           <View style={styles.divider}>
             <Divider />
           </View>
+          <View style={styles.divider} />
           <RecipeIconButtons recipe={recipe} />
-          <View style={styles.bottomView}>
-            <View style={styles.ingredientSectionTitle}>
-              <Text style={styles.sectionTitle}>Ingrédients</Text>
-              <Text style={styles.sectionSubtitle}>Nombre de personnes</Text>
-              <View style={styles.inputIngredient}>
-                <TouchableOpacity
-                  style={styles.ingredientIcon}
-                  onPress={() => {
-                    if (count > 1) setCount(count - 1);
-                  }}
-                >
-                  <Ionicons name="ios-remove" size={25} color="#2196F3" />
-                </TouchableOpacity>
-                <Text style={styles.textNumber}>{count}</Text>
-                <TouchableOpacity
-                  style={styles.ingredientIcon}
-                  onPress={() => {
-                    if (count < 99) setCount(count + 1);
-                  }}
-                >
-                  <Ionicons name="ios-add" size={25} color="#2196F3" />
-                </TouchableOpacity>
-              </View>
-            </View>
+          <View style={styles.contentContainer}>
+            <RecipeNumberInput
+              count={count}
+              minusClick={() => {
+                if (count > 1) setCount(count - 1);
+              }}
+              addClick={() => {
+                if (count < 99) setCount(count + 1);
+              }}
+            />
           </View>
         </ScrollView>
       </View>

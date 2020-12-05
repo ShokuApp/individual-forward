@@ -2,14 +2,10 @@ import React, { FC } from "react";
 import { Text, View, StyleSheet, Dimensions } from "react-native";
 import { Recipe } from "../../../models";
 
-type Props = {
-  recipe: Recipe;
-};
-
 const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-  descriptionView: {
+  container: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -27,41 +23,42 @@ const styles = StyleSheet.create({
     color: "#8A8A8A",
     textAlign: "right",
   },
-  descriptionValueTextLeft: {
+  descriptionValueText: {
     marginHorizontal: 30,
-    textAlign: "left",
-  },
-  descriptionValueTextRight: {
-    marginHorizontal: 30,
-    textAlign: "right",
   },
 });
+
+type Props = {
+  recipe: Recipe;
+};
 
 export const RecipeDescription: FC<Props> = ({ recipe }: Props) => {
   return (
     <View>
-      <View style={styles.descriptionView}>
+      <View style={styles.container}>
         <View>
           <Text style={styles.descriptionTextLeft}>Préparation</Text>
-          <Text style={styles.descriptionValueTextLeft}>
+          <Text style={[styles.descriptionValueText, { textAlign: "left" }]}>
             {Math.round(recipe.average_time / 60)} minutes
           </Text>
         </View>
         <View>
           <Text style={styles.descriptionTextRight}>Cuisson</Text>
-          <Text style={styles.descriptionValueTextRight}>
+          <Text style={[styles.descriptionValueText, { textAlign: "right" }]}>
             {Math.round(recipe.average_time / 60)} minutes
           </Text>
         </View>
       </View>
-      <View style={styles.descriptionView}>
+      <View style={styles.container}>
         <View>
           <Text style={styles.descriptionTextLeft}>Fait par</Text>
-          <Text style={styles.descriptionValueTextLeft}>ViviG51</Text>
+          <Text style={[styles.descriptionValueText, { textAlign: "left" }]}>
+            ViviG51
+          </Text>
         </View>
         <View>
           <Text style={styles.descriptionTextRight}>Note</Text>
-          <Text style={styles.descriptionValueTextRight}>
+          <Text style={[styles.descriptionValueText, { textAlign: "right" }]}>
             {recipe.average_rate}/5
           </Text>
         </View>
