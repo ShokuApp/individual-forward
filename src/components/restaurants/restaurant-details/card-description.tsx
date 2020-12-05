@@ -96,7 +96,7 @@ const filterCardByAllergens: (
     }, []),
   ];
 
-  return { dishes: filteredDishes, menus: filteredMenus, allDishes: allDishes };
+  return { dishes: filteredDishes, menus: filteredMenus, allDishes };
 };
 
 export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
