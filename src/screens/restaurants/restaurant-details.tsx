@@ -38,7 +38,7 @@ const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
           return (
             <RestaurantDetails
               restaurant={route.params.restaurant}
-              profile={(state as ProfileGetState).profile}
+              profile={state.profile}
             />
           );
         }

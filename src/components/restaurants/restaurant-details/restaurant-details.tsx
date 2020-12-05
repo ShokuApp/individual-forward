@@ -5,23 +5,20 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
 } from "react-native";
 import { Divider } from "../../common";
 import { Informations } from "./informations";
 import { UserButtons } from "./user-buttons";
 import { CardDescription } from "./card-description";
-import { AntDesign } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
 import { Profile, Restaurant, TimeRange } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
+import { Icon } from "react-native-elements";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   image: {
     minHeight: 100,
     height: "20%",
@@ -41,9 +38,9 @@ const styles = StyleSheet.create({
   detailsContainer: {
     top: -30,
     backgroundColor: "white",
-    height,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
+    marginBottom: 100,
   },
   title: {
     fontSize: 20,
@@ -92,10 +89,10 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView>
       <Image source={{ uri: restaurant.image }} style={styles.image} />
       <TouchableOpacity style={styles.closeIcon} onPress={() => goBack()}>
-        <AntDesign name="close" size={25} color="white" />
+        <Icon name="close" type={"antdesign"} size={25} color="white" />
       </TouchableOpacity>
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -120,6 +117,6 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
         <UserButtons />
         <CardDescription card={restaurant.card} profile={profile} />
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
