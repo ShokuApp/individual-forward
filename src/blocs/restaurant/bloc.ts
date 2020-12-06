@@ -3,6 +3,7 @@ import {
   RestaurantEvent,
   RestaurantGetEvent,
   RestaurantListEvent,
+  RestaurantRefreshEvent,
 } from "./event";
 import {
   RestaurantErrorState,
@@ -27,6 +28,10 @@ export class RestaurantBloc extends Bloc<RestaurantEvent, RestaurantState> {
     event: RestaurantEvent
   ): AsyncIterableIterator<RestaurantState> {
     yield new RestaurantLoadingState();
+
+    if (event instanceof RestaurantRefreshEvent) {
+      yield this.state;
+    }
 
     if (event instanceof RestaurantGetEvent) {
       yield* this.get(event);

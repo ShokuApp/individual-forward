@@ -1,5 +1,7 @@
 export abstract class RestaurantEvent {}
 
+export class RestaurantRefreshEvent extends RestaurantEvent {}
+
 export class RestaurantGetEvent extends RestaurantEvent {
   id: string;
 

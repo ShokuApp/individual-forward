@@ -1,9 +1,14 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { RestaurantStack } from "./restaurant-details-navigator";
+import { RestaurantsStackScreens } from "./restaurants-navigator";
 import { BottomTabNavigator } from "../components/bottom-tab-navigator";
 
-const Stack = createStackNavigator();
+export type HomeStackParamList = {
+  Home: { filters: any };
+  Restaurant: undefined;
+};
+
+const Stack = createStackNavigator<HomeStackParamList>();
 
 export const RootStack: FC = () => {
   return (
@@ -15,7 +20,7 @@ export const RootStack: FC = () => {
       />
       <Stack.Screen
         name="Restaurant"
-        component={RestaurantStack}
+        component={RestaurantsStackScreens}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

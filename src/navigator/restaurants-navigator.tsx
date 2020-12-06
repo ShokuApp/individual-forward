@@ -2,23 +2,30 @@ import React, { FC } from "react";
 import { Restaurant } from "../models";
 import RestaurantDetailsScreen from "../screens/restaurants/restaurant-details";
 import { createStackNavigator } from "@react-navigation/stack";
+import SearchRestaurantScreen from "../screens/restaurants/search-restaurants";
 
 export type RestaurantStackParamList = {
   RestaurantDetailsScreen: { restaurant: Restaurant };
+  SearchRestaurants: undefined;
 };
 
-const RestaurantDetailsStack = createStackNavigator<RestaurantStackParamList>();
+const RestaurantsStack = createStackNavigator<RestaurantStackParamList>();
 
-export const RestaurantStack: FC = () => {
+export const RestaurantsStackScreens: FC = () => {
   return (
-    <RestaurantDetailsStack.Navigator>
-      <RestaurantDetailsStack.Screen
+    <RestaurantsStack.Navigator>
+      <RestaurantsStack.Screen
         name={"RestaurantDetailsScreen"}
         component={RestaurantDetailsScreen}
         options={{
           headerShown: false,
         }}
       />
-    </RestaurantDetailsStack.Navigator>
+      <RestaurantsStack.Screen
+        name="SearchRestaurants"
+        component={SearchRestaurantScreen}
+        options={{ title: "Recherche" }}
+      />
+    </RestaurantsStack.Navigator>
   );
 };

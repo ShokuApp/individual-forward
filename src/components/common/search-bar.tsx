@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import { Icon } from "react-native-elements";
-import { colors } from "../../../constants";
+import { colors } from "../../constants";
 
 const styles = StyleSheet.create({
   container: {
@@ -37,7 +37,7 @@ type Props = {
   setText: (text: string) => void;
 };
 
-export const RecipeSearch: FC<Props> = (props) => {
+export const SearchBar: FC<Props> = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.bar}>

@@ -11,6 +11,10 @@ import {
 } from "../../blocs";
 import { RestaurantRepository } from "../../repositories";
 import { BlocBuilder } from "@felangel/react-bloc";
+import { RestaurantsStackParamsList } from "../../components/bottom-tab-navigator/bottom-tab-navigator";
+import { RouteProp } from "@react-navigation/native";
+import "react-native-get-random-values";
+import { v4 } from "uuid";
 
 const styles = StyleSheet.create({
   map: {
@@ -18,6 +22,15 @@ const styles = StyleSheet.create({
     height: Dimensions.get("window").height,
   },
 });
+
+type RestaurantScreenProps = RouteProp<
+  RestaurantsStackParamsList,
+  "Restaurants"
+>;
+
+type Props = {
+  route: RestaurantScreenProps;
+};
 
 // ! Temporary pending SPAR-259
 // ! Related Pull Request: https://github.com/ShokuApp/individual-forward/pull/21
@@ -51,13 +64,13 @@ const RestaurantsMap: FC = () => {
   );
 };
 
-const RestaurantsScreen: FC = () => {
+const RestaurantsScreen: FC<Props> = ({ route }: Props) => {
   const restaurantBloc = new RestaurantBloc(new RestaurantRepository());
-
   restaurantBloc.add(new RestaurantListEvent());
 
   return (
     <BlocBuilder
+      key={v4()}
       bloc={restaurantBloc}
       builder={(state: RestaurantState) => {
         if (state instanceof RestaurantErrorState) {
@@ -68,7 +81,10 @@ const RestaurantsScreen: FC = () => {
           return (
             <>
               <RestaurantsMap />
-              <ListRestaurantPreview restaurants={state.restaurants} />
+              <ListRestaurantPreview
+                restaurants={state.restaurants}
+                filters={route.params?.filters}
+              />
             </>
           );
         }
