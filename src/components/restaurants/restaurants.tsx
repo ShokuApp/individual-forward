@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
-import { MapArea } from "../map-area/map-area";
+import { MapArea } from "./restaurant-map/map-area";
 import { ListRestaurantPreview } from "./restaurant-preview/list-restaurant-preview";
 import { Restaurant } from "../../models";
 
