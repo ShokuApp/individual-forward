@@ -9,11 +9,34 @@ const styles = StyleSheet.create({
     width,
     height,
   },
-  previewList: {
-    position: "absolute",
-    bottom: 0,
-  },
 });
+
+const mapStyle = [
+  {
+    featureType: "poi.business",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "poi.medical",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "poi.sports_complex",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+];
 
 type Props = {
   locations: Array<{
@@ -31,9 +54,10 @@ export const MapArea: FC<Props> = (props: Props) => {
     if (props.index !== -1) {
       mapRef.current?.animateToRegion(
         {
-          latitudeDelta: 0,
-          longitudeDelta: 0.006,
-          ...props.locations[props.index],
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
+          latitude: props.locations[props.index].latitude - 0.001,
+          longitude: props.locations[props.index].longitude,
         },
         350
       );
@@ -49,6 +73,7 @@ export const MapArea: FC<Props> = (props: Props) => {
   return (
     <MapView
       ref={mapRef}
+      customMapStyle={mapStyle}
       style={styles.container}
       provider={PROVIDER_GOOGLE}
       initialRegion={{
@@ -70,9 +95,9 @@ export const MapArea: FC<Props> = (props: Props) => {
             onPress={(e) => {
               mapRef.current?.animateToRegion(
                 {
-                  latitudeDelta: 0,
-                  longitudeDelta: 0.006,
-                  latitude: e.nativeEvent.coordinate.latitude,
+                  latitudeDelta: 0.005,
+                  longitudeDelta: 0.005,
+                  latitude: e.nativeEvent.coordinate.latitude - 0.00075,
                   longitude: e.nativeEvent.coordinate.longitude,
                 },
                 390
