@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { RestaurantStack } from "./restaurant-details-navigator";
+import { RestaurantsStackScreens } from "./restaurants-navigator";
 import { RecipeDetails } from "./recipe-details-navigator";
 import { BottomTabNavigator } from "../components/bottom-tab-navigator";
 
@@ -16,7 +16,7 @@ export const RootStack: FC = () => {
       />
       <Stack.Screen
         name="Restaurant"
-        component={RestaurantStack}
+        component={RestaurantsStackScreens}
         options={{ headerShown: false }}
       />
       <Stack.Screen

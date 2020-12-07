@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Text } from "react-native";
 
 import { RouteProp } from "@react-navigation/native";
-import { RestaurantStackParamList } from "../../navigator/restaurant-details-navigator";
+import { RestaurantStackParamList } from "../../navigator/restaurants-navigator";
 import { BlocBuilder } from "@felangel/react-bloc";
 import {
   ProfileBloc,

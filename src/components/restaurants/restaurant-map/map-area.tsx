@@ -1,19 +1,42 @@
 import React, { FC, useEffect } from "react";
-import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
+import { Dimensions, ScrollView, StyleSheet } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-  mapStyle: {
+  container: {
     width,
     height,
   },
-  previewList: {
-    position: "absolute",
-    bottom: 0,
-  },
 });
+
+const mapStyle = [
+  {
+    featureType: "poi.business",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "poi.medical",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+  {
+    featureType: "poi.sports_complex",
+    stylers: [
+      {
+        visibility: "off",
+      },
+    ],
+  },
+];
 
 type Props = {
   locations: Array<{
@@ -31,9 +54,10 @@ export const MapArea: FC<Props> = (props: Props) => {
     if (props.index !== -1) {
       mapRef.current?.animateToRegion(
         {
-          latitudeDelta: 0,
-          longitudeDelta: 0.006,
-          ...props.locations[props.index],
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
+          latitude: props.locations[props.index].latitude - 0.001,
+          longitude: props.locations[props.index].longitude,
         },
         350
       );
@@ -49,7 +73,8 @@ export const MapArea: FC<Props> = (props: Props) => {
   return (
     <MapView
       ref={mapRef}
-      style={styles.mapStyle}
+      customMapStyle={mapStyle}
+      style={styles.container}
       provider={PROVIDER_GOOGLE}
       initialRegion={{
         latitude: 43.6047,
@@ -70,9 +95,9 @@ export const MapArea: FC<Props> = (props: Props) => {
             onPress={(e) => {
               mapRef.current?.animateToRegion(
                 {
-                  latitudeDelta: 0,
-                  longitudeDelta: 0.006,
-                  latitude: e.nativeEvent.coordinate.latitude,
+                  latitudeDelta: 0.005,
+                  longitudeDelta: 0.005,
+                  latitude: e.nativeEvent.coordinate.latitude - 0.001,
                   longitude: e.nativeEvent.coordinate.longitude,
                 },
                 390

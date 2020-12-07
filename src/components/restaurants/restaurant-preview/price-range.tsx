@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { StyleSheet, View } from "react-native";
 import { Icon } from "react-native-elements";
+import { restaurantPriceRange } from "../../../helpers/restaurants/average-price";
 
 const styles = StyleSheet.create({
   iconPrice: {
@@ -20,14 +21,7 @@ type Props = {
 };
 
 const RestaurantPreviewPriceRange: FC<Props> = ({ price }: Props) => {
-  let numberIcons;
-  if (price < 15) {
-    numberIcons = 1;
-  } else if (price < 30) {
-    numberIcons = 2;
-  } else {
-    numberIcons = 3;
-  }
+  const numberIcons = restaurantPriceRange(price);
   const icons = [];
   for (let i = 0; i < numberIcons; i++) {
     icons.push(

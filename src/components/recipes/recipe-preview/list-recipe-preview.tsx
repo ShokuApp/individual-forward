@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { RecipePreview } from "./recipe-preview";
 import { ScrollView } from "react-native-gesture-handler";
 import { Recipe } from "../../../models";
-import { RecipeSearch } from "./search";
+import { SearchBar } from "../../common/search-bar";
 
 const styles = StyleSheet.create({
   container: {
@@ -36,7 +36,7 @@ export const ListRecipePreview: FC<Props> = (props) => {
 
   return (
     <ScrollView style={styles.container}>
-      <RecipeSearch text={text} setText={setText} />
+      <SearchBar text={text} setText={setText} />
       {filteredRecipes.length ? (
         <View style={styles.listContainer}>
           {filteredRecipes.map((recipe) => {

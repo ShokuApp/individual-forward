@@ -1,9 +1,13 @@
 import React, { FC } from "react";
-import { View, StyleSheet, Dimensions } from "react-native";
+import { Dimensions, StyleSheet, View } from "react-native";
 import { RestaurantPreview } from "./restaurant-preview";
 import { Restaurant } from "../../../models";
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    position: "absolute",
+    bottom: 25,
+  },
   container: {
     display: "flex",
     flexDirection: "row",
@@ -19,7 +23,7 @@ type Props = {
   restaurants: Restaurant[];
 };
 
-export const ListRestaurantPreview: FC<Props> = (props) => {
+export const ListRestaurantPreview: FC<Props> = (props: Props) => {
   return (
     <View style={styles.container}>
       {props.restaurants.map((restaurant) => {
