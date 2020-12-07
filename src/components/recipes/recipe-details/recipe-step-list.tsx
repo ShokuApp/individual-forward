@@ -1,9 +1,7 @@
 import React, { FC } from "react";
 import { RecipeSteps } from "./recipe-steps";
-import { Text, View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { RecipeStep } from "../../../models";
-
-const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {

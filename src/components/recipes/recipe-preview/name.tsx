@@ -13,8 +13,6 @@ const styles = StyleSheet.create({
 
 type Props = { name: string };
 
-const RecipePreviewName: FC<Props> = (props: Props) => {
+export const RecipePreviewName: FC<Props> = (props: Props) => {
   return <Text style={styles.text}>{props.name}</Text>;
 };
-
-export default RecipePreviewName;

@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Recipe } from "../../../models";
-import RecipePreviewName from "./name";
-import RecipePreviewFavorite from "./favorite";
-import RecipePreviewPreparationTime from "./preparation-time";
-import RecipePreviewRating from "./rating";
+import { RecipePreviewName } from "./name";
+import { RecipePreviewFavorite } from "./favorite";
+import { RecipePreviewPreparationTime } from "./preparation-time";
+import { RecipePreviewRating } from "./rating";
 import { useNavigation } from "@react-navigation/native";
 
 const styles = StyleSheet.create({
@@ -44,7 +44,7 @@ type Props = {
   recipe: Recipe;
 };
 
-const RecipePreview: FC<Props> = ({ recipe }: Props) => {
+export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
   const imageSrc = { uri: recipe.image };
   const { navigate } = useNavigation();
   return (
@@ -74,5 +74,3 @@ const RecipePreview: FC<Props> = ({ recipe }: Props) => {
     </TouchableOpacity>
   );
 };
-
-export default RecipePreview;

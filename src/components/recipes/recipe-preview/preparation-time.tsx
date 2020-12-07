@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 
 type Props = { preparationTime: number; cookingTime: number };
 
-const RecipePreviewPreparationTime: FC<Props> = (props: Props) => {
+export const RecipePreviewPreparationTime: FC<Props> = (props: Props) => {
   return (
     <View style={styles.view}>
       <Icon
@@ -35,5 +35,3 @@ const RecipePreviewPreparationTime: FC<Props> = (props: Props) => {
     </View>
   );
 };
-
-export default RecipePreviewPreparationTime;

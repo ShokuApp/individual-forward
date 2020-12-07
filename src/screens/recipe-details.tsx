@@ -1,11 +1,7 @@
-import { Route } from "@react-navigation/native";
 import React, { FC } from "react";
-import Data from "../../data/recipes/data.json";
 import { RecipeDetails } from "../components/recipes/recipe-details/recipe-details";
-import { Recipe } from "../models";
 import { RouteProp } from "@react-navigation/native";
-import { RecipesStackParamList } from "../app";
-import RecipesScreen from "./recipes";
+import { RecipesStackParamList } from "../navigator/recipe-details-navigator";
 
 type RecipeDetailsScreenProps = RouteProp<
   RecipesStackParamList,

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 
 type Props = { averageRate: number };
 
-const RecipePreviewRating: FC<Props> = (props: Props) => {
+export const RecipePreviewRating: FC<Props> = (props: Props) => {
   return (
     <View style={styles.view}>
       <Text style={styles.text}>{props.averageRate}</Text>
@@ -32,5 +32,3 @@ const RecipePreviewRating: FC<Props> = (props: Props) => {
     </View>
   );
 };
-
-export default RecipePreviewRating;
