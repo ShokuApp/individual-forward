@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Restaurant } from "../models";
+import { Icon } from "react-native-elements";
 import RestaurantDetailsScreen from "../screens/restaurants/restaurant-details";
 import { createStackNavigator } from "@react-navigation/stack";
 import SearchRestaurantScreen from "../screens/restaurants/search-restaurants";
@@ -24,7 +25,14 @@ export const RestaurantsStackScreens: FC = () => {
       <RestaurantsStack.Screen
         name="SearchRestaurants"
         component={SearchRestaurantScreen}
-        options={{ title: "Recherche" }}
+        options={{
+          title: "Recherche",
+          headerBackTitle: "Restaurants",
+          headerBackTitleStyle: { color: "black" },
+          headerBackImage: () => (
+            <Icon type="entypo" name="chevron-small-left" size={24} />
+          ),
+        }}
       />
     </RestaurantsStack.Navigator>
   );

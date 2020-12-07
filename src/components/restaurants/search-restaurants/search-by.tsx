@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   switchTitle: {
     paddingHorizontal: 20,
     fontSize: 15,
+    color: "black",
   },
   switchTitleSelected: {
     fontWeight: "bold",

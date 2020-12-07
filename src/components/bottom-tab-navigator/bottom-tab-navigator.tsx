@@ -57,7 +57,10 @@ const Restaurants: FC = () => {
       <RestaurantsStack.Screen
         name={"Restaurants"}
         component={RestaurantsScreen}
-        options={{ title: "Restaurants", headerRight: () => <Filters /> }}
+        options={{
+          title: "Restaurants",
+          headerRight: () => <Filters />,
+        }}
       />
     </RestaurantsStack.Navigator>
   );
