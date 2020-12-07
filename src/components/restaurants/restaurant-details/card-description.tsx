@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ECECEC",
     alignItems: "center",
   },
-  headerContainer: {
+  titleContainer: {
     width: "85%",
     flexDirection: "row",
     alignItems: "center",
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
   allergenLabel: {
     fontSize: 13,
     color: "#2196F3",
-    marginBottom: "2%",
   },
   warningContainer: {
     marginTop: 20,
@@ -112,7 +111,7 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
+      <View style={styles.titleContainer}>
         <Text style={styles.title}>Pour moi</Text>
         <TouchableOpacity
           style={styles.filterContainer}

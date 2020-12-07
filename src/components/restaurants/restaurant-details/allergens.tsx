@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     justifyContent: "center",
-    marginBottom: "12%",
+    marginVertical: 10,
   },
   allergen: {
     width: 30,
