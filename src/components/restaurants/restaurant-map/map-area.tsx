@@ -5,12 +5,6 @@ import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   mapStyle: {
     width,
     height,
@@ -53,7 +47,7 @@ export const MapArea: FC<Props> = (props: Props) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View>
       <MapView
         ref={mapRef}
         style={styles.mapStyle}
