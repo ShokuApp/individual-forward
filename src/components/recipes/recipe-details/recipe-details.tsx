@@ -1,17 +1,18 @@
 import React, { FC, useState } from "react";
 import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
   Dimensions,
+  Image,
   ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { Icon } from "react-native-elements";
 import { Recipe } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
 import { RecipeDescription } from "./recipe-decription";
-import { Divider } from "./divider";
+import { Divider } from "../../common";
 import { RecipeIconButtons } from "./recipe-icon-buttons";
 import { RecipeNumberInput } from "./recipe-number-input";
 import { RecipeIngredients } from "./recipe-ingredients";
@@ -22,7 +23,11 @@ const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: "white",
+  },
+  image: {
+    height: height * 0.2,
+    backgroundColor: "gray",
   },
   closeIcon: {
     height: 40,
@@ -35,55 +40,46 @@ const styles = StyleSheet.create({
     top: height / 14,
     left: width / 15,
   },
-  image: {
-    width,
-    height: height / 5,
-  },
-  cardView: {
+  roundedContainer: {
+    flexGrow: 1,
     top: -30,
     backgroundColor: "white",
-    borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    alignItems: "center",
-    height,
-    width,
+    borderTopLeftRadius: 30,
+    overflow: "hidden",
   },
-  recipeTitle: {
+  scrollContainer: {
+    height: height * 0.8 + 30,
+  },
+  title: {
     fontSize: 20,
-    fontWeight: "bold",
     color: "#2196F3",
-    marginTop: 10,
-    marginBottom: 20,
+    fontWeight: "bold",
     textAlign: "center",
+    marginVertical: 10,
   },
-  divider: {
-    alignItems: "center",
-  },
-  contentContainer: {
-    alignItems: "center",
+  sectionContainer: {
+    width: "100%",
     backgroundColor: "#ECECEC",
-    paddingBottom: 150,
+    alignItems: "center",
   },
-  scroll: {
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-  },
-  listContainer: {
-    marginTop: 10,
-    width: (90 * width) / 100,
-    borderRadius: 10,
-    backgroundColor: "white",
+  sectionTitleContainer: {
+    width: "85%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginVertical: 10,
   },
   sectionTitle: {
     fontSize: 20,
     fontWeight: "bold",
     color: "#2196F3",
-    marginTop: 15,
-    marginLeft: 15,
-    alignSelf: "flex-start",
   },
-  descriptionContainer: {
+  sectionSubContainer: {
+    width: "90%",
     backgroundColor: "white",
+    borderRadius: 10,
+    paddingVertical: 10,
   },
 });
 
@@ -98,47 +94,43 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.image} source={imageSrc} />
-      <View style={styles.closeIcon}>
-        <Icon
-          type="antdesign"
-          name="close"
-          size={25}
-          color="white"
-          onPress={() => {
-            goBack();
-          }}
-        />
-      </View>
-      <View style={styles.cardView}>
-        <ScrollView showsVerticalScrollIndicator={false} style={styles.scroll}>
-          <View style={styles.descriptionContainer}>
-            <Text style={styles.recipeTitle}>{recipe.name}</Text>
-            <RecipeDescription recipe={recipe} />
-            <View style={styles.divider}>
-              <Divider />
-              {/*TODO: use @Matttx 's Divider component */}
+      <TouchableOpacity style={styles.closeIcon} onPress={() => goBack()}>
+        <Icon name="close" type={"antdesign"} size={25} color="white" />
+      </TouchableOpacity>
+      <View style={styles.roundedContainer}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          style={styles.scrollContainer}
+        >
+          <Text style={styles.title}>{recipe.name}</Text>
+          <RecipeDescription recipe={recipe} />
+          <Divider width={"80%"} color={"#DADADA"} />
+          <RecipeIconButtons recipe={recipe} />
+          <View style={styles.sectionContainer}>
+            <View style={styles.sectionTitleContainer}>
+              <Text style={styles.sectionTitle}>Ingrédients</Text>
+              <RecipeNumberInput
+                count={count}
+                minusClick={() => {
+                  if (count > 1) setCount(count - 1);
+                }}
+                addClick={() => {
+                  if (count < 99) setCount(count + 1);
+                }}
+              />
             </View>
-            <View style={styles.divider} />
-            <RecipeIconButtons recipe={recipe} />
-          </View>
-          <View style={styles.contentContainer}>
-            <RecipeNumberInput
-              count={count}
-              minusClick={() => {
-                if (count > 1) setCount(count - 1);
-              }}
-              addClick={() => {
-                if (count < 99) setCount(count + 1);
-              }}
-            />
-            <View style={styles.listContainer}>
+            <View style={styles.sectionSubContainer}>
               <RecipeIngredients
                 ingredients={recipe.ingredients}
                 nbPeople={count}
               />
             </View>
-            <Text style={styles.sectionTitle}>Préparation</Text>
-            <View style={styles.listContainer}>
+          </View>
+          <View style={styles.sectionContainer}>
+            <View style={styles.sectionTitleContainer}>
+              <Text style={styles.sectionTitle}>Préparation</Text>
+            </View>
+            <View style={[styles.sectionSubContainer, { marginBottom: 20 }]}>
               <RecipeStepsList steps={recipe.steps} />
             </View>
           </View>
