@@ -21,7 +21,7 @@ type Props = {
   profile: Profile;
 };
 
-const ProfileGet: FC<Props> = (profile) => {
+const ProfileGet: FC<Props> = (props: Props) => {
   const allergensBloc = new PictogramBloc(new PictogramRepository());
   allergensBloc.add(new PictogramListEvent());
   return (
@@ -35,7 +35,7 @@ const ProfileGet: FC<Props> = (profile) => {
           return (
             <SearchRestaurant
               allergens={allergensState.pictograms}
-              profileAllergens={profile.allergens}
+              profileAllergens={props.profile.allergens}
             />
           );
         }
@@ -56,7 +56,7 @@ const SearchRestaurantScreen: FC = () => {
           return <Text>Error</Text>;
         }
         if (profileState instanceof ProfileGetState) {
-          <ProfileGet profile={profileState?.profile} />;
+          return <ProfileGet profile={profileState.profile} />;
         }
         return <Text>Loading</Text>;
       }}
