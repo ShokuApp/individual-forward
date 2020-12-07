@@ -34,7 +34,7 @@ export const UserButtons: FC = () => {
         icon={
           <Icon type="evilicon" name="share-apple" size={50} color="#2196F3" />
         }
-        onPress={() => alert("Appeler")}
+        onPress={() => alert("Partager")}
       />
     </View>
   );
