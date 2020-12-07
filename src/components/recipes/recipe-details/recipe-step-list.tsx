@@ -16,8 +16,8 @@ type Props = {
 export const RecipeStepsList: FC<Props> = ({ steps }: Props) => {
   return (
     <View style={styles.container}>
-      {steps.map((step) => {
-        return <RecipeSteps step={step} key={step.name} />;
+      {steps.map((step, index) => {
+        return <RecipeSteps step={step} key={index} />;
       })}
     </View>
   );
