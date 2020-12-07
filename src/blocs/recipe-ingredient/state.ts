@@ -8,11 +8,23 @@ export class RecipeIngredientLoadingState extends RecipeIngredientState {}
 
 export class RecipeIngredientErrorState extends RecipeIngredientState {}
 
+export class RecipeIngredientCreateState extends RecipeIngredientState {}
+
 export class RecipeIngredientGetState extends RecipeIngredientState {
   recipeIngredient: RecipeIngredient;
 
   constructor(recipeIngredient: RecipeIngredient) {
     super();
+    this.recipeIngredient = recipeIngredient;
+  }
+}
+
+export class RecipeIngredientSetState extends RecipeIngredientState {
+  recipeIngredient: RecipeIngredient;
+
+  constructor(recipeIngredient: RecipeIngredient) {
+    super();
+
     this.recipeIngredient = recipeIngredient;
   }
 }
