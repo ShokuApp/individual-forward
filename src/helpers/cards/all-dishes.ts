@@ -1,6 +1,6 @@
 import { Card, Dish, Menu } from "../../models";
 
-export const restaurantAllDishes: (card: Card) => Dish[] = (card) => {
+export const cardAllDishes: (card: Card) => Dish[] = (card) => {
   return [
     ...card.dishes,
     ...card.menus.reduce((previous: Dish[], current: Menu) => {

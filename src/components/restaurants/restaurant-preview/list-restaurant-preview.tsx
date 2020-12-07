@@ -3,8 +3,8 @@ import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
 import RestaurantPreview from "./restaurant-preview";
 import { Restaurant, Dish } from "../../../models";
 import { Filters } from "../../bottom-tab-navigator/bottom-tab-navigator";
-import { averagePrice } from "../../../helpers/restaurants/average-price";
-import { restaurantAllDishes } from "../../../helpers/restaurants/all-dishes";
+import { restaurantPriceRange } from "../../../helpers/restaurants/average-price";
+import { cardAllDishes } from "../../../helpers/cards/all-dishes";
 import { SEARCH_BY } from "../search-restaurants/search-by";
 
 const styles = StyleSheet.create({
@@ -34,11 +34,8 @@ const filterRestaurants: (
 ) => Restaurant[] = (restaurants: Restaurant[], filters?: Filters) => {
   if (!filters) return restaurants;
   let filteredRestaurants = restaurants.filter((restaurant) => {
-    const price = averagePrice(restaurant.averagePrice);
-    if (price === 1 && filters.price.lowPrice) return true;
-    if (price === 2 && filters.price.middlePrice) return true;
-    if (price === 3 && filters.price.highPrice) return true;
-    return false;
+    const price = restaurantPriceRange(restaurant.averagePrice);
+    return Object.values(filters.price)[price - 1];
   });
   if (filters.label && filters.searchBy === SEARCH_BY.RESTAURANT) {
     filteredRestaurants = filteredRestaurants.filter((restaurant) => {
@@ -48,7 +45,7 @@ const filterRestaurants: (
     });
   }
   filteredRestaurants = filteredRestaurants.filter((restaurant) => {
-    const allDishes = restaurantAllDishes(restaurant.card);
+    const allDishes = cardAllDishes(restaurant.card);
     let filteredDishes: Dish[] = allDishes;
     if (filters.label && filters.searchBy === SEARCH_BY.RECIPE) {
       filteredDishes = allDishes.filter((dish) => {

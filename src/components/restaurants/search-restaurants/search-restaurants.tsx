@@ -2,15 +2,17 @@ import React, { FC, useState, useEffect } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Pictogram } from "../../../models";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { SearchBar, SearchButton } from "../../common";
+import { SearchBar, Button } from "../../common";
 import { MyCheckBox } from "./checkbox";
 import { ScrollView } from "react-native-gesture-handler";
 import { Allergen } from "./allergen";
 import { useNavigation } from "@react-navigation/native";
 import { SearchBy, SEARCH_BY } from "./search-by";
+import { alertForMe } from "./alerts";
 
 const styles = StyleSheet.create({
   container: {
+    display: "flex",
     height: "100%",
     width: "100%",
     backgroundColor: "white",
@@ -35,6 +37,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-start",
     flexWrap: "wrap",
+  },
+  searchButton: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 30,
   },
 });
 
@@ -77,19 +85,33 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
         <SearchBy isSearchBy={isSearchBy} setSearchBy={setSearchBy} />
         <SearchBar text={text} setText={setText} />
         <View style={styles.filterContainer}>
-          <MyCheckBox label={"Pour moi"} check={forMe} setCheck={setForMe} />
+          <MyCheckBox
+            label={"Pour moi"}
+            check={forMe}
+            onPress={() => {
+              if (forMe) {
+                alertForMe(setForMe);
+              } else {
+                setForMe(!forMe);
+              }
+            }}
+          />
           <Text style={styles.filterTitle}>Prix :</Text>
           <View style={styles.priceContainer}>
-            <MyCheckBox label={"€"} check={lowPrice} setCheck={setLowPrice} />
+            <MyCheckBox
+              label={"€"}
+              check={lowPrice}
+              onPress={() => setLowPrice(!lowPrice)}
+            />
             <MyCheckBox
               label={"€€"}
               check={middlePrice}
-              setCheck={setMiddlePrice}
+              onPress={() => setMiddlePrice(!middlePrice)}
             />
             <MyCheckBox
               label={"€€€"}
               check={highPrice}
-              setCheck={setHighPrice}
+              onPress={() => setHighPrice(!highPrice)}
             />
           </View>
           <Text style={styles.filterTitle}>Allergènes :</Text>
@@ -106,25 +128,27 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
           </View>
         </View>
       </ScrollView>
-      <SearchButton
-        label={"Rechercher"}
-        onPress={() => {
-          navigate("Home", {
-            screen: "RestaurantScreen",
-            params: {
-              screen: "Restaurants",
+      <View style={styles.searchButton}>
+        <Button
+          label={"Rechercher"}
+          onPress={() => {
+            navigate("Home", {
+              screen: "RestaurantScreen",
               params: {
-                filters: {
-                  label: text,
-                  searchBy: isSearchBy,
-                  price: { lowPrice, middlePrice, highPrice },
-                  allergens: allergensSelected,
+                screen: "Restaurants",
+                params: {
+                  filters: {
+                    label: text,
+                    searchBy: isSearchBy,
+                    price: { lowPrice, middlePrice, highPrice },
+                    allergens: allergensSelected,
+                  },
                 },
               },
-            },
-          });
-        }}
-      />
+            });
+          }}
+        />
+      </View>
     </SafeAreaView>
   );
 };
