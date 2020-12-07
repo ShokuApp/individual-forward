@@ -1,11 +1,11 @@
 import React, { FC, useEffect } from "react";
-import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
+import { Dimensions, ScrollView, StyleSheet } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
 const { width, height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-  mapStyle: {
+  container: {
     width,
     height,
   },
@@ -49,7 +49,7 @@ export const MapArea: FC<Props> = (props: Props) => {
   return (
     <MapView
       ref={mapRef}
-      style={styles.mapStyle}
+      style={styles.container}
       provider={PROVIDER_GOOGLE}
       initialRegion={{
         latitude: 43.6047,

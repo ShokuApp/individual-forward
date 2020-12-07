@@ -1,11 +1,7 @@
 import React, { FC } from "react";
-import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
-import RestaurantPreview from "./restaurant-preview";
-import { Restaurant, Dish } from "../../../models";
-import { Filters } from "../../bottom-tab-navigator/bottom-tab-navigator";
-import { restaurantPriceRange } from "../../../helpers/restaurants/average-price";
-import { cardAllDishes } from "../../../helpers/cards/all-dishes";
-import { SEARCH_BY } from "../search-restaurants/search-by";
+import { Dimensions, StyleSheet, View } from "react-native";
+import { RestaurantPreview } from "./restaurant-preview";
+import { Restaurant } from "../../../models";
 
 const styles = StyleSheet.create({
   scrollContainer: {
@@ -25,71 +21,18 @@ const styles = StyleSheet.create({
 
 type Props = {
   restaurants: Restaurant[];
-  filters: Filters;
-};
-
-const filterRestaurants: (
-  restaurants: Restaurant[],
-  filters?: Filters
-) => Restaurant[] = (restaurants: Restaurant[], filters?: Filters) => {
-  if (!filters) return restaurants;
-  let filteredRestaurants = restaurants.filter((restaurant) => {
-    const price = restaurantPriceRange(restaurant.averagePrice);
-    return Object.values(filters.price)[price - 1];
-  });
-  if (filters.label && filters.searchBy === SEARCH_BY.RESTAURANT) {
-    filteredRestaurants = filteredRestaurants.filter((restaurant) => {
-      return restaurant.name
-        .toLowerCase()
-        .includes(filters.label.toLowerCase());
-    });
-  }
-  filteredRestaurants = filteredRestaurants.filter((restaurant) => {
-    const allDishes = cardAllDishes(restaurant.card);
-    let filteredDishes: Dish[] = allDishes;
-    if (filters.label && filters.searchBy === SEARCH_BY.RECIPE) {
-      filteredDishes = allDishes.filter((dish) => {
-        return dish.name.toLowerCase().includes(filters.label.toLowerCase());
-      });
-    }
-    filteredDishes = filteredDishes.filter((dish) => {
-      return (
-        dish.ingredients.find((ingredient) => {
-          for (const allergen of filters.allergens) {
-            if (ingredient.allergens.includes(allergen)) {
-              return true;
-            }
-          }
-        }) === undefined
-      );
-    });
-    return filteredDishes.length > 0;
-  });
-
-  return filteredRestaurants;
 };
 
 export const ListRestaurantPreview: FC<Props> = (props: Props) => {
-  const filteredRestaurants = filterRestaurants(
-    props.restaurants,
-    props.filters
-  );
   return (
-    <ScrollView
-      horizontal={true}
-      pagingEnabled
-      showsHorizontalScrollIndicator={false}
-      style={styles.scrollContainer}
-    >
-      <View style={styles.container}>
-        {filteredRestaurants.map((restaurant) => {
-          return (
-            <View style={styles.restaurantPreviewContainer} key={restaurant.id}>
-              <RestaurantPreview restaurant={restaurant} />
-            </View>
-          );
-        })}
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      {props.restaurants.map((restaurant) => {
+        return (
+          <View style={styles.restaurantPreviewContainer} key={restaurant.id}>
+            <RestaurantPreview restaurant={restaurant} />
+          </View>
+        );
+      })}
+    </View>
   );
 };
