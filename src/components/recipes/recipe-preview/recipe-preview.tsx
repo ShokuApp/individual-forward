@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 65,
   },
-  view: {
+  descriptionContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -59,11 +59,11 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
     >
       <Image style={styles.image} source={imageSrc} />
       <View style={styles.informationContainer}>
-        <View style={styles.view}>
+        <View style={styles.descriptionContainer}>
           <RecipePreviewName name={recipe.name} />
           <RecipePreviewFavorite />
         </View>
-        <View style={styles.view}>
+        <View style={styles.descriptionContainer}>
           <RecipePreviewPreparationTime
             preparationTime={recipe.averageTime.preparation}
             cookingTime={recipe.averageTime.cooking}
