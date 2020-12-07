@@ -2,6 +2,8 @@ import React, { FC, useEffect } from "react";
 import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
+const { width, height } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -10,8 +12,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   mapStyle: {
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
+    width: width,
+    height: height,
   },
   previewList: {
     position: "absolute",
@@ -29,21 +31,19 @@ type Props = {
 };
 
 export const MapArea: FC<Props> = (props: Props) => {
-  const { width, height } = Dimensions.get("window");
-
   const mapRef = React.useRef<MapView>(null);
 
   useEffect(() => {
-    props.index !== -1
-      ? mapRef.current?.animateToRegion(
-          {
-            latitudeDelta: 0,
-            longitudeDelta: 0.006,
-            ...props.locations[props.index],
-          },
-          350
-        )
-      : null;
+    if (props.index !== -1) {
+      mapRef.current?.animateToRegion(
+        {
+          latitudeDelta: 0,
+          longitudeDelta: 0.006,
+          ...props.locations[props.index],
+        },
+        350
+      );
+    }
   }, [props.index]);
 
   const scrollToRow: (itemIndex: number) => void = (itemIndex) => {
