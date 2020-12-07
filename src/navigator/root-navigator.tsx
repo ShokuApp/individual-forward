@@ -3,12 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { RestaurantsStackScreens } from "./restaurants-navigator";
 import { BottomTabNavigator } from "../components/bottom-tab-navigator";
 
-export type HomeStackParamList = {
-  Home: { filters: any };
-  Restaurant: undefined;
-};
-
-const Stack = createStackNavigator<HomeStackParamList>();
+const Stack = createStackNavigator();
 
 export const RootStack: FC = () => {
   return (
