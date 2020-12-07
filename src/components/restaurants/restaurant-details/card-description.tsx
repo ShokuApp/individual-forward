@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
   allergenLabel: {
     fontSize: 13,
     color: "#2196F3",
-    marginBottom: "2%",
   },
   warningContainer: {
     marginTop: 20,

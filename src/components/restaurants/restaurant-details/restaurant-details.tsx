@@ -15,7 +15,10 @@ import { ScrollView } from "react-native-gesture-handler";
 import { Profile, Restaurant, TimeRange } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
 import { Icon } from "react-native-elements";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 
 const { width, height } = Dimensions.get("window");
 
@@ -46,9 +49,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     overflow: "hidden",
   },
-  scrollContainer: {
-    height: height * 0.8 + 30,
-  },
   title: {
     fontSize: 20,
     color: "#2196F3",
@@ -67,6 +67,10 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
   restaurant,
   profile,
 }: RestaurantDetailsProps) => {
+  const scrollStyle = {
+    height:
+      height * 0.8 + 30 - useSafeAreaInsets().bottom - useSafeAreaInsets().top,
+  };
   const { goBack } = useNavigation();
 
   const getOpeningTime: (dataOpeningTime: TimeRange[][]) => string = (
@@ -102,10 +106,7 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
         <Icon name="close" type={"antdesign"} size={25} color="white" />
       </TouchableOpacity>
       <View style={styles.roundedContainer}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          style={styles.scrollContainer}
-        >
+        <ScrollView showsVerticalScrollIndicator={false} style={scrollStyle}>
           <Text style={styles.title}>{restaurant.name}</Text>
           <Informations
             address={

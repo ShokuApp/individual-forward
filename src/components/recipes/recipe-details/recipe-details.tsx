@@ -13,11 +13,14 @@ import { Recipe } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
 import { RecipeDescription } from "./recipe-decription";
 import { Divider } from "../../common";
-import { RecipeIconButtons } from "./recipe-icon-buttons";
 import { RecipeNumberInput } from "./recipe-number-input";
 import { RecipeIngredients } from "./recipe-ingredients";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import { RecipeStepsList } from "./recipe-step-list";
+import { UserButtons } from "./user-buttons";
 
 const { width, height } = Dimensions.get("window");
 
@@ -47,9 +50,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     overflow: "hidden",
-  },
-  scrollContainer: {
-    height: height * 0.8 + 30,
   },
   title: {
     fontSize: 20,
@@ -88,6 +88,10 @@ type Props = {
 };
 
 export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
+  const scrollStyle = {
+    height:
+      height * 0.8 + 30 - useSafeAreaInsets().bottom - useSafeAreaInsets().top,
+  };
   const imageSrc = { uri: recipe.image };
   const { goBack } = useNavigation();
   const [count, setCount] = useState(2);
@@ -98,14 +102,11 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
         <Icon name="close" type={"antdesign"} size={25} color="white" />
       </TouchableOpacity>
       <View style={styles.roundedContainer}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          style={styles.scrollContainer}
-        >
+        <ScrollView showsVerticalScrollIndicator={false} style={scrollStyle}>
           <Text style={styles.title}>{recipe.name}</Text>
           <RecipeDescription recipe={recipe} />
           <Divider width={"80%"} color={"#DADADA"} />
-          <RecipeIconButtons recipe={recipe} />
+          <UserButtons />
           <View style={styles.sectionContainer}>
             <View style={styles.sectionTitleContainer}>
               <Text style={styles.sectionTitle}>Ingrédients</Text>
@@ -126,7 +127,7 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
               />
             </View>
           </View>
-          <View style={styles.sectionContainer}>
+          <View style={[styles.sectionContainer, { height: "100%" }]}>
             <View style={styles.sectionTitleContainer}>
               <Text style={styles.sectionTitle}>Préparation</Text>
             </View>

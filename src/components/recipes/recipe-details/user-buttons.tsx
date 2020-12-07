@@ -1,0 +1,41 @@
+import React, { FC } from "react";
+import { View, StyleSheet } from "react-native";
+import { UserButton } from "../../common";
+import { Icon } from "react-native-elements";
+
+const styles = StyleSheet.create({
+  container: {
+    marginVertical: 15,
+    justifyContent: "center",
+    flexDirection: "row",
+  },
+});
+
+export const UserButtons: FC = () => {
+  return (
+    <View style={styles.container}>
+      <UserButton
+        label="Favoris"
+        icon={<Icon type="evilicon" name="heart" size={50} color="#2196F3" />}
+        onPress={() => alert("Favoris")}
+      />
+      <UserButton
+        label="Commenter"
+        icon={<Icon type="evilicon" name="comment" size={50} color="#2196F3" />}
+        onPress={() => alert("Commenter")}
+      />
+      <UserButton
+        label="Noter"
+        icon={<Icon type="evilicon" name="star" size={50} color="#2196F3" />}
+        onPress={() => alert("Noter")}
+      />
+      <UserButton
+        label="Partager"
+        icon={
+          <Icon type="evilicon" name="share-apple" size={50} color="#2196F3" />
+        }
+        onPress={() => alert("Appeler")}
+      />
+    </View>
+  );
+};
