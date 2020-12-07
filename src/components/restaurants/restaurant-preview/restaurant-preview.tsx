@@ -55,7 +55,7 @@ type Props = {
   restaurant: Restaurant;
 };
 
-const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
+export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
   const imageRestaurant = { uri: restaurant.image };
   const { navigate } = useNavigation();
   return (
@@ -92,5 +92,3 @@ const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
     </TouchableOpacity>
   );
 };
-
-export default RestaurantPreview;
