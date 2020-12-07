@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     height: 5,
     position: "absolute",
     top: 0,
-    left: 28,
+    left: 30,
     backgroundColor: colors.themeStandard,
     borderRadius: 20,
     width: 30,
