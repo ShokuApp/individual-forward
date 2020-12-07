@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import {
   Dimensions,
   Image,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -68,9 +69,15 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
   profile,
 }: RestaurantDetailsProps) => {
   const scrollStyle = {
-    height:
-      height * 0.8 + 30 - useSafeAreaInsets().bottom - useSafeAreaInsets().top,
+    height: height * 0.8 + 30,
   };
+
+  if (Platform.OS === "ios") {
+    const { top, bottom } = useSafeAreaInsets();
+
+    scrollStyle.height -= top + bottom;
+  }
+
   const { goBack } = useNavigation();
 
   const getOpeningTime: (dataOpeningTime: TimeRange[][]) => string = (

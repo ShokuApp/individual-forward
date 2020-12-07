@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import {
   Dimensions,
   Image,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -89,9 +90,15 @@ type Props = {
 
 export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
   const scrollStyle = {
-    height:
-      height * 0.8 + 30 - useSafeAreaInsets().bottom - useSafeAreaInsets().top,
+    height: height * 0.8 + 30,
   };
+
+  if (Platform.OS === "ios") {
+    const { top, bottom } = useSafeAreaInsets();
+
+    scrollStyle.height -= top + bottom;
+  }
+
   const imageSrc = { uri: recipe.image };
   const { goBack } = useNavigation();
   const [count, setCount] = useState(2);
