@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   mapStyle: {
-    width: width,
-    height: height,
+    width,
+    height,
   },
   previewList: {
     position: "absolute",
