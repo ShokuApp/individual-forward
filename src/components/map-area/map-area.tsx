@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from "react";
-import { StyleSheet, View, Dimensions, ScrollView } from "react-native";
-import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
+import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
 const styles = StyleSheet.create({
   container: {
@@ -44,7 +44,7 @@ export const MapArea: FC<Props> = (props: Props) => {
           350
         )
       : null;
-  });
+  }, [props.index]);
 
   const scrollToRow: (itemIndex: number) => void = (itemIndex) => {
     props.scrollRef.current?.scrollTo({
