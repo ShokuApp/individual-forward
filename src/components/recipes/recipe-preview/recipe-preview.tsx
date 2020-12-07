@@ -1,10 +1,11 @@
 import React, { FC } from "react";
 import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Recipe } from "../../../models";
-import RecipePreviewName from "./name";
-import RecipePreviewFavorite from "./favorite";
-import RecipePreviewPreparationTime from "./preparation-time";
-import RecipePreviewRating from "./rating";
+import { RecipePreviewName } from "./name";
+import { RecipePreviewFavorite } from "./favorite";
+import { RecipePreviewPreparationTime } from "./preparation-time";
+import { RecipePreviewRating } from "./rating";
+import { useNavigation } from "@react-navigation/native";
 
 const styles = StyleSheet.create({
   container: {
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 65,
   },
-  view: {
+  descriptionContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -43,20 +44,26 @@ type Props = {
   recipe: Recipe;
 };
 
-const RecipePreview: FC<Props> = ({ recipe }: Props) => {
+export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
   const imageSrc = { uri: recipe.image };
+  const { navigate } = useNavigation();
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => console.log("Attach display recipe details method")}
+      onPress={() =>
+        navigate("RecipeDetails", {
+          screen: "RecipeDetails",
+          params: { recipe },
+        })
+      }
     >
       <Image style={styles.image} source={imageSrc} />
       <View style={styles.informationContainer}>
-        <View style={styles.view}>
+        <View style={styles.descriptionContainer}>
           <RecipePreviewName name={recipe.name} />
           <RecipePreviewFavorite />
         </View>
-        <View style={styles.view}>
+        <View style={styles.descriptionContainer}>
           <RecipePreviewPreparationTime
             preparationTime={recipe.averageTime.preparation}
             cookingTime={recipe.averageTime.cooking}
@@ -67,5 +74,3 @@ const RecipePreview: FC<Props> = ({ recipe }: Props) => {
     </TouchableOpacity>
   );
 };
-
-export default RecipePreview;

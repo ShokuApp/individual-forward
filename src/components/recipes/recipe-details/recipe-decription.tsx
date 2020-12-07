@@ -39,13 +39,13 @@ export const RecipeDescription: FC<Props> = ({ recipe }: Props) => {
         <View>
           <InformationSubtitle label="Préparation" />
           <Text style={styles.labelContainer}>
-            {Math.round(recipe.average_time / 60)} minutes
+            {Math.round(recipe.averageTime.preparation / 60)} minutes
           </Text>
         </View>
         <View style={[styles.typeContainer, styles.labelContainer]}>
           <InformationSubtitle label="Cuisson" />
           <Text style={styles.typeContainer}>
-            {Math.round(recipe.average_time / 60)} minutes
+            {Math.round(recipe.averageTime.cooking / 60)} minutes
           </Text>
         </View>
       </View>
@@ -57,7 +57,7 @@ export const RecipeDescription: FC<Props> = ({ recipe }: Props) => {
         <View style={[styles.typeContainer, styles.labelContainer]}>
           <InformationSubtitle label="Note" />
           <Text style={styles.typeContainer}>
-            {recipe.average_rate.toString() + "/5"}
+            {recipe.averageRate.toString() + "/5"}
           </Text>
         </View>
       </View>

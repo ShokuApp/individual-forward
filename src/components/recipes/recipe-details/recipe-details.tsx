@@ -15,6 +15,8 @@ import { Divider } from "./divider";
 import { RecipeIconButtons } from "./recipe-icon-buttons";
 import { RecipeNumberInput } from "./recipe-number-input";
 import { RecipeIngredients } from "./recipe-ingredients";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { RecipeStepsList } from "./recipe-step-list";
 
 const { width, height } = Dimensions.get("window");
 
@@ -60,17 +62,27 @@ const styles = StyleSheet.create({
   contentContainer: {
     alignItems: "center",
     backgroundColor: "#ECECEC",
-    height,
-    width,
+    paddingBottom: 150,
   },
   scroll: {
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
   },
-  ingredientsContainer: {
+  listContainer: {
     marginTop: 10,
     width: (90 * width) / 100,
     borderRadius: 10,
+    backgroundColor: "white",
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#2196F3",
+    marginTop: 15,
+    marginLeft: 15,
+    alignSelf: "flex-start",
+  },
+  descriptionContainer: {
     backgroundColor: "white",
   },
 });
@@ -84,7 +96,7 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
   const { goBack } = useNavigation();
   const [count, setCount] = useState(2);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Image style={styles.image} source={imageSrc} />
       <View style={styles.closeIcon}>
         <Icon
@@ -99,14 +111,16 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
       </View>
       <View style={styles.cardView}>
         <ScrollView showsVerticalScrollIndicator={false} style={styles.scroll}>
-          <Text style={styles.recipeTitle}>{recipe.name}</Text>
-          <RecipeDescription recipe={recipe} />
-          <View style={styles.divider}>
-            <Divider />
-            {/*TODO: use @Matttx 's Divider component */}
+          <View style={styles.descriptionContainer}>
+            <Text style={styles.recipeTitle}>{recipe.name}</Text>
+            <RecipeDescription recipe={recipe} />
+            <View style={styles.divider}>
+              <Divider />
+              {/*TODO: use @Matttx 's Divider component */}
+            </View>
+            <View style={styles.divider} />
+            <RecipeIconButtons recipe={recipe} />
           </View>
-          <View style={styles.divider} />
-          <RecipeIconButtons recipe={recipe} />
           <View style={styles.contentContainer}>
             <RecipeNumberInput
               count={count}
@@ -117,15 +131,19 @@ export const RecipeDetails: FC<Props> = ({ recipe }: Props) => {
                 if (count < 99) setCount(count + 1);
               }}
             />
-            <View style={styles.ingredientsContainer}>
+            <View style={styles.listContainer}>
               <RecipeIngredients
                 ingredients={recipe.ingredients}
                 nbPeople={count}
               />
             </View>
+            <Text style={styles.sectionTitle}>Préparation</Text>
+            <View style={styles.listContainer}>
+              <RecipeStepsList steps={recipe.steps} />
+            </View>
           </View>
         </ScrollView>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
