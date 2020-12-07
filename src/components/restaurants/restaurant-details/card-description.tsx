@@ -134,7 +134,7 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
           </Text>
         </View>
       ) : (
-        <View>
+        <>
           {starters.length !== 0 ? (
             <DishesSection category={"Entrées"} dishes={starters} />
           ) : null}
@@ -153,7 +153,7 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
               <Allergens allergens={profile.allergens} />
             </View>
           ) : null}
-        </View>
+        </>
       )}
     </View>
   );
