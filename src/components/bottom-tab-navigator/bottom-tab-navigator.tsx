@@ -1,21 +1,28 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   BottomTabBarProps,
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./tab-bar";
 import ProfileScreen from "../../screens/profile";
-import RestaurantsScreen from "../../screens/restaurants";
-import { StyleSheet, View } from "react-native";
+import RestaurantsScreen from "../../screens/restaurants/restaurants";
+import { SafeAreaView } from "react-native-safe-area-context";
 import RecipesScreen from "../../screens/recipes";
 import RecipeDetailsScreen from "../../screens/recipe-details";
 import { Recipe } from "../../models";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
+const styles = {
+  container: {
+    height: "100%",
+    backgroundColor: "white",
+  },
+};
+
 const Stack = createStackNavigator();
 
-const Restaurants = () => {
+const Restaurants: FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -27,7 +34,7 @@ const Restaurants = () => {
   );
 };
 
-const Recipes = () => {
+const Recipes: FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -39,17 +46,11 @@ const Recipes = () => {
   );
 };
 
-export const BottomTabNavigator = () => {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-  });
-
+export const BottomTabNavigator: FC = () => {
   const Tab = createBottomTabNavigator();
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["bottom"]}>
       <Tab.Navigator
         tabBar={(props: BottomTabBarProps) => <TabBar {...props} />}
       >
@@ -57,6 +58,6 @@ export const BottomTabNavigator = () => {
         <Tab.Screen name="recipeScreen" component={Recipes} />
         <Tab.Screen name="profileScreen" component={ProfileScreen} />
       </Tab.Navigator>
-    </View>
+    </SafeAreaView>
   );
 };

@@ -16,3 +16,12 @@ export class MenuGetState extends MenuState {
     this.menu = menu;
   }
 }
+
+export class MenuListState extends MenuState {
+  menus: Menu[];
+
+  constructor(menus: Menu[]) {
+    super();
+    this.menus = menus;
+  }
+}

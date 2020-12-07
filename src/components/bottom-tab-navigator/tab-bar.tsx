@@ -1,26 +1,22 @@
-import React, { useState, useEffect } from "react";
-import {
-  View,
-  TouchableOpacity,
-  Dimensions,
-  StyleSheet,
-  Animated,
-} from "react-native";
+import React, { useState, useEffect, FC } from "react";
+import { View, Dimensions, StyleSheet, Animated } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
-import { TabBarItem } from "./tab-bar-item";
-import { colors } from "../../constants";
+import ItemInteraction from "./item-interaction";
+import { colors } from "../../constants/colors";
 
-const style = StyleSheet.create({
-  tabContainer: {
+const styles = StyleSheet.create({
+  container: {
     height: 60,
+    width: Dimensions.get("window").width,
+    flexDirection: "row",
     shadowOffset: {
       width: 0,
       height: -4,
     },
     shadowOpacity: 0.2,
     shadowRadius: 4.0,
-    elevation: 10,
     backgroundColor: "white",
+    elevation: 10,
     bottom: 0,
   },
   slider: {
@@ -34,7 +30,7 @@ const style = StyleSheet.create({
   },
 });
 
-export const TabBar = ({
+export const TabBar: FC<BottomTabBarProps> = ({
   state,
   descriptors,
   navigation,
@@ -56,66 +52,26 @@ export const TabBar = ({
   }, [state.index]);
 
   return (
-    <View style={[style.tabContainer, { width: totalWidth }]}>
-      <View style={{ flexDirection: "row" }}>
-        <Animated.View
-          style={[
-            style.slider,
-            {
-              transform: [{ translateX: translateValue }],
-              width: tabWidth - 60,
-            },
-          ]}
+    <View style={styles.container}>
+      <Animated.View
+        style={[
+          styles.slider,
+          {
+            transform: [{ translateX: translateValue }],
+            width: tabWidth - 60,
+          },
+        ]}
+      />
+      {state.routes.map((route, index) => (
+        <ItemInteraction
+          key={index}
+          state={state}
+          descriptors={descriptors}
+          navigation={navigation}
+          route={route}
+          index={index}
         />
-
-        {state.routes.map((route, index) => {
-          const { options } = descriptors[route.key];
-          const label =
-            options.tabBarLabel !== undefined
-              ? options.tabBarLabel
-              : options.title !== undefined
-              ? options.title
-              : route.name;
-
-          const isFocused = state.index === index;
-
-          const onPress = () => {
-            const event = navigation.emit({
-              type: "tabPress",
-              target: route.key,
-              canPreventDefault: true,
-            });
-
-            if (!isFocused && !event.defaultPrevented) {
-              navigation.navigate(route.name);
-            }
-            Animated.spring(translateValue, {
-              toValue: index * tabWidth,
-              velocity: 10,
-              useNativeDriver: true,
-            }).start();
-          };
-
-          const onLongPress = () => {
-            navigation.emit({
-              type: "tabLongPress",
-              target: route.key,
-            });
-          };
-
-          return (
-            <TouchableOpacity
-              testID={options.tabBarTestID}
-              onPress={onPress}
-              onLongPress={onLongPress}
-              style={{ flex: 1 }}
-              key={index}
-            >
-              <TabBarItem iconName={label.toString()} isCurrent={isFocused} />
-            </TouchableOpacity>
-          );
-        })}
-      </View>
+      ))}
     </View>
   );
 };

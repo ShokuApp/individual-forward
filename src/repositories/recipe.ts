@@ -1,10 +1,55 @@
 import { Repository } from "./repository";
-import { Recipe } from "../models";
+import { Profile, Recipe, RecipeIngredient } from "../models";
 
 import recipes from "../../data/recipes/data.json";
 import { RecipeIngredientRepository } from "./recipe-ingredient";
+import { ProfileRepository } from "./profile";
 
+const profileRepository = new ProfileRepository();
 const recipeIngredientRepository = new RecipeIngredientRepository();
+
+// deepcode ignore no-any: JSON
+async function fromJSON(recipeJson: any): Promise<Recipe> {
+  const author: Profile = await profileRepository.get(recipeJson.author);
+
+  const ingredients: RecipeIngredient[] = await Promise.all(
+    recipeJson.ingredients.map(async (id: string) => {
+      return recipeIngredientRepository.get(id);
+    })
+  );
+
+  return {
+    id: recipeJson.id,
+    name: recipeJson.name,
+    description: recipeJson.description,
+    image: recipeJson.image,
+    averageTime: {
+      preparation: Number(recipeJson.average_time.preparation),
+      cooking: Number(recipeJson.average_time.cooking),
+    },
+    averageRate: Number(recipeJson.average_rate),
+    steps: recipeJson.steps,
+    author,
+    ingredients,
+  };
+}
+
+function toJSON(recipe: Recipe) {
+  return {
+    id: recipe.id,
+    name: recipe.name,
+    description: recipe.description,
+    author: recipe.author.id,
+    image: recipe.image,
+    average_time: {
+      preparation: recipe.averageTime.preparation.toString(),
+      cooking: recipe.averageTime.cooking.toString(),
+    },
+    average_rate: recipe.averageRate.toString(),
+    steps: recipe.steps,
+    ingredients: recipe.ingredients.map((ingredient) => ingredient.id),
+  };
+}
 
 export class RecipeRepository implements Repository<Recipe> {
   async get(id: string): Promise<Recipe> {
@@ -14,41 +59,25 @@ export class RecipeRepository implements Repository<Recipe> {
       throw Error("Recipe not found");
     }
 
-    const ingredients = await Promise.all(
-      recipeJson.ingredients.map(async (id) => {
-        return recipeIngredientRepository.get(id);
-      })
-    );
-
-    return {
-      id: recipeJson.id,
-      name: recipeJson.name,
-      description: recipeJson.description,
-      image: recipeJson.image,
-      average_time: Number(recipeJson.average_time),
-      average_rate: Number(recipeJson.average_rate),
-      steps: recipeJson.steps,
-      ingredients,
-    };
+    return fromJSON(recipeJson);
   }
 
   async set(recipe: Recipe): Promise<void> {
-    const recipeJson = {
-      id: recipe.id,
-      name: recipe.name,
-      description: recipe.description,
-      image: recipe.image,
-      average_time: recipe.average_time.toString(),
-      average_rate: recipe.average_rate.toString(),
-      steps: recipe.steps,
-      ingredients: recipe.ingredients.map((ingredient) => ingredient.id),
-    };
     const index = recipes.findIndex((item) => item.id === recipe.id);
+    const recipeJson = toJSON(recipe);
 
     if (index !== -1) {
       recipes[index] = recipeJson;
     } else {
       recipes.push(recipeJson);
     }
+  }
+
+  async list(): Promise<Recipe[]> {
+    return Promise.all(
+      recipes.map((recipeJson) => {
+        return fromJSON(recipeJson);
+      })
+    );
   }
 }

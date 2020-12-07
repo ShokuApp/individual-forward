@@ -2,11 +2,6 @@ import React, { FC } from "react";
 import { View, StyleSheet, Image } from "react-native";
 import { icons } from "../../constants";
 
-type Props = {
-  iconName: string;
-  isCurrent?: boolean;
-};
-
 const styles = StyleSheet.create({
   container: {
     height: "100%",
@@ -18,6 +13,11 @@ const styles = StyleSheet.create({
     height: 32,
   },
 });
+
+type Props = {
+  iconName: string;
+  isCurrent?: boolean;
+};
 
 export const TabBarItem: FC<Props> = ({ iconName, isCurrent }: Props) => {
   const icon = isCurrent
