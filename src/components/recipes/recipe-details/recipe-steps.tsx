@@ -1,14 +1,6 @@
 import React, { FC } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
-import { Icon } from "react-native-elements";
-import { Recipe, RecipeStep } from "../../../models";
+import { Text, View, StyleSheet } from "react-native";
+import { RecipeStep } from "../../../models";
 
 const styles = StyleSheet.create({
   container: {
