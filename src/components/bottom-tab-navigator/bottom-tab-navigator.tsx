@@ -8,13 +8,11 @@ import ProfileScreen from "../../screens/profile";
 import RestaurantsScreen from "../../screens/restaurants/restaurants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import RecipesScreen from "../../screens/recipes";
-import RecipeDetailsScreen from "../../screens/recipe-details";
-import { Recipe } from "../../models";
+import { Pictogram } from "../../models";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 import { Icon } from "react-native-elements";
-import { Pictogram } from "../../models";
 import { SEARCH_BY } from "../restaurants/search-restaurants/search-by";
 
 const styles = {

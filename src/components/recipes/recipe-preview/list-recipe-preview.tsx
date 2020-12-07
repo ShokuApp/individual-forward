@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { RecipePreview } from "./recipe-preview";
 import { ScrollView } from "react-native-gesture-handler";
 import { Recipe } from "../../../models";
-import { SearchBar } from "../../common/search-bar";
+import { SearchBar } from "../../common";
 
 const styles = StyleSheet.create({
   container: {

@@ -2,7 +2,7 @@ import React, { useState, useEffect, FC } from "react";
 import { View, Dimensions, StyleSheet, Animated } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import ItemInteraction from "./item-interaction";
-import { colors } from "../../constants/colors";
+import { colors } from "../../constants";
 
 const styles = StyleSheet.create({
   container: {

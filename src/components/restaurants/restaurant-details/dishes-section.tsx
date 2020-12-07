@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Dish } from "../../../models/dish";
+import { Dish } from "../../../models";
 import { CategoryTitle } from "./category-title";
 
 const styles = StyleSheet.create({

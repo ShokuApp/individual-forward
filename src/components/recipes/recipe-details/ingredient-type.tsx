@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { RecipeIngredient } from "../../../models";
-import { colors } from "../../../constants/colors";
+import { colors } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
