@@ -97,7 +97,7 @@ export const MapArea: FC<Props> = (props: Props) => {
                 {
                   latitudeDelta: 0.005,
                   longitudeDelta: 0.005,
-                  latitude: e.nativeEvent.coordinate.latitude - 0.00075,
+                  latitude: e.nativeEvent.coordinate.latitude - 0.001,
                   longitude: e.nativeEvent.coordinate.longitude,
                 },
                 390
