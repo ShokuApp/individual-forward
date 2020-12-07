@@ -48,8 +48,9 @@ export const Restaurants: FC<Props> = (props: Props) => {
         pagingEnabled
         showsHorizontalScrollIndicator={false}
         style={styles.previewList}
+        disableIntervalMomentum={true}
         onMomentumScrollEnd={(event) => {
-          setIndex(event.nativeEvent.contentOffset.x / width);
+          setIndex(Math.round(event.nativeEvent.contentOffset.x / width));
         }}
       >
         <ListRestaurantPreview restaurants={props.restaurantsList} />
