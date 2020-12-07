@@ -2,9 +2,11 @@ import React, { FC } from "react";
 import {
   Dimensions,
   Image,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
+  View,
 } from "react-native";
 import { Divider } from "../../common";
 import { Informations } from "./informations";
@@ -14,7 +16,10 @@ import { ScrollView } from "react-native-gesture-handler";
 import { Profile, Restaurant, TimeRange } from "../../../models";
 import { useNavigation } from "@react-navigation/native";
 import { Icon } from "react-native-elements";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 
 const { width, height } = Dimensions.get("window");
 
@@ -23,8 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   image: {
-    minHeight: 100,
-    height: "20%",
+    height: height * 0.2,
     backgroundColor: "gray",
   },
   closeIcon: {
@@ -38,12 +42,13 @@ const styles = StyleSheet.create({
     top: height / 14,
     left: width / 15,
   },
-  detailsContainer: {
+  roundedContainer: {
+    flexGrow: 1,
     top: -30,
     backgroundColor: "white",
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    marginBottom: 100,
+    overflow: "hidden",
   },
   title: {
     fontSize: 20,
@@ -63,6 +68,16 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
   restaurant,
   profile,
 }: RestaurantDetailsProps) => {
+  const scrollStyle = {
+    height: height * 0.8 + 30,
+  };
+
+  if (Platform.OS === "ios") {
+    const { top, bottom } = useSafeAreaInsets();
+
+    scrollStyle.height -= top + bottom;
+  }
+
   const { goBack } = useNavigation();
 
   const getOpeningTime: (dataOpeningTime: TimeRange[][]) => string = (
@@ -97,29 +112,28 @@ export const RestaurantDetails: FC<RestaurantDetailsProps> = ({
       <TouchableOpacity style={styles.closeIcon} onPress={() => goBack()}>
         <Icon name="close" type={"antdesign"} size={25} color="white" />
       </TouchableOpacity>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        style={styles.detailsContainer}
-      >
-        <Text style={styles.title}>{restaurant.name}</Text>
-        <Informations
-          address={
-            restaurant.address.streetNumber +
-            " " +
-            restaurant.address.street +
-            " " +
-            restaurant.address.postalCode +
-            " " +
-            restaurant.address.city
-          }
-          type={restaurant.description}
-          hours={getOpeningTime(restaurant.openingTime)}
-          note={restaurant.averageRate}
-        />
-        <Divider width={"80%"} color={"#DADADA"} />
-        <UserButtons />
-        <CardDescription card={restaurant.card} profile={profile} />
-      </ScrollView>
+      <View style={styles.roundedContainer}>
+        <ScrollView showsVerticalScrollIndicator={false} style={scrollStyle}>
+          <Text style={styles.title}>{restaurant.name}</Text>
+          <Informations
+            address={
+              restaurant.address.streetNumber +
+              " " +
+              restaurant.address.street +
+              " " +
+              restaurant.address.postalCode +
+              " " +
+              restaurant.address.city
+            }
+            type={restaurant.description}
+            hours={getOpeningTime(restaurant.openingTime)}
+            note={restaurant.averageRate}
+          />
+          <Divider width={"80%"} color={"#DADADA"} />
+          <UserButtons />
+          <CardDescription card={restaurant.card} profile={profile} />
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };

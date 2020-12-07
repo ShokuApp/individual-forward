@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const RecipePreviewFavorite: FC = () => {
+export const RecipePreviewFavorite: FC = () => {
   return (
     <Icon
       style={styles.icon}
@@ -21,5 +21,3 @@ const RecipePreviewFavorite: FC = () => {
     />
   );
 };
-
-export default RecipePreviewFavorite;

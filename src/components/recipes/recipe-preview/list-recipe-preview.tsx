@@ -1,8 +1,6 @@
 import React, { FC, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import RecipePreview from "./recipe-preview";
-import { RecipeBloc, RecipeListEvent } from "../../../blocs";
-import { RecipeRepository } from "../../../repositories";
+import { RecipePreview } from "./recipe-preview";
 import { ScrollView } from "react-native-gesture-handler";
 import { Recipe } from "../../../models";
 import { SearchBar } from "../../common/search-bar";
@@ -31,9 +29,6 @@ type Props = {
 };
 
 export const ListRecipePreview: FC<Props> = (props) => {
-  const recipeBloc = new RecipeBloc(new RecipeRepository());
-  recipeBloc.add(new RecipeListEvent());
-
   const [text, setText] = useState("");
   const filteredRecipes = props.recipes.filter((recipe) => {
     return recipe.name.toLowerCase().includes(text.toLowerCase());
