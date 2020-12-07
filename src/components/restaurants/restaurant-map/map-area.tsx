@@ -47,43 +47,41 @@ export const MapArea: FC<Props> = (props: Props) => {
   };
 
   return (
-    <View>
-      <MapView
-        ref={mapRef}
-        style={styles.mapStyle}
-        provider={PROVIDER_GOOGLE}
-        initialRegion={{
-          latitude: 43.6047,
-          longitude: 1.4442,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0922 * (width / height), //TOULOUSE COORDINATES, FAIRLY ZOOMED
-        }}
-        showsUserLocation={true}
-      >
-        {props.locations.map((restaurantLocation, index) => {
-          return (
-            <Marker
-              key={index}
-              coordinate={{
-                latitude: restaurantLocation.latitude,
-                longitude: restaurantLocation.longitude,
-              }}
-              onPress={(e) => {
-                mapRef.current?.animateToRegion(
-                  {
-                    latitudeDelta: 0,
-                    longitudeDelta: 0.006,
-                    latitude: e.nativeEvent.coordinate.latitude,
-                    longitude: e.nativeEvent.coordinate.longitude,
-                  },
-                  390
-                );
-                scrollToRow(index);
-              }}
-            />
-          );
-        })}
-      </MapView>
-    </View>
+    <MapView
+      ref={mapRef}
+      style={styles.mapStyle}
+      provider={PROVIDER_GOOGLE}
+      initialRegion={{
+        latitude: 43.6047,
+        longitude: 1.4442,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0922 * (width / height), //TOULOUSE COORDINATES, FAIRLY ZOOMED
+      }}
+      showsUserLocation={true}
+    >
+      {props.locations.map((restaurantLocation, index) => {
+        return (
+          <Marker
+            key={index}
+            coordinate={{
+              latitude: restaurantLocation.latitude,
+              longitude: restaurantLocation.longitude,
+            }}
+            onPress={(e) => {
+              mapRef.current?.animateToRegion(
+                {
+                  latitudeDelta: 0,
+                  longitudeDelta: 0.006,
+                  latitude: e.nativeEvent.coordinate.latitude,
+                  longitude: e.nativeEvent.coordinate.longitude,
+                },
+                390
+              );
+              scrollToRow(index);
+            }}
+          />
+        );
+      })}
+    </MapView>
   );
 };
