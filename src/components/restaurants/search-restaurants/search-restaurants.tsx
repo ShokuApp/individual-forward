@@ -1,5 +1,5 @@
-import React, { FC, useState } from "react";
-import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
+import React, { FC, useState, useEffect } from "react";
+import { Text, View, StyleSheet } from "react-native";
 import { Pictogram } from "../../../models";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { SearchBar, SearchButton } from "../../common";
@@ -7,6 +7,7 @@ import { MyCheckBox } from "./checkbox";
 import { ScrollView } from "react-native-gesture-handler";
 import { Allergen } from "./allergen";
 import { useNavigation } from "@react-navigation/native";
+import { SearchBy, SEARCH_BY } from "./search-by";
 
 const styles = StyleSheet.create({
   container: {
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
 
 type Props = {
   allergens: Pictogram[];
+  profileAllergens: Pictogram[];
 };
 
 const handleAllergensSelected: (
@@ -59,11 +61,20 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
   const [lowPrice, setLowPrice] = useState(true);
   const [middlePrice, setMiddlePrice] = useState(true);
   const [highPrice, setHighPrice] = useState(true);
-  const allergensSelected: Pictogram[] = [];
+  const [isSearchBy, setSearchBy] = useState(SEARCH_BY.RESTAURANT);
+  const [allergensSelected, setAllergensSelected] = useState([
+    ...props.profileAllergens,
+  ]);
   const { navigate } = useNavigation();
+  useEffect(() => {
+    if (forMe) {
+      setAllergensSelected([...props.profileAllergens]);
+    }
+  }, [forMe]);
   return (
     <SafeAreaView style={styles.container} edges={["bottom"]}>
       <ScrollView>
+        <SearchBy isSearchBy={isSearchBy} setSearchBy={setSearchBy} />
         <SearchBar text={text} setText={setText} />
         <View style={styles.filterContainer}>
           <MyCheckBox label={"Pour moi"} check={forMe} setCheck={setForMe} />
@@ -86,6 +97,7 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
             {props.allergens.map((allergen) => (
               <Allergen
                 key={allergen.id}
+                touchableDisable={forMe}
                 allergen={allergen}
                 handleAllergensSelected={handleAllergensSelected}
                 allergensSelected={allergensSelected}
@@ -97,7 +109,6 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
       <SearchButton
         label={"Rechercher"}
         onPress={() => {
-          console.log("profileAllergensOnly", forMe);
           navigate("Home", {
             screen: "RestaurantScreen",
             params: {
@@ -105,7 +116,7 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
               params: {
                 filters: {
                   label: text,
-                  profileAllergensOnly: forMe,
+                  searchBy: isSearchBy,
                   price: { lowPrice, middlePrice, highPrice },
                   allergens: allergensSelected,
                 },

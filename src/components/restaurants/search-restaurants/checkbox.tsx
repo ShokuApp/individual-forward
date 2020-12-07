@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { CheckBox } from "react-native-elements";
 import { View, StyleSheet } from "react-native";
+import { alertForMe } from "./alerts";
 
 const styles = StyleSheet.create({
   checkbox: {
@@ -39,7 +40,13 @@ export const MyCheckBox: FC<Props> = (props: Props) => {
         <View style={[styles.checkIcon, { backgroundColor: "#2196F3" }]} />
       }
       uncheckedIcon={<View style={styles.checkIcon} />}
-      onPress={() => props.setCheck(!props.check)}
+      onPress={() => {
+        if (props.label === "Pour moi" && props.check) {
+          alertForMe(props.setCheck);
+        } else {
+          props.setCheck(!props.check);
+        }
+      }}
     />
   );
 };

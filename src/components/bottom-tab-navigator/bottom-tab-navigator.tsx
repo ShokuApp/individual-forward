@@ -12,6 +12,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 import { Icon } from "react-native-elements";
 import { Pictogram } from "../../models";
+import { SEARCH_BY } from "../restaurants/search-restaurants/search-by";
 
 const styles = {
   container: {
@@ -25,7 +26,7 @@ const styles = {
 
 export type Filters = {
   label: string;
-  profileAllergensOnly: boolean;
+  searchBy: SEARCH_BY;
   price: { lowPrice: boolean; middlePrice: boolean; highPrice: boolean };
   allergens: Pictogram[];
 };

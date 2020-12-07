@@ -1,6 +1,7 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 import { Pictogram } from "../../../models";
+import { alertAllergen } from "./alerts";
 
 const styles = StyleSheet.create({
   allergenContainer: {
@@ -20,10 +21,14 @@ const styles = StyleSheet.create({
   selectedAllergenText: {
     color: "#2196F3",
   },
+  disabledAllergen: {
+    opacity: 0.5,
+  },
 });
 
 type Props = {
   allergen: Pictogram;
+  touchableDisable: boolean;
   handleAllergensSelected: (
     allergen: Pictogram,
     allergensSelected: Pictogram[]
@@ -33,14 +38,23 @@ type Props = {
 
 export const Allergen: FC<Props> = (props: Props) => {
   const [isSelected, setSelected] = useState(false);
+  useEffect(() => {
+    setSelected(props.allergensSelected.includes(props.allergen));
+  }, [props.allergensSelected]);
   return (
     <TouchableOpacity
       key={props.allergen.id}
       style={styles.allergenContainer}
       onPress={() => {
-        setSelected(!isSelected);
-        props.handleAllergensSelected(props.allergen, props.allergensSelected);
-        console.log(props.allergensSelected);
+        if (props.touchableDisable) {
+          alertAllergen();
+        } else {
+          setSelected(!isSelected);
+          props.handleAllergensSelected(
+            props.allergen,
+            props.allergensSelected
+          );
+        }
       }}
     >
       <Image

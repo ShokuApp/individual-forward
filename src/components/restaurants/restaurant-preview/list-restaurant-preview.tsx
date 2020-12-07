@@ -1,11 +1,11 @@
-import React, { FC, useState } from "react";
-import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { FC } from "react";
+import { Dimensions, ScrollView, StyleSheet, View } from "react-native";
 import RestaurantPreview from "./restaurant-preview";
-import { Restaurant } from "../../../models";
+import { Restaurant, Dish } from "../../../models";
 import { Filters } from "../../bottom-tab-navigator/bottom-tab-navigator";
-import { useIsFocused } from "@react-navigation/native";
 import { averagePrice } from "../../../helpers/restaurants/average-price";
 import { restaurantAllDishes } from "../../../helpers/restaurants/all-dishes";
+import { SEARCH_BY } from "../search-restaurants/search-by";
 
 const styles = StyleSheet.create({
   scrollContainer: {
@@ -40,11 +40,21 @@ const filterRestaurants: (
     if (price === 3 && filters.price.highPrice) return true;
     return false;
   });
+  if (filters.label && filters.searchBy === SEARCH_BY.RESTAURANT) {
+    filteredRestaurants = filteredRestaurants.filter((restaurant) => {
+      return restaurant.name
+        .toLowerCase()
+        .includes(filters.label.toLowerCase());
+    });
+  }
   filteredRestaurants = filteredRestaurants.filter((restaurant) => {
     const allDishes = restaurantAllDishes(restaurant.card);
-    let filteredDishes = allDishes.filter((dish) => {
-      return dish.name.toLowerCase().includes(filters.label.toLowerCase());
-    });
+    let filteredDishes: Dish[] = allDishes;
+    if (filters.label && filters.searchBy === SEARCH_BY.RECIPE) {
+      filteredDishes = allDishes.filter((dish) => {
+        return dish.name.toLowerCase().includes(filters.label.toLowerCase());
+      });
+    }
     filteredDishes = filteredDishes.filter((dish) => {
       return (
         dish.ingredients.find((ingredient) => {
@@ -58,6 +68,7 @@ const filterRestaurants: (
     });
     return filteredDishes.length > 0;
   });
+
   return filteredRestaurants;
 };
 

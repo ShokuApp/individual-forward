@@ -14,7 +14,7 @@ import { BlocBuilder } from "@felangel/react-bloc";
 import { RestaurantsStackParamsList } from "../../components/bottom-tab-navigator/bottom-tab-navigator";
 import { RouteProp } from "@react-navigation/native";
 import "react-native-get-random-values";
-import { v4 } from "uuid";
+import { v4 as uuid } from "uuid";
 
 const styles = StyleSheet.create({
   map: {
@@ -70,7 +70,7 @@ const RestaurantsScreen: FC<Props> = ({ route }: Props) => {
 
   return (
     <BlocBuilder
-      key={v4()}
+      key={uuid()}
       bloc={restaurantBloc}
       builder={(state: RestaurantState) => {
         if (state instanceof RestaurantErrorState) {
