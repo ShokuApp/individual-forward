@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { Ionicons } from "@expo/vector-icons";
 import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
