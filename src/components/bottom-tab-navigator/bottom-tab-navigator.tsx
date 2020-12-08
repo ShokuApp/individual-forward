@@ -86,7 +86,6 @@ const Recipes: FC = () => {
         style={styles.filtersIcon}
         onPress={() => {
           navigate("Recipe", { screen: "SearchRecipes" });
-          console.log("here");
         }}
       />
     );
