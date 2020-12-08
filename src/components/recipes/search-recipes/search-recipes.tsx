@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView } from "react-native-gesture-handler";
 import { SearchBar, Button } from "../../common";
-import { alertForMe } from "../../restaurants/search-restaurants/alerts";
+import { alertForMe } from "../../common/alerts";
 import { MyCheckBox } from "../../restaurants/search-restaurants/checkbox";
 import { Pictogram } from "../../../models";
 import { Allergen } from "../../restaurants/search-restaurants/allergen";
@@ -87,7 +87,10 @@ export const SearchRecipe: FC<Props> = (props: Props) => {
             check={forMe}
             onPress={() => {
               if (forMe) {
-                alertForMe(setForMe);
+                alertForMe(
+                  setForMe,
+                  "Les recettes proposées pourraient ne plus être sûrs pour vous"
+                );
               } else {
                 setForMe(!forMe);
               }

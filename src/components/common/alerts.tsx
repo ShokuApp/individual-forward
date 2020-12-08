@@ -15,12 +15,13 @@ export const alertAllergen: () => void = () => {
   );
 };
 
-export const alertForMe: (setSelected: (check: boolean) => void) => void = (
-  setSelected
-) => {
+export const alertForMe: (
+  setSelected: (check: boolean) => void,
+  displayAlert: string
+) => void = (setSelected, displayAlert) => {
   Alert.alert(
     "Êtes-vous sûr ?",
-    "Les restaurants proposés pourraient ne plus être sûrs pour vous",
+    displayAlert,
     [
       {
         text: "Oui",

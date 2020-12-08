@@ -8,7 +8,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { Allergen } from "./allergen";
 import { useNavigation } from "@react-navigation/native";
 import { SearchBy, SEARCH_BY } from "./search-by";
-import { alertForMe } from "./alerts";
+import { alertForMe } from "../../common/alerts";
 
 const styles = StyleSheet.create({
   container: {
@@ -90,7 +90,10 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
             check={forMe}
             onPress={() => {
               if (forMe) {
-                alertForMe(setForMe);
+                alertForMe(
+                  setForMe,
+                  "Les restaurants proposés pourraient ne plus être sûrs pour vous"
+                );
               } else {
                 setForMe(!forMe);
               }
