@@ -1,27 +1,36 @@
 import React, { FC } from "react";
-import Data from "../../data/recipes/data.json";
-import ListRecipePreview from "../components/recipes/recipe-preview/list-recipe-preview";
-import { ScrollView, StyleSheet } from "react-native";
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#FFFFFF",
-  },
-});
-
-const getRecipeIds: () => string[] = () => {
-  const ids: string[] = [];
-  Data.map((recipe) => {
-    ids.push(recipe.id);
-  });
-  return ids;
-};
+import { BlocBuilder } from "@felangel/react-bloc";
+import {
+  RecipeBloc,
+  RecipeErrorState,
+  RecipeListEvent,
+  RecipeListState,
+  RecipeState,
+} from "../blocs";
+import { RecipeRepository } from "../repositories";
+import { Text } from "react-native";
+import { ListRecipePreview } from "../components/recipes/recipe-preview/list-recipe-preview";
 
 const RecipesScreen: FC = () => {
+  const recipeBloc = new RecipeBloc(new RecipeRepository());
+
+  recipeBloc.add(new RecipeListEvent());
+
   return (
-    <ScrollView style={styles.container}>
-      <ListRecipePreview recipes={getRecipeIds()} />
-    </ScrollView>
+    <BlocBuilder
+      bloc={recipeBloc}
+      builder={(state: RecipeState) => {
+        if (state instanceof RecipeErrorState) {
+          return <Text>Error</Text>;
+        }
+
+        if (state instanceof RecipeListState) {
+          return <ListRecipePreview recipes={state.recipes} />;
+        }
+
+        return <Text>Loading...</Text>;
+      }}
+    />
   );
 };
 

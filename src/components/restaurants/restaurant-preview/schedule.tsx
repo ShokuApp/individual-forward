@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Icon } from "react-native-elements";
 import RestaurantPreviewOpeningTime from "./opening-time";
 import { TimeRange } from "../../../models";

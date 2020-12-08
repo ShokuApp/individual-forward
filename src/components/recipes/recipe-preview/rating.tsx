@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
-  view: {
+  container: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -18,9 +18,9 @@ const styles = StyleSheet.create({
 
 type Props = { averageRate: number };
 
-const RecipePreviewRating: FC<Props> = (props: Props) => {
+export const RecipePreviewRating: FC<Props> = (props: Props) => {
   return (
-    <View style={styles.view}>
+    <View style={styles.container}>
       <Text style={styles.text}>{props.averageRate}</Text>
       <Icon
         style={styles.icon}
@@ -32,5 +32,3 @@ const RecipePreviewRating: FC<Props> = (props: Props) => {
     </View>
   );
 };
-
-export default RecipePreviewRating;

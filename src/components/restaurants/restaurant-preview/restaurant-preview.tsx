@@ -13,6 +13,7 @@ import RestaurantPreviewLocation from "./location";
 import RestaurantPreviewType from "./type";
 import RestaurantPreviewRating from "./rating";
 import { Schedule } from "./schedule";
+import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
 
@@ -54,13 +55,19 @@ type Props = {
   restaurant: Restaurant;
 };
 
-const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
+export const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
   const imageRestaurant = { uri: restaurant.image };
+  const { navigate } = useNavigation();
   return (
     <TouchableOpacity
       activeOpacity={1}
       style={styles.container}
-      onPress={() => console.log("Attach display restaurant details method")}
+      onPress={() =>
+        navigate("Restaurant", {
+          screen: "RestaurantDetailsScreen",
+          params: { restaurant },
+        })
+      }
     >
       <Image style={styles.image} source={imageRestaurant} />
       <View style={styles.informationContainer}>
@@ -85,5 +92,3 @@ const RestaurantPreview: FC<Props> = ({ restaurant }: Props) => {
     </TouchableOpacity>
   );
 };
-
-export default RestaurantPreview;

@@ -1,67 +1,55 @@
-import React, { FC } from "react";
-import { Text, View, StyleSheet } from "react-native";
-import RecipePreview from "./recipe-preview";
-import {
-  RecipeBloc,
-  RecipeGetEvent,
-  RecipeState,
-  RecipeLoadingState,
-  RecipeErrorState,
-  RecipeInitialState,
-  RecipeGetState,
-} from "../../../blocs";
-import { RecipeRepository } from "../../../repositories";
-import { BlocBuilder } from "@felangel/react-bloc";
+import React, { FC, useState } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { RecipePreview } from "./recipe-preview";
+import { ScrollView } from "react-native-gesture-handler";
+import { Recipe } from "../../../models";
+import { SearchBar } from "../../common";
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
+    backgroundColor: "white",
+  },
+  listContainer: {
     flexDirection: "row",
     alignItems: "flex-start",
     flexWrap: "wrap",
   },
-  child: {
+  recipePreviewContainer: {
     flexBasis: "50%",
     paddingHorizontal: 5,
     paddingVertical: 8,
   },
+  text: {
+    textAlign: "center",
+  },
 });
 
 type Props = {
-  recipes: string[];
+  recipes: Recipe[];
 };
 
-const ListRecipePreview: FC<Props> = ({ recipes }: Props) => {
+export const ListRecipePreview: FC<Props> = (props) => {
+  const [text, setText] = useState("");
+  const filteredRecipes = props.recipes.filter((recipe) => {
+    return recipe.name.toLowerCase().includes(text.toLowerCase());
+  });
+
   return (
-    <View style={styles.container}>
-      {recipes.map((id) => {
-        const recipe = new RecipeBloc(new RecipeRepository());
-        recipe.add(new RecipeGetEvent(id));
-        return (
-          <BlocBuilder
-            key={id}
-            bloc={recipe}
-            builder={(state: RecipeState) => {
-              if (state instanceof RecipeErrorState) {
-                return <Text>Error</Text>;
-              }
-              if (state instanceof RecipeInitialState) {
-                return <Text>Loading</Text>;
-              }
-              if (state instanceof RecipeLoadingState) {
-                return <Text>Loading</Text>;
-              }
-              return (
-                <View style={styles.child}>
-                  <RecipePreview recipe={(state as RecipeGetState).recipe} />
-                </View>
-              );
-            }}
-          />
-        );
-      })}
-    </View>
+    <ScrollView style={styles.container}>
+      <SearchBar text={text} setText={setText} />
+      {filteredRecipes.length ? (
+        <View style={styles.listContainer}>
+          {filteredRecipes.map((recipe) => {
+            return (
+              <View style={styles.recipePreviewContainer} key={recipe.id}>
+                <RecipePreview recipe={recipe} />
+              </View>
+            );
+          })}
+        </View>
+      ) : (
+        <Text style={styles.text}>Aucune recette trouvée</Text>
+      )}
+    </ScrollView>
   );
 };
-
-export default ListRecipePreview;

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { FC } from "react";
 
 const styles = StyleSheet.create({
-  view: {
+  container: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
 
 type Props = { preparationTime: number; cookingTime: number };
 
-const RecipePreviewPreparationTime: FC<Props> = (props: Props) => {
+export const RecipePreviewPreparationTime: FC<Props> = (props: Props) => {
   return (
-    <View style={styles.view}>
+    <View style={styles.container}>
       <Icon
         style={styles.icon}
         name="clock"
@@ -35,5 +35,3 @@ const RecipePreviewPreparationTime: FC<Props> = (props: Props) => {
     </View>
   );
 };
-
-export default RecipePreviewPreparationTime;
