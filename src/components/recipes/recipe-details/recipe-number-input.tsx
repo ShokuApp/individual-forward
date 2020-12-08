@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
+import { Icon } from "react-native-elements";
 
 const styles = StyleSheet.create({
   container: {
@@ -56,7 +57,7 @@ export const RecipeNumberInput: FC<Props> = ({
           minusClick();
         }}
       >
-        <Ionicons name="ios-remove" size={25} color="#2196F3" />
+        <Icon type="ionicon" name="ios-remove" size={25} color="#2196F3" />
       </TouchableOpacity>
       <Text style={styles.textNumber}>{count}</Text>
       <TouchableOpacity
@@ -65,7 +66,7 @@ export const RecipeNumberInput: FC<Props> = ({
           addClick();
         }}
       >
-        <Ionicons name="ios-add" size={25} color="#2196F3" />
+        <Icon type="ionicon" name="ios-add" size={25} color="#2196F3" />
       </TouchableOpacity>
     </View>
   );
