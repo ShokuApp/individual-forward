@@ -85,7 +85,7 @@ export const CardDescription: FC<Props> = ({ card, profile }: Props) => {
   const unfilteredCard = {
     dishes: { ...card }.dishes,
     menus: { ...card }.menus,
-    allDishes: allDishes,
+    allDishes,
   };
   const filteredCard = filterCardByAllergens(
     card.dishes,
