@@ -41,14 +41,22 @@ export const MenuCard: FC<Props> = ({ menus }: Props) => {
 
         return (
           <View key={menu.name} style={styles.menuContainer}>
-            <View style={styles.menuTitleContainer}>
-              <Text>{menu.name}</Text>
-              <Text>{menu.price.toString() + "€"}</Text>
-            </View>
-            <Divider width={"100%"} color={"#DADADA"} />
-            {starters.length !== 0 ? <DishesDisplay dishes={starters} /> : null}
-            {plates.length !== 0 ? <DishesDisplay dishes={plates} /> : null}
-            {desserts.length !== 0 ? <DishesDisplay dishes={desserts} /> : null}
+            {menu.dishes.length !== 0 ? (
+              <>
+                <View style={styles.menuTitleContainer}>
+                  <Text>{menu.name}</Text>
+                  <Text>{menu.price.toString() + "€"}</Text>
+                </View>
+                <Divider width={"100%"} color={"#DADADA"} />
+                {starters.length !== 0 ? (
+                  <DishesDisplay dishes={starters} />
+                ) : null}
+                {plates.length !== 0 ? <DishesDisplay dishes={plates} /> : null}
+                {desserts.length !== 0 ? (
+                  <DishesDisplay dishes={desserts} />
+                ) : null}
+              </>
+            ) : null}
           </View>
         );
       })}
