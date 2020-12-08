@@ -4,6 +4,7 @@ import { RecipePreview } from "./recipe-preview";
 import { ScrollView } from "react-native-gesture-handler";
 import { Recipe } from "../../../models";
 import { SearchBar } from "../../common";
+import { Filters } from "../../bottom-tab-navigator/bottom-tab-navigator";
 
 const styles = StyleSheet.create({
   container: {
@@ -26,14 +27,36 @@ const styles = StyleSheet.create({
 
 type Props = {
   recipes: Recipe[];
+  filters: Filters;
 };
 
-export const ListRecipePreview: FC<Props> = (props) => {
-  const [text, setText] = useState("");
-  const filteredRecipes = props.recipes.filter((recipe) => {
-    return recipe.name.toLowerCase().includes(text.toLowerCase());
+const filterRecipes: (recipes: Recipe[], filters?: Filters) => Recipe[] = (
+  recipes: Recipe[],
+  filters?: Filters
+) => {
+  let filteredRecipes: Recipe[] = recipes;
+  if (!filters) return recipes;
+  if (filters.label) {
+    filteredRecipes = recipes.filter((recipe) => {
+      return recipe.name.toLowerCase().includes(filters.label.toLowerCase());
+    });
+  }
+  filteredRecipes = filteredRecipes.filter((recipe) => {
+    return (
+      recipe.ingredients.find((recipeIngredient) => {
+        for (const allergen of filters.allergens) {
+          if (recipeIngredient.ingredient.allergens.includes(allergen)) {
+            return true;
+          }
+        }
+      }) === undefined
+    );
   });
+  return filteredRecipes;
+};
 
+export const ListRecipePreview: FC<Props> = (props: Props) => {
+  const filteredRecipes = filterRecipes(props.recipes, props.filters);
   return (
     <ScrollView style={styles.container}>
       {filteredRecipes.length ? (
