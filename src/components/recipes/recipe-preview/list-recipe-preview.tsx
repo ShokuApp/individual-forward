@@ -1,9 +1,8 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { RecipePreview } from "./recipe-preview";
 import { ScrollView } from "react-native-gesture-handler";
 import { Recipe } from "../../../models";
-import { SearchBar } from "../../common";
 import { Filters } from "../../bottom-tab-navigator/bottom-tab-navigator";
 
 const styles = StyleSheet.create({
