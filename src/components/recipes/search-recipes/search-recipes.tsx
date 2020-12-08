@@ -5,9 +5,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView } from "react-native-gesture-handler";
 import { SearchBar, Button } from "../../common";
 import { alertForMe } from "../../common/alerts";
-import { MyCheckBox } from "../../restaurants/search-restaurants/checkbox";
+import { MyCheckBox } from "../../common/checkbox";
 import { Pictogram } from "../../../models";
-import { Allergen } from "../../restaurants/search-restaurants/allergen";
+import { Allergen } from "../../common/allergen";
 
 const styles = StyleSheet.create({
   container: {
