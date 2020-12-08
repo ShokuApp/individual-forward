@@ -36,7 +36,12 @@ export type RestaurantsStackParamsList = {
   Restaurants: { filters: Filters };
 };
 
+export type RecipesStackParamsList = {
+  Recipes: { filters: Filters };
+};
+
 const RestaurantsStack = createStackNavigator<RestaurantsStackParamsList>();
+const RecipesStack = createStackNavigator<RecipesStackParamsList>();
 
 const Restaurants: FC = () => {
   const Filters = () => {
@@ -70,12 +75,32 @@ const Restaurants: FC = () => {
 const Stack = createStackNavigator();
 
 const Recipes: FC = () => {
+  const Filters = () => {
+    const { navigate } = useNavigation();
+
+    return (
+      <Icon
+        type="evilicon"
+        name="search"
+        size={30}
+        style={styles.filtersIcon}
+        onPress={() => {
+          navigate("Recipe", { screen: "SearchRecipes" });
+          console.log("here");
+        }}
+      />
+    );
+  };
+
   return (
     <Stack.Navigator>
-      <Stack.Screen
+      <RecipesStack.Screen
         name={"Recipes"}
         component={RecipesScreen}
-        options={{ title: "Recettes" }}
+        options={{
+          title: "Recettes",
+          headerRight: () => <Filters />,
+        }}
       />
     </Stack.Navigator>
   );

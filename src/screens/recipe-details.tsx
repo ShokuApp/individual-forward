@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { RecipeDetails } from "../components/recipes/recipe-details/recipe-details";
 import { RouteProp } from "@react-navigation/native";
-import { RecipesStackParamList } from "../navigator/recipe-details-navigator";
+import { RecipesStackParamList } from "../navigator/recipes-navigator";
 
 type RecipeDetailsScreenProps = RouteProp<
   RecipesStackParamList,
