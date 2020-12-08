@@ -36,7 +36,6 @@ export const ListRecipePreview: FC<Props> = (props) => {
 
   return (
     <ScrollView style={styles.container}>
-      <SearchBar text={text} setText={setText} />
       {filteredRecipes.length ? (
         <View style={styles.listContainer}>
           {filteredRecipes.map((recipe) => {
