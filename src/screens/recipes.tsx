@@ -1,30 +1,77 @@
 import React, { FC } from "react";
 import { BlocBuilder } from "@felangel/react-bloc";
 import {
+  PictogramBloc,
+  PictogramErrorState,
+  PictogramListEvent,
+  PictogramListState,
+  PictogramState,
+  ProfileBloc,
+  ProfileErrorState,
+  ProfileGetEvent,
+  ProfileGetState,
+  ProfileState,
   RecipeBloc,
   RecipeErrorState,
   RecipeListEvent,
   RecipeListState,
   RecipeState,
 } from "../blocs";
-import { RecipeRepository } from "../repositories";
+import {
+  PictogramRepository,
+  ProfileRepository,
+  RecipeRepository,
+} from "../repositories";
 import { Text } from "react-native";
 import { v4 as uuid } from "uuid";
 import { ListRecipePreview } from "../components/recipes/recipe-preview/list-recipe-preview";
-import { RecipesStackParamList } from "../navigator/recipes-navigator";
 import { RouteProp } from "@react-navigation/native";
-import { RecipesStackParamsList } from "../components/bottom-tab-navigator";
+import {
+  Filters,
+  RecipesStackParamsList,
+} from "../components/bottom-tab-navigator";
+import { Profile, Recipe } from "../models";
 
 type RecipeScreenProps = RouteProp<RecipesStackParamsList, "Recipes">;
 
+type profilProps = {
+  profile: Profile;
+  recipes: Recipe[];
+  filters: Filters;
+};
 type Props = {
   route: RecipeScreenProps;
 };
 
+const ProfileGet: FC<profilProps> = (props: profilProps) => {
+  const allergensBloc = new PictogramBloc(new PictogramRepository());
+  allergensBloc.add(new PictogramListEvent());
+  return (
+    <BlocBuilder
+      bloc={allergensBloc}
+      builder={(allergensState: PictogramState) => {
+        if (allergensState instanceof PictogramErrorState) {
+          return <Text>Error</Text>;
+        }
+        if (allergensState instanceof PictogramListState) {
+          return (
+            <ListRecipePreview
+              recipes={props.recipes}
+              filters={props.filters || props.profile.allergens}
+            />
+          );
+        }
+        return <Text>Loading</Text>;
+      }}
+    />
+  );
+};
+
 const RecipesScreen: FC<Props> = ({ route }: Props) => {
   const recipeBloc = new RecipeBloc(new RecipeRepository());
-
   recipeBloc.add(new RecipeListEvent());
+  const profileBloc = new ProfileBloc(new ProfileRepository());
+  profileBloc.add(new ProfileGetEvent("e57a085b-ac14-4ceb-9978-83497bb17c7d"));
 
   return (
     <BlocBuilder
@@ -37,9 +84,23 @@ const RecipesScreen: FC<Props> = ({ route }: Props) => {
 
         if (state instanceof RecipeListState) {
           return (
-            <ListRecipePreview
-              recipes={state.recipes}
-              filters={route.params?.filters}
+            <BlocBuilder
+              bloc={profileBloc}
+              builder={(profileState: ProfileState) => {
+                if (profileState instanceof ProfileErrorState) {
+                  return <Text>Error</Text>;
+                }
+                if (profileState instanceof ProfileGetState) {
+                  return (
+                    <ProfileGet
+                      profile={profileState.profile}
+                      recipes={state.recipes}
+                      filters={route.params?.filters}
+                    />
+                  );
+                }
+                return <Text>Loading</Text>;
+              }}
             />
           );
         }

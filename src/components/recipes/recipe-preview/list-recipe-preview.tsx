@@ -43,7 +43,9 @@ const filterRecipes: (recipes: Recipe[], filters?: Filters) => Recipe[] = (
   filteredRecipes = filteredRecipes.filter((recipe) => {
     return (
       recipe.ingredients.find((recipeIngredient) => {
-        for (const allergen of filters.allergens) {
+        for (const allergen of filters.allergens
+          ? filters.allergens
+          : filters) {
           if (recipeIngredient.ingredient.allergens.includes(allergen)) {
             return true;
           }

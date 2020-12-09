@@ -47,7 +47,7 @@ const ProfileGet: FC<Props> = (props: Props) => {
 
 const SearchRecipeScreen: FC = () => {
   const profileBloc = new ProfileBloc(new ProfileRepository());
-  profileBloc.add(new ProfileGetEvent("129e5ebe-aaab-48f0-a1f5-31409a2fc11d"));
+  profileBloc.add(new ProfileGetEvent("e57a085b-ac14-4ceb-9978-83497bb17c7d"));
   return (
     <BlocBuilder
       bloc={profileBloc}
