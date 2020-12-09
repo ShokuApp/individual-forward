@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, RefObject, useRef } from "react";
 import { Dimensions, ScrollView, StyleSheet } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
@@ -43,12 +43,12 @@ type Props = {
     latitude: number;
     longitude: number;
   }>;
-  scrollRef: React.RefObject<ScrollView>;
+  scrollRef: RefObject<ScrollView>;
   index: number;
 };
 
 export const MapArea: FC<Props> = (props: Props) => {
-  const mapRef = React.useRef<MapView>(null);
+  const mapRef = useRef<MapView>(null);
 
   useEffect(() => {
     if (props.index !== -1) {
