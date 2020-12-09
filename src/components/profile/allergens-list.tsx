@@ -1,10 +1,10 @@
 import React, { FC } from "react";
-import { StyleSheet, View, Image, Dimensions } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import { Profile } from "../../models";
 import { ScrollView } from "react-native-gesture-handler";
 
 const styles = StyleSheet.create({
-  scrollViewContainer: {
+  container: {
     backgroundColor: "white",
     flexDirection: "row",
     display: "flex",
@@ -31,15 +31,13 @@ const styles = StyleSheet.create({
   },
 });
 
-const width = Dimensions.get("window").width;
-
 type ProfileProps = {
   profile: Profile;
 };
 
 export const AllergensList: FC<ProfileProps> = ({ profile }: ProfileProps) => {
   return (
-    <View style={styles.scrollViewContainer}>
+    <View style={styles.container}>
       <ScrollView
         style={styles.allergenContainer}
         horizontal={true}

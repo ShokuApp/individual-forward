@@ -10,21 +10,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  allergiesTitle: {
-    paddingVertical: 20,
-    width: "85%",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  textModify: {
-    color: "#C4C4C4",
-    fontSize: 16,
-  },
-  textAllergy: {
-    color: "#2196F3",
-    fontSize: 20,
-  },
 });
 
 type ProfileProps = {
