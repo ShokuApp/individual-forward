@@ -34,7 +34,7 @@ import { Profile, Recipe } from "../models";
 
 type RecipeScreenProps = RouteProp<RecipesStackParamsList, "Recipes">;
 
-type profilProps = {
+type ProfileProps = {
   profile: Profile;
   recipes: Recipe[];
   filters: Filters;
@@ -43,7 +43,7 @@ type Props = {
   route: RecipeScreenProps;
 };
 
-const ProfileGet: FC<profilProps> = (props: profilProps) => {
+const ProfileGet: FC<ProfileProps> = (props: ProfileProps) => {
   const allergensBloc = new PictogramBloc(new PictogramRepository());
   allergensBloc.add(new PictogramListEvent());
   return (
