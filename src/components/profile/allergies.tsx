@@ -1,11 +1,5 @@
 import React, { FC } from "react";
-import {
-  StyleSheet,
-  View,
-  Dimensions,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Profile } from "../../models";
 import { AllergensList } from "./allergens-list";
 
@@ -32,8 +26,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
-
-const width = Dimensions.get("window").width;
 
 type ProfileProps = {
   profile: Profile;
