@@ -686,12 +686,7 @@
         "id": "88fd98e2-8dc5-404d-a671-9bfc02de9749",
         "name": "pomme de terre",
         "image": "https://source.unsplash.com/random",
-        "allergens": [
-            "6ff2f426-7dea-46ff-af46-f8d8d37dc7f5",
-            "c097ea7b-17e1-4c71-aa49-6f6ea1030a92",
-            "9d906437-619e-4e7f-ab9a-7fcc86f673fb",
-            "3ce8353e-b42d-4f68-979e-fe8512a1d5c6"
-        ],
+        "allergens": [],
         "diets": [
             "ce8253d4-9f87-49a9-ba29-84de096c89b0"
         ]
@@ -701,7 +696,7 @@
         "name": "oeuf",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "8b836d96-2eec-4e88-a648-ddf694141c41"
+            "fa054b5b-dcf0-4b6b-b11b-85b98bba3e45"
         ],
         "diets": [
             "f4212eed-fff6-4633-a390-023a02bb5c55"
@@ -712,8 +707,7 @@
         "name": "levure chimique",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "22d7fa91-76bd-41b0-88b8-ae7a55222398",
-            "3ce8353e-b42d-4f68-979e-fe8512a1d5c6"
+            "69867a11-eb0f-41b0-b615-10855290be4f"
         ],
         "diets": [
             "ccb48393-89da-40db-96c3-df49f1467813",
@@ -726,11 +720,7 @@
         "id": "04aa43f3-45e2-4f6c-95e3-90de9e7775b9",
         "name": "banane",
         "image": "https://source.unsplash.com/random",
-        "allergens": [
-            "a87e18de-809a-4ab3-840d-03ea5b2b84c0",
-            "6c1cfab3-8be3-496a-b676-705340c4861c",
-            "3ce8353e-b42d-4f68-979e-fe8512a1d5c6"
-        ],
+        "allergens": [],
         "diets": [
             "28ec155a-e087-442c-8a84-c852d21ea314",
             "42ec01e8-4579-4842-9364-a24d247fb6f9"
@@ -741,9 +731,7 @@
         "name": "beurre",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "3ef4fa58-d860-4952-ac3f-2e29fa82527d",
-            "28ec155a-e087-442c-8a84-c852d21ea314",
-            "a1f43d19-0239-4835-8e42-fbd5ca1f20db"
+            "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
         "diets": [
             "4190f7bf-77b4-4b99-8c1c-de3560492a59",
@@ -756,9 +744,7 @@
         "id": "ccff9638-5d32-4ebb-bdff-fb0ef08226a5",
         "name": "sucre",
         "image": "https://source.unsplash.com/random",
-        "allergens": [
-            "3ef4fa58-d860-4952-ac3f-2e29fa82527d"
-        ],
+        "allergens": [],
         "diets": [
             "62892245-9f97-46d3-8d41-31288c23195d"
         ]
@@ -767,10 +753,7 @@
         "id": "8a7bc4df-8ce8-4716-9723-a4127e24e302",
         "name": "maïzena",
         "image": "https://source.unsplash.com/random",
-        "allergens": [
-            "cbdcdd91-35b5-4781-9ef8-778b44f6e69c",
-            "28ec155a-e087-442c-8a84-c852d21ea314"
-        ],
+        "allergens": [],
         "diets": [
             "1c7d5aa3-2ee7-498f-adde-d8ef14e6435d",
             "6a02ee48-f507-45aa-a995-b541537e1009",
@@ -791,9 +774,7 @@
         "id": "4ce47a82-aefd-4cd0-a802-fc4de8775a40",
         "name": "lait de riz",
         "image": "https://source.unsplash.com/random",
-        "allergens": [
-            "fc37f7fb-141a-4fa4-8e26-97885e9b9b9d"
-        ],
+        "allergens": [],
         "diets": [
             "72447cb8-75c9-469f-9a76-f2d542524ea7",
             "34e1c274-4b07-4683-adbe-28dbfa08ce55",
@@ -806,11 +787,7 @@
         "id": "2f4b01e1-b469-4d3a-b40e-be50b0fe7c86",
         "name": "sucre cassonade",
         "image": "https://source.unsplash.com/random",
-        "allergens": [
-            "daf28407-f365-4103-94d8-62def91da526",
-            "3fdd18b0-83b0-4223-853c-f76c1a7d8885",
-            "a3a333aa-0f13-4d8e-9505-e57023f4f4fe"
-        ],
+        "allergens": [],
         "diets": [
             "70399331-7098-41c6-861a-8d25d1670869",
             "74efa7ca-2adf-4c52-87f7-9847171b5806",
@@ -821,9 +798,7 @@
         "id": "cfe4db67-1c28-4ce8-9983-5d90fb844efc",
         "name": "gousse de vanille",
         "image": "https://source.unsplash.com/random",
-        "allergens": [
-            "70399331-7098-41c6-861a-8d25d1670869"
-        ],
+        "allergens": [],
         "diets": [
             "6c1cfab3-8be3-496a-b676-705340c4861c",
             "3ef4fa58-d860-4952-ac3f-2e29fa82527d",
@@ -835,12 +810,11 @@
         "name": "farine de blé",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "3fdd18b0-83b0-4223-853c-f76c1a7d8885",
-            "62892245-9f97-46d3-8d41-31288c23195d",
-            "309c75bd-0445-4bb0-b789-776dabb9ae47"
+            "69867a11-eb0f-41b0-b615-10855290be4f"
         ],
         "diets": [
-            "a1f43d19-0239-4835-8e42-fbd5ca1f20db"
+            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
+            "d34d5667-a48a-4c10-bcb3-66044800bc84"
         ]
     },
     {
