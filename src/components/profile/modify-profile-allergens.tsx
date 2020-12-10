@@ -66,8 +66,6 @@ const handleAllergensSelected: (
   }
 };
 
-const setAllergen = () => {};
-
 export const ModifyProfileAllergens: FC<ProfileProps> = ({
   profile,
   allergens,
