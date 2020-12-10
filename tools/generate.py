@@ -435,7 +435,12 @@ def main():
         card_data = card_list(random.randint(5, 100), dish_data, menu_data)
     save_to_file(card_data, "./data/cards/data.json")
 
-    restaurant_data = restaurant_list(random.randint(5, 100), restaurant_names, street_names, postal_codes, card_data)
+    if os.path.exists("./data/restaurants/initial-data.json"):
+        file = open("./data/restaurants/initial-data.json")
+        restaurant_data = json.load(file)
+        file.close()
+    else:
+        restaurant_data = restaurant_list(random.randint(5, 100), restaurant_names, street_names, postal_codes, card_data)
     save_to_file(restaurant_data, "./data/restaurants/data.json")
 
     if os.path.exists("./data/recipe-ingredients/initial-data.json"):
