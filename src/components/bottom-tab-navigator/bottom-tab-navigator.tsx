@@ -32,27 +32,37 @@ export type Filters = {
   allergens: Pictogram[];
 };
 
+type FiltersProps = {
+  stackName: string;
+  screenName: string;
+};
+
 export type RestaurantsStackParamsList = {
   Restaurants: { filters: Filters };
 };
 
+export type RecipesStackParamsList = {
+  Recipes: { filters: Filters };
+};
+
 const RestaurantsStack = createStackNavigator<RestaurantsStackParamsList>();
+const RecipesStack = createStackNavigator<RecipesStackParamsList>();
+
+const Filters: FC<FiltersProps> = ({ stackName, screenName }: FiltersProps) => {
+  const { navigate } = useNavigation();
+
+  return (
+    <Icon
+      type="evilicon"
+      name="search"
+      size={30}
+      style={styles.filtersIcon}
+      onPress={() => navigate(stackName, { screen: screenName })}
+    />
+  );
+};
 
 const Restaurants: FC = () => {
-  const Filters = () => {
-    const { navigate } = useNavigation();
-
-    return (
-      <Icon
-        type="evilicon"
-        name="search"
-        size={30}
-        style={styles.filtersIcon}
-        onPress={() => navigate("Restaurant", { screen: "SearchRestaurants" })}
-      />
-    );
-  };
-
   return (
     <RestaurantsStack.Navigator>
       <RestaurantsStack.Screen
@@ -60,24 +70,29 @@ const Restaurants: FC = () => {
         component={RestaurantsScreen}
         options={{
           title: "Restaurants",
-          headerRight: () => <Filters />,
+          headerRight: () => (
+            <Filters stackName="Restaurant" screenName="SearchRestaurants" />
+          ),
         }}
       />
     </RestaurantsStack.Navigator>
   );
 };
 
-const Stack = createStackNavigator();
-
 const Recipes: FC = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
+    <RecipesStack.Navigator>
+      <RecipesStack.Screen
         name={"Recipes"}
         component={RecipesScreen}
-        options={{ title: "Recettes" }}
+        options={{
+          title: "Recettes",
+          headerRight: () => (
+            <Filters stackName="Recipe" screenName="SearchRecipes" />
+          ),
+        }}
       />
-    </Stack.Navigator>
+    </RecipesStack.Navigator>
   );
 };
 

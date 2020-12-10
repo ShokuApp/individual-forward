@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { RestaurantsStackScreens } from "./restaurants-navigator";
-import { RecipeDetails } from "./recipe-details-navigator";
+import { RecipesStackScreen } from "./recipes-navigator";
 import { BottomTabNavigator } from "../components/bottom-tab-navigator";
 
 const Stack = createStackNavigator();
@@ -20,8 +20,8 @@ export const RootStack: FC = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="RecipeDetails"
-        component={RecipeDetails}
+        name="Recipe"
+        component={RecipesStackScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
