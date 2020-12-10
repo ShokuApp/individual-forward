@@ -71,7 +71,8 @@ const RecipesScreen: FC<Props> = ({ route }: Props) => {
   const recipeBloc = new RecipeBloc(new RecipeRepository());
   recipeBloc.add(new RecipeListEvent());
   const profileBloc = new ProfileBloc(new ProfileRepository());
-  profileBloc.add(new ProfileGetEvent("60bc28d6-c853-41bc-b6e0-473547fe3b1e"));
+  const id = "f7c00709-8b61-4e60-9575-18f0c065587e";
+  profileBloc.add(new ProfileGetEvent(id));
 
   return (
     <BlocBuilder

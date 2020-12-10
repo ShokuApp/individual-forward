@@ -50,6 +50,8 @@ export class ProfileRepository implements Repository<Profile> {
     const profileJson = profiles.find((item) => item.id === id);
 
     if (profileJson === undefined) {
+      console.log(id);
+      console.log("Profile");
       throw Error("Profile not found");
     }
 

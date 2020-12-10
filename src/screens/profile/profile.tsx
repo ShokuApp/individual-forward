@@ -12,7 +12,7 @@ import { ProfileRepository } from "../../repositories";
 import { ProfileContainer } from "../../components/profile/profile";
 
 const ProfileScreen: FC = () => {
-  const id = "60bc28d6-c853-41bc-b6e0-473547fe3b1e";
+  const id = "f7c00709-8b61-4e60-9575-18f0c065587e";
   const profileBloc = new ProfileBloc(new ProfileRepository());
   profileBloc.add(new ProfileGetEvent(id));
   return (
