@@ -10,9 +10,9 @@ import {
 } from "../../blocs";
 import { ProfileRepository } from "../../repositories";
 import { ProfileContainer } from "../../components/profile/profile";
+import { id } from "../../constants/demo";
 
 const ProfileScreen: FC = () => {
-  const id = "f7c00709-8b61-4e60-9575-18f0c065587e";
   const profileBloc = new ProfileBloc(new ProfileRepository());
   profileBloc.add(new ProfileGetEvent(id));
   return (

@@ -31,6 +31,7 @@ import {
   RecipesStackParamsList,
 } from "../components/bottom-tab-navigator";
 import { Profile, Recipe } from "../models";
+import { id } from "../constants/demo";
 
 type RecipeScreenProps = RouteProp<RecipesStackParamsList, "Recipes">;
 
@@ -71,7 +72,6 @@ const RecipesScreen: FC<Props> = ({ route }: Props) => {
   const recipeBloc = new RecipeBloc(new RecipeRepository());
   recipeBloc.add(new RecipeListEvent());
   const profileBloc = new ProfileBloc(new ProfileRepository());
-  const id = "f7c00709-8b61-4e60-9575-18f0c065587e";
   profileBloc.add(new ProfileGetEvent(id));
 
   return (
