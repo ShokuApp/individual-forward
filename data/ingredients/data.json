@@ -848,27 +848,19 @@
         "name": "tofu soyeux",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "a11202a9-2d20-4921-b629-8138aec9c6d0",
-            "625ce61b-ff71-4d23-94a0-e2fdff59ecc7",
-            "52d3666f-edf9-459b-aed3-98681981d853"
+            "7897889a-db46-4cc8-abdc-a62e60bb842d"
         ],
-        "diets": [
-            "daf28407-f365-4103-94d8-62def91da526",
-            "022a8252-d3cf-4d0a-9b49-34d8dd1386ce",
-            "9d906437-619e-4e7f-ab9a-7fcc86f673fb"
-        ]
+        "diets": []
     },
     {
         "id": "fe43e483-f6a1-4a3d-8681-10153ed2d472",
         "name": "lait",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "daf28407-f365-4103-94d8-62def91da526",
-            "c097ea7b-17e1-4c71-aa49-6f6ea1030a92"
+            "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
         "diets": [
-            "3ef4fa58-d860-4952-ac3f-2e29fa82527d",
-            "32d9dfcc-7db6-44d7-8498-4bb7cd88689d"
+            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
         ]
     }
 ]
