@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { StyleSheet, View, Text, Dimensions, Platform } from "react-native";
 import { Profile } from "../../models";
 import { Pictogram } from "../../models";
-import { Allergen } from "../restaurants/search-restaurants/allergen";
+import { Allergen } from "../common/allergen";
 import {
   SafeAreaView,
   useSafeAreaInsets,
@@ -22,13 +22,6 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     alignItems: "center",
-  },
-  allergenCard: {
-    width: "90%",
-    height: Dimensions.get("window").height / 1.8,
-    backgroundColor: "white",
-    borderRadius: 10,
-    paddingVertical: 10,
   },
   allergensContainer: {
     display: "flex",

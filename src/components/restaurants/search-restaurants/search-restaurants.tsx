@@ -5,7 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { SearchBar, Button } from "../../common";
 import { MyCheckBox } from "./checkbox";
 import { ScrollView } from "react-native-gesture-handler";
-import { Allergen } from "./allergen";
+import { Allergen } from "../../common/allergen";
 import { useNavigation } from "@react-navigation/native";
 import { SearchBy, SEARCH_BY } from "./search-by";
 import { alertForMe } from "./alerts";
