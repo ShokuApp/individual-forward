@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Dish, Menu, Pictogram } from "../../../models";
-import { CARD_CHOICE } from "./card-description";
+import { CARD_CHOICE } from "./card-description-header";
 import { DishesSection } from "./dishes-section";
 import { MenuCard } from "./menu-card";
 import { Allergens } from "./allergens";
@@ -62,7 +62,7 @@ export const CardDisplay: FC<Props> = (props: Props) => {
           props.cardChoice === CARD_CHOICE.FOR_ME ? (
             <View style={styles.allergenContainer}>
               <Text style={styles.allergenLabel}>
-                Ces plats ne contiennent pas les allergènes suivant:
+                Ces plats ne contiennent pas les allergènes suivants :
               </Text>
               <Allergens allergens={props.allergens} />
             </View>

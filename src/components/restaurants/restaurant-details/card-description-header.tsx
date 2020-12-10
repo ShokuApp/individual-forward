@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { CARD_CHOICE } from "./card-description";
 
 const styles = StyleSheet.create({
   titleContainer: {
@@ -20,6 +19,11 @@ const styles = StyleSheet.create({
     color: "#2196F3",
   },
 });
+
+export enum CARD_CHOICE {
+  FOR_ME = 1,
+  ALL_THE_CARD,
+}
 
 type Props = {
   setter: (choice: number) => void;

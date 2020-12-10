@@ -3,7 +3,7 @@ import { View, StyleSheet } from "react-native";
 import { Card, Dish, Menu, Pictogram } from "../../../models";
 import { Profile } from "../../../models";
 import { CardDisplay } from "./card-display";
-import { CardDescriptionHeader } from "./card-description-header";
+import { CardDescriptionHeader, CARD_CHOICE } from "./card-description-header";
 
 const styles = StyleSheet.create({
   container: {
@@ -40,11 +40,6 @@ const filterDishesByAllergens: (
     });
   });
 };
-
-export enum CARD_CHOICE {
-  FOR_ME = 1,
-  ALL_THE_CARD,
-}
 
 const filterCardByAllergens: (
   dishes: Dish[],
