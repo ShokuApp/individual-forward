@@ -96,6 +96,8 @@ const Recipes: FC = () => {
   );
 };
 
+const Stack = createStackNavigator();
+
 const Profile: FC = () => {
   return (
     <Stack.Navigator>
