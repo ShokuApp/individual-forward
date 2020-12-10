@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
   },
 });
 
-type ProfileProps = {
+type Props = {
   profile: Profile;
 };
 
-export const AllergensList: FC<ProfileProps> = ({ profile }: ProfileProps) => {
+export const AllergensList: FC<Props> = ({ profile }: Props) => {
   return (
     <View style={styles.container}>
       <ScrollView
