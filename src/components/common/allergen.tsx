@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from "react";
 import { Text, TouchableOpacity, Image, StyleSheet } from "react-native";
-import { Pictogram } from "../../../models";
+import { Pictogram } from "../../models";
 import { alertAllergen } from "./alerts";
 
 const styles = StyleSheet.create({

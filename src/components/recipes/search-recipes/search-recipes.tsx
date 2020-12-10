@@ -1,12 +1,10 @@
 import React, { FC, useState } from "react";
-import { Text, View, StyleSheet } from "react-native";
-import { Pictogram } from "../../../models";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { SearchBar, Button } from "../../common";
-import { MyCheckBox } from "../../common/checkbox";
-import { ScrollView } from "react-native-gesture-handler";
+import { View, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { SearchBy, SEARCH_BY } from "./search-by";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { ScrollView } from "react-native-gesture-handler";
+import { SearchBar, Button } from "../../common";
+import { Pictogram } from "../../../models";
 import { AllergenSelection } from "../../common/allergen-selection";
 
 const styles = StyleSheet.create({
@@ -50,49 +48,25 @@ type Props = {
   profileAllergens: Pictogram[];
 };
 
-export const SearchRestaurant: FC<Props> = (props: Props) => {
+export const SearchRecipe: FC<Props> = (props: Props) => {
   const [text, setText] = useState("");
-  const [lowPrice, setLowPrice] = useState(true);
-  const [middlePrice, setMiddlePrice] = useState(true);
-  const [highPrice, setHighPrice] = useState(true);
-  const [isSearchBy, setSearchBy] = useState(SEARCH_BY.RESTAURANT);
   const [allergensSelected, setAllergensSelected] = useState([
     ...props.profileAllergens,
   ]);
+
   const { navigate } = useNavigation();
 
   return (
     <SafeAreaView style={styles.container} edges={["bottom"]}>
       <ScrollView>
-        <SearchBy isSearchBy={isSearchBy} setSearchBy={setSearchBy} />
         <SearchBar text={text} setText={setText} />
-        <View style={styles.filterContainer}>
-          <Text style={styles.filterTitle}>Prix :</Text>
-          <View style={styles.priceContainer}>
-            <MyCheckBox
-              label={"€"}
-              check={lowPrice}
-              onPress={() => setLowPrice(!lowPrice)}
-            />
-            <MyCheckBox
-              label={"€€"}
-              check={middlePrice}
-              onPress={() => setMiddlePrice(!middlePrice)}
-            />
-            <MyCheckBox
-              label={"€€€"}
-              check={highPrice}
-              onPress={() => setHighPrice(!highPrice)}
-            />
-          </View>
-        </View>
         <AllergenSelection
           allergensSelected={allergensSelected}
           setAllergensSelected={setAllergensSelected}
           allergens={props.allergens}
           profileAllergens={props.profileAllergens}
           alertDisplay={
-            "Les restaurants proposés pourraient ne plus être sûrs pour vous"
+            "Les recettes proposées pourraient ne plus être sûrs pour vous"
           }
         />
       </ScrollView>
@@ -101,14 +75,12 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
           label={"Rechercher"}
           onPress={() => {
             navigate("Home", {
-              screen: "RestaurantScreen",
+              screen: "RecipeScreen",
               params: {
-                screen: "Restaurants",
+                screen: "Recipes",
                 params: {
                   filters: {
                     label: text,
-                    searchBy: isSearchBy,
-                    price: { lowPrice, middlePrice, highPrice },
                     allergens: allergensSelected,
                   },
                 },

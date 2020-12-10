@@ -51,7 +51,7 @@ export const RecipePreview: FC<Props> = ({ recipe }: Props) => {
     <TouchableOpacity
       style={styles.container}
       onPress={() =>
-        navigate("RecipeDetails", {
+        navigate("Recipe", {
           screen: "RecipeDetails",
           params: { recipe },
         })
