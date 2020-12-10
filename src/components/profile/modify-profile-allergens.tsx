@@ -1,19 +1,24 @@
 import React, { FC } from "react";
-import { StyleSheet, View, Text, Dimensions } from "react-native";
+import { StyleSheet, View, Text, Dimensions, Platform } from "react-native";
 import { Profile } from "../../models";
 import { Pictogram } from "../../models";
 import { Allergen } from "../restaurants/search-restaurants/allergen";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import { ScrollView } from "react-native-gesture-handler";
 import { colors } from "../../constants/colors";
+import { Button } from "../common";
+
+const { height } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 50,
     display: "flex",
     height: "100%",
     width: "100%",
-    backgroundColor: "#ECECEC",
+    backgroundColor: "white",
   },
   cardContainer: {
     alignItems: "center",
@@ -32,13 +37,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-start",
     flexWrap: "wrap",
+    paddingBottom: 60,
   },
   title: {
+    paddingTop: 30,
     paddingLeft: 10,
     fontSize: 20,
     color: colors.themeStandard,
     fontWeight: "bold",
-    marginBottom: 20,
+    marginBottom: 10,
+  },
+  buttonContainer: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 40,
+    marginVertical: 10,
   },
 });
 
@@ -59,29 +73,39 @@ const handleAllergensSelected: (
   }
 };
 
+const setAllergen = () => {};
+
 export const ModifyProfileAllergens: FC<ProfileProps> = ({
   profile,
   allergens,
 }: ProfileProps) => {
+  const scrollStyle = {
+    height: height * 0.8 + 30,
+  };
+
+  if (Platform.OS === "ios") {
+    const { top, bottom } = useSafeAreaInsets();
+
+    scrollStyle.height -= top + bottom;
+  }
   return (
     <SafeAreaView style={styles.container} edges={["bottom"]}>
-      <Text style={styles.title}>Sélectionnez vos allergènes :</Text>
-      <View style={styles.cardContainer}>
-        <View style={styles.allergenCard}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <View style={styles.allergensContainer}>
-              {allergens.map((allergen) => (
-                <Allergen
-                  key={allergen.id}
-                  touchableDisable={false}
-                  allergen={allergen}
-                  handleAllergensSelected={handleAllergensSelected}
-                  allergensSelected={profile.allergens}
-                />
-              ))}
-            </View>
-          </ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false} style={scrollStyle}>
+        <Text style={styles.title}>Sélectionnez vos allergènes :</Text>
+        <View style={styles.allergensContainer}>
+          {allergens.map((allergen) => (
+            <Allergen
+              key={allergen.id}
+              touchableDisable={false}
+              allergen={allergen}
+              handleAllergensSelected={handleAllergensSelected}
+              allergensSelected={profile.allergens}
+            />
+          ))}
         </View>
+      </ScrollView>
+      <View style={styles.buttonContainer}>
+        <Button label={"Appliquer"} onPress={() => alert("Todo!")} />
       </View>
     </SafeAreaView>
   );
