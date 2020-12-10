@@ -96,6 +96,18 @@ const Recipes: FC = () => {
   );
 };
 
+const Profile: FC = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={"Profile"}
+        component={ProfileScreen}
+        options={{ title: "Profil" }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 const Tab = createBottomTabNavigator();
 
 export const BottomTabNavigator: FC = () => {
@@ -106,7 +118,7 @@ export const BottomTabNavigator: FC = () => {
       >
         <Tab.Screen name="RestaurantScreen" component={Restaurants} />
         <Tab.Screen name="RecipeScreen" component={Recipes} />
-        <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Tab.Screen name="ProfileScreen" component={Profile} />
       </Tab.Navigator>
     </SafeAreaView>
   );
