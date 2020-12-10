@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { Profile } from "../../models";
 import { AllergensList } from "./allergens-list";
+import { useNavigation } from "@react-navigation/native";
 
 const styles = StyleSheet.create({
   container: {
@@ -32,14 +33,18 @@ type ProfileProps = {
 };
 
 export const Allergies: FC<ProfileProps> = ({ profile }: ProfileProps) => {
+  const { navigate } = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.allergiesTitle}>
         <Text style={styles.textAllergy}>Allergies</Text>
         <TouchableOpacity
-          onPress={() => {
-            alert("To do");
-          }}
+          onPress={() =>
+            navigate("ModifyProfileAllergens", {
+              screen: "ModifyProfileAllergens",
+              params: { profile },
+            })
+          }
         >
           <Text style={styles.textModify}>Modifier</Text>
         </TouchableOpacity>
