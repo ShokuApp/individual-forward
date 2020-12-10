@@ -43,7 +43,7 @@ export const CardDisplay: FC<Props> = (props: Props) => {
       {!allDishes || allDishes.length === 0 ? (
         <View style={styles.warningContainer}>
           <Text style={styles.warningLabel}>
-            Aucun plat ne correspond a votre profil
+            Aucun plat ne correspond à votre profil
           </Text>
         </View>
       ) : (
