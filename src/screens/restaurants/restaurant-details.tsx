@@ -24,7 +24,7 @@ type Props = {
 };
 
 const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
-  const id = "129e5ebe-aaab-48f0-a1f5-31409a2fc11d";
+  const id = "771a455b-6131-4d83-a934-59e3bab5303c";
   const profileBloc = new ProfileBloc(new ProfileRepository());
   profileBloc.add(new ProfileGetEvent(id));
   return (
