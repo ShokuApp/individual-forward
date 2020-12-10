@@ -1,5 +1,5 @@
-import React, { FC, useState, useEffect } from "react";
-import { Text, TouchableOpacity, Image, StyleSheet } from "react-native";
+import React, { FC, useEffect, useState } from "react";
+import { Image, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Pictogram } from "../../models";
 import { alertAllergen } from "./alerts";
 
@@ -7,12 +7,16 @@ const styles = StyleSheet.create({
   allergenContainer: {
     display: "flex",
     alignItems: "center",
+    width: "25%",
     margin: 5,
   },
   allergenImage: {
     height: 40,
     width: 40,
     borderRadius: 40 / 2,
+  },
+  allergenText: {
+    color: "black",
   },
   selectedAllergenImage: {
     borderWidth: 2,
@@ -65,7 +69,9 @@ export const Allergen: FC<Props> = (props: Props) => {
             : styles.allergenImage
         }
       />
-      <Text style={isSelected ? styles.selectedAllergenText : null}>
+      <Text
+        style={isSelected ? styles.selectedAllergenText : styles.allergenText}
+      >
         {props.allergen.name}
       </Text>
     </TouchableOpacity>

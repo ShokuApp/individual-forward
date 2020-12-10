@@ -4,7 +4,7 @@ import {
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./tab-bar";
-import ProfileScreen from "../../screens/profile";
+import ProfileScreen from "../../screens/profile/profile";
 import RestaurantsScreen from "../../screens/restaurants/restaurants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import RecipesScreen from "../../screens/recipes";
@@ -95,6 +95,8 @@ const Recipes: FC = () => {
     </RecipesStack.Navigator>
   );
 };
+
+const Stack = createStackNavigator();
 
 const Profile: FC = () => {
   return (
