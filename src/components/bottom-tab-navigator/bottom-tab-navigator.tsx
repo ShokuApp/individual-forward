@@ -4,7 +4,7 @@ import {
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./tab-bar";
-import ProfileScreen from "../../screens/profile";
+import ProfileScreen from "../../screens/profile/profile";
 import RestaurantsScreen from "../../screens/restaurants/restaurants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import RecipesScreen from "../../screens/recipes";
@@ -32,27 +32,37 @@ export type Filters = {
   allergens: Pictogram[];
 };
 
+type FiltersProps = {
+  stackName: string;
+  screenName: string;
+};
+
 export type RestaurantsStackParamsList = {
   Restaurants: { filters: Filters };
 };
 
+export type RecipesStackParamsList = {
+  Recipes: { filters: Filters };
+};
+
 const RestaurantsStack = createStackNavigator<RestaurantsStackParamsList>();
+const RecipesStack = createStackNavigator<RecipesStackParamsList>();
+
+const Filters: FC<FiltersProps> = ({ stackName, screenName }: FiltersProps) => {
+  const { navigate } = useNavigation();
+
+  return (
+    <Icon
+      type="evilicon"
+      name="search"
+      size={30}
+      style={styles.filtersIcon}
+      onPress={() => navigate(stackName, { screen: screenName })}
+    />
+  );
+};
 
 const Restaurants: FC = () => {
-  const Filters = () => {
-    const { navigate } = useNavigation();
-
-    return (
-      <Icon
-        type="evilicon"
-        name="search"
-        size={30}
-        style={styles.filtersIcon}
-        onPress={() => navigate("Restaurant", { screen: "SearchRestaurants" })}
-      />
-    );
-  };
-
   return (
     <RestaurantsStack.Navigator>
       <RestaurantsStack.Screen
@@ -60,22 +70,41 @@ const Restaurants: FC = () => {
         component={RestaurantsScreen}
         options={{
           title: "Restaurants",
-          headerRight: () => <Filters />,
+          headerRight: () => (
+            <Filters stackName="Restaurant" screenName="SearchRestaurants" />
+          ),
         }}
       />
     </RestaurantsStack.Navigator>
   );
 };
 
+const Recipes: FC = () => {
+  return (
+    <RecipesStack.Navigator>
+      <RecipesStack.Screen
+        name={"Recipes"}
+        component={RecipesScreen}
+        options={{
+          title: "Recettes",
+          headerRight: () => (
+            <Filters stackName="Recipe" screenName="SearchRecipes" />
+          ),
+        }}
+      />
+    </RecipesStack.Navigator>
+  );
+};
+
 const Stack = createStackNavigator();
 
-const Recipes: FC = () => {
+const Profile: FC = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={"Recipes"}
-        component={RecipesScreen}
-        options={{ title: "Recettes" }}
+        name={"Profile"}
+        component={ProfileScreen}
+        options={{ title: "Profil" }}
       />
     </Stack.Navigator>
   );
@@ -91,7 +120,7 @@ export const BottomTabNavigator: FC = () => {
       >
         <Tab.Screen name="RestaurantScreen" component={Restaurants} />
         <Tab.Screen name="RecipeScreen" component={Recipes} />
-        <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Tab.Screen name="ProfileScreen" component={Profile} />
       </Tab.Navigator>
     </SafeAreaView>
   );

@@ -2,6 +2,7 @@
 
 import json
 import random
+import os
 import uuid
 from datetime import datetime
 
@@ -386,31 +387,76 @@ def main():
     street_names = get_street_names()
     postal_codes = get_postal_codes()
 
-    pictogram_data = pictogram_list(random.randint(5, 100))
+    if os.path.exists("./data/pictograms/initial-data.json"):
+        file = open("./data/pictograms/initial-data.json")
+        pictogram_data = json.load(file)
+        file.close()
+    else:
+        pictogram_data = pictogram_list(random.randint(5, 100))
     save_to_file(pictogram_data, "./data/pictograms/data.json")
 
-    ingredient_data = ingredient_list(random.randint(5, 100), pictogram_data)
+    if os.path.exists("./data/ingredients/initial-data.json"):
+        file = open("./data/ingredients/initial-data.json")
+        ingredient_data = json.load(file)
+        file.close()
+    else:
+        ingredient_data = ingredient_list(random.randint(5, 100), pictogram_data)
     save_to_file(ingredient_data, "./data/ingredients/data.json")
 
-    sauce_data = sauce_list(random.randint(5, 100), ingredient_data)
+    if os.path.exists("./data/sauces/initial-data.json"):
+        file = open("./data/sauces/initial-data.json")
+        sauce_data = json.load(file)
+        file.close()
+    else:
+        sauce_data = sauce_list(random.randint(5, 100), ingredient_data)
     save_to_file(sauce_data, "./data/sauces/data.json")
 
-    dish_data = dish_list(random.randint(5, 100), ingredient_data, sauce_data)
+    if os.path.exists("./data/dishes/initial-data.json"):
+        file = open("./data/dishes/initial-data.json")
+        dish_data = json.load(file)
+        file.close()
+    else:
+        dish_data = dish_list(random.randint(5, 100), ingredient_data, sauce_data)
     save_to_file(dish_data, "./data/dishes/data.json")
 
-    menu_data = menu_list(random.randint(5, 100), dish_data)
+    if os.path.exists("./data/menus/initial-data.json"):
+        file = open("./data/menus/initial-data.json")
+        menu_data = json.load(file)
+        file.close()
+    else:
+        menu_data = menu_list(random.randint(5, 100), dish_data)
     save_to_file(menu_data, "./data/menus/data.json")
 
-    card_data = card_list(random.randint(5, 100), dish_data, menu_data)
+    if os.path.exists("./data/cards/initial-data.json"):
+        file = open("./data/cards/initial-data.json")
+        card_data = json.load(file)
+        file.close()
+    else:
+        card_data = card_list(random.randint(5, 100), dish_data, menu_data)
     save_to_file(card_data, "./data/cards/data.json")
 
-    restaurant_data = restaurant_list(random.randint(5, 100), restaurant_names, street_names, postal_codes, card_data)
+    if os.path.exists("./data/restaurants/initial-data.json"):
+        file = open("./data/restaurants/initial-data.json")
+        restaurant_data = json.load(file)
+        file.close()
+    else:
+        restaurant_data = restaurant_list(random.randint(5, 100), restaurant_names, street_names, postal_codes, card_data)
     save_to_file(restaurant_data, "./data/restaurants/data.json")
 
-    recipe_ingredient_data = recipe_ingredient_list(random.randint(5, 100), ingredient_data)
+    if os.path.exists("./data/recipe-ingredients/initial-data.json"):
+        file = open("./data/recipe-ingredients/initial-data.json")
+        recipe_ingredient_data = json.load(file)
+        file.close()
+    else:
+        recipe_ingredient_data = recipe_ingredient_list(random.randint(5, 100), ingredient_data)
     save_to_file(recipe_ingredient_data, "./data/recipe-ingredients/data.json")
 
-    recipe_data = recipe_list(random.randint(5, 100), recipe_ingredient_data)
+    if os.path.exists("./data/recipes/initial-data.json"):
+        file = open("./data/recipes/initial-data.json")
+        recipe_data = json.load(file)
+        file.close()
+    else:
+        recipe_data = recipe_list(random.randint(5, 100), recipe_ingredient_data)
 
     profile_data = profile_list(random.randint(5, 100), profile_names, pictogram_data, recipe_data, restaurant_data)
     save_to_file(profile_data, "./data/profiles/data.json")

@@ -14,7 +14,7 @@ import {
   ProfileErrorState,
 } from "../../blocs";
 import { PictogramRepository, ProfileRepository } from "../../repositories";
-import { SearchRestaurant } from "../../components/restaurants/search-restaurants/search-restaurants";
+import { SearchRecipe } from "../../components/recipes/search-recipes/search-recipes";
 import { Profile } from "../../models";
 import { id } from "../../constants/demo";
 
@@ -34,7 +34,7 @@ const ProfileGet: FC<Props> = (props: Props) => {
         }
         if (allergensState instanceof PictogramListState) {
           return (
-            <SearchRestaurant
+            <SearchRecipe
               allergens={allergensState.pictograms}
               profileAllergens={props.profile.allergens}
             />
@@ -46,7 +46,7 @@ const ProfileGet: FC<Props> = (props: Props) => {
   );
 };
 
-const SearchRestaurantScreen: FC = () => {
+const SearchRecipeScreen: FC = () => {
   const profileBloc = new ProfileBloc(new ProfileRepository());
   profileBloc.add(new ProfileGetEvent(id));
   return (
@@ -65,4 +65,4 @@ const SearchRestaurantScreen: FC = () => {
   );
 };
 
-export default SearchRestaurantScreen;
+export default SearchRecipeScreen;

@@ -22,7 +22,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   dishName: {
-    paddingRight: 20,
+    width: "90%",
+  },
+  dishPrice: {
+    paddingLeft: 20,
   },
 });
 

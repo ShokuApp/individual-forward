@@ -1,8 +1,5 @@
 import React, { FC } from "react";
 import { Text } from "react-native";
-
-import { RouteProp } from "@react-navigation/native";
-import { RestaurantStackParamList } from "../../navigator/restaurants-navigator";
 import { BlocBuilder } from "@felangel/react-bloc";
 import {
   ProfileBloc,
@@ -12,19 +9,10 @@ import {
   ProfileState,
 } from "../../blocs";
 import { ProfileRepository } from "../../repositories";
-import { RestaurantDetails } from "../../components/restaurants/restaurant-details";
+import { ProfileContainer } from "../../components/profile/profile";
 import { id } from "../../constants/demo";
 
-type RestaurantDetailsScreenProps = RouteProp<
-  RestaurantStackParamList,
-  "RestaurantDetailsScreen"
->;
-
-type Props = {
-  route: RestaurantDetailsScreenProps;
-};
-
-const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
+const ProfileScreen: FC = () => {
   const profileBloc = new ProfileBloc(new ProfileRepository());
   profileBloc.add(new ProfileGetEvent(id));
   return (
@@ -35,12 +23,7 @@ const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
           return <Text>Error</Text>;
         }
         if (state instanceof ProfileGetState) {
-          return (
-            <RestaurantDetails
-              restaurant={route.params.restaurant}
-              profile={state.profile}
-            />
-          );
+          return <ProfileContainer profile={state.profile} />;
         }
         return <Text>Loading</Text>;
       }}
@@ -48,4 +31,4 @@ const RestaurantDetailsScreen: FC<Props> = ({ route }: Props) => {
   );
 };
 
-export default RestaurantDetailsScreen;
+export default ProfileScreen;
