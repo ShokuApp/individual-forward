@@ -7,9 +7,9 @@ import {
   ProfileGetEvent,
   ProfileGetState,
   ProfileState,
-} from "../blocs";
-import { ProfileRepository } from "../repositories";
-import { Allergies } from "../components/profile/allergies";
+} from "../../blocs";
+import { ProfileRepository } from "../../repositories";
+import { Allergies } from "../../components/profile/allergies";
 
 const ProfileScreen: FC = () => {
   const id = "771a455b-6131-4d83-a934-59e3bab5303c";
