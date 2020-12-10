@@ -91,6 +91,9 @@ export const SearchRestaurant: FC<Props> = (props: Props) => {
           setAllergensSelected={setAllergensSelected}
           allergens={props.allergens}
           profileAllergens={props.profileAllergens}
+          alertDisplay={
+            "Les restaurants proposés pourraient ne plus être sûrs pour vous"
+          }
         />
       </ScrollView>
       <View style={styles.searchButton}>

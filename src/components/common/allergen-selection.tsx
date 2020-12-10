@@ -29,6 +29,7 @@ type Props = {
   allergensSelected: Pictogram[];
   allergens: Pictogram[];
   profileAllergens: Pictogram[];
+  alertDisplay: string;
 };
 
 const handleAllergensSelected: (
@@ -54,21 +55,18 @@ export const AllergenSelection: FC<Props> = (props: Props) => {
 
   return (
     <View style={styles.filterContainer}>
+      <Text style={styles.filterTitle}>Allergènes :</Text>
       <MyCheckBox
         label={"Pour moi"}
         check={forMe}
         onPress={() => {
           if (forMe) {
-            alertForMe(
-              setForMe,
-              "Les recettes proposées pourraient ne plus être sûrs pour vous"
-            );
+            alertForMe(setForMe, props.alertDisplay);
           } else {
             setForMe(!forMe);
           }
         }}
       />
-      <Text style={styles.filterTitle}>Allergènes :</Text>
       <View style={styles.allergensContainer}>
         {props.allergens.map((allergen) => (
           <Allergen
