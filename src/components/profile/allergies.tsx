@@ -6,7 +6,7 @@ import { AllergensList } from "./allergens-list";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },

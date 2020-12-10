@@ -9,7 +9,7 @@ import {
   ProfileState,
 } from "../blocs";
 import { ProfileRepository } from "../repositories";
-import { Allergies } from "../components/profile/allergies";
+import { ProfileContainer } from "../components/profile/profile";
 
 const ProfileScreen: FC = () => {
   const id = "771a455b-6131-4d83-a934-59e3bab5303c";
@@ -23,7 +23,7 @@ const ProfileScreen: FC = () => {
           return <Text>Error</Text>;
         }
         if (state instanceof ProfileGetState) {
-          return <Allergies profile={state.profile} />;
+          return <ProfileContainer profile={state.profile} />;
         }
         return <Text>Loading</Text>;
       }}
