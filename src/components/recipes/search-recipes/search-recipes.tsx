@@ -66,7 +66,7 @@ export const SearchRecipe: FC<Props> = (props: Props) => {
           allergens={props.allergens}
           profileAllergens={props.profileAllergens}
           alertDisplay={
-            "Les recettes proposées pourraient ne plus être sûrs pour vous"
+            "Les recettes proposées pourraient ne plus être sûres pour vous"
           }
         />
       </ScrollView>

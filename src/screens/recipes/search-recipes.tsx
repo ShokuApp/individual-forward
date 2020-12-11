@@ -16,6 +16,7 @@ import {
 import { PictogramRepository, ProfileRepository } from "../../repositories";
 import { SearchRecipe } from "../../components/recipes/search-recipes/search-recipes";
 import { Profile } from "../../models";
+import { id } from "../../constants/demo";
 
 type Props = {
   profile: Profile;
@@ -47,7 +48,7 @@ const ProfileGet: FC<Props> = (props: Props) => {
 
 const SearchRecipeScreen: FC = () => {
   const profileBloc = new ProfileBloc(new ProfileRepository());
-  profileBloc.add(new ProfileGetEvent("e57a085b-ac14-4ceb-9978-83497bb17c7d"));
+  profileBloc.add(new ProfileGetEvent(id));
   return (
     <BlocBuilder
       bloc={profileBloc}

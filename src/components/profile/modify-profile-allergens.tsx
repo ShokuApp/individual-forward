@@ -8,7 +8,7 @@ import {
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 import { ScrollView } from "react-native-gesture-handler";
-import { colors } from "../../constants/colors";
+import { colors } from "../../constants";
 import { Button } from "../common";
 import { Alert } from "react-native";
 
