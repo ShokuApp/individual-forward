@@ -10,6 +10,7 @@ import {
 import { ScrollView } from "react-native-gesture-handler";
 import { colors } from "../../constants";
 import { Button } from "../common";
+import { Alert } from "react-native";
 
 const { height } = Dimensions.get("window");
 
@@ -96,7 +97,12 @@ export const ModifyProfileAllergens: FC<ProfileProps> = ({
         </View>
       </ScrollView>
       <View style={styles.buttonContainer}>
-        <Button label={"Appliquer"} onPress={() => alert("Todo!")} />
+        <Button
+          label={"Appliquer"}
+          onPress={() =>
+            Alert.alert("", "Cette fonctionnalité n'est pas encore disponible.")
+          }
+        />
       </View>
     </SafeAreaView>
   );
