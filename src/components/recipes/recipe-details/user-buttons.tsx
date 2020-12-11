@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { View, StyleSheet } from "react-native";
+import { Alert, View, StyleSheet } from "react-native";
 import { UserButton } from "../../common";
 import { Icon } from "react-native-elements";
 
@@ -17,24 +17,32 @@ export const UserButtons: FC = () => {
       <UserButton
         label="Favoris"
         icon={<Icon type="evilicon" name="heart" size={50} color="#2196F3" />}
-        onPress={() => alert("Favoris")}
+        onPress={() =>
+          Alert.alert("", "Cette fonctionnalité n'est pas encore disponible.")
+        }
       />
       <UserButton
         label="Commenter"
         icon={<Icon type="evilicon" name="comment" size={50} color="#2196F3" />}
-        onPress={() => alert("Commenter")}
+        onPress={() =>
+          Alert.alert("", "Cette fonctionnalité n'est pas encore disponible.")
+        }
       />
       <UserButton
         label="Noter"
         icon={<Icon type="evilicon" name="star" size={50} color="#2196F3" />}
-        onPress={() => alert("Noter")}
+        onPress={() =>
+          Alert.alert("", "Cette fonctionnalité n'est pas encore disponible.")
+        }
       />
       <UserButton
         label="Partager"
         icon={
           <Icon type="evilicon" name="share-apple" size={50} color="#2196F3" />
         }
-        onPress={() => alert("Partager")}
+        onPress={() =>
+          Alert.alert("", "Cette fonctionnalité n'est pas encore disponible.")
+        }
       />
     </View>
   );
