@@ -136,5 +136,29 @@
         "ingredient": "8a7bc4df-8ce8-4716-9723-a4127e24e302",
         "quantity": "50",
         "unity": "g"
+    },
+    {
+        "id": "ff1345ac-4c08-486f-8d59-fff07b93be28",
+        "ingredient": "f7ed90ee-7f23-49de-9788-f57e4c6a6ea3",
+        "quantity": "50",
+        "unity": "g"
+    },
+    {
+        "id": "385ac51f-6639-403d-a935-748edb652088",
+        "ingredient": "37ebf37d-918a-4426-a413-df2546cd2b8e",
+        "quantity": "50",
+        "unity": "g"
+    },
+    {
+        "id": "bde3facb-fe77-48b9-9f0d-65397e854d1a",
+        "ingredient": "82e1be32-ea5b-4b2b-ba02-09e6f33a8071",
+        "quantity": "50",
+        "unity": "g"
+    },
+    {
+        "id": "d48c3132-d880-4fb5-adfb-680aea0ae319",
+        "ingredient": "088d68f2-ba21-4ca1-b714-62204a412b09",
+        "quantity": "50",
+        "unity": "g"
     }
 ]

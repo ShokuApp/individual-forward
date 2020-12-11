@@ -175,7 +175,7 @@
         },
         "average_rate": "3.8",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "d61c4901-ff68-4672-8046-5539e29f64da"
         ],
         "steps": [
             {
@@ -204,7 +204,11 @@
         },
         "average_rate": "4.9",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "ff1345ac-4c08-486f-8d59-fff07b93be28",
+            "d61c4901-ff68-4672-8046-5539e29f64da",
+            "385ac51f-6639-403d-a935-748edb652088",
+            "aa7b1c2a-d22a-414e-b13a-6921be0a0cbd"
+
         ],
         "steps": [
             {
@@ -241,7 +245,9 @@
         },
         "average_rate": "3.8",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "23d00dc8-02d9-4f58-a486-fd87d889a263",
+            "d61c4901-ff68-4672-8046-5539e29f64da",
+            "a117824c-de58-4f3e-9c61-7ecf1ea686e2"
         ],
         "steps": [
             {
@@ -282,7 +288,7 @@
         },
         "average_rate": "3.2",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "aa7b1c2a-d22a-414e-b13a-6921be0a0cbd"
         ],
         "steps": [
             {
@@ -331,7 +337,9 @@
         },
         "average_rate": "4.3",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "4b249784-d15c-40a6-b3c8-1d161a2a5917",
+            "bb762bdb-a1de-4298-86d9-e5168c7019b8",
+            "b80915ab-63c8-4f26-a278-3f81ddc6ce6f"
         ],
         "steps": [
             {
@@ -376,7 +384,10 @@
         },
         "average_rate": "4.2",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "bde3facb-fe77-48b9-9f0d-65397e854d1a",
+            "aa7b1c2a-d22a-414e-b13a-6921be0a0cbd",
+            "4b249784-d15c-40a6-b3c8-1d161a2a5917"
+
         ],
         "steps": [
             {
@@ -433,7 +444,8 @@
         },
         "average_rate": "3.6",
         "ingredients": [
-            "e0ce6341-010f-419d-b653-20ea3182beb8"
+            "e0ce6341-010f-419d-b653-20ea3182beb8",
+            "aa7b1c2a-d22a-414e-b13a-6921be0a0cbd"
         ],
         "steps": [
             {
@@ -474,7 +486,9 @@
         },
         "average_rate": "2.8",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "aa7b1c2a-d22a-414e-b13a-6921be0a0cbd",
+            "4b249784-d15c-40a6-b3c8-1d161a2a5917",
+            "7d4cef91-2e10-458f-8c90-2f88c482f769"
         ],
         "steps": [
             {
@@ -515,7 +529,7 @@
         },
         "average_rate": "3.7",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "eba49651-1abb-46ef-ac1c-6d66f612ee83"
         ],
         "steps": [
             {
@@ -547,7 +561,7 @@
     },
     {
         "id": "f2065576-a4eb-437d-ae75-ba1a1abefa5e",
-        "name": "Brownie aux noix",
+        "name": "Brownie amandes",
         "description": "A generic description",
         "image": "https://images.unsplash.com/photo-1461009312844-e80697a81cc7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80",
         "average_time": {
@@ -556,7 +570,8 @@
         },
         "average_rate": "2.8",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "d48c3132-d880-4fb5-adfb-680aea0ae319",
+            "4b249784-d15c-40a6-b3c8-1d161a2a5917"
         ],
         "steps": [
             {
@@ -609,7 +624,8 @@
         },
         "average_rate": "4.2",
         "ingredients": [
-            "9bb2786c-ebd5-42fa-be66-6724809681c4"
+            "bde3facb-fe77-48b9-9f0d-65397e854d1a",
+            "23d00dc8-02d9-4f58-a486-fd87d889a263"
         ],
         "steps": [
             {
