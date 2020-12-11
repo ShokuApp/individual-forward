@@ -753,7 +753,6 @@
         "name": "maïzena",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "c3480f58-ee41-4ae1-84b1-06a5725ca4c9",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
         "diets": [
@@ -831,6 +830,30 @@
         ],
         "diets": [
             "7c8ff128-c23d-443c-ace2-7b96f5417adc"
+        ]
+    },
+    {
+        "id": "8c6b51d6-8c43-457f-b9b7-fddaf44129db",
+        "name": "pois chiche",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "7f327c05-cee1-420d-be1d-a01ba5c5e35e"
+        ],
+        "diets": [
+            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
+            "d34d5667-a48a-4c10-bcb3-66044800bc84"
+        ]
+    },
+    {
+        "id": "92703506-92fb-4f4d-a6cb-fcac66310060",
+        "name": "haricot rouge",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "7f327c05-cee1-420d-be1d-a01ba5c5e35e"
+        ],
+        "diets": [
+            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
+            "d34d5667-a48a-4c10-bcb3-66044800bc84"
         ]
     }
 ]

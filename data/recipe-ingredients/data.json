@@ -136,5 +136,77 @@
         "ingredient": "8a7bc4df-8ce8-4716-9723-a4127e24e302",
         "quantity": "50",
         "unity": "g"
+    },
+    {
+        "id": "751f3376-2fbd-4663-b3f2-6a35df4ef0b0",
+        "ingredient": "8c6b51d6-8c43-457f-b9b7-fddaf44129db",
+        "quantity": "300",
+        "unity": "g"
+    },
+    {
+        "id": "d38e6f9e-a451-43f2-9a38-8f10b7b9e8b0",
+        "ingredient": "722c924c-da15-4d60-945a-a6731c619f0c",
+        "quantity": "1",
+        "unity": ""
+    },
+    {
+        "id": "d4bae847-8138-43bb-9812-45196a503e6c",
+        "ingredient": "3f2a3432-9c03-4ed8-a1e9-7ace655e2bf2",
+        "quantity": "2",
+        "unity": ""
+    },
+    {
+        "id": "28fe37e8-1b5e-47ca-af5a-3198ed8ef2fd",
+        "ingredient": "92703506-92fb-4f4d-a6cb-fcac66310060",
+        "quantity": "600",
+        "unity": "g"
+    },
+    {
+        "id": "73507d23-0acf-4036-b675-c2e9dd5b0483",
+        "ingredient": "a01b2a02-3dfe-4e97-8bf8-096ab01a9bfc",
+        "quantity": "500",
+        "unity": "g"
+    },
+    {
+        "id": "a15aec7f-07f3-4742-9f0d-32f6216417cf",
+        "ingredient": "e1026388-7ea4-4d0e-b3e4-cbc7a91bafd6",
+        "quantity": "300",
+        "unity": "mL"
+    },
+    {
+        "id": "252e9864-e859-4c0d-8286-7833826f35f2",
+        "ingredient": "ccff9638-5d32-4ebb-bdff-fb0ef08226a5",
+        "quantity": "50",
+        "unity": "g"
+    },
+    {
+        "id": "20b18c70-be00-4f7b-aed0-362072e2b7cb",
+        "ingredient": "c5e98656-2ecb-4647-b6db-558b68d4dead",
+        "quantity": "190",
+        "unity": "g"
+    },
+    {
+        "id": "34165858-1c31-45dd-9cf9-d5a6b48d95be",
+        "ingredient": "a41a5636-8e67-4be9-a3e6-084e7b925242",
+        "quantity": "200",
+        "unity": "g"
+    },
+    {
+        "id": "15b7d632-703d-44c9-a5dd-8835cb379043",
+        "ingredient": "897f359d-8a5f-47de-8cb8-38770fe15715",
+        "quantity": "1",
+        "unity": "pot"
+    },
+    {
+        "id": "08d45239-6c93-48d3-b221-f78815b11ad6",
+        "ingredient": "f7ed90ee-7f23-49de-9788-f57e4c6a6ea3",
+        "quantity": "1",
+        "unity": "boite"
+    },
+    {
+        "id": "c9331dc9-5c7a-4a22-bd23-b3dbfd595aa2",
+        "ingredient": "3d67d168-2133-4d8c-8a07-be9ca351405c",
+        "quantity": "1",
+        "unity": ""
     }
 ]
