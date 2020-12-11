@@ -6,9 +6,7 @@
         "allergens": [
             "fa054b5b-dcf0-4b6b-b11b-85b98bba3e45"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "cd002746-cf62-4be0-b934-f99c9bd8b5a9",
@@ -17,9 +15,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "15bc47b2-f22b-4feb-89e3-92fdec59e629",
@@ -28,9 +24,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "37ebf37d-918a-4426-a413-df2546cd2b8e",
@@ -41,9 +35,7 @@
             "f2585ede-2a8d-44ef-9cdb-e41abb477196",
             "69867a11-eb0f-41b0-b615-10855290be4f"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "262bc49e-b935-4aea-bdb8-d91099e96ea3",
@@ -57,10 +49,7 @@
         "name": "Boeuf",
         "image": "https://source.unsplash.com/random",
         "allergens": [],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "d34d5667-a48a-4c10-bcb3-66044800bc84"
-        ]
+        "diets": []
     },
     {
         "id": "0180d42d-a663-48a9-bd62-a6a8849d923c",
@@ -69,9 +58,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "3f2a3432-9c03-4ed8-a1e9-7ace655e2bf2",
@@ -96,9 +83,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "72a34fdc-d038-4747-988b-308a30f950da",
@@ -137,10 +122,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "fcf26b65-82f2-47dd-a729-06552d045095",
@@ -167,10 +149,7 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "b2165eb5-9202-44b7-a70b-b910f89b69da",
@@ -180,10 +159,7 @@
             "69867a11-eb0f-41b0-b615-10855290be4f",
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "e1026388-7ea4-4d0e-b3e4-cbc7a91bafd6",
@@ -192,10 +168,7 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "897f359d-8a5f-47de-8cb8-38770fe15715",
@@ -204,10 +177,7 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "c82f50a6-402d-4e58-bb90-73ec9317f66a",
@@ -216,9 +186,7 @@
         "allergens": [
             "69867a11-eb0f-41b0-b615-10855290be4f"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "81768102-ea40-49a2-83b6-d04805c8bc3e",
@@ -257,10 +225,7 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "088d68f2-ba21-4ca1-b714-62204a412b09",
@@ -276,11 +241,7 @@
         "name": "Foie gras",
         "image": "https://source.unsplash.com/random",
         "allergens": [],
-        "diets": [
-            "d34d5667-a48a-4c10-bcb3-66044800bc84",
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "4e870ce7-b804-4aac-8ce3-95300c6addd9",
@@ -291,11 +252,7 @@
             "fa054b5b-dcf0-4b6b-b11b-85b98bba3e45",
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "99f905e5-9aab-43b9-84d3-94549961f154",
@@ -304,9 +261,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "83e98047-145a-47f5-ae63-bc352444e217",
@@ -315,20 +270,14 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "04e57a13-d56a-46a7-9efe-f238e54b3a76",
         "name": "Magret de canard",
         "image": "https://source.unsplash.com/random",
         "allergens": [],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "d34d5667-a48a-4c10-bcb3-66044800bc84"
-        ]
+        "diets": []
     },
     {
         "id": "941f0df0-d35d-46f0-a9f9-10a32afb9106",
@@ -337,10 +286,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "c38a0e43-3bec-422a-ba30-9432732ff2dc",
@@ -349,9 +295,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "c6cae453-f61c-4354-a96e-e132c6fa5d34",
@@ -360,9 +304,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "e572e039-eee4-486f-ab79-4a39b78b21f2",
@@ -378,10 +320,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "d34d5667-a48a-4c10-bcb3-66044800bc84"
-        ]
+        "diets": []
     },
     {
         "id": "7de2bdba-3881-471c-9311-477959b2f288",
@@ -390,10 +329,7 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "c588fbd4-882b-471b-b648-ab1aaa0b6a5b",
@@ -403,11 +339,7 @@
             "69867a11-eb0f-41b0-b615-10855290be4f",
             "fa054b5b-dcf0-4b6b-b11b-85b98bba3e45"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "4bb01c75-882a-492a-89c2-e511bc1f8ffa",
@@ -425,9 +357,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "2f850941-676e-4f2e-8463-623e5b3f7b5b",
@@ -455,10 +385,7 @@
             "69867a11-eb0f-41b0-b615-10855290be4f",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "a167d439-3ff4-46d1-a577-5a5471cb11de",
@@ -475,10 +402,7 @@
             "958b643a-cec4-4e8b-9016-f06fd5eefca8",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "30dc1056-2d40-4db5-9610-a78348fc863a",
@@ -488,10 +412,7 @@
             "958b643a-cec4-4e8b-9016-f06fd5eefca8",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "a41a5636-8e67-4be9-a3e6-084e7b925242",
@@ -500,9 +421,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "59f053cc-0a52-4262-a2a7-088abf7648e3",
@@ -513,11 +432,7 @@
             "fa054b5b-dcf0-4b6b-b11b-85b98bba3e45",
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "72b94464-a362-43b6-bb53-c2372442bb91",
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "5e6fd33b-104e-402b-a086-5d94a3bb974e",
@@ -527,10 +442,7 @@
             "958b643a-cec4-4e8b-9016-f06fd5eefca8",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "dcd6e255-0253-4c15-b1af-2765edfad252",
@@ -539,11 +451,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "d34d5667-a48a-4c10-bcb3-66044800bc84",
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "53668e09-2559-4ddb-afa5-8402f4dfca79",
@@ -552,11 +460,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "d34d5667-a48a-4c10-bcb3-66044800bc84",
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "82e1be32-ea5b-4b2b-ba02-09e6f33a8071",
@@ -591,19 +495,14 @@
             "2d755541-3aa2-48b0-a973-9c1502cac7ce",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "dddf74bb-c698-4c02-96d1-325b15ae667f",
         "name": "Poulet",
         "image": "https://source.unsplash.com/random",
         "allergens": [],
-        "diets": [
-            "d34d5667-a48a-4c10-bcb3-66044800bc84",
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "0ebcc6ef-8c03-4414-82cd-4a3cb7a3f421",
@@ -637,9 +536,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "0d63452e-1a8c-4a7e-86a5-7ad6fcfa4f2e",
@@ -649,10 +546,7 @@
             "958b643a-cec4-4e8b-9016-f06fd5eefca8",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc",
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "95b10323-9226-4ac5-9608-3ee45ae3be08",
@@ -663,10 +557,7 @@
             "fa054b5b-dcf0-4b6b-b11b-85b98bba3e45",
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "f67e2e6c-70a4-4e42-8208-7f4174ac77fb",
@@ -689,9 +580,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "0a63098d-ad25-460d-bf30-6b3a443bddaa",
@@ -700,9 +589,7 @@
         "allergens": [
             "fa054b5b-dcf0-4b6b-b11b-85b98bba3e45"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
     },
     {
         "id": "3da1de6b-b3df-4af3-9476-7e5e4851585a",
@@ -710,12 +597,9 @@
         "image": "https://source.unsplash.com/random",
         "allergens": [
             "69867a11-eb0f-41b0-b615-10855290be4f",
-            "69867a11-eb0f-41b0-b615-10855290be4f",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "04aa43f3-45e2-4f6c-95e3-90de9e7775b9",
@@ -724,9 +608,7 @@
         "allergens": [
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "6b5af7da-c334-4897-a7ce-86d47ff8688d",
@@ -735,30 +617,23 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "ccff9638-5d32-4ebb-bdff-fb0ef08226a5",
         "name": "sucre",
         "image": "https://source.unsplash.com/random",
         "allergens": [],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "8a7bc4df-8ce8-4716-9723-a4127e24e302",
         "name": "maïzena",
         "image": "https://source.unsplash.com/random",
         "allergens": [
-            "c3480f58-ee41-4ae1-84b1-06a5725ca4c9",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "618113a1-84df-46d1-9ecc-33e97473e416",
@@ -767,20 +642,14 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "4ce47a82-aefd-4cd0-a802-fc4de8775a40",
         "name": "lait de riz",
         "image": "https://source.unsplash.com/random",
         "allergens": [],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "2f4b01e1-b469-4d3a-b40e-be50b0fe7c86",
@@ -802,13 +671,9 @@
         "image": "https://source.unsplash.com/random",
         "allergens": [
             "69867a11-eb0f-41b0-b615-10855290be4f",
-            "69867a11-eb0f-41b0-b615-10855290be4f",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892",
-            "72b94464-a362-43b6-bb53-c2372442bb91"
-        ]
+        "diets": []
     },
     {
         "id": "a45a3bf6-d674-4098-9d59-80bc8afbb964",
@@ -818,9 +683,7 @@
             "7897889a-db46-4cc8-abdc-a62e60bb842d",
             "c3480f58-ee41-4ae1-84b1-06a5725ca4c9"
         ],
-        "diets": [
-            "7fb21b99-29df-4c8c-ad37-e9104db96892"
-        ]
+        "diets": []
     },
     {
         "id": "fe43e483-f6a1-4a3d-8681-10153ed2d472",
@@ -829,8 +692,24 @@
         "allergens": [
             "958b643a-cec4-4e8b-9016-f06fd5eefca8"
         ],
-        "diets": [
-            "7c8ff128-c23d-443c-ace2-7b96f5417adc"
-        ]
+        "diets": []
+    },
+    {
+        "id": "8c6b51d6-8c43-457f-b9b7-fddaf44129db",
+        "name": "pois chiche",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "7f327c05-cee1-420d-be1d-a01ba5c5e35e"
+        ],
+        "diets": []
+    },
+    {
+        "id": "92703506-92fb-4f4d-a6cb-fcac66310060",
+        "name": "haricot rouge",
+        "image": "https://source.unsplash.com/random",
+        "allergens": [
+            "7f327c05-cee1-420d-be1d-a01ba5c5e35e"
+        ],
+        "diets": []
     }
 ]
