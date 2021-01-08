@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   recipePreviewContainer: {
     flexBasis: "50%",
     paddingHorizontal: 5,
-    paddingVertical: 8,
   },
   text: {
     textAlign: "center",

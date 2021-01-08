@@ -56,6 +56,7 @@ const Filters: FC<FiltersProps> = ({ stackName, screenName }: FiltersProps) => {
       type="evilicon"
       name="search"
       size={30}
+      color="#2196F3"
       style={styles.filtersIcon}
       onPress={() => navigate(stackName, { screen: screenName })}
     />
@@ -70,6 +71,7 @@ const Restaurants: FC = () => {
         component={RestaurantsScreen}
         options={{
           title: "Restaurants",
+          headerTintColor: "#2196F3",
           headerRight: () => (
             <Filters stackName="Restaurant" screenName="SearchRestaurants" />
           ),
@@ -87,6 +89,7 @@ const Recipes: FC = () => {
         component={RecipesScreen}
         options={{
           title: "Recettes",
+          headerTintColor: "#2196F3",
           headerRight: () => (
             <Filters stackName="Recipe" screenName="SearchRecipes" />
           ),
