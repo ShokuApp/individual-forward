@@ -9,11 +9,11 @@ export class MessageLoadingState extends MessageState {}
 export class MessageErrorState extends MessageState {}
 
 export class MessageGetState extends MessageState {
-  Message: Message;
+  message: Message;
 
   constructor(Message: Message) {
     super();
-    this.Message = Message;
+    this.message = Message;
   }
 }
 

@@ -18,6 +18,15 @@ async function fromJSON(messageJson: any): Promise<Message> {
   };
 }
 
+function toJSON(message: Message) {
+  return {
+    id: message.id,
+    sender: message.sender.id,
+    content: message.content,
+    timestamp: message.timestamp,
+  };
+}
+
 export class MessageRepository implements Repository<Message> {
   async get(id: string): Promise<Message> {
     const message = messages.find((item) => item.id === id);
@@ -31,11 +40,12 @@ export class MessageRepository implements Repository<Message> {
 
   async set(message: Message): Promise<void> {
     const index = messages.findIndex((item) => item.id === message.id);
+    const messageJson = toJSON(message);
 
     if (index !== -1) {
       messages[index] = message;
     } else {
-      messages.push(message);
+      messages.push(messageJson);
     }
   }
 
