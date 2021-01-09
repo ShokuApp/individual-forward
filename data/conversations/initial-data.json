@@ -1,0 +1,48 @@
+[
+  {
+    "id": "aa76ef71-48d9-4132-a292-1be5e13ffc13",
+    "title": "",
+    "users": [
+      "6e723b41-a983-44bd-a3c2-95fc6a892592",
+      "f7c00709-8b61-4e60-9575-18f0c065587e"
+    ],
+    "messages": [
+      "addde38a-e5e3-4573-b719-4519b84a96eb",
+      "0f3325d2-d0e4-401b-af4b-5286f0157784",
+      "75136ddc-4600-4a56-9cb0-24545f3f0d1e",
+      "98415974-c4f6-4eb2-8da7-ded14501cd3e",
+      "7dfab5d1-4b6f-43d9-ab6e-944e297062de",
+      "6e4c3212-7de3-43ca-80a3-71b790b89cbf",
+      "2ad78b6b-f3d9-4d22-a253-7379972162ca"
+    ]
+  },
+  {
+    "id": "6e2b33dc-cab6-4a0d-862c-b7ddbabe6d57",
+    "title": "",
+    "users": [
+      "dc6cd7ed-65f0-4ffc-97d5-be5531585f01",
+      "f7c00709-8b61-4e60-9575-18f0c065587e"
+    ],
+    "messages": [
+      "c23aae0d-5bbe-4587-a085-e24e97996edd",
+      "7559c07c-8023-4f13-80a7-03467f56d0da",
+      "b6e3911c-0881-4413-b88c-7620e8fb76e4",
+      "2adb38bf-ca60-4c6b-9856-ed7151ce0ef0"
+    ]
+  },
+  {
+    "id": "f3a2820b-42e4-4854-95fc-df4cbcbb8194",
+    "title": "",
+    "users": [
+      "9868d0b8-9971-4a24-b5ae-86f081327ec4",
+      "f7c00709-8b61-4e60-9575-18f0c065587e"
+    ],
+    "messages": [
+      "de5b1ada-26be-4fe4-8d38-81c329439ef8",
+      "1869ac8f-34e5-4bb0-817a-691179ceb510",
+      "37af613e-c835-492b-ace0-7aa5c70e9a2f",
+      "81aa1bc3-3962-4339-b5e3-1471c45e5c90",
+      "5dedfb32-740c-4f24-8eaf-de3db5facf9f"
+    ]
+  }
+]
