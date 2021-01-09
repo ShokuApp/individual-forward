@@ -2,7 +2,7 @@
   {
     "id": "addde38a-e5e3-4573-b719-4519b84a96eb",
     "sender": "6e723b41-a983-44bd-a3c2-95fc6a892592",
-    "content": "Salut, Je suis nouvelle ici, as-tu des recommendations de restaurants sur Toulouse ?",
+    "content": "Salut, je suis nouvelle ici, as-tu des recommandations de restaurants sur Toulouse ?",
     "timestamp": "1609578643000"
   },
   {
@@ -14,7 +14,7 @@
   {
     "id": "75136ddc-4600-4a56-9cb0-24545f3f0d1e",
     "sender": "6e723b41-a983-44bd-a3c2-95fc6a892592",
-    "content": "Niquel ! merci beaucoup, j'y vais dans la semaine",
+    "content": "Niquel ! Merci beaucoup, j'y vais dans la semaine",
     "timestamp": "1609579363000"
   },
   {
@@ -26,7 +26,7 @@
   {
     "id": "7dfab5d1-4b6f-43d9-ab6e-944e297062de",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
-    "content": "Super ! Bonne appétit alors ^^",
+    "content": "Super ! Bon appétit alors ^^",
     "timestamp": "1609579723000"
   },
   {
@@ -38,13 +38,13 @@
   {
     "id": "2ad78b6b-f3d9-4d22-a253-7379972162ca",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
-    "content": "Je te l'avais haha, content que ça t'es plu ;)",
+    "content": "Je te l'avais dis haha, content que ça t'ai plu ;)",
     "timestamp": "1610114503000"
   },
   {
     "id": "c23aae0d-5bbe-4587-a085-e24e97996edd",
     "sender": "dc6cd7ed-65f0-4ffc-97d5-be5531585f01",
-    "content": "Salut, j'ai vu que tu était aussi allergique au gluten. Est ce que tu aurai des idées d'entrée simple à faire ?",
+    "content": "Salut, j'ai vu que tu étais aussi allergique au gluten. Est ce que tu aurais des idées d'entrées simples à faire ?",
     "timestamp": "1610276503000"
   },
   {
@@ -56,7 +56,7 @@
   {
     "id": "b6e3911c-0881-4413-b88c-7620e8fb76e4",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
-    "content": "J'ai essayé cette recette la semaine dernière et elle est plutot simple et rapide à préparer ;)",
+    "content": "J'ai essayé cette recette la semaine dernière et elle est plutôt simple et rapide à préparer ;)",
     "timestamp": "1610276563000"
   },
   {
@@ -68,13 +68,13 @@
   {
     "id": "de5b1ada-26be-4fe4-8d38-81c329439ef8",
     "sender": "9868d0b8-9971-4a24-b5ae-86f081327ec4",
-    "content": "Bonjour, j'ai mon petit de 7 ans qui est allergique au lait comme vous et j'aimerais bien lui faire un gateaux",
+    "content": "Bonjour, j'ai mon petit de 7 ans qui est allergique au lait comme vous et j'aimerais bien lui faire un gâteau",
     "timestamp": "1605533785000"
   },
   {
     "id": "1869ac8f-34e5-4bb0-817a-691179ceb510",
     "sender": "9868d0b8-9971-4a24-b5ae-86f081327ec4",
-    "content": "Auriez-vous un gateaux a me conseiller parmis les recettes proposés ?",
+    "content": "Auriez-vous un gâteau à me conseiller parmis les recettes proposés ?",
     "timestamp": "1605533845000"
   },
   {
@@ -86,13 +86,13 @@
   {
     "id": "81aa1bc3-3962-4339-b5e3-1471c45e5c90",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
-    "content": "Oui il y'en a un que je fais assez souvent, c'est un gateaux nature sans lait qui est très bon ! je rajoute une gousse de vanilles la plus part du temps :)",
+    "content": "Oui il y en a un que je fais assez souvent, c'est un gâteau nature sans lait qui est très bon ! Je rajoute une gousse de vanilles la plus part du temps :)",
     "timestamp": "1605546293000"
   },
   {
     "id": "5dedfb32-740c-4f24-8eaf-de3db5facf9f",
     "sender": "9868d0b8-9971-4a24-b5ae-86f081327ec4",
-    "content": "Super merci ! je vais essayer avec la vanille alors ^^",
+    "content": "Super merci ! Je vais essayer avec la vanille alors ^^",
     "timestamp": "1605548060000"
   }
 ]
