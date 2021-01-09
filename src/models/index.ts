@@ -11,3 +11,5 @@ export * from "./recipe-step";
 export * from "./restaurant";
 export * from "./sauce";
 export * from "./time-range";
+export * from "./conversation";
+export * from "./message";

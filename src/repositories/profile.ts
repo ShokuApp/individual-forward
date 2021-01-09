@@ -29,6 +29,7 @@ async function fromJSON(profileJson: any): Promise<Profile> {
     favoriteRestaurants: profileJson.favorite_restaurants,
     allergens,
     diets,
+    conversations: profileJson.conversations,
   };
 }
 
@@ -42,6 +43,7 @@ function toJSON(profile: Profile) {
     diets: profile.diets.map((diet) => diet.id),
     favorite_recipes: profile.favoriteRecipes,
     favorite_restaurants: profile.favoriteRestaurants,
+    conversations: profile.conversations,
   };
 }
 

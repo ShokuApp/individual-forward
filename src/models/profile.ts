@@ -9,4 +9,5 @@ export type Profile = {
   diets: Pictogram[];
   favoriteRecipes: string[];
   favoriteRestaurants: string[];
+  conversations: string[];
 };

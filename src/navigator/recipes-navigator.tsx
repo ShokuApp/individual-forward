@@ -25,10 +25,19 @@ export const RecipesStackScreen: FC = () => {
         component={SearchRecipesScreen}
         options={{
           title: "Recherche",
+          headerTintColor: "white",
           headerBackTitle: "Recettes",
-          headerBackTitleStyle: { color: "black" },
+          headerStyle: {
+            backgroundColor: "#2196F3",
+          },
+          headerBackTitleStyle: { color: "white" },
           headerBackImage: () => (
-            <Icon type="entypo" name="chevron-small-left" size={24} />
+            <Icon
+              type="entypo"
+              name="chevron-small-left"
+              color="white"
+              size={24}
+            />
           ),
         }}
       />

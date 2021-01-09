@@ -30,6 +30,15 @@ async function fromJSON(cardJson: any): Promise<Card> {
   };
 }
 
+function toJSON(card: Card) {
+  return {
+    id: card.id,
+    name: card.name,
+    dishes: card.dishes.map((dish) => dish.id),
+    menus: card.menus.map((menu) => menu.id),
+  };
+}
+
 export class CardRepository implements Repository<Card> {
   async get(id: string): Promise<Card> {
     const cardJson = cards.find((item) => item.id === id);
@@ -42,13 +51,8 @@ export class CardRepository implements Repository<Card> {
   }
 
   async set(card: Card): Promise<void> {
-    const cardJson = {
-      id: card.id,
-      name: card.name,
-      dishes: card.dishes.map((dish) => dish.id),
-      menus: card.menus.map((menu) => menu.id),
-    };
     const index = cards.findIndex((item) => item.id === card.id);
+    const cardJson = toJSON(card);
 
     if (index !== -1) {
       cards[index] = cardJson;

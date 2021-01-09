@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: "100%",
     height: 200,
-    marginBottom: 25,
+    marginVertical: 5,
     shadowOffset: { height: 3, width: 0 },
     shadowOpacity: 0.4,
     shadowRadius: 3,
