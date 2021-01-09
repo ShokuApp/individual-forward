@@ -10,6 +10,7 @@ import { ProfileRepository } from "../../repositories";
 import { id } from "../../constants/demo";
 import { BlocBuilder } from "@felangel/react-bloc";
 import { Text } from "react-native";
+import { Messages } from "../../components/messages/messages";
 
 const MessagesScreen: FC = () => {
   const profileBloc = new ProfileBloc(new ProfileRepository());
@@ -22,6 +23,7 @@ const MessagesScreen: FC = () => {
           return <Text>Error</Text>;
         }
         if (state instanceof ProfileGetState) {
+          return <Messages profile={state.profile} />;
         }
         return <Text>Loading</Text>;
       }}
