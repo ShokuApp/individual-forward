@@ -101,6 +101,22 @@ const Recipes: FC = () => {
   );
 };
 
+const MessagesStack = createStackNavigator();
+
+const Messages: FC = () => {
+  return (
+    <MessagesStack.Navigator>
+      <MessagesStack.Screen
+        name={"Messages"}
+        component={MessagesScreen}
+        options={{
+          headerTintColor: "#2196F3",
+        }}
+      />
+    </MessagesStack.Navigator>
+  );
+};
+
 const ProfileStack = createStackNavigator();
 
 const Profile: FC = () => {
@@ -109,19 +125,9 @@ const Profile: FC = () => {
       <ProfileStack.Screen
         name={"Profile"}
         component={ProfileScreen}
-        options={{ title: "Profil" }}
+        options={{ title: "Profil", headerTintColor: "#2196F3" }}
       />
     </ProfileStack.Navigator>
-  );
-};
-
-const MessagesStack = createStackNavigator();
-
-const Messages: FC = () => {
-  return (
-    <MessagesStack.Navigator>
-      <MessagesStack.Screen name={"Messages"} component={MessagesScreen} />
-    </MessagesStack.Navigator>
   );
 };
 

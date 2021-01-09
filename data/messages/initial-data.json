@@ -3,96 +3,96 @@
     "id": "addde38a-e5e3-4573-b719-4519b84a96eb",
     "sender": "6e723b41-a983-44bd-a3c2-95fc6a892592",
     "content": "Salut, je suis nouvelle ici, as-tu des recommandations de restaurants sur Toulouse ?",
-    "timestamp": "1609578643000"
+    "timestamp": 1609578643000
   },
   {
     "id": "0f3325d2-d0e4-401b-af4b-5286f0157784",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
     "content": "Hey !! Bien sûr, je peux te conseiller La Compagnie Française tout d'abord ! c'est top, si t'y vas, dit moi ce que tu en penses :)",
-    "timestamp": "1609579003000"
+    "timestamp": 1609579003000
   },
   {
     "id": "75136ddc-4600-4a56-9cb0-24545f3f0d1e",
     "sender": "6e723b41-a983-44bd-a3c2-95fc6a892592",
     "content": "Niquel ! Merci beaucoup, j'y vais dans la semaine",
-    "timestamp": "1609579363000"
+    "timestamp": 1609579363000
   },
   {
     "id": "98415974-c4f6-4eb2-8da7-ded14501cd3e",
     "sender": "6e723b41-a983-44bd-a3c2-95fc6a892592",
     "content": "Je te ferais mon retour sans soucis",
-    "timestamp": "1609579423000"
+    "timestamp": 1609579423000
   },
   {
     "id": "7dfab5d1-4b6f-43d9-ab6e-944e297062de",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
     "content": "Super ! Bon appétit alors ^^",
-    "timestamp": "1609579723000"
+    "timestamp": 1609579723000
   },
   {
     "id": "6e4c3212-7de3-43ca-80a3-71b790b89cbf",
     "sender": "6e723b41-a983-44bd-a3c2-95fc6a892592",
     "content": "Coucou ! C'était super bon, en plus d'un bon accueil, merci encore !",
-    "timestamp": "1610112223000"
+    "timestamp": 1610112223000
   },
   {
     "id": "2ad78b6b-f3d9-4d22-a253-7379972162ca",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
     "content": "Je te l'avais dis haha, content que ça t'ai plu ;)",
-    "timestamp": "1610114503000"
+    "timestamp": 1610114503000
   },
   {
     "id": "c23aae0d-5bbe-4587-a085-e24e97996edd",
     "sender": "dc6cd7ed-65f0-4ffc-97d5-be5531585f01",
     "content": "Salut, j'ai vu que tu étais aussi allergique au gluten. Est ce que tu aurais des idées d'entrées simples à faire ?",
-    "timestamp": "1610276503000"
+    "timestamp": 1610276503000
   },
   {
     "id": "7559c07c-8023-4f13-80a7-03467f56d0da",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
     "content": "Bonjour, il y a la tortilla qu'Antoni a posté sur l'onglet recette de Shoku qui peut correspondre à tes besoins",
-    "timestamp": "1627911883000"
+    "timestamp": 1627911883000
   },
   {
     "id": "b6e3911c-0881-4413-b88c-7620e8fb76e4",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
     "content": "J'ai essayé cette recette la semaine dernière et elle est plutôt simple et rapide à préparer ;)",
-    "timestamp": "1610276563000"
+    "timestamp": 1610276563000
   },
   {
     "id": "2adb38bf-ca60-4c6b-9856-ed7151ce0ef0",
     "sender": "dc6cd7ed-65f0-4ffc-97d5-be5531585f01",
     "content": "Super merci, j'essaierai ça",
-    "timestamp": "1610277583000"
+    "timestamp": 1610277583000
   },
   {
     "id": "de5b1ada-26be-4fe4-8d38-81c329439ef8",
     "sender": "9868d0b8-9971-4a24-b5ae-86f081327ec4",
     "content": "Bonjour, j'ai mon petit de 7 ans qui est allergique au lait comme vous et j'aimerais bien lui faire un gâteau",
-    "timestamp": "1605533785000"
+    "timestamp": 1605533785000
   },
   {
     "id": "1869ac8f-34e5-4bb0-817a-691179ceb510",
     "sender": "9868d0b8-9971-4a24-b5ae-86f081327ec4",
     "content": "Auriez-vous un gâteau à me conseiller parmis les recettes proposés ?",
-    "timestamp": "1605533845000"
+    "timestamp": 1605533845000
   },
   {
     "id": "37af613e-c835-492b-ace0-7aa5c70e9a2f",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
     "content": "Salut ^^",
-    "timestamp": "1605546194000"
+    "timestamp": 1605546194000
   },
   {
     "id": "81aa1bc3-3962-4339-b5e3-1471c45e5c90",
     "sender": "f7c00709-8b61-4e60-9575-18f0c065587e",
     "content": "Oui il y en a un que je fais assez souvent, c'est un gâteau nature sans lait qui est très bon ! Je rajoute une gousse de vanilles la plus part du temps :)",
-    "timestamp": "1605546293000"
+    "timestamp": 1605546293000
   },
   {
     "id": "5dedfb32-740c-4f24-8eaf-de3db5facf9f",
     "sender": "9868d0b8-9971-4a24-b5ae-86f081327ec4",
     "content": "Super merci ! Je vais essayer avec la vanille alors ^^",
-    "timestamp": "1605548060000"
+    "timestamp": 1605548060000
   }
 ]

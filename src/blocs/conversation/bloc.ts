@@ -44,6 +44,7 @@ export class ConversationBloc extends Bloc<
 
       yield new ConversationGetState(Conversation);
     } catch (e) {
+      console.log(e);
       yield new ConversationErrorState();
     }
   }

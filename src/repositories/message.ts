@@ -35,7 +35,7 @@ export class MessageRepository implements Repository<Message> {
       throw Error("Message not found");
     }
 
-    return message;
+    return fromJSON(message);
   }
 
   async set(message: Message): Promise<void> {
@@ -43,7 +43,7 @@ export class MessageRepository implements Repository<Message> {
     const messageJson = toJSON(message);
 
     if (index !== -1) {
-      messages[index] = message;
+      messages[index] = messageJson;
     } else {
       messages.push(messageJson);
     }

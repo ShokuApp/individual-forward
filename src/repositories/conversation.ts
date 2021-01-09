@@ -1,10 +1,12 @@
 import { MessageRepository } from "./message";
-import { Conversation, Message } from "../models";
+import { Conversation, Message, Profile } from "../models";
 import { Repository } from "./repository";
 
 import conversations from "../../data/conversations/data.json";
+import { ProfileRepository } from "./profile";
 
 const messageRepository = new MessageRepository();
+const profileRepository = new ProfileRepository();
 
 // deepcode ignore no-any: JSON
 async function fromJSON(conversationJson: any): Promise<Conversation> {
@@ -14,10 +16,16 @@ async function fromJSON(conversationJson: any): Promise<Conversation> {
     })
   );
 
+  const users: Profile[] = await Promise.all(
+    conversationJson.users.map(async (id: string) => {
+      return profileRepository.get(id);
+    })
+  );
+
   return {
     id: conversationJson.id,
     title: conversationJson.name,
-    users: conversationJson.users,
+    users,
     messages,
   };
 }
@@ -26,6 +34,7 @@ function toJSON(conversation: Conversation) {
   return {
     id: conversation.id,
     title: conversation.title,
+    users: conversation.users.map((user) => user.id),
     messages: conversation.messages.map((message) => message.id),
   };
 }
