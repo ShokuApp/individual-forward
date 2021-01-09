@@ -27,10 +27,19 @@ export const RestaurantsStackScreens: FC = () => {
         component={SearchRestaurantScreen}
         options={{
           title: "Recherche",
+          headerTintColor: "white",
+          headerStyle: {
+            backgroundColor: "#2196F3",
+          },
           headerBackTitle: "Restaurants",
-          headerBackTitleStyle: { color: "black" },
+          headerBackTitleStyle: { color: "white" },
           headerBackImage: () => (
-            <Icon type="entypo" name="chevron-small-left" size={24} />
+            <Icon
+              type="entypo"
+              name="chevron-small-left"
+              color="white"
+              size={24}
+            />
           ),
         }}
       />

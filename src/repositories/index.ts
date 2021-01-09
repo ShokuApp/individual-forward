@@ -9,3 +9,5 @@ export * from "./recipe-ingredient";
 export * from "./repository";
 export * from "./restaurant";
 export * from "./sauce";
+export * from "./conversation";
+export * from "./message";
