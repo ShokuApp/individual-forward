@@ -5,6 +5,7 @@ import {
 } from "@react-navigation/bottom-tabs";
 import { TabBar } from "./tab-bar";
 import ProfileScreen from "../../screens/profile/profile";
+import MessagesScreen from "../../screens/messages/messages";
 import RestaurantsScreen from "../../screens/restaurants/restaurants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import RecipesScreen from "../../screens/recipes";
@@ -46,7 +47,6 @@ export type RecipesStackParamsList = {
 };
 
 const RestaurantsStack = createStackNavigator<RestaurantsStackParamsList>();
-const RecipesStack = createStackNavigator<RecipesStackParamsList>();
 
 const Filters: FC<FiltersProps> = ({ stackName, screenName }: FiltersProps) => {
   const { navigate } = useNavigation();
@@ -56,6 +56,7 @@ const Filters: FC<FiltersProps> = ({ stackName, screenName }: FiltersProps) => {
       type="evilicon"
       name="search"
       size={30}
+      color="#2196F3"
       style={styles.filtersIcon}
       onPress={() => navigate(stackName, { screen: screenName })}
     />
@@ -70,6 +71,7 @@ const Restaurants: FC = () => {
         component={RestaurantsScreen}
         options={{
           title: "Restaurants",
+          headerTintColor: "#2196F3",
           headerRight: () => (
             <Filters stackName="Restaurant" screenName="SearchRestaurants" />
           ),
@@ -79,6 +81,8 @@ const Restaurants: FC = () => {
   );
 };
 
+const RecipesStack = createStackNavigator<RecipesStackParamsList>();
+
 const Recipes: FC = () => {
   return (
     <RecipesStack.Navigator>
@@ -87,6 +91,7 @@ const Recipes: FC = () => {
         component={RecipesScreen}
         options={{
           title: "Recettes",
+          headerTintColor: "#2196F3",
           headerRight: () => (
             <Filters stackName="Recipe" screenName="SearchRecipes" />
           ),
@@ -96,17 +101,27 @@ const Recipes: FC = () => {
   );
 };
 
-const Stack = createStackNavigator();
+const ProfileStack = createStackNavigator();
 
 const Profile: FC = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
+    <ProfileStack.Navigator>
+      <ProfileStack.Screen
         name={"Profile"}
         component={ProfileScreen}
         options={{ title: "Profil" }}
       />
-    </Stack.Navigator>
+    </ProfileStack.Navigator>
+  );
+};
+
+const MessagesStack = createStackNavigator();
+
+const Messages: FC = () => {
+  return (
+    <MessagesStack.Navigator>
+      <MessagesStack.Screen name={"Messages"} component={MessagesScreen} />
+    </MessagesStack.Navigator>
   );
 };
 
@@ -120,6 +135,7 @@ export const BottomTabNavigator: FC = () => {
       >
         <Tab.Screen name="RestaurantScreen" component={Restaurants} />
         <Tab.Screen name="RecipeScreen" component={Recipes} />
+        <Tab.Screen name="MessagesScreen" component={Messages} />
         <Tab.Screen name="ProfileScreen" component={Profile} />
       </Tab.Navigator>
     </SafeAreaView>
