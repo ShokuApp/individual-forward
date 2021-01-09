@@ -20,8 +20,8 @@ export class ConversationGetState extends ConversationState {
 export class ConversationListState extends ConversationState {
   conversations: Conversation[];
 
-  constructor(conversation: Conversation[]) {
+  constructor(conversations: Conversation[]) {
     super();
-    this.conversations = conversation;
+    this.conversations = conversations;
   }
 }
