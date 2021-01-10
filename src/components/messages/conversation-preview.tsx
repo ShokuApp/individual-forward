@@ -56,7 +56,7 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     const profiles = props.conversation.users.filter(
       (user) => user.id !== props.profile.id
     );
-    let title: string = "";
+    let title = "";
     profiles.forEach((profile, index) => {
       title += profile.firstName + " " + profile.lastName;
       if (index !== profiles.length - 1) {

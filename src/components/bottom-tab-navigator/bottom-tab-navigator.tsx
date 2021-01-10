@@ -107,7 +107,7 @@ const Messages: FC = () => {
   return (
     <MessagesStack.Navigator>
       <MessagesStack.Screen
-        name={"Messages"}
+        name={"Discussions"}
         component={MessagesScreen}
         options={{
           headerTintColor: "#2196F3",
