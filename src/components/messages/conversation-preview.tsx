@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Conversation, Profile } from "../../models";
+import { useNavigation } from "@react-navigation/native";
+import { getTime } from "../../helpers/messages/get-time";
 
 const styles = StyleSheet.create({
   container: {
@@ -51,6 +53,8 @@ type Props = {
 };
 
 export const ConversationPreview: FC<Props> = (props: Props) => {
+  const { navigate } = useNavigation();
+
   const getTitle: () => string = () => {
     if (props.conversation.title) return props.conversation.title;
     const profiles = props.conversation.users.filter(
@@ -93,24 +97,34 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     return lastMessage;
   };
 
-  const getTime: () => string = () => {
-    const timestamp =
-      props.conversation.messages[props.conversation.messages.length - 1]
-        .timestamp;
-    const date = new Date(+timestamp).toLocaleString();
-    const now = new Date().toLocaleString().slice(0, 10);
-    return date.slice(0, 10) !== now ? date.slice(0, 5) : date.slice(12, 17);
+  const goToConversation = () => {
+    navigate("Messages", {
+      screen: "Conversation",
+      params: {
+        conversationName: title,
+        profile: props.profile,
+        conversation: props.conversation,
+      },
+    });
   };
 
+  const title = getTitle();
+
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={goToConversation}>
       <View style={styles.infoContainer}>
         <Image style={styles.picture} source={{ uri: getPicture() }} />
         <View style={styles.titleAndMessageContainer}>
-          <Text style={styles.title}>{getTitle()}</Text>
+          <Text style={styles.title}>{title}</Text>
           <View style={styles.messageAndTime}>
             <Text style={styles.message}>{getLastMessage()}</Text>
-            <Text style={styles.date}>{getTime()}</Text>
+            <Text style={styles.date}>
+              {getTime(
+                props.conversation.messages[
+                  props.conversation.messages.length - 1
+                ].timestamp
+              )}
+            </Text>
           </View>
         </View>
       </View>

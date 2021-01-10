@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import RecipeDetailsScreen from "../screens/recipe-details";
+import RecipeDetailsScreen from "../screens/recipes/recipe-details";
 import { Recipe } from "../models";
 import { Icon } from "react-native-elements";
 import SearchRecipesScreen from "../screens/recipes/search-recipes";
