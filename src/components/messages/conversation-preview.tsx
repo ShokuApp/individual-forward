@@ -56,14 +56,10 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     const profiles = props.conversation.users.filter(
       (user) => user.id !== props.profile.id
     );
-    let title = "";
-    profiles.forEach((profile, index) => {
-      title += profile.firstName + " " + profile.lastName;
-      if (index !== profiles.length - 1) {
-        title += ", ";
-      }
+    const fullnames = profiles.map((profile) => {
+      return [profile.firstName, profile.lastName].join(" ");
     });
-    return title;
+    return fullnames.join(", ");
   };
 
   const getPicture: () => string = () => {
