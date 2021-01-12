@@ -35,10 +35,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   message: {
+    flex: 0.7,
     fontSize: 14,
     color: "#9E9E9E",
   },
   date: {
+    flex: 0.3,
     fontSize: 14,
     color: "#9E9E9E",
     paddingLeft: 10,
@@ -82,10 +84,6 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     lastMessage +=
       props.conversation.messages[props.conversation.messages.length - 1]
         .content;
-    lastMessage =
-      lastMessage.length >= 43
-        ? lastMessage.substring(0, 43 - 3) + "..."
-        : lastMessage;
     return lastMessage;
   };
 
@@ -105,7 +103,9 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
         <View style={styles.titleAndMessageContainer}>
           <Text style={styles.title}>{getTitle()}</Text>
           <View style={styles.messageAndTime}>
-            <Text style={styles.message}>{getLastMessage()}</Text>
+            <Text numberOfLines={1} style={styles.message}>
+              {getLastMessage()}
+            </Text>
             <Text style={styles.date}>{getTime()}</Text>
           </View>
         </View>
