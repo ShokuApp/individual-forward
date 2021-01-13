@@ -59,7 +59,7 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
       (user) => user.id !== props.profile.id
     );
     const fullnames = profiles.map((profile) => {
-      return [profile.firstName, profile.lastName].join(" ");
+      return profile.firstName + " " + profile.lastName;
     });
     return fullnames.join(", ");
   };
