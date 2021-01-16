@@ -88,12 +88,23 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
   };
 
   const getTime: () => string = () => {
-    const timestamp =
-      props.conversation.messages[props.conversation.messages.length - 1]
-        .timestamp;
-    const date = new Date(+timestamp).toLocaleString();
-    const now = new Date().toLocaleString().slice(0, 10);
-    return date.slice(0, 10) !== now ? date.slice(0, 5) : date.slice(12, 17);
+    const lastMessage =
+      props.conversation.messages[props.conversation.messages.length - 1];
+    const lastMessageDate = new Date(+lastMessage.timestamp);
+
+    if (Date.now() - lastMessageDate.getTime() < 86400000) {
+      return lastMessageDate
+        .toLocaleTimeString()
+        .split(":")
+        .slice(0, 2)
+        .join(":");
+    }
+
+    return lastMessageDate
+      .toLocaleDateString()
+      .split("/")
+      .slice(0, 2)
+      .join("/");
   };
 
   return (
