@@ -72,19 +72,17 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
   };
 
   const getLastMessage: () => string = () => {
-    let lastMessage =
-      props.profile.id ===
-      props.conversation.messages[props.conversation.messages.length - 1].sender
-        .id
-        ? "Vous: "
-        : props.conversation.users.length > 2
-        ? props.conversation.messages[props.conversation.messages.length - 1]
-            .sender.firstName + ": "
-        : "";
-    lastMessage +=
-      props.conversation.messages[props.conversation.messages.length - 1]
-        .content;
-    return lastMessage;
+    const lastMessage =
+      props.conversation.messages[props.conversation.messages.length - 1];
+    let lastMessageContent = lastMessage.content;
+
+    if (lastMessage.sender.id === props.profile.id) {
+      lastMessageContent = `Vous : ${lastMessage.content}`;
+    } else if (props.conversation.users.length > 2) {
+      lastMessageContent = `${lastMessage.sender.firstName} : ${lastMessage.content}`;
+    }
+
+    return lastMessageContent;
   };
 
   const getTime: () => string = () => {
