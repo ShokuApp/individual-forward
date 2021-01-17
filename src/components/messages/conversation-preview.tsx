@@ -89,8 +89,9 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     const lastMessage =
       props.conversation.messages[props.conversation.messages.length - 1];
     const lastMessageDate = new Date(+lastMessage.timestamp);
+    const nowDate = new Date();
 
-    if (Date.now() - lastMessageDate.getTime() < 86400000) {
+    if (nowDate.toLocaleDateString() === lastMessageDate.toLocaleDateString()) {
       return lastMessageDate
         .toLocaleTimeString()
         .split(":")
