@@ -5,6 +5,7 @@ export type Profile = {
   email: string;
   firstName: string;
   lastName: string;
+  profilePicture: string;
   allergens: Pictogram[];
   diets: Pictogram[];
   favoriteRecipes: string[];

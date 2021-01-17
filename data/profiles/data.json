@@ -369,6 +369,7 @@
     "email": "eoin.dorsey@example.com",
     "firstName": "Eoin",
     "lastName": "Dorsey",
+    "profilePicture": "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "allergens": [
       "69867a11-eb0f-41b0-b615-10855290be4f"
     ],
@@ -408,6 +409,7 @@
     "email": "harper.hayward@example.com",
     "firstName": "Harper",
     "lastName": "Hayward",
+    "profilePicture": "https://images.unsplash.com/photo-1543080853-556086153871?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
     "allergens": [
       "958b643a-cec4-4e8b-9016-f06fd5eefca8"
     ],
@@ -1882,6 +1884,7 @@
     "email": "mathew.barajas@example.com",
     "firstName": "Mathew",
     "lastName": "Barajas",
+    "profilePicture": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "allergens": [
       "7f327c05-cee1-420d-be1d-a01ba5c5e35e",
       "e8eb7fed-514b-4084-b4f6-816417394b06"
