@@ -43,7 +43,7 @@ type Props = {
   sender: boolean;
 };
 
-export const ConnectedUserMessage: FC<Props> = (props: Props) => {
+export const UserMessage: FC<Props> = (props: Props) => {
   return (
     <View
       style={

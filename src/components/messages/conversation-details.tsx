@@ -10,7 +10,7 @@ import {
   View,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { ConnectedUserMessage } from "./connected-user-message";
+import { UserMessage } from "./user-message";
 
 const styles = StyleSheet.create({
   container: {
@@ -76,7 +76,7 @@ export const ConversationDetails: FC<Props> = (props: Props) => {
       <View style={styles.mainContainer}>
         <ScrollView showsVerticalScrollIndicator={false} style={scrollStyle}>
           {props.conversation.messages.map((message) => (
-            <ConnectedUserMessage
+            <UserMessage
               key={message.id}
               message={message}
               sender={checkSenderMessage(message.sender)}
