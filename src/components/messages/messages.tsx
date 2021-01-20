@@ -35,7 +35,6 @@ export const ConversationGet: FC<ConversationGetProps> = (
       bloc={conversationBloc}
       builder={(state: ConversationState) => {
         if (state instanceof ConversationErrorState) {
-          console.log(props.conversationId);
           return <Text>Error</Text>;
         }
         if (state instanceof ConversationGetState) {

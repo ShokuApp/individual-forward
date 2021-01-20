@@ -37,10 +37,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   message: {
+    flex: 0.7,
     fontSize: 14,
     color: "#9E9E9E",
   },
   date: {
+    flex: 0.3,
     fontSize: 14,
     color: "#9E9E9E",
     paddingLeft: 10,
@@ -60,14 +62,10 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     const profiles = props.conversation.users.filter(
       (user) => user.id !== props.profile.id
     );
-    let title = "";
-    profiles.forEach((profile, index) => {
-      title += profile.firstName + " " + profile.lastName;
-      if (index !== profiles.length - 1) {
-        title += ", ";
-      }
+    const fullnames = profiles.map((profile) => {
+      return profile.firstName + " " + profile.lastName;
     });
-    return title;
+    return fullnames.join(", ");
   };
 
   const getPicture: () => string = () => {
@@ -78,23 +76,17 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
   };
 
   const getLastMessage: () => string = () => {
-    let lastMessage =
-      props.profile.id ===
-      props.conversation.messages[props.conversation.messages.length - 1].sender
-        .id
-        ? "Vous: "
-        : props.conversation.users.length > 2
-        ? props.conversation.messages[props.conversation.messages.length - 1]
-            .sender.firstName + ": "
-        : "";
-    lastMessage +=
-      props.conversation.messages[props.conversation.messages.length - 1]
-        .content;
-    lastMessage =
-      lastMessage.length >= 43
-        ? lastMessage.substring(0, 43 - 3) + "..."
-        : lastMessage;
-    return lastMessage;
+    const lastMessage =
+      props.conversation.messages[props.conversation.messages.length - 1];
+    let lastMessageContent = lastMessage.content;
+
+    if (lastMessage.sender.id === props.profile.id) {
+      lastMessageContent = `Vous : ${lastMessage.content}`;
+    } else if (props.conversation.users.length > 2) {
+      lastMessageContent = `${lastMessage.sender.firstName} : ${lastMessage.content}`;
+    }
+
+    return lastMessageContent;
   };
 
   const goToConversation = () => {
@@ -108,6 +100,27 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     });
   };
 
+  const getTime: () => string = () => {
+    const lastMessage =
+      props.conversation.messages[props.conversation.messages.length - 1];
+    const lastMessageDate = new Date(+lastMessage.timestamp);
+    const nowDate = new Date();
+
+    if (nowDate.toLocaleDateString() === lastMessageDate.toLocaleDateString()) {
+      return lastMessageDate
+        .toLocaleTimeString()
+        .split(":")
+        .slice(0, 2)
+        .join(":");
+    }
+
+    return lastMessageDate
+      .toLocaleDateString()
+      .split("/")
+      .slice(0, 2)
+      .join("/");
+  };
+
   const title = getTitle();
 
   return (
@@ -117,14 +130,10 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
         <View style={styles.titleAndMessageContainer}>
           <Text style={styles.title}>{title}</Text>
           <View style={styles.messageAndTime}>
-            <Text style={styles.message}>{getLastMessage()}</Text>
-            <Text style={styles.date}>
-              {getTime(
-                props.conversation.messages[
-                  props.conversation.messages.length - 1
-                ].timestamp
-              )}
+            <Text numberOfLines={1} style={styles.message}>
+              {getLastMessage()}
             </Text>
+            <Text style={styles.date}>{getTime()}</Text>
           </View>
         </View>
       </View>
