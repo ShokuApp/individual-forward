@@ -1,5 +1,18 @@
 export const getTime: (timestamp: number) => string = (timestamp: number) => {
-  const date = new Date(timestamp).toLocaleString();
-  const now = new Date().toLocaleString().slice(0, 10);
-  return date.slice(0, 10) !== now ? date.slice(0, 5) : date.slice(12, 17);
+  const messageDate = new Date(timestamp);
+  const nowDate = new Date();
+
+  if (nowDate.toLocaleDateString() === messageDate.toLocaleDateString()) {
+    return messageDate
+      .toLocaleTimeString()
+      .split(":")
+      .slice(0, 2)
+      .join(":");
+  }
+
+  return messageDate
+    .toLocaleDateString()
+    .split("/")
+    .slice(0, 2)
+    .join("/");
 };
