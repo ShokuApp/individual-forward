@@ -4,6 +4,7 @@ import { RestaurantsStackScreens } from "./restaurants-navigator";
 import { RecipesStackScreen } from "./recipes-navigator";
 import { ModifyProfileAllergens } from "./modify-profile-allergens-navigator";
 import { BottomTabNavigator } from "../components/bottom-tab-navigator";
+import { MessagesStackScreen } from "./messages-navigator";
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,11 @@ export const RootStack: FC = () => {
       <Stack.Screen
         name="Recipe"
         component={RecipesStackScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name={"Messages"}
+        component={MessagesStackScreen}
         options={{ headerShown: false }}
       />
       <Stack.Screen

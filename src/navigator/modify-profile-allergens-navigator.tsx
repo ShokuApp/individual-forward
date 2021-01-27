@@ -19,9 +19,18 @@ export const ModifyProfileAllergens: FC = () => {
         options={{
           title: "Modifier mes allergènes",
           headerBackTitle: "Profil",
-          headerBackTitleStyle: { color: "black" },
+          headerBackTitleStyle: { color: "white" },
+          headerTintColor: "white",
+          headerStyle: {
+            backgroundColor: "#2196F3",
+          },
           headerBackImage: () => (
-            <Icon type="entypo" name="chevron-small-left" size={24} />
+            <Icon
+              type="entypo"
+              name="chevron-small-left"
+              color={"white"}
+              size={24}
+            />
           ),
         }}
       />

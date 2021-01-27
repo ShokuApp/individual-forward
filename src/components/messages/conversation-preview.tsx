@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Conversation, Profile } from "../../models";
+import { useNavigation } from "@react-navigation/native";
+import { getTime } from "../../helpers/messages/get-time";
 
 const styles = StyleSheet.create({
   container: {
@@ -53,6 +55,8 @@ type Props = {
 };
 
 export const ConversationPreview: FC<Props> = (props: Props) => {
+  const { navigate } = useNavigation();
+
   const getTitle: () => string = () => {
     if (props.conversation.title) return props.conversation.title;
     const profiles = props.conversation.users.filter(
@@ -85,6 +89,17 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
     return lastMessageContent;
   };
 
+  const goToConversation = () => {
+    navigate("Messages", {
+      screen: "Conversation",
+      params: {
+        conversationName: title,
+        profile: props.profile,
+        conversation: props.conversation,
+      },
+    });
+  };
+
   const getTime: () => string = () => {
     const lastMessage =
       props.conversation.messages[props.conversation.messages.length - 1];
@@ -106,12 +121,14 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
       .join("/");
   };
 
+  const title = getTitle();
+
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={goToConversation}>
       <View style={styles.infoContainer}>
         <Image style={styles.picture} source={{ uri: getPicture() }} />
         <View style={styles.titleAndMessageContainer}>
-          <Text style={styles.title}>{getTitle()}</Text>
+          <Text style={styles.title}>{title}</Text>
           <View style={styles.messageAndTime}>
             <Text numberOfLines={1} style={styles.message}>
               {getLastMessage()}

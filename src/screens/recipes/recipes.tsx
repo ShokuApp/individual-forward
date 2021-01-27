@@ -16,22 +16,22 @@ import {
   RecipeListEvent,
   RecipeListState,
   RecipeState,
-} from "../blocs";
+} from "../../blocs";
 import {
   PictogramRepository,
   ProfileRepository,
   RecipeRepository,
-} from "../repositories";
+} from "../../repositories";
 import { Text } from "react-native";
 import { v4 as uuid } from "uuid";
-import { ListRecipePreview } from "../components/recipes/recipe-preview/list-recipe-preview";
+import { ListRecipePreview } from "../../components/recipes/recipe-preview/list-recipe-preview";
 import { RouteProp } from "@react-navigation/native";
 import {
   Filters,
   RecipesStackParamsList,
-} from "../components/bottom-tab-navigator";
-import { Profile, Recipe } from "../models";
-import { id } from "../constants/demo";
+} from "../../components/bottom-tab-navigator";
+import { Profile, Recipe } from "../../models";
+import { id } from "../../constants/demo";
 
 type RecipeScreenProps = RouteProp<RecipesStackParamsList, "Recipes">;
 

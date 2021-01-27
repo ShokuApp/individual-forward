@@ -8,7 +8,7 @@ import ProfileScreen from "../../screens/profile/profile";
 import MessagesScreen from "../../screens/messages/messages";
 import RestaurantsScreen from "../../screens/restaurants/restaurants";
 import { SafeAreaView } from "react-native-safe-area-context";
-import RecipesScreen from "../../screens/recipes";
+import RecipesScreen from "../../screens/recipes/recipes";
 import { Pictogram } from "../../models";
 
 import { createStackNavigator } from "@react-navigation/stack";

@@ -51,6 +51,7 @@ export const SearchBar: FC<Props> = (props) => {
           value={props.text}
           onChangeText={(text) => props.setText(text)}
           selectionColor={colors.themeStandard}
+          placeholderTextColor={"#9E9E9E"}
           style={styles.input}
         />
       </View>
