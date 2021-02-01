@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: "white",
+    paddingTop: 10,
+    paddingBottom: 50,
   },
   textInputContainer: {
     height: 50,
