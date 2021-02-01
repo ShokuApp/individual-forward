@@ -254,7 +254,7 @@
         "description": "Français",
         "image": "https://unsplash.com/photos/0uAVsDcyD0M/download?force=true&w=1920",
         "average_rate": "4.2",
-        "average_price": "26",
+        "average_price": "32",
         "address": {
             "street_number": "100",
             "street": "Avenue Jean Moulin",
@@ -685,7 +685,7 @@
         "name": "Didier de Courten",
         "description": "Gastronomique",
         "image": "https://unsplash.com/photos/yXnPoTkkY94/download?force=true&w=1920",
-        "average_rate": "3.7",
+        "average_rate": "4.5",
         "average_price": "27",
         "address": {
             "street_number": "184",
