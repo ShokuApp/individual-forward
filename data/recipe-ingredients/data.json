@@ -255,7 +255,7 @@
         "id": "4d530389-ee27-4dd6-8938-5e6fece5e90a",
         "ingredient": "99f905e5-9aab-43b9-84d3-94549961f154",
         "quantity": "1",
-        "unity": "cuillère(s) à soupe"
+        "unity": " cuillère(s) à soupe"
     },
     {
         "id": "133ce1ff-ba25-4dbf-8aca-4b0c10554085",
@@ -267,12 +267,12 @@
         "id": "09c69c6d-e9ef-4685-92d1-23d38ec654f9",
         "ingredient": "c7e33582-f7a9-41f5-b776-2f8689352070",
         "quantity": "1",
-        "unity": "pincée(s)"
+        "unity": " pincée(s)"
     },
     {
         "id": "b23f8034-2ab8-475b-88ec-f3dabd2fc729",
         "ingredient": "262bc49e-b935-4aea-bdb8-d91099e96ea3",
         "quantity": "1",
-        "unity": "pincée(s)"
+        "unity": " pincée(s)"
     }
 ]
