@@ -1,8 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Conversation, Profile } from "../../models";
 import { useNavigation } from "@react-navigation/native";
-import { getTime } from "../../helpers/messages/get-time";
 
 const styles = StyleSheet.create({
   container: {
@@ -27,6 +26,17 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingLeft: 10,
   },
+  titleAndNotRead: {
+    flexDirection: "row",
+  },
+  circle: {
+    height: 10,
+    width: 10,
+    borderRadius: 10 / 2,
+    backgroundColor: "#2196F3",
+    marginTop: 7,
+    marginLeft: 10,
+  },
   title: {
     fontWeight: "bold",
     fontSize: 17,
@@ -40,6 +50,12 @@ const styles = StyleSheet.create({
     flex: 0.7,
     fontSize: 14,
     color: "#9E9E9E",
+  },
+  notReadMessage: {
+    flex: 0.7,
+    fontSize: 14,
+    color: "#9E9E9E",
+    fontWeight: "bold",
   },
   date: {
     flex: 0.3,
@@ -56,6 +72,11 @@ type Props = {
 
 export const ConversationPreview: FC<Props> = (props: Props) => {
   const { navigate } = useNavigation();
+  const [notRead, setNotRead] = useState(
+    props.conversation.id === "aa76ef71-48d9-4132-a292-1be5e13ffc13"
+      ? true
+      : false
+  );
 
   const getTitle: () => string = () => {
     if (props.conversation.title) return props.conversation.title;
@@ -90,6 +111,7 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
   };
 
   const goToConversation = () => {
+    setNotRead(false);
     navigate("Messages", {
       screen: "Conversation",
       params: {
@@ -128,9 +150,15 @@ export const ConversationPreview: FC<Props> = (props: Props) => {
       <View style={styles.infoContainer}>
         <Image style={styles.picture} source={{ uri: getPicture() }} />
         <View style={styles.titleAndMessageContainer}>
-          <Text style={styles.title}>{title}</Text>
+          <View style={styles.titleAndNotRead}>
+            <Text style={styles.title}>{title}</Text>
+            {notRead ? <View style={styles.circle} /> : null}
+          </View>
           <View style={styles.messageAndTime}>
-            <Text numberOfLines={1} style={styles.message}>
+            <Text
+              numberOfLines={1}
+              style={notRead ? styles.notReadMessage : styles.message}
+            >
               {getLastMessage()}
             </Text>
             <Text style={styles.date}>{getTime()}</Text>
