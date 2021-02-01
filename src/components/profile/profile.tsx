@@ -45,7 +45,7 @@ export const ProfileContainer: FC<Props> = (props: Props) => {
         <View style={styles.borderImageContainer}>
           <Image
             style={styles.image}
-            source={{ uri: "https://source.unsplash.com/random" }}
+            source={{ uri: "https://shoku.app/assets/img/team/anthonin.png" }}
           />
         </View>
         <Text style={styles.name}>

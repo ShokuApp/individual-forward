@@ -118,11 +118,12 @@
   },
   {
     "id": "f7c00709-8b61-4e60-9575-18f0c065587e",
-    "email": "emyr.shea@example.com",
-    "firstName": "Emyr",
-    "lastName": "Shea",
+    "email": "anthonin.clara@example.com",
+    "firstName": "Anthonin",
+    "lastName": "Clara",
+    "profilePicture": "https://shoku.app/assets/img/team/anthonin.png",
     "allergens": [
-      "2d755541-3aa2-48b0-a973-9c1502cac7ce"
+      "69867a11-eb0f-41b0-b615-10855290be4f"
     ],
     "diets": [],
     "favorite_recipes": [
