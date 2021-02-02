@@ -839,5 +839,56 @@
             }
         ],
         "author": "4209c1a7-248f-46f0-81ae-ec291f2ed57b"
+    },
+    {
+        "id": "7f4b1e55-4cda-4398-b290-23de8929c112",
+        "name": "Wok au poulet",
+        "description": "Un delicieux wok avec une touche de miel pour ajouter un côté insolite !",
+        "image": "https://assets.afcdn.com/recipe/20161004/57797_w1024h768c1cx1500cy1000.webp",
+        "average_time": {
+            "preparation": "2100",
+            "cooking": "900"
+        },
+        "average_rate": "4.8",
+        "ingredients": [
+            "e74246da-cc9d-4fa3-ad33-6dbeba2038c7",
+            "a1a90746-7ffe-4375-b594-f3443e1f15bb",
+            "ee7a4ebb-e3e5-43f9-b235-1484d9485b46",
+            "4d530389-ee27-4dd6-8938-5e6fece5e90a",
+            "133ce1ff-ba25-4dbf-8aca-4b0c10554085",
+            "09c69c6d-e9ef-4685-92d1-23d38ec654f9",
+            "b23f8034-2ab8-475b-88ec-f3dabd2fc729"
+        ],
+        "steps": [
+            {
+                "name": "Step 1",
+                "description": "Découpez le blanc de poulet en lamelles (très pratiques et rapide, j'utilise des grands ciseaux pour cette tâche)."
+            },
+            {
+                "name": "Step 2",
+                "description": "Laissez mariner 30 minutes le poulet dans un saladier avec la sauje soja (découpé, le poulet imbibe plus vite)."
+            },
+            {
+                "name": "Step 3",
+                "description": "Coupez le poireau en fines rondelles (les ciseaux fonctionnent toujours aussi bien) et le brocolis en petites branches."
+            },
+            {
+                "name": "Step 4",
+                "description": "Dans un wok (ou une poêle sauteuse) à feu vif, faîtes dorer les morceaux de poulet 2 minutes, puisse le feu pour les faire mijoter 10 minutes."
+            },
+            {
+                "name": "Step 5",
+                "description": "Ajouter le brocolis, les rondelles de poireau, la canelle, le gingembre, un peu de poivre et/ou piment de Cayenne."
+            },
+            {
+                "name": "Step 6",
+                "description": "Patienter 5 minutes et ajouter le miel, puis mélangez bien."
+            },
+            {
+                "name": "Step 7",
+                "description": "Servez accompagné de riz thaï ou d'une salade gourmande (mâche, roquette, frisée, chicorée rouge)."
+            }
+        ],
+        "author": "4209c1a7-248f-46f0-81ae-ec291f2ed57b"
     }
 ]

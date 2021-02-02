@@ -232,5 +232,47 @@
         "ingredient": "088d68f2-ba21-4ca1-b714-62204a412b09",
         "quantity": "50",
         "unity": "g"
+    },
+    {
+        "id": "e74246da-cc9d-4fa3-ad33-6dbeba2038c7",
+        "ingredient": "dddf74bb-c698-4c02-96d1-325b15ae667f",
+        "quantity": "125",
+        "unity": "g"
+    },
+    {
+        "id": "a1a90746-7ffe-4375-b594-f3443e1f15bb",
+        "ingredient": "12e0ecf8-1285-4c88-98a3-8b4524227168",
+        "quantity": "1",
+        "unity": ""
+    },
+    {
+        "id": "ee7a4ebb-e3e5-43f9-b235-1484d9485b46",
+        "ingredient": "ad4aac5c-c923-4fc2-98c2-cd4bb71e0e61",
+        "quantity": "1",
+        "unity": ""
+    },
+    {
+        "id": "4d530389-ee27-4dd6-8938-5e6fece5e90a",
+        "ingredient": "99f905e5-9aab-43b9-84d3-94549961f154",
+        "quantity": "1",
+        "unity": " cuillère(s) à soupe"
+    },
+    {
+        "id": "133ce1ff-ba25-4dbf-8aca-4b0c10554085",
+        "ingredient": "8aa4561c-166c-4933-86e7-b1a409c4ecb4",
+        "quantity": "1.8",
+        "unity": "cl"
+    },
+    {
+        "id": "09c69c6d-e9ef-4685-92d1-23d38ec654f9",
+        "ingredient": "c7e33582-f7a9-41f5-b776-2f8689352070",
+        "quantity": "1",
+        "unity": " pincée(s)"
+    },
+    {
+        "id": "b23f8034-2ab8-475b-88ec-f3dabd2fc729",
+        "ingredient": "262bc49e-b935-4aea-bdb8-d91099e96ea3",
+        "quantity": "1",
+        "unity": " pincée(s)"
     }
 ]
