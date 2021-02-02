@@ -124,7 +124,7 @@
     {
         "id": "6cd36b0d-a374-4ba0-aed2-3273dbf8cbc0",
         "name": "Menu à partager",
-        "price": "28",
+        "price": "39",
         "dishes": [
             "ed378895-baca-4673-8d18-0a30bf81dd74",
             "834d1f59-e6c7-4796-ad44-efe9382b6298",
@@ -134,7 +134,7 @@
     {
         "id": "ff21520c-acde-48f1-9a2f-319012f11871",
         "name": "Menu du Chef",
-        "price": "25",
+        "price": "33",
         "dishes": [
             "3fcf4def-280f-4b98-975f-cde668f45774",
             "b0863fd0-7618-4072-87e4-715fdb8d9452",

@@ -42,7 +42,7 @@
         "name": "Dame Blanche",
         "type": "dessert",
         "description": "Trois boules de glace à la vanille, chocolat chaud, chantilly et amandes effilées",
-        "price": "5",
+        "price": "9",
         "ingredients": [
             "8d8722dc-a6fe-4c16-9b99-64f2d4640c68",
             "eb120378-60e6-49da-9198-3250e7a4a569",
@@ -74,7 +74,7 @@
         "name": "Magret de canard et écrasé de pommes de terre",
         "type": "plate",
         "description": "Magret de canard et écrasé de pommes de terre, avec sa sauce au vin rouge",
-        "price": "14",
+        "price": "23",
         "ingredients": [
             "04e57a13-d56a-46a7-9efe-f238e54b3a76",
             "c5e98656-2ecb-4647-b6db-558b68d4dead",
@@ -93,7 +93,7 @@
         "name": "Tartelette à la framboise",
         "type": "dessert",
         "description": "Une belle tartelette à la framboise maison",
-        "price": "5",
+        "price": "9",
         "ingredients": [
             "7bf73095-6359-46c5-bc8b-9b3a1a65ba24",
             "c5e98656-2ecb-4647-b6db-558b68d4dead",
@@ -150,7 +150,7 @@
         "name": "Îles flottantes",
         "type": "dessert",
         "description": "Les véritables îles flottantes",
-        "price": "5",
+        "price": "8",
         "ingredients": [
             "a0148b26-9e35-449c-97ad-2acba737413d",
             "e1026388-7ea4-4d0e-b3e4-cbc7a91bafd6",
@@ -167,7 +167,7 @@
         "name": "Les tomates mozzarella",
         "type": "starter",
         "description": "Simple salade fraîche de tomates et mozzarella",
-        "price": "5",
+        "price": "11",
         "ingredients": [
             "4e3be63a-b1ef-4a84-8b22-195f7561abae",
             "41ad5aad-5b4b-45bb-9bde-dd2ed64edeab",
@@ -199,7 +199,7 @@
         "name": "Tarte au citron meringuée",
         "type": "dessert",
         "description": "La classique tarte au citron meringuée",
-        "price": "6",
+        "price": "8",
         "ingredients": [
             "c82f50a6-402d-4e58-bb90-73ec9317f66a",
             "c5e98656-2ecb-4647-b6db-558b68d4dead",
@@ -215,7 +215,7 @@
         "name": "Quiche Lorraine",
         "type": "starter",
         "description": "La traditionnelle quiche Lorraine",
-        "price": "4",
+        "price": "12",
         "ingredients": [
             "59f053cc-0a52-4262-a2a7-088abf7648e3",
             "a41a5636-8e67-4be9-a3e6-084e7b925242",
@@ -264,7 +264,7 @@
     },
     {
         "id": "badbd0b4-970f-4579-bfbc-de5a6b75d5b5",
-        "name": "Quiche végétarienne",
+        "name": "Avocat et thon",
         "type": "starter",
         "description": "Classique, efficace... un avocat et du thon",
         "price": "7",
@@ -315,10 +315,10 @@
     },
     {
         "id": "bcdda62f-75ae-41b9-a08a-cfb36093a59c",
-        "name": "Entrecôte 450g, frites",
+        "name": "Entrecôte, frites",
         "type": "plate",
         "description": "Une tendre et généreuse entrecôte de boeuf servie avec ses frites et une sauce au choix",
-        "price": "17",
+        "price": "25",
         "ingredients": [
             "bcf92313-25c1-4b56-8911-82955e5006e7",
             "0180d42d-a663-48a9-bd62-a6a8849d923c",

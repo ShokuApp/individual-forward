@@ -711,26 +711,5 @@
             "7f327c05-cee1-420d-be1d-a01ba5c5e35e"
         ],
         "diets": []
-    },
-    {
-        "id": "12e0ecf8-1285-4c88-98a3-8b4524227168",
-        "name": "Poireau",
-        "image": "https://source.unsplash.com/random",
-        "allergens": [],
-        "diets": []
-    },
-    {
-        "id": "ad4aac5c-c923-4fc2-98c2-cd4bb71e0e61",
-        "name": "Brocoli",
-        "image": "https://source.unsplash.com/random",
-        "allergens": [],
-        "diets": []
-    },
-    {
-        "id": "8aa4561c-166c-4933-86e7-b1a409c4ecb4",
-        "name": "Sauce soja",
-        "image": "https://source.unsplash.com/random",
-        "allergens": [],
-        "diets": []
     }
 ]
